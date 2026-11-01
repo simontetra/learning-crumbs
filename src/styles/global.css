@@ -15,6 +15,14 @@
   --font-body: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
   --font-label: "Courier Prime", "Courier New", ui-monospace, monospace;
 
+  /* Each gallery is a room painted its own colour. --x-fill paints plates;
+     --x-text is the same hue tuned for text on the page background. */
+  --names-fill: #2b5a8c;  --names-text: #2b5a8c;   /* Prussian blue */
+  --quill-fill: #9a3428;  --quill-text: #9a3428;   /* sealing-wax red */
+  --brink-fill: #2e6a4c;  --brink-text: #2e6a4c;   /* moss green, reserved for Back from the Brink */
+  --myth-fill:  #5b3f86;  --myth-text:  #5b3f86;   /* violet, reserved for myths and legends */
+  --room-ink: #fbf7ef;    /* lettering on a painted plate */
+
   --step--1: 0.875rem;
   --step-0: 1.0625rem;
   --step-1: 1.3rem;
@@ -28,14 +36,23 @@
   :root:not([data-theme="light"]) {
     --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
     --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
+    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
   --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
+  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0;
   color-scheme: dark;
 }
+
+/* Which room are we in? Pages and cards carry data-gallery. */
+:root, [data-gallery] { --room-fill: #5b5348; --room-text: var(--accent); }
+[data-gallery="names-that-nearly-were"] { --room-fill: var(--names-fill); --room-text: var(--names-text); }
+[data-gallery="from-quill-to-keyboard"] { --room-fill: var(--quill-fill); --room-text: var(--quill-text); }
+[data-gallery="back-from-the-brink"]    { --room-fill: var(--brink-fill); --room-text: var(--brink-text); }
+[data-gallery="myths-and-legends"]      { --room-fill: var(--myth-fill);  --room-text: var(--myth-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -199,3 +216,29 @@ main { padding-block: 8px 72px; }
 @media (prefers-reduced-motion: no-preference) {
   .card, .gallery-door { transition: border-color 0.15s ease; }
 }
+
+/* ---------- Room colours ---------- */
+.card-plate, .plate, .door-plates span { background: var(--room-fill); color: var(--room-ink); }
+.plate { box-shadow: inset 0 0 0 10px var(--room-fill), inset 0 0 0 11px color-mix(in srgb, var(--room-ink) 45%, transparent); }
+.card { border-top: 0; }
+.card:hover .card-title { color: var(--room-text); }
+.card:hover { border-color: var(--room-text); }
+.card .eyebrow, .label-head .eyebrow, .placard .eyebrow, .gallery-door .eyebrow:first-child { color: var(--room-text); }
+.gallery-door { border-top: 6px solid var(--room-fill); }
+.gallery-door:hover { border-color: var(--room-text); border-top-color: var(--room-fill); }
+.gallery-door .q, .placard .q { color: var(--room-text); }
+.placard { position: relative; }
+.placard[data-gallery]::before { content: ""; width: 56px; height: 6px; border-radius: 3px; background: var(--room-fill); }
+.asked { border-left-color: var(--room-fill); }
+.board blockquote { background: color-mix(in srgb, var(--room-fill) 9%, var(--label)); border-color: color-mix(in srgb, var(--room-fill) 30%, var(--rule)); border-left: 4px solid var(--room-fill); }
+.label-meta span:last-child { color: var(--room-text); }
+.walk-nav a:hover strong, .board a { color: var(--room-text); }
+
+/* The pebble trail picks up the room colours */
+.trail-line span:nth-child(1) { background: var(--names-fill); }
+.trail-line span:nth-child(2) { background: var(--quill-fill); }
+.trail-line span:nth-child(3) { background: var(--brink-fill); }
+.trail-line span:nth-child(4) { background: var(--myth-fill); }
+.logo-mark span:nth-child(1) { background: var(--names-fill); }
+.logo-mark span:nth-child(2) { background: var(--quill-fill); }
+.entrance h1 em { font-style: italic; color: var(--accent); }

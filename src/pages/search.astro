@@ -22,7 +22,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       function href(id) { return root === '/' ? '/exhibits/' + id + '/' : root + 'exhibits/' + id + '/index.html'; }
       function card(x) {
         var li = document.createElement('li'), a = document.createElement('a');
-        a.className = 'card'; a.href = href(x.id);
+        a.className = 'card'; a.href = href(x.id); a.setAttribute('data-gallery', x.room);
         a.innerHTML = '<div class="card-plate" aria-hidden="true"><span></span></div><div class="card-body"><span class="eyebrow"></span><span class="card-title"></span><span class="card-sum"></span></div>';
         a.querySelector('.card-plate span').textContent = x.plate;
         a.querySelector('.eyebrow').textContent = x.gallery;

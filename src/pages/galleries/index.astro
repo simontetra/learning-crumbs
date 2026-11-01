@@ -13,7 +13,7 @@ const count = (slug: string) => exhibits.filter((e) => e.data.gallery === slug).
   </section>
   <div class="galleries">
     {galleries.map((g) => (
-      <a class="gallery-door" href={galleryUrl(g.slug)}>
+      <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
         <span class="eyebrow">Gallery {g.code}</span>
         <h2 style="font-size:var(--step-2)">{g.title}</h2>
         <p class="q">“{g.question}”</p>

@@ -26,7 +26,7 @@ const ld = {
 <Base title={SITE_NAME} description="True stories behind everyday names, words and inventions, told as a walk through a museum: one question leads to the next." jsonLd={ld} nav="home">
   <section class="entrance">
     <span class="eyebrow">Entrance</span>
-    <h1>Every answer leaves a crumb that leads to the next question.</h1>
+    <h1>Every answer leaves a <em>crumb</em> that leads to the next question.</h1>
     <p class="lede">
       It started with my son asking whether I used to write on a typewriter. Each gallery here begins with a question like that,
       then wanders: from a games console to a Viking king, from a goose feather to the keys under your fingers.
@@ -41,7 +41,7 @@ const ld = {
     </div>
     <div class="galleries">
       {galleries.map((g) => (
-        <a class="gallery-door" href={galleryUrl(g.slug)}>
+        <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
           <span class="eyebrow">Gallery {g.code}</span>
           <h3>{g.title}</h3>
           <p class="q">“{g.question}”</p>

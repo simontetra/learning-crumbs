@@ -21,7 +21,7 @@ const ld = {
 ---
 <Base title={gallery.title} description={gallery.summary} jsonLd={ld} nav="galleries">
   <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title }]} />
-  <section class="placard">
+  <section class="placard" data-gallery={gallery.slug}>
     <span class="eyebrow">Gallery {gallery.code} · {exhibits.length} exhibits</span>
     <h1>{gallery.title}</h1>
     <p class="q">“{gallery.question}”</p>

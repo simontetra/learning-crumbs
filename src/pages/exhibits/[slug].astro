@@ -38,7 +38,7 @@ const ld = {
 <Base title={d.title} description={d.summary} jsonLd={ld} ogType="article">
   <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title, href: galleryUrl(gallery.slug) }, { name: d.title }]} />
 
-  <article class="exhibit">
+  <article class="exhibit" data-gallery={d.gallery}>
     <div class="plate-col">
       <figure class="plate" style="margin:0">
         {d.image

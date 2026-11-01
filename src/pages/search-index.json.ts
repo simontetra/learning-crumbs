@@ -10,6 +10,7 @@ export async function GET() {
     summary: e.data.summary,
     question: e.data.question,
     gallery: galleryOf(e.data.gallery).title,
+    room: e.data.gallery,
     plate: e.data.plate,
     accession: e.data.accession,
     tags: e.data.tags,
