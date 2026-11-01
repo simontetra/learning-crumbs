@@ -114,7 +114,7 @@ main { padding-block: 8px 72px; }
 .gallery-door h3 { font-size: var(--step-2); }
 .gallery-door .q { font-family: var(--font-display); font-style: italic; font-size: var(--step-1); color: var(--muted); }
 .gallery-door .meta { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
-.door-plates { display: flex; gap: 8px; overflow: hidden; }
+.door-plates { display: flex; flex-wrap: wrap; gap: 8px; }
 .door-plates span {
   flex: none; min-width: 3.2rem; height: 3.2rem; padding-inline: 6px; display: grid; place-items: center; background: var(--plate);
   border-radius: 2px; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--ink);

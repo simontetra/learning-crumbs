@@ -46,7 +46,7 @@ const ld = {
           <h3>{g.title}</h3>
           <p class="q">“{g.question}”</p>
           <div class="door-plates" aria-hidden="true">
-            {byGallery(g.slug).slice(0, 5).map((e) => <span>{e.data.plate.length > 6 ? e.data.plate.slice(0, 3) + '…' : e.data.plate}</span>)}
+            {byGallery(g.slug).slice(0, 5).map((e) => <span>{e.data.plate}</span>)}
           </div>
           <div class="meta"><span class="eyebrow">{byGallery(g.slug).length} exhibits</span><span>Enter →</span></div>
         </a>
