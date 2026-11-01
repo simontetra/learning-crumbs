@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ExhibitCard from '../../components/ExhibitCard.astro';
+import { allExhibits, tagSlug } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const all = await allExhibits();
+  const tags = new Map<string, string>();
+  all.forEach((e) => e.data.tags.forEach((t) => tags.set(tagSlug(t), t)));
+  return [...tags].map(([slug, name]) => ({
+    params: { tag: slug },
+    props: { name, exhibits: all.filter((e) => e.data.tags.some((t) => tagSlug(t) === slug)) },
+  }));
+}
+const { name, exhibits } = Astro.props;
+const title = name.charAt(0).toUpperCase() + name.slice(1);
+---
+<Base title={title} description={`Exhibits about ${name}: ${exhibits.map((e) => e.data.title).join(', ')}.`.slice(0, 160)}>
+  <Breadcrumbs trail={[{ name: 'Topics' }, { name: title }]} />
+  <section class="placard">
+    <span class="eyebrow">Topic · {exhibits.length} {exhibits.length === 1 ? 'exhibit' : 'exhibits'}</span>
+    <h1>{title}</h1>
+  </section>
+  <ul class="walk">
+    {exhibits.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
+  </ul>
+</Base>

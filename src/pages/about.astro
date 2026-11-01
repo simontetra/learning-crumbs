@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+<Base title="About" description="How Learning Crumbs is made: questions from a parent and child, research checked against sources, and only freely licensed images." nav="about">
+  <Breadcrumbs trail={[{ name: 'About' }]} />
+  <div class="prose">
+    <h1>About Learning Crumbs</h1>
+    <p>
+      My son once asked whether I used to write on a typewriter. To him, the past is one flat place where I might as well have been
+      chiselling stone tablets. Answering him properly took me from correction fluid to keyboards, to printing, to paper, to papyrus.
+      This site is that walk, written down, so anyone can follow it.
+    </p>
+    <h2>How it works</h2>
+    <p>
+      The site is laid out like a museum. Each <strong>gallery</strong> begins with a real question. Each <strong>exhibit</strong> has a
+      label, a short text board, and a list of sources. At the bottom of every exhibit, a few <strong>crumbs</strong> lead to related
+      exhibits, often in a different gallery. Follow them and you will end up somewhere you did not expect.
+    </p>
+    <h2>How we curate</h2>
+    <p>
+      Every exhibit is written fresh in our own words. We check the facts against reliable sources and list them at the foot of the page,
+      so you can read further and judge for yourself. Where historians disagree, or a popular story is probably a legend, we say so.
+    </p>
+    <h2>Images</h2>
+    <p>
+      We only use images that are in the public domain or released under open licences, from places such as the Smithsonian, The Met,
+      the Library of Congress and Wikimedia Commons. Each one carries its credit and licence. Until an exhibit has a suitable image,
+      it shows a lettered plate instead.
+    </p>
+    <h2>Spotted a mistake?</h2>
+    <p>Knowledge keeps changing, and so will this site. If something here is wrong or out of date, please tell us.</p>
+  </div>
+</Base>

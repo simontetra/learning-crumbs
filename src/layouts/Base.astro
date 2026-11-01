@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { SITE_NAME, TAGLINE } from '../lib/site';
+
+interface Props {
+  title: string;              // page title, without the site name
+  description: string;        // meta description, about 150 characters
+  jsonLd?: object | object[]; // structured data for search engines
+  ogType?: string;
+  nav?: 'home' | 'galleries' | 'search' | 'about';
+}
+const { title, description, jsonLd, ogType = 'website', nav } = Astro.props;
+const fullTitle = title === SITE_NAME ? `${SITE_NAME}: ${TAGLINE}` : `${title} | ${SITE_NAME}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&family=Courier+Prime&display=swap" />
+    {ld.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="/" aria-label={`${SITE_NAME} home`}>
+          <span class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="logo-text">{SITE_NAME}</span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="/galleries/" aria-current={nav === 'galleries' ? 'page' : undefined}>Galleries</a>
+          <a href="/search/" aria-current={nav === 'search' ? 'page' : undefined}>Search</a>
+          <a href="/about/" aria-current={nav === 'about' ? 'page' : undefined}>About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>{SITE_NAME}: {TAGLINE}</p>
+        <p>Every exhibit lists its sources. <a href="/about/">How we curate</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

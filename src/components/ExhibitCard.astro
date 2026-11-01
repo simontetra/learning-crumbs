@@ -1,0 +1,16 @@
+---
+import { exhibitUrl, type Exhibit } from '../lib/site';
+interface Props { exhibit: Exhibit }
+const { exhibit } = Astro.props;
+const d = exhibit.data;
+---
+<a class="card" href={exhibitUrl(exhibit.id)}>
+  <div class="card-plate" aria-hidden="true">
+    {d.image ? <img src={d.image.src} alt="" loading="lazy" /> : <span>{d.plate}</span>}
+  </div>
+  <div class="card-body">
+    <span class="eyebrow">{d.accession}</span>
+    <span class="card-title">{d.title}</span>
+    <span class="card-sum">{d.summary}</span>
+  </div>
+</a>

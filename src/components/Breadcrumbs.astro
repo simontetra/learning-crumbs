@@ -1,0 +1,26 @@
+---
+// A trail of pebbles at the top of the page, plus the matching structured data.
+interface Props { trail: { name: string; href?: string }[] }
+const { trail } = Astro.props;
+const items = [{ name: 'Home', href: '/' }, ...trail];
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    ...(c.href ? { item: new URL(c.href, Astro.site).href } : {}),
+  })),
+};
+---
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    {items.map((c, i) =>
+      i === items.length - 1 || !c.href
+        ? <li><span aria-current="page">{c.name}</span></li>
+        : <li><a href={c.href}>{c.name}</a></li>
+    )}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

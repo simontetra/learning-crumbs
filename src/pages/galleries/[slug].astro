@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ExhibitCard from '../../components/ExhibitCard.astro';
+import { galleries, galleryUrl, exhibitUrl, allExhibits } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return galleries.map((g) => ({ params: { slug: g.slug }, props: { gallery: g } }));
+}
+const { gallery } = Astro.props;
+const exhibits = (await allExhibits()).filter((e) => e.data.gallery === gallery.slug);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: gallery.title,
+  description: gallery.summary,
+  url: new URL(galleryUrl(gallery.slug), Astro.site).href,
+  hasPart: exhibits.map((e) => ({ '@type': 'Article', headline: e.data.title, url: new URL(exhibitUrl(e.id), Astro.site).href })),
+};
+---
+<Base title={gallery.title} description={gallery.summary} jsonLd={ld} nav="galleries">
+  <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title }]} />
+  <section class="placard">
+    <span class="eyebrow">Gallery {gallery.code} · {exhibits.length} exhibits</span>
+    <h1>{gallery.title}</h1>
+    <p class="q">“{gallery.question}”</p>
+    <p class="voice">{gallery.placard}</p>
+  </section>
+  <ol class="walk">
+    {exhibits.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
+  </ol>
+</Base>

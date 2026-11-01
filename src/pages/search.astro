@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+<Base title="Search" description="Search every exhibit in Learning Crumbs by name, question or topic." nav="search">
+  <Breadcrumbs trail={[{ name: 'Search' }]} />
+  <form class="search-box" role="search" id="search-form">
+    <h1>Search the galleries</h1>
+    <label class="visually-hidden" for="q">Search exhibits</label>
+    <input id="q" name="q" type="search" placeholder="Try typewriter, Viking, Sherlock…" autocomplete="off" />
+    <p class="search-count" id="count" aria-live="polite"></p>
+  </form>
+  <ul class="walk" id="results"></ul>
+
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('q'), out = document.getElementById('results'), count = document.getElementById('count');
+      var form = document.getElementById('search-form');
+      var root = document.documentElement.dataset.root || '/';
+      var data = [];
+      form.addEventListener('submit', function (e) { e.preventDefault(); });
+      function href(id) { return root === '/' ? '/exhibits/' + id + '/' : root + 'exhibits/' + id + '/index.html'; }
+      function card(x) {
+        var li = document.createElement('li'), a = document.createElement('a');
+        a.className = 'card'; a.href = href(x.id);
+        a.innerHTML = '<div class="card-plate" aria-hidden="true"><span></span></div><div class="card-body"><span class="eyebrow"></span><span class="card-title"></span><span class="card-sum"></span></div>';
+        a.querySelector('.card-plate span').textContent = x.plate;
+        a.querySelector('.eyebrow').textContent = x.gallery;
+        a.querySelector('.card-title').textContent = x.title;
+        a.querySelector('.card-sum').textContent = x.summary;
+        li.appendChild(a); return li;
+      }
+      function run() {
+        var q = input.value.trim().toLowerCase();
+        out.innerHTML = '';
+        if (!q) { count.textContent = data.length ? data.length + ' exhibits to explore.' : ''; data.forEach(function (x) { out.appendChild(card(x)); }); return; }
+        var words = q.split(/\s+/);
+        var hits = data.map(function (x) {
+          var hay = (x.title + ' ' + x.question + ' ' + x.summary + ' ' + x.tags.join(' ') + ' ' + x.gallery).toLowerCase();
+          var body = x.text.toLowerCase(), score = 0;
+          for (var i = 0; i < words.length; i++) {
+            var w = words[i];
+            if (hay.indexOf(w) > -1) score += 3; else if (body.indexOf(w) > -1) score += 1; else return null;
+          }
+          return { x: x, s: score };
+        }).filter(Boolean).sort(function (a, b) { return b.s - a.s; });
+        count.textContent = hits.length ? hits.length + (hits.length === 1 ? ' exhibit' : ' exhibits') + ' found.' : 'Nothing yet. Try a broader word, like "printing" or "names".';
+        hits.forEach(function (h) { out.appendChild(card(h.x)); });
+      }
+      var params = new URLSearchParams(location.search);
+      if (params.get('q')) input.value = params.get('q');
+      fetch(root === '/' ? '/search-index.json' : root + 'search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { data = d; run(); })
+        .catch(function () { count.textContent = 'Search could not load. Browse the galleries instead.'; });
+      input.addEventListener('input', run);
+    })();
+  </script>
+</Base>

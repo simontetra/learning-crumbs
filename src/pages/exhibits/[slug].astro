@@ -1,0 +1,128 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ExhibitCard from '../../components/ExhibitCard.astro';
+import { render } from 'astro:content';
+import { allExhibits, galleryOf, galleryUrl, exhibitUrl, tagUrl, SITE_NAME } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const all = await allExhibits();
+  return all.map((e) => ({ params: { slug: e.id }, props: { exhibit: e, all } }));
+}
+const { exhibit, all } = Astro.props;
+const d = exhibit.data;
+const gallery = galleryOf(d.gallery);
+const { Content } = await render(exhibit);
+
+const inGallery = all.filter((e) => e.data.gallery === d.gallery);
+const i = inGallery.findIndex((e) => e.id === exhibit.id);
+const prev = inGallery[i - 1];
+const next = inGallery[i + 1];
+const pebbles = d.pebbles.map((id) => all.find((e) => e.id === id)).filter(Boolean);
+
+const url = new URL(exhibitUrl(exhibit.id), Astro.site).href;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.summary,
+  url,
+  mainEntityOfPage: url,
+  about: d.tags,
+  isPartOf: { '@type': 'CollectionPage', name: gallery.title, url: new URL(galleryUrl(gallery.slug), Astro.site).href },
+  publisher: { '@type': 'Organization', name: SITE_NAME },
+  citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })),
+  ...(d.image ? { image: new URL(d.image.src, Astro.site).href } : {}),
+};
+---
+<Base title={d.title} description={d.summary} jsonLd={ld} ogType="article">
+  <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title, href: galleryUrl(gallery.slug) }, { name: d.title }]} />
+
+  <article class="exhibit">
+    <div class="plate-col">
+      <figure class="plate" style="margin:0">
+        {d.image
+          ? <img src={d.image.src} alt={d.image.alt} />
+          : <span aria-hidden="true">{d.plate}</span>}
+      </figure>
+      <p class="plate-note">
+        {d.image
+          ? <>{d.image.alt}. <a href={d.image.url}>{d.image.credit}</a>, {d.image.licence}.</>
+          : d.plateNote}
+      </p>
+    </div>
+
+    <div class="label">
+      <header class="label-head">
+        <span class="eyebrow">{gallery.title} · Exhibit {d.order} of {inGallery.length}</span>
+        <h1>{d.title}</h1>
+        <div class="label-meta">
+          <span>{d.when}</span>
+          <span>{d.where}</span>
+          <span>{d.accession}</span>
+        </div>
+      </header>
+
+      <p class="asked">“{d.question}”</p>
+
+      <div class="board"><Content /></div>
+
+      <div class="tags" aria-label="Topics">
+        {d.tags.map((t) => <a href={tagUrl(t)}>{t}</a>)}
+      </div>
+
+      <section class="sources" aria-labelledby="src-h">
+        <h2 id="src-h">Sources</h2>
+        <ol>
+          {d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.title}</a></li>)}
+        </ol>
+      </section>
+    </div>
+  </article>
+
+  <section class="pebbles" aria-labelledby="peb-h">
+    <h2 id="peb-h">Follow the crumbs</h2>
+    <ul class="walk">
+      {pebbles.map((e) => <li><ExhibitCard exhibit={e!} /></li>)}
+    </ul>
+  </section>
+
+  <nav class="walk-nav" aria-label="Gallery walk">
+    {prev && <a href={exhibitUrl(prev.id)}><span class="eyebrow">← Previous in this gallery</span><strong>{prev.data.title}</strong></a>}
+    {next && <a href={exhibitUrl(next.id)}><span class="eyebrow">Next in this gallery →</span><strong>{next.data.title}</strong></a>}
+    {!next && <a href={galleryUrl(gallery.slug)}><span class="eyebrow">End of the gallery</span><strong>Back to {gallery.title}</strong></a>}
+  </nav>
+
+  <aside class="my-trail" id="my-trail" hidden data-id={exhibit.id} data-title={d.title}>
+    <span class="eyebrow">Your trail so far</span>
+    <ol></ol>
+    <button type="button" id="clear-trail">Start a fresh trail</button>
+  </aside>
+
+  <script is:inline>
+    // Keeps a list of the exhibits this visitor has walked through, in this browser only.
+    (function () {
+      var box = document.getElementById('my-trail');
+      if (!box) return;
+      var key = 'lc-trail', here = { id: box.dataset.id, t: box.dataset.title }, trail = [];
+      try { trail = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { trail = []; }
+      trail = trail.filter(function (x) { return x && x.id !== here.id; });
+      trail.push(here);
+      trail = trail.slice(-12);
+      try { localStorage.setItem(key, JSON.stringify(trail)); } catch (e) {}
+      if (trail.length < 2) return;
+      var ol = box.querySelector('ol');
+      trail.forEach(function (x) {
+        var li = document.createElement('li');
+        if (x.id === here.id) { var s = document.createElement('strong'); s.textContent = x.t; li.appendChild(s); }
+        else { var a = document.createElement('a'); a.textContent = x.t; a.href = box.dataset.prefix ? box.dataset.prefix + x.id + '/index.html' : '/exhibits/' + x.id + '/'; li.appendChild(a); }
+        ol.appendChild(li);
+      });
+      box.hidden = false;
+      document.getElementById('clear-trail').addEventListener('click', function () {
+        try { localStorage.removeItem(key); } catch (e) {}
+        box.hidden = true;
+      });
+    })();
+  </script>
+</Base>

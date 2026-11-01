@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import ExhibitCard from '../components/ExhibitCard.astro';
+import { SITE_NAME, TAGLINE, galleries, galleryUrl, allExhibits } from '../lib/site';
+
+const exhibits = await allExhibits();
+const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === slug);
+// A few favourites to start the walk; change these slugs to feature others.
+const featured = ['xbox', 'james-bond', 'upper-and-lower-case', 'correction-fluid']
+  .map((id) => exhibits.find((e) => e.id === id)!)
+  .filter(Boolean);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  description: TAGLINE,
+  url: Astro.site?.href,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: new URL('/search/?q={query}', Astro.site).href,
+    'query-input': 'required name=query',
+  },
+};
+---
+<Base title={SITE_NAME} description="True stories behind everyday names, words and inventions, told as a walk through a museum: one question leads to the next." jsonLd={ld} nav="home">
+  <section class="entrance">
+    <span class="eyebrow">Entrance</span>
+    <h1>Every answer leaves a crumb that leads to the next question.</h1>
+    <p class="lede">
+      It started with my son asking whether I used to write on a typewriter. Each gallery here begins with a question like that,
+      then wanders: from a games console to a Viking king, from a goose feather to the keys under your fingers.
+    </p>
+    <div class="trail-line" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  </section>
+
+  <section aria-labelledby="galleries-h">
+    <div class="section-head">
+      <h2 id="galleries-h">Galleries</h2>
+      <span class="eyebrow">{exhibits.length} exhibits</span>
+    </div>
+    <div class="galleries">
+      {galleries.map((g) => (
+        <a class="gallery-door" href={galleryUrl(g.slug)}>
+          <span class="eyebrow">Gallery {g.code}</span>
+          <h3>{g.title}</h3>
+          <p class="q">“{g.question}”</p>
+          <div class="door-plates" aria-hidden="true">
+            {byGallery(g.slug).slice(0, 5).map((e) => <span>{e.data.plate.length > 6 ? e.data.plate.slice(0, 3) + '…' : e.data.plate}</span>)}
+          </div>
+          <div class="meta"><span class="eyebrow">{byGallery(g.slug).length} exhibits</span><span>Enter →</span></div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section aria-labelledby="start-h" style="margin-top:56px">
+    <div class="section-head">
+      <h2 id="start-h">Pick up a crumb</h2>
+    </div>
+    <ul class="walk">
+      {featured.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
+    </ul>
+  </section>
+</Base>
