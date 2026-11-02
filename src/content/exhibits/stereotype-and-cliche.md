@@ -9,7 +9,13 @@ when: "18th – 19th centuries"
 where: "Printing workshops in France and Britain"
 plate: "cliché"
 plateNote: "Said to imitate the click of the mould striking molten metal."
-imageToFind: "Museums Victoria and other collections hold photographed stereotype plates and flongs; check each licence."
+image:
+  src: "/images/stereotype-and-cliche.jpg"
+  alt: "A printer's drawer of big wooden letters in Bodoni type, worn and stained with old ink, sorted into rows: lower-case g, a and sloping italic letters, with a printer's hand on the edge. Every one of these blocks is a sort; run out of one and you are out of sorts"
+  credit: "Unionpearl, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (border trimmed)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Bodoni_120_point_wood_type.jpg"
 pebbles: [upper-and-lower-case, gutenberg-bible, electra-typeface]
 tags: [printing, words, everyday phrases, etymology]
 sources:

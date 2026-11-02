@@ -11,11 +11,11 @@ plate: "Aa"
 plateNote: "A capital and a small letter: the upper case and the lower case."
 image:
   src: "/images/upper-and-lower-case.jpg"
-  alt: "A printer's drawer of big wooden letters in Bodoni type, sorted in rows and worn and stained with old ink: lower-case g, a and sloping italic letters, with a printer's hand resting on the edge. Large wooden letters like these were for posters; book type was metal and far smaller"
-  credit: "Unionpearl, via Wikimedia Commons"
-  licence: "CC BY-SA 4.0 (border trimmed)"
-  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
-  url: "https://commons.wikimedia.org/wiki/File:Bodoni_120_point_wood_type.jpg"
+  alt: "A real pair of printer's cases in an old workshop. The upper case, propped up at the back, has rows of equal little boxes for the capitals. The lower case, nearest the hand, is full of small metal letters, and its boxes come in different sizes: big ones for common letters, small ones for rare ones. A card says Please do not touch"
+  credit: "Maggie McCain, via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Upper_case_and_lower_case_types.jpg"
 pebbles: [stereotype-and-cliche, qwerty, electra-typeface]
 tags: [printing, words, everyday phrases, typography]
 sources:
