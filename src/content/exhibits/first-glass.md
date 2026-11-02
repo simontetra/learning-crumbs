@@ -9,7 +9,12 @@ when: "At least 4,000 years ago"
 where: "Western Asia, perhaps Mesopotamia"
 plate: "4,000"
 plateNote: "Years, at least, that people have been making true glass."
-imageToFind: "Ancient glass from a museum: a Roman or Egyptian glass bottle or bead, many public domain on Wikimedia Commons or The Met Open Access."
+image:
+  src: "/images/first-glass.jpg"
+  alt: "A small round green glass flask with a wide lip and two little handles, shown on a white plinth in a museum case. Its surface has gone cloudy and rainbow-coloured with age, the way very old glass does after centuries in the ground. Its shape is like Roman flasks, but the museum and date aren't recorded with the photo."
+  credit: "Photo by Miguel Á. Padriñán, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@padrinan/"
 pebbles: [why-glass-is-clear, safety-glass, papyrus]
 tags: [glass, ancient history, materials, myths]
 sources:
