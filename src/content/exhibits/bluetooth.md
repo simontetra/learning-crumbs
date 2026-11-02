@@ -12,9 +12,9 @@ plateNote: "Harald Bluetooth's initials in runes, joined into one mark: the Blue
 image:
   src: "/images/bluetooth.jpg"
   alt: "A phone's control panel, with the Bluetooth button lit in blue beside Wi-Fi and mobile data"
-  credit: "Photo: Pexels"
+  credit: "Photo by Brett Jordan, Pexels"
   licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/search/bluetooth/"
+  url: "https://www.instagram.com/instabrettjordan"
 pebbles: [xbox, sherlock-holmes, the-journey-of-paper]
 tags: [technology, vikings, history, placeholders, logos]
 sources:
