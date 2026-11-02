@@ -9,6 +9,12 @@ when: "1935"
 where: "Hingham, Massachusetts"
 plate: "Electra"
 plateNote: "Shown here in a stand-in face. Electra itself is a licensed typeface."
+image:
+  src: "/images/electra-typeface.jpg"
+  alt: "Two men in waistcoats typing at huge Linotype machines, made by the Mergenthaler Linotype Company, in the print room of a Sydney department store around 1935, the year Electra appeared. Stacks of metal bars on the floor were melted inside the machines to cast each line of type"
+  credit: "A. E. Foster, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Linotype_machines,_Anthony_Hordern_and_Sons_department_store,_c._1935.jpg"
 pebbles: [upper-and-lower-case, stereotype-and-cliche, james-bond]
 tags: [typography, design, books, people]
 sources:
