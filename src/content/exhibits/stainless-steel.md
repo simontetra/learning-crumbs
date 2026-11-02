@@ -9,7 +9,12 @@ when: "August 1913"
 where: "Sheffield"
 plate: "12.8%"
 plateNote: "The amount of chromium in Brearley's first stainless steel."
-imageToFind: "Stainless steel knives, forks and spoons, from Pexels."
+image:
+  src: "/images/stainless-steel.jpg"
+  alt: "Black-and-white close-up of everyday steel cutlery: the shiny tines of a fork resting in the bowl of a spoon, with a metal chopstick laid across it. Most cutlery like this is made of stainless steel, which doesn't rust or stain."
+  credit: "Photo by nati4, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@nati4/"
 pebbles: [velcro, pyrex, rubbing-out]
 tags: [metals, inventions, Sheffield, Britain, kitchens, materials]
 sources:
