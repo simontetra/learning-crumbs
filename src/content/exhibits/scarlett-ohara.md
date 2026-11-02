@@ -15,7 +15,7 @@ image:
   credit: "Noumenon, via Wikimedia Commons"
   licence: "CC BY-SA 3.0 (resized)"
   licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
-  url: "https://commons.wikimedia.org/w/index.php?search=Pansy+viola+x+wittrockiana+Noumenon&title=Special:MediaSearch&type=image"
+  url: "https://commons.wikimedia.org/wiki/File:Pansy_viola_x_wittrockiana_blue.jpg"
 pebbles: [the-great-gatsby, sherlock-holmes, nineteen-eighty-four]
 tags: [books, characters, America]
 sources:
