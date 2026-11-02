@@ -11,10 +11,11 @@ plate: "37435"
 plateNote: "The number of Karl Benz's 1886 patent."
 image:
   src: "/images/benz-patent.jpg"
-  alt: "Close-up of an early Benz engine painted teal, with a polished BENZ nameplate, brass fittings, spark plugs and a Bosch magneto beside it. It is a little later and bigger than the single-cylinder engine of 1886, but it carries the same name"
-  credit: "Photo by derio, Pexels"
-  licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/@derio/"
+  alt: "The back of a Benz Patent-Motorwagen on display at a motor show: the big red flywheel lying flat, the single-cylinder engine with its brass tanks, the chain drive and two tall spoked wheels, all under a little bench seat. A sign behind it reads 'The 1886 Benz Patent-Motorwagen, the world's first motorcar'"
+  credit: "Shane K, via Wikimedia Commons"
+  licence: "CC BY-SA 2.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Benz_Patent-Motorwagen_(5483434392).jpg"
 pebbles: [bertha-benz, red-flag, pneumatic-tyre]
 tags: [cars, inventions, Germany, inventors, transport]
 sources:
