@@ -9,7 +9,14 @@ when: "1969 – 1992"
 where: "Mongolia and China"
 plate: "12"
 plateNote: "The number of wild-caught horses that every Przewalski's horse descends from."
-imageToFind: "Przewalski's horses on the Mongolian steppe. Wikimedia Commons, search \"Przewalski's horse Hustai\"; check each licence."
+image:
+  src: "/images/przewalskis-horse.jpg"
+  alt: "Three sand-coloured Przewalski's horses with short upright manes on dry grassland, on the Causse Mejean plateau in southern France, where a herd lives semi-wild"
+  credit: "Ancalagon, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:France_Loz%C3%A8re_Causse_M%C3%A9jean_Chevaux_de_Przewalski_17.jpg"
+  fit: contain
 pebbles: [arabian-oryx, draisine, the-journey-of-paper]
 tags: [mammals, horses, Mongolia, conservation, zoos]
 sources:
