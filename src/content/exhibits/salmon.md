@@ -9,7 +9,12 @@ when: "Every spawning season; magnetic study 2013"
 where: "The Pacific Ocean and its rivers"
 plate: "home"
 plateNote: "The river where a salmon hatched, and where it returns to lay its own eggs."
-imageToFind: "Sockeye or Chinook salmon leaping up a waterfall, from the US Fish and Wildlife Service (public domain) or Pexels."
+image:
+  src: "/images/salmon.jpg"
+  alt: "A dozen silver salmon leaping clear of the white water at the foot of a waterfall, all pointing upstream, on their way back to the stream where they hatched"
+  credit: "Photo by @lfk_dsk, Unsplash"
+  licence: "Unsplash licence, free to use"
+  url: "https://unsplash.com/@lfk_dsk"
 pebbles: [sea-turtles, arctic-tern, humpback-whale]
 tags: [animals, fish, migration, navigation, magnetism, rivers]
 sources:
