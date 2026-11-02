@@ -15,7 +15,7 @@ image:
   credit: "FA2010, via Wikimedia Commons"
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Liquid_paper_products_Womens_Museum.jpg"
-pebbles: [qwerty, pepsi, bertha-benz]
+pebbles: [qwerty, rubbing-out, bertha-benz]
 tags: [typewriters, inventors, women in history, brands, offices]
 sources:
   - title: "Bette Graham (Lemelson-MIT)"

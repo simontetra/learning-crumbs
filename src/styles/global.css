@@ -22,6 +22,7 @@
   --brink-fill: #2e6a4c;  --brink-text: #2e6a4c;   /* moss green, reserved for Back from the Brink */
   --myth-fill:  #5b3f86;  --myth-text:  #5b3f86;   /* violet, reserved for myths and legends */
   --wheel-fill: #1d6670;  --wheel-text: #1d6670;   /* signal teal, for Wheels and Wings */
+  --art-fill:   #8a5418;  --art-text:   #8a5418;   /* red-ochre brown, for From Cave Wall to Picture Book */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -37,14 +38,14 @@
   :root:not([data-theme="light"]) {
     --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
     --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc;
+    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
   --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc;
+  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e;
   color-scheme: dark;
 }
 
@@ -55,6 +56,7 @@
 [data-gallery="back-from-the-brink"]    { --room-fill: var(--brink-fill); --room-text: var(--brink-text); }
 [data-gallery="myths-and-legends"]      { --room-fill: var(--myth-fill);  --room-text: var(--myth-text); }
 [data-gallery="wheels-and-wings"]       { --room-fill: var(--wheel-fill); --room-text: var(--wheel-text); }
+[data-gallery="from-cave-wall-to-picture-book"] { --room-fill: var(--art-fill); --room-text: var(--art-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -245,6 +247,7 @@ main { padding-block: 8px 72px; }
 .trail-line span:nth-child(2) { background: var(--quill-fill); }
 .trail-line span:nth-child(3) { background: var(--brink-fill); }
 .trail-line span:nth-child(4) { background: var(--wheel-fill); }
+.trail-line span:nth-child(5) { background: var(--art-fill); }
 .logo-mark span:nth-child(1) { background: var(--names-fill); }
 .logo-mark span:nth-child(2) { background: var(--quill-fill); }
 .entrance h1 em { font-style: italic; color: var(--accent); }
@@ -256,3 +259,4 @@ main { padding-block: 8px 72px; }
 /* Old prints and illustrations are shown whole, mounted on the room colour */
 .card-plate:has(img.print), .plate:has(img.print) { padding: 6%; }
 .card-plate img.print, .plate img.print { object-fit: contain; box-shadow: 0 2px 10px rgb(0 0 0 / 0.25); background: #fff; height: auto; max-height: 100%; width: auto; max-width: 100%; }
+.q em { font-style: normal; }

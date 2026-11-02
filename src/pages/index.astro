@@ -44,7 +44,7 @@ const ld = {
         <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
           <span class="eyebrow">Gallery {g.code}</span>
           <h3>{g.title}</h3>
-          <p class="q">“{g.question}”</p>
+          <p class="q" set:html={`“${g.question}”`} />
           <div class="door-plates" aria-hidden="true">
             {byGallery(g.slug).slice(0, 5).map((e) => <span>{e.data.plate}</span>)}
           </div>

@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Papyrus_Amherst_63,_reverse,_columns_xvii-xviii.jpg"
   fit: contain
-pebbles: [the-journey-of-paper, quill-pen, upper-and-lower-case]
+pebbles: [the-journey-of-paper, quill-pen, hands-on-the-wall]
 tags: [ancient Egypt, writing materials, archaeology]
 sources:
   - title: "Papyrus (Wikipedia)"

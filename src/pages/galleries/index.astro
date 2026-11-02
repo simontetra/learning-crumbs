@@ -16,7 +16,7 @@ const count = (slug: string) => exhibits.filter((e) => e.data.gallery === slug).
       <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
         <span class="eyebrow">Gallery {g.code}</span>
         <h2 style="font-size:var(--step-2)">{g.title}</h2>
-        <p class="q">“{g.question}”</p>
+        <p class="q" set:html={`“${g.question}”`} />
         <p>{g.summary}</p>
         <div class="meta"><span class="eyebrow">{count(g.slug)} exhibits</span><span>Enter →</span></div>
       </a>
