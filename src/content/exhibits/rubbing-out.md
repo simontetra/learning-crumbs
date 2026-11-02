@@ -9,7 +9,12 @@ when: "1770; vulcanised rubber from 1839"
 where: "London"
 plate: "crumbs"
 plateNote: "What people used to rub out pencil, before rubber."
-imageToFind: "A slice of bread, or an old pencil with a rubber on the end, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/rubbing-out.jpg"
+  alt: "Silver pencils marked HB lying criss-crossed on white paper, each with a pink rubber held on the end by a ridged brass band: Hymen Lipman's 1858 idea, now on pencils everywhere"
+  credit: "Photo by gamzenurcolakerol, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@gamzenurcolakerol/"
 pebbles: [the-pencil, correction-fluid, crayola]
 tags: [drawing, inventions, everyday objects, words]
 sources:
