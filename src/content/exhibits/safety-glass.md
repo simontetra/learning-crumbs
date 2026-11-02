@@ -9,7 +9,12 @@ when: "1903 – 1909"
 where: "France"
 plate: "1903"
 plateNote: "The year Édouard Bénédictus dropped his flask."
-imageToFind: "A cracked but unbroken car windscreen, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/safety-glass.jpg"
+  alt: "Close-up of a pane of safety glass that has been smashed: it is crazed into thousands of tiny pieces, yet every piece is still in place, with blurred street lights glowing through the cracks."
+  credit: "Photo by theshuttervision, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@theshuttervision/"
 pebbles: [pyrex, seat-belt, windscreen-wiper]
 tags: [glass, inventions, accidents, cars, France, materials]
 sources:
