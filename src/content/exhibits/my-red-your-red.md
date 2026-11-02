@@ -9,7 +9,12 @@ when: "1690 – today"
 where: "England, and everywhere"
 plate: "?"
 plateNote: "The question nobody has been able to settle."
-imageToFind: "A red apple and a green apple side by side, from Pexels."
+image:
+  src: "/images/my-red-your-red.jpg"
+  alt: "A shiny red apple and a bright green apple side by side on a wooden board. We'd both call the left one red and the right one green, but nobody can be sure the colours look the same inside your head as inside mine"
+  credit: "Photo by freestocks, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@freestocks/"
 pebbles: [colour-blind, the-pencil, ultramarine]
 tags: [colour, philosophy, mysteries, how we know]
 sources:
