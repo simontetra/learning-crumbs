@@ -9,7 +9,13 @@ when: "12 June 1817"
 where: "Mannheim, Germany"
 plate: "1817"
 plateNote: "The year Karl Drais first rode his running machine through Mannheim."
-imageToFind: "An old print or museum photo of a draisine or 'dandy horse'. Wikimedia Commons, search \"Laufmaschine\" or \"dandy horse\"."
+image:
+  src: "/images/draisine.jpg"
+  alt: "An early 19th-century painting of a rider on a wooden running machine, pushing himself along with his feet. There are no pedals"
+  credit: "Unknown artist, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Drais.jpeg"
+  fit: contain
 pebbles: [penny-farthing, roller-skates, przewalskis-horse]
 tags: [bicycles, transport, inventions, Germany]
 sources:
