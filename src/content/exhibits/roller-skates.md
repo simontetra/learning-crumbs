@@ -9,7 +9,13 @@ when: "c. 1760; 1863"
 where: "London; New York"
 plate: "c. 1760"
 plateNote: "Roughly when Merlin made his famous entrance."
-imageToFind: "A Victorian roller-skating rink or old roller skates. Library of Congress or Wikimedia Commons, search \"roller skating rink 1880s\"."
+image:
+  src: "/images/roller-skates.jpg"
+  alt: "A glass-plate photograph from the 1800s of a roller skater in a fur-trimmed skating costume, posing on four-wheeled skates of the kind James Plimpton invented"
+  credit: "Mathew Brady Studio, National Portrait Gallery, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Roller_Skater_NPG-NPG_81_M2072.jpg"
+  fit: contain
 pebbles: [skateboard, draisine, penny-farthing]
 tags: [skating, transport, inventions, inventors, London]
 sources:
