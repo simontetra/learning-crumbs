@@ -9,7 +9,12 @@ when: "4 October 1918"
 where: "The Argonne Forest, France"
 plate: "Cher Ami"
 plateNote: "French for 'dear friend'."
-imageToFind: "A homing pigeon, from Pexels; or Cher Ami as preserved at the Smithsonian (photos on Wikimedia Commons)."
+image:
+  src: "/images/pigeons.jpg"
+  alt: "A grey pigeon hovering head-on against a cloudy blue sky, wings raised and tail fanned wide as it comes in to land. Homing pigeons like this were carried to the front line in the First World War to fly messages home"
+  credit: "burtamus, Pixabay"
+  licence: "Pixabay licence, free to use"
+  url: "https://pixabay.com/users/burtamus-985676/"
 pebbles: [godwit, wayfinding, hello]
 tags: [animals, birds, navigation, First World War, history, myths]
 sources:
