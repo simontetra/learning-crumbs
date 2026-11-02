@@ -9,7 +9,12 @@ when: "1950s – 1972"
 where: "California"
 plate: "1959"
 plateNote: "The year the first mass-produced skateboard went on sale."
-imageToFind: "A skateboarder in a skate park or a vintage skateboard. Pexels, search \"skateboard\"."
+image:
+  src: "/images/skateboard.jpg"
+  alt: "A skater's foot in a black-and-white trainer on a skateboard, showing its soft wide wheels, the descendants of Frank Nasworthy's 1972 urethane wheels"
+  credit: "Photo by Ivan S, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@ivan-s/"
 pebbles: [roller-skates, pneumatic-tyre, humpback-whale]
 tags: [skating, transport, sport, America]
 sources:
