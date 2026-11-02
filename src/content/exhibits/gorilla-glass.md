@@ -9,7 +9,12 @@ when: "1960 – 2007"
 where: "Corning, New York"
 plate: "Muscle"
 plateNote: "The name of the 1960s project that made the glass."
-imageToFind: "A smartphone with a cracked or uncracked screen, from Pexels."
+image:
+  src: "/images/gorilla-glass.jpg"
+  alt: "A smartphone lying on a table, seen from a low angle so the light gleams across its glass screen and the app icons blur into the distance. Toughened glass like Gorilla Glass covers the screens of many phones like this one."
+  credit: "Photo by amar-rockz, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@amar-rockz/"
 pebbles: [safety-glass, why-glass-is-clear, xbox]
 tags: [glass, phones, inventions, America, materials]
 sources:
