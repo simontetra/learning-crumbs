@@ -9,7 +9,13 @@ when: "1922 – 1990 (the record)"
 where: "Your chest; the record began in Nebraska"
 plate: "68 years"
 plateNote: "How long Charles Osborne had the hiccups."
-imageToFind: "A diagram of the diaphragm and lungs, public domain on Wikimedia Commons."
+image:
+  src: "/images/hiccups.jpg"
+  alt: "A simple labelled drawing of the breathing parts of the body: nose, mouth, trachea (windpipe), the two pink lungs, and the curved diaphragm muscle underneath them. A hiccup is a sudden twitch of that diaphragm."
+  credit: "Clker-Free-Vector-Images, Pixabay"
+  licence: "Pixabay licence, free to use (cropped)"
+  url: "https://pixabay.com/users/clker-free-vector-images-3736/"
+  fit: contain
 pebbles: [sun-sneeze, brain-freeze, goosebumps]
 tags: [the body, breathing, records, mysteries, America]
 sources:
