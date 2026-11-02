@@ -9,7 +9,12 @@ when: "After a while in water"
 where: "Fingers and toes"
 plate: "12%"
 plateNote: "How much faster people moved wet marbles with wrinkly fingers."
-imageToFind: "Wrinkly fingertips after a bath, or wet marbles, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/wrinkly-fingers.jpg"
+  alt: "Two cupped hands full of water against a dark background, water spilling through the fingers and running off in streams. These hands are only just wet: give them a few minutes in the bath and the fingertips would start to wrinkle."
+  credit: "Photo by Yassin Doukhane, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@yassin-doukhane-1334941/"
 pebbles: [pneumatic-tyre, velcro, taller-in-the-morning]
 tags: [the body, nerves, experiments, biology]
 sources:
