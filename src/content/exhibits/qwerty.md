@@ -8,8 +8,14 @@ summary: "The QWERTY layout came from 1870s typewriters. The usual story says it
 when: "1868 – 1878"
 where: "Milwaukee, Wisconsin; Remington, New York"
 plate: "QWERTY"
-plateNote: "Image to come: a Sholes and Glidden typewriter, the first commercially sold QWERTY machine."
-imageToFind: "Smithsonian Open Access has CC0 photographs of early typewriters."
+plateNote: "The first six letters on the top row, ever since the 1870s."
+image:
+  src: "/images/qwerty.jpg"
+  alt: "The round, rust-spotted keys of a Sholes and Glidden typewriter from the 1870s, in four rows beneath a green painted cover. The top letter row already reads Q W E R T Y U I O P. Look closely: M sits at the end of the middle row, and there is no key for 1 or 0"
+  credit: "Eremeev, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Sholes_and_Glidden_Schreibmaschine_03.jpg"
 pebbles: [correction-fluid, upper-and-lower-case, quill-pen]
 tags: [typewriters, keyboards, inventions, myths]
 sources:
