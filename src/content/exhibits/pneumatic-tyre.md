@@ -9,7 +9,13 @@ when: "1887 – 1888"
 where: "Belfast"
 plate: "1888"
 plateNote: "The year Dunlop's pneumatic tyre patent was granted."
-imageToFind: "An old Dunlop tyre advert or a Victorian tricycle. Wikimedia Commons, search \"Dunlop tyre advertisement\" or \"Victorian tricycle\"."
+image:
+  src: "/images/pneumatic-tyre.jpg"
+  alt: "A 1925 French newspaper advertisement: a giant Dunlop tyre rolling past the rows of Dunlop factories at Montlucon. Less than forty years after a tricycle tyre in Belfast"
+  credit: "L'Homme libre (1925), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Usines_Dunlop_de_Montlu%C3%A7on_(Allier),_en_1925.jpg"
+  fit: contain
 pebbles: [penny-farthing, bertha-benz, pepsi]
 tags: [bicycles, transport, inventions, Ireland, inventors]
 sources:
