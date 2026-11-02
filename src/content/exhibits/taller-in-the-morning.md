@@ -11,9 +11,9 @@ plate: "3%"
 plateNote: "How much taller astronauts can grow in space."
 image:
   src: "/images/taller-in-the-morning.jpg"
-  alt: "A small girl in a blue top and jeans stands against a wall marked with a height chart, stretching one arm up as high as she can and looking up in wonder. The clouds and butterflies above her were added to the photo digitally."
+  alt: "A small girl in a blue top and jeans stands against a wall marked with a height chart, stretching one arm up as high as she can and looking up in wonder."
   credit: "Photo by pixelloverk3, Pixabay"
-  licence: "Pixabay licence, free to use (cropped)"
+  licence: "Pixabay licence, free to use (cropped; added clouds and butterflies removed)"
   url: "https://pixabay.com/users/pixelloverk3-3761183/"
 pebbles: [baby-bones, wrinkly-fingers, wright-brothers]
 tags: [the body, bones, space, biology]

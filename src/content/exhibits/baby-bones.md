@@ -9,7 +9,12 @@ when: "From birth until the teenage years"
 where: "Your skeleton"
 plate: "300 → 206"
 plateNote: "From a baby's bones to a grown-up's."
-imageToFind: "A baby's hand or foot, or an X-ray of a child's hand, public domain on Wikimedia Commons."
+image:
+  src: "/images/baby-bones.jpg"
+  alt: "Two people hold an X-ray of a hand up against a bright window, one pointing at it with a pen. Every bone shows: the long finger bones, the palm bones and the cluster of small wrist bones. This is a grown-up's hand; a baby's X-ray shows many more separate pieces, with gaps where cartilage hasn't yet turned to bone."
+  credit: "Photo by Gustavo Fring, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@gustavo-fring/"
 pebbles: [taller-in-the-morning, hair-length, goosebumps]
 tags: [the body, bones, babies, growing up]
 sources:
