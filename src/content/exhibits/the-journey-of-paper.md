@@ -9,7 +9,13 @@ when: "c. AD 105 – 12th century"
 where: "China, Central Asia, the Islamic world, Spain"
 plate: "105"
 plateNote: "The traditional date given for Cai Lun's papermaking, AD 105."
-imageToFind: "Historic illustrations of Chinese papermaking (for example from the 1637 encyclopedia Tiangong Kaiwu) are public domain on Wikimedia Commons."
+image:
+  src: "/images/the-journey-of-paper.jpg"
+  alt: "Five woodblock pictures from a Chinese book of 1637 showing how paper was made from bamboo: cutting bamboo and soaking it in a pond, boiling it in a great vat over a fire, dipping a fine screen into the pulp, stacking and pressing the wet sheets, and drying them on a heated wall"
+  credit: "Unknown artist, from Song Yingxing's Tiangong Kaiwu (1637), via Wikimedia Commons"
+  licence: "public domain (five frames arranged as one picture)"
+  url: "https://commons.wikimedia.org/wiki/File:Making_Paper.gif"
+  fit: contain
 pebbles: [papyrus, movable-type-before-gutenberg, montgolfier-balloon]
 tags: [paper, China, Islamic world, trade routes, inventions]
 sources:
