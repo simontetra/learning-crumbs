@@ -9,7 +9,12 @@ when: "1944 – 1949"
 where: "Jura, Scotland"
 plate: "1984"
 plateNote: "Image to come: the remote island of Jura, where Orwell finished the novel."
-imageToFind: "Landscape photographs of Jura on Wikimedia Commons; check each licence."
+image:
+  src: "/images/nineteen-eighty-four.jpg"
+  alt: "Satellite view of the Isle of Jura, the long island in the centre, nearly cut in two by Loch Tarbert, with Islay below and the Scottish mainland to the right"
+  credit: "Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/w/index.php?curid=253567"
 pebbles: [the-great-gatsby, scarlett-ohara, qwerty]
 tags: [books, titles, Britain, 20th century]
 sources:
