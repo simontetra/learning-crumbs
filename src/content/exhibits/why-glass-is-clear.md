@@ -9,7 +9,12 @@ when: "Every time glass is made"
 where: "Anywhere there is sand and a hot enough fire"
 plate: "SiO₂"
 plateNote: "Silica: the main ingredient of both sand and glass."
-imageToFind: "Sand close up, beside a clear glass, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/why-glass-is-clear.jpg"
+  alt: "Beach sand close up: a jumble of tiny grains in cream, white, orange and brown, with little bits of broken shell mixed in. Look carefully and some grains are glassy and see-through on their own; heaped together, their edges scatter the light and the sand looks solid."
+  credit: "Photo by Alexey Demidov, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@alexeydemidov/"
 pebbles: [first-glass, fulgurite, gorilla-glass]
 tags: [glass, materials, science, light]
 sources:
