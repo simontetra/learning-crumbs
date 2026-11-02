@@ -9,7 +9,12 @@ when: "1924 – 1925"
 where: "New York and France"
 plate: "Trimalchio"
 plateNote: "Image to come: a 1920s Long Island scene from a public-domain photograph."
-imageToFind: "Library of Congress collections include 1920s Long Island photographs; check each item's rights statement."
+image:
+  src: "/images/the-great-gatsby.jpg"
+  alt: "An Art Deco style illustration of a glittering 1920s party: flappers in fringed dresses and men in dinner jackets raise champagne glasses while a jazz band plays"
+  credit: "AI-generated illustration for Learning Crumbs"
+  licence: "not a historical image"
+  url: "/about/#images"
 pebbles: [nineteen-eighty-four, scarlett-ohara, james-bond]
 tags: [books, titles, America, 1920s]
 sources:
