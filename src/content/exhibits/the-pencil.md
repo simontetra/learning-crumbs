@@ -9,7 +9,14 @@ when: "1500s – 1795"
 where: "Borrowdale, Cumbria; Paris"
 plate: "plumbago"
 plateNote: "The old name for graphite, from the Latin for lead ore."
-imageToFind: "A lump of graphite, or an old photograph of Borrowdale or Keswick, on Wikimedia Commons."
+image:
+  src: "/images/the-pencil.jpg"
+  alt: "Two views of a lump of graphite about four centimetres tall, found in West Yorkshire and recorded by archaeologists: one side rough and dark grey, the other smooth, silvery and covered in fine scratches. Soft enough to scratch, and it leaves a grey mark on anything it rubs against"
+  credit: "West Yorkshire Archaeology Advisory Service, via Wikimedia Commons"
+  licence: "CC BY 2.0 (two views cropped from the original)"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Graphite_(FindID_773522).jpg"
+  fit: contain
 pebbles: [rubbing-out, peter-rabbit, quill-pen]
 tags: [drawing, writing tools, Lake District, inventions, Britain]
 sources:
