@@ -11,11 +11,10 @@ plate: "hats"
 plateNote: "Tiny cardboard caps that blocked the beetles' view of the sky."
 image:
   src: "/images/dung-beetles.jpg"
-  alt: "A shiny black flightless dung beetle in Addo Elephant National Park, South Africa, head down and back legs up, pushing a dung ball bigger than itself across red sand. This kind rolls by day; the star-gazing beetles in the experiment were a different, night-time species"
-  credit: "Kay-africa, via Wikimedia Commons"
-  licence: "CC BY-SA 3.0 (resized)"
-  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
-  url: "https://commons.wikimedia.org/wiki/File:Flightless_Dung_Beetle_Circellium_Bachuss,_Addo_Elephant_National_Park,_South_Africa.JPG"
+  alt: "The crowded heart of our galaxy, the Milky Way, glowing in red, gold, purple and blue: a picture made by combining views from three space telescopes that see infrared, visible and X-ray light. A beetle sees only a faint pale band across the night sky, but this is what that band is made of: countless stars"
+  credit: "NASA/JPL-Caltech/ESA/CXC/STScI, via Wikimedia Commons"
+  licence: "public domain (cropped)"
+  url: "https://commons.wikimedia.org/wiki/File:Center_of_the_Milky_Way_Galaxy_IV_%E2%80%93_Composite.jpg"
 pebbles: [monarchs, wayfinding, helium]
 tags: [animals, insects, stars, navigation, experiments]
 sources:
