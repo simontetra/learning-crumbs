@@ -9,7 +9,12 @@ when: "1950s – 1975"
 where: "Canada, the USA and the mountains of Mexico"
 plate: "1975"
 plateNote: "The year the monarchs' winter forest was found."
-imageToFind: "Monarch butterflies clustered on fir trees in Mexico, or a single monarch, from US Fish and Wildlife (public domain) or Pexels."
+image:
+  src: "/images/monarchs.jpg"
+  alt: "Hundreds of monarch butterflies hanging together in a dense cluster from a pine branch, most with their wings closed, a few showing bright orange. Not the Mexican fir forest itself, but monarchs huddle this way wherever they spend the winter"
+  credit: "christiev44, Pixabay"
+  licence: "Pixabay licence, free to use"
+  url: "https://pixabay.com/users/christiev44-18099307/"
 pebbles: [arctic-tern, dung-beetles, what-dogs-see]
 tags: [animals, insects, butterflies, migration, citizen science, Mexico]
 sources:
