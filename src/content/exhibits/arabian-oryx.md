@@ -11,10 +11,11 @@ plate: "1972"
 plateNote: "The year the Arabian oryx was declared extinct in the wild."
 image:
   src: "/images/arabian-oryx.jpg"
-  alt: "An Arabian oryx, white with long straight horns, walking across the desert sand in Abu Dhabi"
-  credit: "Western Region, Abu Dhabi, via Wikimedia Commons"
-  licence: "public domain"
-  url: "https://commons.wikimedia.org/wiki/File:Arabian_oryx,_Abu_Dhabi,_WesternRegion.jpg"
+  alt: "An Arabian oryx, white with dark legs and long straight horns, eating hay beneath an acacia tree in the desert"
+  credit: "MathKnight, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Reem-Lavan001.jpg"
 pebbles: [przewalskis-horse, california-condor, humpback-whale]
 tags: [mammals, deserts, conservation, Middle East, zoos]
 sources:
