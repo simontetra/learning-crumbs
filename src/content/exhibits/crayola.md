@@ -1,7 +1,7 @@
 ---
 title: "Oily chalk"
 gallery: from-cave-wall-to-picture-book
-order: 7
+order: 6
 accession: LB-ART-007
 question: "Who named Crayola?"
 summary: "The first box of Crayola crayons, in 1903, held eight colours and cost a nickel. The name was made up by a former teacher from two French words: chalk and oily."

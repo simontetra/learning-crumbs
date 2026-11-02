@@ -1,7 +1,7 @@
 ---
 title: "A letter to a boy who was ill"
 gallery: from-cave-wall-to-picture-book
-order: 6
+order: 8
 accession: LB-ART-006
 question: "Where did Peter Rabbit come from?"
 summary: "In 1893 Beatrix Potter wrote a picture letter to cheer up a five-year-old who was ill. It became The Tale of Peter Rabbit, after publishers turned it down and she printed it herself."

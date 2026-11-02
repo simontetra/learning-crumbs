@@ -76,6 +76,16 @@ const ld = {
 
       <div class="board"><Content /></div>
 
+      {d.fromHome && (
+        <details class="from-home">
+          <summary><span class="from-home-label">From our house</span> <span class="from-home-hint">See ours</span></summary>
+          <figure>
+            <img src={d.fromHome.src} alt={d.fromHome.alt} loading="lazy" />
+            <figcaption>{d.fromHome.caption}</figcaption>
+          </figure>
+        </details>
+      )}
+
       <div class="tags" aria-label="Topics">
         {d.tags.map((t) => <a href={tagUrl(t)}>{t}</a>)}
       </div>

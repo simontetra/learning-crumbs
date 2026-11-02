@@ -303,3 +303,16 @@ main { padding-block: 8px 72px; }
 
 /* Headings and titles in deep olive ink rather than black */
 .card-title, .walk-nav strong { color: var(--heading); }
+
+/* "From our house": now and then, a photo of the real thing at home */
+.from-home { max-width: var(--measure); margin-top: 12px; border: 1px dashed color-mix(in srgb, var(--room-fill) 45%, var(--rule)); border-radius: 12px; background: var(--label); }
+.from-home summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; }
+.from-home summary::-webkit-details-marker { display: none; }
+.from-home-label { font-family: var(--font-label); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--room-text); }
+.from-home-label::before { content: ""; display: inline-block; width: 8px; height: 7px; border-radius: 50%; background: var(--room-fill); margin-right: 8px; vertical-align: 1px; }
+.from-home-hint { font-size: var(--step--1); color: var(--muted); }
+.from-home-hint::after { content: " +"; }
+.from-home[open] .from-home-hint::after { content: " \2212"; }
+.from-home figure { margin: 0; padding: 0 16px 16px; display: grid; gap: 10px; }
+.from-home img { width: 100%; height: auto; border-radius: 8px; display: block; }
+.from-home figcaption { font-size: var(--step--1); color: var(--muted); font-style: italic; line-height: 1.5; }

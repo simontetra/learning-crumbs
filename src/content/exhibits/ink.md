@@ -1,7 +1,7 @@
 ---
 title: "Ink from a wasp's nursery"
 gallery: from-cave-wall-to-picture-book
-order: 8
+order: 7
 accession: LB-ART-008
 question: "What was ink made of?"
 summary: "For over a thousand years, most writing and drawing in Europe was done in ink made from oak galls, little balls an oak tree grows around a wasp's egg. In China, ink was made from soot."

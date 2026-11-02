@@ -15,6 +15,10 @@ image:
   credit: "Photo by gamzenurcolakerol, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@gamzenurcolakerol/"
+fromHome:
+  src: "/images/home-putty-rubber.jpg"
+  alt: "A well-used putty rubber, white with grey smudged edges, lying in front of a paint-spattered box of watercolours: yellows, reds, greens, blues and black"
+  caption: "My own putty rubber, grey at the edges from lifting out pencil, next to the watercolours I paint with. It works just like the breadcrumbs: you press it on and the graphite comes away."
 pebbles: [the-pencil, correction-fluid, crayola]
 tags: [drawing, inventions, everyday objects, words]
 sources:

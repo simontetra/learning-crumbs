@@ -19,6 +19,9 @@ const exhibits = defineCollection({
     image: z
       .object({ src: z.string(), alt: z.string(), credit: z.string(), licence: z.string(), url: z.string(), licenceUrl: z.string().optional(), fit: z.enum(["cover", "contain"]).optional() })
       .optional(),
+    fromHome: z
+      .object({ src: z.string(), alt: z.string(), caption: z.string() })
+      .optional(),         // now and then: a photo of the real thing, from our own house
     imageToFind: z.string().optional(), // note for the curator: where a free image might be found
     pebbles: z.array(z.string()),   // slugs of related exhibits
     tags: z.array(z.string()),
