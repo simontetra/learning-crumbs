@@ -9,7 +9,13 @@ when: "1909 – 1940"
 where: "Kiev; Stratford, Connecticut"
 plate: "VS-300"
 plateNote: "Sikorsky's 1939 helicopter, the ancestor of most helicopters flying today."
-imageToFind: "The Sikorsky VS-300 (public-domain US government or museum photos). Wikimedia Commons, search \"Sikorsky VS-300\"."
+image:
+  src: "/images/sikorsky-helicopter.jpg"
+  alt: "One of Igor Sikorsky's early helicopters, about 1910, with two rotors stacked one above the other on a tall frame and a man standing beside it. It never flew"
+  credit: "Unknown photographer, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:1910-sikorsky_S-2.jpg"
+  fit: contain
 pebbles: [wright-brothers, montgolfier-balloon, stephensons-rocket]
 tags: [flight, helicopters, transport, inventions, inventors]
 sources:
