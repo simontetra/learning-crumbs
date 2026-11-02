@@ -9,7 +9,13 @@ when: "Painted around 17,000 – 22,000 years ago; found September 1940"
 where: "Lascaux, near Montignac, Dordogne, France"
 plate: "1940"
 plateNote: "The year four teenagers found the painted cave."
-imageToFind: "Photographs of Lascaux's paintings (often of the replica caves) on Wikimedia Commons; check each licence."
+image:
+  src: "/images/lascaux.jpg"
+  alt: "Lascaux's Hall of the Bulls: a dark horse trotting to the right, an animal with long black horns and a patch of red on its body, and on the left the strange spotted creature people nickname the unicorn. A modern photograph, so almost certainly taken in one of the full-size replica caves"
+  credit: "JoJan, via Wikimedia Commons"
+  licence: "CC BY 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Lascaux_009.jpg"
 pebbles: [hands-on-the-wall, ultramarine, przewalskis-horse]
 tags: [cave art, prehistory, France, archaeology, painting]
 sources:
