@@ -25,6 +25,7 @@
   --art-fill:   #8a5418;  --art-text:   #8a5418;   /* red-ochre brown, for From Cave Wall to Picture Book */
   --mat-fill:   #4a5868;  --mat-text:   #4a5868;   /* slate, for What Things Are Made Of */
   --word-fill:  #85305c;  --word-text:  #85305c;   /* berry, for Where Words Come From */
+  --bio-fill:   #5a6a1c;  --bio-text:   #5a6a1c;   /* olive, for Weird Biology */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -40,14 +41,14 @@
   :root:not([data-theme="light"]) {
     --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
     --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4;
+    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
   --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4;
+  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e;
   color-scheme: dark;
 }
 
@@ -61,6 +62,7 @@
 [data-gallery="from-cave-wall-to-picture-book"] { --room-fill: var(--art-fill); --room-text: var(--art-text); }
 [data-gallery="what-things-are-made-of"] { --room-fill: var(--mat-fill); --room-text: var(--mat-text); }
 [data-gallery="where-words-come-from"] { --room-fill: var(--word-fill); --room-text: var(--word-text); }
+[data-gallery="weird-biology"] { --room-fill: var(--bio-fill); --room-text: var(--bio-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

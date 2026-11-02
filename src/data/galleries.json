@@ -54,5 +54,13 @@
     "question": "Why do we say it's raining cats and dogs?",
     "placard": "My son asked me this one, and I had to admit I didn't know. It turns out nobody does, not for certain, and that is half the fun. Every word we use has a story behind it: some we know, some we can only guess at, and some that people tell even though they aren't true. This room collects a few of the best.",
     "summary": "The stories behind everyday words and sayings: raining cats and dogs, clue, daisy, muscle, nice, goodbye, hello and the computer bug."
+  },
+  {
+    "slug": "weird-biology",
+    "title": "Weird Biology",
+    "code": "BIO",
+    "question": "Why does the hair on our arms and legs stop growing, but not the hair on our head?",
+    "placard": "Bodies are strange. They grow hair that knows when to stop, make goosebumps for fur we no longer have, and shrink a little every day. This room starts with one of the best body questions I have been asked, and goes on to some of the oddest things your own body does without asking you first.",
+    "summary": "The odd things bodies do: hair that stops growing, goosebumps, wrinkly bath fingers, record-breaking hiccups, sun sneezes, brain freeze, being taller in the morning and babies' extra bones."
   }
 ]

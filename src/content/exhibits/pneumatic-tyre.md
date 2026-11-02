@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Usines_Dunlop_de_Montlu%C3%A7on_(Allier),_en_1925.jpg"
   fit: contain
-pebbles: [penny-farthing, bertha-benz, pepsi]
+pebbles: [penny-farthing, bertha-benz, wrinkly-fingers]
 tags: [bicycles, transport, inventions, Ireland, inventors]
 sources:
   - title: "John Boyd Dunlop (Wikipedia)"

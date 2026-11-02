@@ -10,7 +10,7 @@ where: "Ancient Rome"
 plate: "musculus"
 plateNote: "Latin for 'little mouse'."
 imageToFind: "A wood mouse or harvest mouse, from Pexels or Wikimedia Commons."
-pebbles: [daisy, nice, velcro]
+pebbles: [daisy, nice, goosebumps]
 tags: [words, the body, animals, Latin]
 sources:
   - title: "Muscle (Merriam-Webster)"
