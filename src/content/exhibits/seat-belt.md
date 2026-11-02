@@ -9,7 +9,13 @@ when: "1959"
 where: "Gothenburg, Sweden"
 plate: "3"
 plateNote: "The three points where the belt is fixed: two at the hip, one at the shoulder."
-imageToFind: "A child or adult buckling a seat belt, from Pexels."
+image:
+  src: "/images/seat-belt.jpg"
+  alt: "Close-up inside a car: a grey seat belt runs diagonally across the picture from its anchor on the door pillar, the high shoulder fixing that makes it a three-point belt. A blurred road and wing mirror show through the side window."
+  credit: "mibernaa on Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@mibernaa/"
+  licenceUrl: "https://www.pexels.com/license/"
 pebbles: [safety-glass, model-t, windscreen-wiper]
 tags: [cars, safety, inventions, Sweden, kindness]
 sources:

@@ -9,7 +9,12 @@ when: "1908 – 1927"
 where: "Detroit, Michigan"
 plate: "93 min"
 plateNote: "Time to build a Model T chassis on the moving line, by 1914."
-imageToFind: "A Ford Model T, or the Highland Park assembly line in about 1913 (public domain on Wikimedia Commons)."
+image:
+  src: "/images/model-t.jpg"
+  alt: "Black-and-white photograph of the moving assembly line at Ford's Highland Park factory, about 1913: a row of Model T chassis, each with spoked wheels, an engine, a steering wheel and a round fuel tank, standing on a long conveyor, with drive belts and wheels running along the ceiling."
+  credit: "Ford Motor Company, Highland Park plant, about 1913; Library of Congress, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Assembly_line_at_the_Ford_Motor_Company%27s_Highland_Park_plant_LCCN2011661021.jpg"
 pebbles: [windscreen-wiper, seat-belt, patterson]
 tags: [cars, factories, inventions, America, transport]
 sources:
