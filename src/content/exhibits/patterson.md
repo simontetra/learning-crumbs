@@ -9,7 +9,12 @@ when: "1952 – 1986"
 where: "Caltech, California"
 plate: "4.55 bn"
 plateNote: "The age of the Earth, in years, from Patterson's 1956 paper."
-imageToFind: "The Canyon Diablo meteorite or Meteor Crater, Arizona, on Wikimedia Commons (NASA and USGS images are public domain)."
+image:
+  src: "/images/patterson.jpg"
+  alt: "Meteor Crater in Arizona under a stormy sky: a vast round bowl in the desert, its rocky walls ringed with layers of red and grey stone. It was blasted out by the meteorite that Clair Patterson's sample came from"
+  credit: "Photo by Marjolijn van Raaij, Unsplash"
+  licence: "Unsplash licence, free to use"
+  url: "https://unsplash.com/@marjolijnvanraaij"
 pebbles: [lehmann, model-t, helium]
 tags: [the Earth, chemistry, pollution, cars, how we know]
 sources:
