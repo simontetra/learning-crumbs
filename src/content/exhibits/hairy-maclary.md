@@ -1,8 +1,8 @@
 ---
 title: "Who drew us?"
 gallery: from-cave-wall-to-picture-book
-order: 8
-accession: LB-ART-008
+order: 9
+accession: LB-ART-009
 question: "Who drew Hairy Maclary?"
 summary: "Hairy Maclary was drawn, and written, by Lynley Dodd, a former art teacher in New Zealand. His first book came out in 1983, from a rhyme and a sketch in her ideas book."
 when: "1983"
@@ -11,6 +11,7 @@ plate: "1983"
 plateNote: "The year Hairy Maclary from Donaldson's Dairy was published."
 imageToFind: "A scruffy little black dog, from Pexels, captioned honestly as a dog like Hairy Maclary, not the real drawing, which is still in copyright."
 pebbles: [peter-rabbit, hands-on-the-wall, crayola]
+hidden: true
 tags: [picture books, drawing, writers, New Zealand, dogs]
 sources:
   - title: "Lynley Dodd (Wikipedia)"

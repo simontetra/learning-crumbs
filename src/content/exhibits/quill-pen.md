@@ -15,7 +15,7 @@ image:
   credit: "Gerrit Dou, A Scholar Sharpening His Quill (c. 1632–35), via Wikimedia Commons"
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Gerrit_Dou_-_Scholar_sharpening_a_quill_pen.jpg"
-pebbles: [papyrus, the-pencil, bald-eagle]
+pebbles: [ink, the-pencil, bald-eagle]
 tags: [writing tools, Middle Ages, Industrial Revolution, birds]
 sources:
   - title: "Quill (Encyclopaedia Britannica)"

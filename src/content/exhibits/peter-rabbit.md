@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Peter-rabbit.PNG"
   fit: contain
-pebbles: [hairy-maclary, the-pencil, gutenberg-bible]
+pebbles: [ink, the-pencil, gutenberg-bible]
 tags: [picture books, drawing, writers, women in history, Britain]
 sources:
   - title: "Peter Rabbit: the tale of the tale (V&A)"
