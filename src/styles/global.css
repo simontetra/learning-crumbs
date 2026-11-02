@@ -242,3 +242,7 @@ main { padding-block: 8px 72px; }
 .logo-mark span:nth-child(1) { background: var(--names-fill); }
 .logo-mark span:nth-child(2) { background: var(--quill-fill); }
 .entrance h1 em { font-style: italic; color: var(--accent); }
+
+/* Photographs on plates fill the mount edge to edge */
+.card-plate:has(img), .plate:has(img) { padding: 0; overflow: hidden; }
+.card-plate img, .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }

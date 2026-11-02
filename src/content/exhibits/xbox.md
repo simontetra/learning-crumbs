@@ -9,7 +9,12 @@ when: "Late 1990s – 2001"
 where: "Microsoft, Redmond, Washington"
 plate: "X"
 plateNote: "Image to come: the original 2001 Xbox console."
-imageToFind: "Wikimedia Commons has photographs of the original Xbox; check each file's licence and credit line."
+image:
+  src: "/images/xbox.jpg"
+  alt: "A modern silver Xbox controller resting on its box, which carries the Xbox name and logo"
+  credit: "Photo: Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/search/xbox/"
 pebbles: [bluetooth, google, amazon]
 tags: [technology, games, brands, placeholders]
 sources:
