@@ -11,10 +11,11 @@ plate: "67,800"
 plateNote: "The minimum age, in years, of the oldest known hand stencil."
 image:
   src: "/images/hands-on-the-wall.jpg"
-  alt: "A faded red hand stencil on the golden sandstone wall of a rock shelter: the outline of a hand and fingers, left behind when red ochre was sprayed around it. Not the record-breaking stencil from Indonesia, but made the same way"
-  credit: "Schomynv, via Wikimedia Commons"
-  licence: "public domain"
-  url: "https://commons.wikimedia.org/wiki/File:Red_hand_stencil_small.JPG"
+  alt: "Hand stencils overlapping on a rock wall at the Cueva de las Manos, the Cave of the Hands, in Argentina: outlines of fingers and palms left in red, orange, white and dark paint where it was sprayed around people's hands. These are thousands of years old, though far younger than the record-breaker in Indonesia"
+  credit: "Diego Tirira, via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:AR_Cueva_de_las_Manos_0702_038_(17215564935).jpg"
 pebbles: [lascaux, ultramarine, papyrus]
 tags: [cave art, prehistory, Indonesia, archaeology, painting]
 sources:
