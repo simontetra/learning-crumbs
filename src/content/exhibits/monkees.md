@@ -10,8 +10,7 @@ where: "Los Angeles; London"
 plate: "Monkees"
 plateNote: "Spelled wrong on purpose, like Beatles and Byrds."
 imageToFind: "1960s NBC publicity photos of the Monkees, several of which are public domain on Wikimedia Commons; check each file's licence."
-pebbles: [correction-fluid, google, pepsi]
-hidden: true
+pebbles: [correction-fluid, google, vinyl]
 tags: [music, television, words, America, spelling]
 sources:
   - title: "The Monkees (Wikipedia)"

@@ -15,7 +15,7 @@ image:
   credit: "Photo by Brett Jordan, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@brettjordan/"
-pebbles: [xbox, sherlock-holmes, the-journey-of-paper]
+pebbles: [xbox, sherlock-holmes, wireless]
 tags: [technology, vikings, history, placeholders, logos]
 sources:
   - title: "Origin of the Bluetooth Name (Bluetooth SIG)"

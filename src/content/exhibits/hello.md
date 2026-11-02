@@ -10,7 +10,7 @@ where: "United States"
 plate: "1877"
 plateNote: "The year Edison recommended 'hello' for the telephone."
 imageToFind: "An old candlestick telephone, or telephone operators at a switchboard, public domain on Wikimedia Commons."
-pebbles: [goodbye, bug, qwerty]
+pebbles: [goodbye, bug, phonograph]
 tags: [words, greetings, telephones, inventions, America]
 sources:
   - title: "Saying 'ahoy-hoy' was at one time the preferred way to answer the phone (Today I Found Out)"
