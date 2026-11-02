@@ -9,7 +9,12 @@ when: "1870s – 1885"
 where: "England"
 plate: "1885"
 plateNote: "The year John Kemp Starley's Rover safety bicycle appeared."
-imageToFind: "A penny-farthing (high-wheeler) bicycle. Smithsonian Open Access or Wikimedia Commons, search \"penny-farthing\"."
+image:
+  src: "/images/penny-farthing.jpg"
+  alt: "A Victorian studio photograph of a moustached cyclist in a cap and tweed jacket, standing beside his penny-farthing. The front wheel reaches his chest"
+  credit: "National Library of Ireland on The Commons, via Wikimedia Commons"
+  licence: "no known copyright restrictions"
+  url: "https://commons.wikimedia.org/wiki/File:Penny_Farthing_(5847418211).jpg"
 pebbles: [pneumatic-tyre, wright-brothers, bertha-benz]
 tags: [bicycles, transport, inventions, Victorian, Britain]
 sources:
