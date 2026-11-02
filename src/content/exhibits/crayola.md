@@ -15,7 +15,7 @@ image:
   credit: "Photo by Orange Tomato, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@orange-tomato-2779185/"
-pebbles: [ultramarine, rubbing-out, pepsi]
+pebbles: [ultramarine, velcro, pepsi]
 tags: [drawing, colour, brands, America, words]
 sources:
   - title: "Crayola history (Crayola)"

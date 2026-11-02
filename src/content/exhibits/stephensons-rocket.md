@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Rocket_(Smiles).jpg"
   fit: contain
-pebbles: [bertha-benz, wright-brothers, draisine]
+pebbles: [bertha-benz, pyrex, draisine]
 tags: [trains, transport, inventions, Britain, Victorian]
 sources:
   - title: "Rainhill trials (Wikipedia)"
