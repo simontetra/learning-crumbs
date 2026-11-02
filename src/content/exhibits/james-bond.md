@@ -11,10 +11,10 @@ plate: "J.B."
 plateNote: "Image to come: a bird of the Caribbean, such as the Cuban tody, from Birds of the West Indies."
 image:
   src: "/images/james-bond.jpg"
-  alt: "An emerald hummingbird perched on a twig. Jamaica, where Fleming wrote, has a hummingbird as its national bird: the doctor bird"
-  credit: "Photo: Pexels"
+  alt: "A green hummingbird hovering in mid-air, its long curved bill held out. Jamaica, where Fleming wrote, has a hummingbird as its national bird: the doctor bird"
+  credit: "Photo by Jean Paul Montanaro, Pexels"
   licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/search/hummingbird/"
+  url: "https://www.pexels.com/photo/flying-hummingbird-bird-20163266/"
 pebbles: [sherlock-holmes, the-great-gatsby, scarlett-ohara]
 tags: [books, spies, birds, Jamaica, characters]
 sources:
