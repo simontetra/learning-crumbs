@@ -14,7 +14,7 @@ image:
   alt: "A phone's control panel, with the Bluetooth button lit in blue beside Wi-Fi and mobile data"
   credit: "Photo by Brett Jordan, Pexels"
   licence: "Pexels licence, free to use"
-  url: "https://www.instagram.com/instabrettjordan"
+  url: "https://www.pexels.com/@brettjordan/"
 pebbles: [xbox, sherlock-holmes, the-journey-of-paper]
 tags: [technology, vikings, history, placeholders, logos]
 sources:
