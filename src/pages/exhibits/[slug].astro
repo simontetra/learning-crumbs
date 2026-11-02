@@ -32,10 +32,20 @@ const ld = {
   isPartOf: { '@type': 'CollectionPage', name: gallery.title, url: new URL(galleryUrl(gallery.slug), Astro.site).href },
   publisher: { '@type': 'Organization', name: SITE_NAME },
   citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })),
-  ...(d.image ? { image: new URL(d.image.src, Astro.site).href } : {}),
+  inLanguage: 'en-GB',
+  isAccessibleForFree: true,
+  ...(d.image ? { image: {
+    '@type': 'ImageObject',
+    contentUrl: new URL(d.image.src, Astro.site).href,
+    url: new URL(d.image.src, Astro.site).href,
+    caption: d.image.alt,
+    creditText: d.image.credit,
+    license: d.image.licenceUrl ?? d.image.url,
+    acquireLicensePage: d.image.url,
+  } } : {}),
 };
 ---
-<Base title={d.title} description={d.summary} jsonLd={ld} ogType="article">
+<Base title={d.title} description={d.summary} jsonLd={ld} ogType="article" image={d.image?.src} imageAlt={d.image?.alt}>
   <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title, href: galleryUrl(gallery.slug) }, { name: d.title }]} />
 
   <article class="exhibit" data-gallery={d.gallery}>

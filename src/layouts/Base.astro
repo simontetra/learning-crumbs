@@ -8,8 +8,11 @@ interface Props {
   jsonLd?: object | object[]; // structured data for search engines
   ogType?: string;
   nav?: 'home' | 'galleries' | 'search' | 'about';
+  image?: string;             // share picture, a site path like /images/x.jpg
+  imageAlt?: string;
 }
-const { title, description, jsonLd, ogType = 'website', nav } = Astro.props;
+const { title, description, jsonLd, ogType = 'website', nav, image, imageAlt } = Astro.props;
+const ogImage = image ? new URL(image, Astro.site).href : undefined;
 const fullTitle = title === SITE_NAME ? `${SITE_NAME}: ${TAGLINE}` : `${title} | ${SITE_NAME}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
@@ -27,7 +30,9 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

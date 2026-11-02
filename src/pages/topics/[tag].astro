@@ -15,8 +15,14 @@ export async function getStaticPaths() {
 }
 const { name, exhibits } = Astro.props;
 const title = name.charAt(0).toUpperCase() + name.slice(1);
+const topicDescription = (() => {
+  const head = `${exhibits.length === 1 ? 'An exhibit' : exhibits.length + ' exhibits'} about ${name} at Learning Crumbs: ${exhibits.map((e) => e.data.title).join(', ')}. `;
+  const full = head + exhibits[0].data.summary;
+  if (full.length <= 158) return full;
+  return full.slice(0, 155).replace(/\s+\S*$/, '') + '…';
+})();
 ---
-<Base title={title} description={`Exhibits about ${name}: ${exhibits.map((e) => e.data.title).join(', ')}.`.slice(0, 160)}>
+<Base title={title} description={topicDescription} image={exhibits.find((e) => e.data.image)?.data.image?.src}>
   <Breadcrumbs trail={[{ name: 'Topics' }, { name: title }]} />
   <section class="placard">
     <span class="eyebrow">Topic · {exhibits.length} {exhibits.length === 1 ? 'exhibit' : 'exhibits'}</span>

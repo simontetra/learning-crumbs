@@ -19,7 +19,7 @@ const ld = {
   hasPart: exhibits.map((e) => ({ '@type': 'Article', headline: e.data.title, url: new URL(exhibitUrl(e.id), Astro.site).href })),
 };
 ---
-<Base title={gallery.title} description={gallery.summary} jsonLd={ld} nav="galleries">
+<Base title={gallery.title} description={gallery.summary} jsonLd={ld} nav="galleries" image={exhibits.find((e) => e.data.image)?.data.image?.src}>
   <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title }]} />
   <section class="placard" data-gallery={gallery.slug}>
     <span class="eyebrow">{exhibits.length} exhibits</span>
