@@ -9,7 +9,12 @@ when: "3rd century BC"
 where: "Alexandria and Syene, Egypt"
 plate: "7.2°"
 plateNote: "The angle of the shadow at Alexandria: one fiftieth of a circle."
-imageToFind: "A stick or post casting a shadow in sunshine, from Pexels; or a diagram of Eratosthenes' method, on Wikimedia Commons."
+image:
+  src: "/images/eratosthenes.jpg"
+  alt: "A wooden stick in bright sunshine, its dark shadow slanting away at an angle across a pale wall. The angle between a stick and its shadow is what Eratosthenes measured to work out the size of the whole Earth"
+  credit: "Photo by cappedx, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@cappedx/"
 pebbles: [romer, lehmann, papyrus]
 tags: [the Earth, maths, ancient Egypt, ancient Greece, how we know]
 sources:
