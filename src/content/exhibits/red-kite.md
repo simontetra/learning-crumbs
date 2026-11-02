@@ -9,7 +9,13 @@ when: "1990 onwards"
 where: "Chiltern Hills, England; Wales; Scotland"
 plate: "13"
 plateNote: "The number of young red kites from Spain that made their first flight in the Chilterns in July 1990."
-imageToFind: "A red kite in flight, showing its forked tail. Pexels or Wikimedia Commons, search \"red kite\"."
+image:
+  src: "/images/red-kite.jpg"
+  alt: "A red kite gliding against a blue sky, showing its russet body, pale wing patches and deeply forked tail"
+  credit: "Thomas Kraft (ThKraft), via Wikimedia Commons"
+  licence: "CC BY-SA 2.5"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.5/"
+  url: "https://commons.wikimedia.org/wiki/File:Milvus_milvus_R(ThKraft).jpg"
 pebbles: [bald-eagle, river-thames, przewalskis-horse]
 tags: [birds, birds of prey, Britain, conservation]
 sources:
