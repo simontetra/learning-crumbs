@@ -22,6 +22,7 @@ const exhibits = defineCollection({
     imageToFind: z.string().optional(), // note for the curator: where a free image might be found
     pebbles: z.array(z.string()),   // slugs of related exhibits
     tags: z.array(z.string()),
+    hidden: z.boolean().optional(),  // true = kept in the repo but not published
     sources: z.array(z.object({ title: z.string(), url: z.string() })),
   }),
 });

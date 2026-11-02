@@ -15,7 +15,7 @@ export const tagSlug = (tag: string) => tag.toLowerCase().replace(/[^a-z0-9]+/g,
 export const tagUrl = (tag: string) => `/topics/${tagSlug(tag)}/`;
 
 export async function allExhibits() {
-  const list = await getCollection('exhibits');
+  const list = await getCollection('exhibits', (e) => !e.data.hidden);
   return list.sort((a, b) => a.data.gallery.localeCompare(b.data.gallery) || a.data.order - b.data.order);
 }
 
