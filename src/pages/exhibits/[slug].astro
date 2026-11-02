@@ -47,7 +47,7 @@ const ld = {
       </figure>
       <p class="plate-note">
         {d.image
-          ? <>{d.image.alt}. <a href={d.image.url}>{d.image.credit}</a>, {d.image.licence}.</>
+          ? <>{d.image.alt}. <a href={d.image.url}>{d.image.credit}</a>, {d.image.licenceUrl ? <a href={d.image.licenceUrl} rel="license">{d.image.licence}</a> : d.image.licence}.</>
           : d.plateNote}
       </p>
     </div>

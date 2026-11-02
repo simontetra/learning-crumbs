@@ -17,7 +17,7 @@ const exhibits = defineCollection({
     plate: z.string(),              // glyph shown until a real image is added
     plateNote: z.string(),          // caption under the plate
     image: z
-      .object({ src: z.string(), alt: z.string(), credit: z.string(), licence: z.string(), url: z.string(), fit: z.enum(["cover", "contain"]).optional() })
+      .object({ src: z.string(), alt: z.string(), credit: z.string(), licence: z.string(), url: z.string(), licenceUrl: z.string().optional(), fit: z.enum(["cover", "contain"]).optional() })
       .optional(),
     imageToFind: z.string().optional(), // note for the curator: where a free image might be found
     pebbles: z.array(z.string()),   // slugs of related exhibits

@@ -9,7 +9,13 @@ when: "1926 – 1936"
 where: "Atlanta, Georgia"
 plate: "Pansy"
 plateNote: "Image to come: a pansy flower, the heroine's first namesake."
-imageToFind: "Any CC0 botanical illustration or photograph of a pansy (Smithsonian Open Access, Biodiversity Heritage Library)."
+image:
+  src: "/images/scarlett-ohara.jpg"
+  alt: "A pale blue pansy with a yellow centre and dark lines on its petals"
+  credit: "Noumenon, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/w/index.php?search=Pansy+viola+x+wittrockiana+Noumenon&title=Special:MediaSearch&type=image"
 pebbles: [the-great-gatsby, sherlock-holmes, nineteen-eighty-four]
 tags: [books, characters, America]
 sources:
