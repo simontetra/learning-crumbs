@@ -9,7 +9,13 @@ when: "1900 – 1902"
 where: "Nice, France; Cannstatt, Germany"
 plate: "Mercédès"
 plateNote: "A Spanish name meaning 'mercies'."
-imageToFind: "A photograph of Mercédès Jellinek as a child (around 1900, public domain on Wikimedia Commons), or the 1901 Mercedes 35 hp."
+image:
+  src: "/images/mercedes.jpg"
+  alt: "A factory photograph of an early Mercedes racing car, labelled 'Mercedes-Rennwagen (40 PS) von 1901': long and low, with the engine at the front, two bucket seats, a steering wheel and big spoked wheels. Cars like this, named after Mercédès Jellinek, set the shape of the modern car"
+  credit: "Mercedes-Benz works photo, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Mercedes_35hp_by_Wilhelm_Maybach.jpg"
+  fit: contain
 pebbles: [benz-patent, lamborghini, pepsi]
 tags: [cars, names, brands, Germany, women in history]
 sources:
