@@ -9,7 +9,12 @@ when: "29 April 1899"
 where: "Near Paris, France"
 plate: "105.88"
 plateNote: "Its record speed, in kilometres per hour."
-imageToFind: "La Jamais Contente: old photos of Jenatzy in the car are public domain on Wikimedia Commons."
+image:
+  src: "/images/jamais-contente.jpg"
+  alt: "A photograph from 1899: La Jamais Contente, the torpedo-shaped electric car, draped in garlands of flowers to celebrate its record. Camille Jenatzy, in a cap and beard, sits at the wheel, with a lady holding a parasol beside him and a crowd of men in bowler and straw hats behind"
+  credit: "Jules Beau (1899), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Jamais_contente_parade.jpg"
 pebbles: [benz-patent, mercedes, wright-brothers]
 tags: [cars, electric, records, speed, Belgium, France]
 sources:
