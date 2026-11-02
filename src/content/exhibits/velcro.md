@@ -9,7 +9,13 @@ when: "1941 – 1955"
 where: "The Jura mountains, Switzerland"
 plate: "vel + cro"
 plateNote: "From the French velours (velvet) and crochet (hook)."
-imageToFind: "Burdock burrs, or a close-up of Velcro hooks and loops, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/velcro.jpg"
+  alt: "Extreme close-up of the hook side of a strip of Velcro: a forest of tiny stiff plastic loops, each cut on one side to leave a little hook, standing up from the woven backing. These hooks catch in the soft loops on the other strip, just as burrs catch in a dog's fur."
+  credit: "Alexander Klink, Velcro Hooks, via Wikimedia Commons"
+  licence: "CC BY 3.0"
+  url: "https://commons.wikimedia.org/wiki/File:Velcro_Hooks.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/3.0/"
 pebbles: [stainless-steel, crayola, bluetooth]
 tags: [materials, inventions, nature, Switzerland, words, dogs]
 sources:
