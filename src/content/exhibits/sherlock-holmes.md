@@ -9,7 +9,13 @@ when: "1886"
 where: "Southsea, Hampshire, England"
 plate: "221B"
 plateNote: "Image to come: Conan Doyle's handwritten notes for A Study in Scarlet."
-imageToFind: "Sidney Paget's original Strand Magazine illustrations of Holmes are in the public domain and widely available on Wikimedia Commons."
+image:
+  src: "/images/sherlock-holmes.jpg"
+  alt: "Sidney Paget's engraving of Sherlock Holmes in an armchair, talking with a man seated at a desk, from The Memoirs of Sherlock Holmes"
+  credit: "Sidney Paget, via Wellcome Collection"
+  licence: "public domain"
+  url: "https://wellcomeimages.org/indexplus/obf_images/7b/ab/912beb453d16104b3c8a6e998306.jpg"
+  fit: contain
 pebbles: [james-bond, scarlett-ohara, the-great-gatsby]
 tags: [books, detectives, characters, Victorian]
 sources:

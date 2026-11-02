@@ -42,7 +42,7 @@ const ld = {
     <div class="plate-col">
       <figure class="plate" style="margin:0">
         {d.image
-          ? <img src={d.image.src} alt={d.image.alt} />
+          ? <img src={d.image.src} alt={d.image.alt} class={d.image.fit === "contain" ? "print" : undefined} />
           : <span aria-hidden="true">{d.plate}</span>}
       </figure>
       <p class="plate-note">

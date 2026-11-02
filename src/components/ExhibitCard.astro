@@ -6,7 +6,7 @@ const d = exhibit.data;
 ---
 <a class="card" href={exhibitUrl(exhibit.id)} data-gallery={d.gallery}>
   <div class="card-plate" aria-hidden="true">
-    {d.image ? <img src={d.image.src} alt="" loading="lazy" /> : <span>{d.plate}</span>}
+    {d.image ? <img src={d.image.src} alt="" loading="lazy" class={d.image.fit === "contain" ? "print" : undefined} /> : <span>{d.plate}</span>}
   </div>
   <div class="card-body">
     <span class="eyebrow">{d.accession}</span>
