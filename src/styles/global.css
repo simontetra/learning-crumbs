@@ -21,6 +21,7 @@
   --quill-fill: #9a3428;  --quill-text: #9a3428;   /* sealing-wax red */
   --brink-fill: #2e6a4c;  --brink-text: #2e6a4c;   /* moss green, reserved for Back from the Brink */
   --myth-fill:  #5b3f86;  --myth-text:  #5b3f86;   /* violet, reserved for myths and legends */
+  --wheel-fill: #1d6670;  --wheel-text: #1d6670;   /* signal teal, for Wheels and Wings */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -36,14 +37,14 @@
   :root:not([data-theme="light"]) {
     --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
     --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0;
+    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
   --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
-  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0;
+  --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc;
   color-scheme: dark;
 }
 
@@ -53,6 +54,7 @@
 [data-gallery="from-quill-to-keyboard"] { --room-fill: var(--quill-fill); --room-text: var(--quill-text); }
 [data-gallery="back-from-the-brink"]    { --room-fill: var(--brink-fill); --room-text: var(--brink-text); }
 [data-gallery="myths-and-legends"]      { --room-fill: var(--myth-fill);  --room-text: var(--myth-text); }
+[data-gallery="wheels-and-wings"]       { --room-fill: var(--wheel-fill); --room-text: var(--wheel-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -238,7 +240,7 @@ main { padding-block: 8px 72px; }
 .trail-line span:nth-child(1) { background: var(--names-fill); }
 .trail-line span:nth-child(2) { background: var(--quill-fill); }
 .trail-line span:nth-child(3) { background: var(--brink-fill); }
-.trail-line span:nth-child(4) { background: var(--myth-fill); }
+.trail-line span:nth-child(4) { background: var(--wheel-fill); }
 .logo-mark span:nth-child(1) { background: var(--names-fill); }
 .logo-mark span:nth-child(2) { background: var(--quill-fill); }
 .entrance h1 em { font-style: italic; color: var(--accent); }

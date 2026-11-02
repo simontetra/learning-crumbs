@@ -10,7 +10,7 @@ where: "China, Central Asia, the Islamic world, Spain"
 plate: "105"
 plateNote: "The traditional date given for Cai Lun's papermaking, AD 105."
 imageToFind: "Historic illustrations of Chinese papermaking (for example from the 1637 encyclopedia Tiangong Kaiwu) are public domain on Wikimedia Commons."
-pebbles: [papyrus, movable-type-before-gutenberg, gutenberg-bible]
+pebbles: [papyrus, movable-type-before-gutenberg, montgolfier-balloon]
 tags: [paper, China, Islamic world, trade routes, inventions]
 sources:
   - title: "Early history of paper (British Association of Paper Historians)"

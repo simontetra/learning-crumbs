@@ -10,7 +10,7 @@ where: "Mongolia and China"
 plate: "12"
 plateNote: "The number of wild-caught horses that every Przewalski's horse descends from."
 imageToFind: "Przewalski's horses on the Mongolian steppe. Wikimedia Commons, search \"Przewalski's horse Hustai\"; check each licence."
-pebbles: [arabian-oryx, red-kite, the-journey-of-paper]
+pebbles: [arabian-oryx, draisine, the-journey-of-paper]
 tags: [mammals, horses, Mongolia, conservation, zoos]
 sources:
   - title: "Przewalski's horse (Encyclopedia MDPI)"

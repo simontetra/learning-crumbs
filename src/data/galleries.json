@@ -22,5 +22,13 @@
     "question": "Can an animal come back once it's nearly gone?",
     "placard": "Sometimes the answer is yes. Each animal in this room fell to a handful: four kestrels, five robins, a few dozen condors. Then someone decided not to give up. These are true stories of stubborn people, lucky breaks and second chances, and of how close some of them came to ending the other way.",
     "summary": "Animals, and one river, brought back from the edge of extinction: the Mauritius kestrel, Old Blue the robin, the California condor, the Arabian oryx and more."
+  },
+  {
+    "slug": "wheels-and-wings",
+    "title": "Wheels and Wings",
+    "code": "WHL",
+    "question": "When was the bicycle invented?",
+    "placard": "My son asked me this one. The answer is 1817, and the first bicycle had no pedals. From there the trail runs on wheels of every kind, along the first railway, and then, thanks to two brothers who mended bicycles, up into the air.",
+    "summary": "How we learned to get about: the first bicycle, the penny-farthing, roller skates, skateboards, the Rocket, the first car journey, the hot air balloon, the Wright brothers and the helicopter."
   }
 ]

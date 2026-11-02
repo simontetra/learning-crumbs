@@ -9,7 +9,7 @@ when: "1951 – 1979"
 where: "Dallas, Texas; Eltville and Frankfurt, Germany"
 plate: "Mistake Out"
 plateNote: "The first name of the fluid later sold as Liquid Paper."
-pebbles: [qwerty, pepsi, xbox]
+pebbles: [qwerty, pepsi, bertha-benz]
 tags: [typewriters, inventors, women in history, brands, offices]
 sources:
   - title: "Bette Graham (Lemelson-MIT)"
