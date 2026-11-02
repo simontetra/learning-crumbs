@@ -9,7 +9,12 @@ when: "1676"
 where: "Paris Observatory"
 plate: "22 min"
 plateNote: "Rømer's estimate for light to cross the width of Earth's orbit."
-imageToFind: "Jupiter and its moons through a small telescope, from NASA (public domain) or Wikimedia Commons."
+image:
+  src: "/images/romer.jpg"
+  alt: "Jupiter seen by the Hubble Space Telescope, its cream and brown cloud bands and the swirling Great Red Spot filling the picture, with one of its moons, Ganymede, peeping out from behind. Rømer timed a different moon, Io, slipping in and out of Jupiter's shadow"
+  credit: "NASA / Hubble Space Telescope"
+  licence: "public domain"
+  url: "https://images.nasa.gov/details/GSFC_20171208_Archive_e002091"
 pebbles: [eratosthenes, helium, jamais-contente]
 tags: [light, space, Denmark, speed, how we know]
 sources:
