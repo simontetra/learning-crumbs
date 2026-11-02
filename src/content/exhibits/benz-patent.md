@@ -9,7 +9,12 @@ when: "29 January 1886"
 where: "Mannheim, Germany"
 plate: "37435"
 plateNote: "The number of Karl Benz's 1886 patent."
-imageToFind: "Karl Benz's 1886 patent drawing, or the Benz Patent-Motorwagen in a museum, public domain or CC on Wikimedia Commons."
+image:
+  src: "/images/benz-patent.jpg"
+  alt: "Close-up of an early Benz engine painted teal, with a polished BENZ nameplate, brass fittings, spark plugs and a Bosch magneto beside it. It is a little later and bigger than the single-cylinder engine of 1886, but it carries the same name"
+  credit: "Photo by derio, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@derio/"
 pebbles: [bertha-benz, red-flag, pneumatic-tyre]
 tags: [cars, inventions, Germany, inventors, transport]
 sources:
