@@ -9,7 +9,13 @@ when: "1963 – 2007"
 where: "United States"
 plate: "417"
 plateNote: "The number of known nesting pairs in the lower 48 states in 1963."
-imageToFind: "A bald eagle. The US Fish and Wildlife Service publishes public-domain photos; Wikimedia Commons, search \"bald eagle USFWS\"."
+image:
+  src: "/images/bald-eagle.jpg"
+  alt: "A bald eagle with its white head and yellow beak, spreading its wings to take off from a weathered post, with snowy mountains behind, in Alaska"
+  credit: "Andy Morffew, via Wikimedia Commons"
+  licence: "CC BY 2.0 (cropped)"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg"
 pebbles: [california-condor, red-kite, quill-pen]
 tags: [birds, birds of prey, America, conservation, pollution]
 sources:
