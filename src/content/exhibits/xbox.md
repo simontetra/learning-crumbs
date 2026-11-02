@@ -12,9 +12,9 @@ plateNote: "Image to come: the original 2001 Xbox console."
 image:
   src: "/images/xbox.jpg"
   alt: "A modern silver Xbox controller resting on its box, which carries the Xbox name and logo"
-  credit: "Photo: Pexels"
+  credit: "Photo by Lance He, Pexels"
   licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/search/xbox/"
+  url: "https://www.pexels.com/@lancehe/"
 pebbles: [bluetooth, google, amazon]
 tags: [technology, games, brands, placeholders]
 sources:
