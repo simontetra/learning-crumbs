@@ -9,7 +9,12 @@ when: "Whenever you're cold or something gives you a thrill"
 where: "Your skin"
 plate: "brrr"
 plateNote: "Goosebumps are a leftover from when our ancestors were furry."
-imageToFind: "A cat with its fur fluffed up, or a close-up of goosebumps on an arm, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/goosebumps.jpg"
+  alt: "Close-up of an arm with goosebumps: the skin is covered in tiny raised bumps, and along the top edge, lit by low sunshine, the fine hairs stand straight up. A striped beach towel and rocks are behind."
+  credit: "Photo by physicsgirl, Pixabay"
+  licence: "Pixabay licence, free to use (cropped)"
+  url: "https://pixabay.com/users/physicsgirl-1292717/"
 pebbles: [hair-length, muscle, hiccups]
 tags: [the body, hair, evolution, animals, biology]
 sources:
