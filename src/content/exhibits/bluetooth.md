@@ -9,7 +9,12 @@ when: "1997 – 1999"
 where: "Intel, Ericsson and Nokia, working together"
 plate: "ᚼᛒ"
 plateNote: "Harald Bluetooth's initials in runes, joined into one mark: the Bluetooth logo's origin."
-imageToFind: "The large Jelling runestone raised by Harald Bluetooth in Denmark. Wikimedia Commons has photographs; check each licence."
+image:
+  src: "/images/bluetooth.jpg"
+  alt: "A phone's control panel, with the Bluetooth button lit in blue beside Wi-Fi and mobile data"
+  credit: "Photo: Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/search/bluetooth/"
 pebbles: [xbox, sherlock-holmes, the-journey-of-paper]
 tags: [technology, vikings, history, placeholders, logos]
 sources:
