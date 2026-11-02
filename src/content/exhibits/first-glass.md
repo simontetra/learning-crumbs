@@ -11,10 +11,10 @@ plate: "4,000"
 plateNote: "Years, at least, that people have been making true glass."
 image:
   src: "/images/first-glass.jpg"
-  alt: "A small round green glass flask with a wide lip and two little handles, shown on a white plinth in a museum case. Its surface has gone cloudy and rainbow-coloured with age, the way very old glass does after centuries in the ground. Its shape is like Roman flasks, but the museum and date aren't recorded with the photo."
-  credit: "Photo by Miguel Á. Padriñán, Pexels"
-  licence: "Pexels licence, free to use (cropped)"
-  url: "https://www.pexels.com/@padrinan/"
+  alt: "A crowd of ancient Roman glass flasks and little bottles in a museum case at the Archaeological Museum in Udine, Italy: tall long-necked ones in pale green and honey yellow, squat wide-mouthed jars, and small round bottles in deep cobalt blue lying on their sides. Many have gone cloudy and pitted with age."
+  credit: "Giovanni Dall'Orto, Archaeological Museum, Udine (2015), via Wikimedia Commons"
+  licence: "free to use with attribution (cropped)"
+  url: "https://commons.wikimedia.org/wiki/File:1257_-_Archaeological_Museum,_Udine_-_Ancient_Roman_glass_flasks_-_Photo_by_Giovanni_Dall%27Orto,_May_29_2015.jpg"
 pebbles: [why-glass-is-clear, safety-glass, papyrus]
 tags: [glass, ancient history, materials, myths]
 sources:
