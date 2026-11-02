@@ -9,7 +9,13 @@ when: "1893 – 1898"
 where: "New Bern, North Carolina"
 plate: "Brad's"
 plateNote: "Image to come: an old-fashioned drugstore soda fountain."
-imageToFind: "Library of Congress has early 20th-century photographs of soda fountains; check each item's rights statement."
+image:
+  src: "/images/pepsi.jpg"
+  alt: "An old postcard of a long marble drugstore soda fountain with rows of stools: Eckerd's, Columbia, South Carolina"
+  credit: "Eckerd's, Columbia, South Carolina (publisher), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Columbia_-_Eckerd%27s_Soda_Fountain.jpg"
+  fit: contain
 pebbles: [amazon, correction-fluid, google]
 tags: [business, brands, food and drink, America]
 sources:
