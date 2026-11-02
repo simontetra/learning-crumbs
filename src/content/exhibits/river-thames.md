@@ -9,7 +9,13 @@ when: "1957 onwards"
 where: "London, England"
 plate: "1957"
 plateNote: "The year Natural History Museum scientists declared large parts of the Thames biologically dead."
-imageToFind: "A seal on the Thames estuary, or the Thames through London. Wikimedia Commons or Pexels, search \"Thames seal\"."
+image:
+  src: "/images/river-thames.jpg"
+  alt: "A harbour seal poking its head above the water. Harbour seals now live in the Thames estuary; this one was photographed in the Columbia River, Oregon"
+  credit: "Oregon Department of Fish and Wildlife, via Wikimedia Commons"
+  licence: "CC BY-SA 2.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:080613_harbor_seal_columbia_river_odfw_(15139521032).jpg"
 pebbles: [humpback-whale, red-kite, nineteen-eighty-four]
 tags: [rivers, London, Britain, pollution, conservation]
 sources:
