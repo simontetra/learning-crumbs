@@ -154,6 +154,10 @@ main { padding-block: 8px 72px; }
 .card-body { display: grid; gap: 6px; padding: 16px 18px 18px; align-content: start; }
 .card-title { font-family: var(--font-display); font-size: var(--step-1); font-weight: 700; line-height: 1.2; }
 .card-sum { font-size: var(--step--1); color: var(--muted); line-height: 1.5; }
+.card { position: relative; }
+.card-body { padding-bottom: 44px; }
+.card-more { position: absolute; right: 16px; bottom: 12px; font-size: 1.35rem; line-height: 1; color: var(--room-text, var(--accent)); transition: transform 0.15s ease; }
+.card:hover .card-more, .card:focus-visible .card-more { transform: translateX(4px); }
 
 /* Exhibit page */
 .exhibit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; padding-top: 28px; align-items: start; }
