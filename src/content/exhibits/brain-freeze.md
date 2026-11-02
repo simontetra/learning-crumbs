@@ -9,7 +9,12 @@ when: "Moments after a big bite of something icy"
 where: "The roof of your mouth"
 plate: "brr"
 plateNote: "The sudden chill on the roof of your mouth that starts it all."
-imageToFind: "Ice cream or an ice lolly on a summer day, from Pexels."
+image:
+  src: "/images/brain-freeze.jpg"
+  alt: "A hand holding a small gold spoon over a glass of ice cream, one pale green scoop and one pale brown scoop dusted with powder. Eat it too fast and the cold on the roof of your mouth can bring on brain freeze."
+  credit: "Photo by soc-nang-d-ng, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@soc-nang-d-ng-2150345854/"
 pebbles: [hiccups, sun-sneeze, pepsi]
 tags: [the body, nerves, food, mysteries]
 sources:
