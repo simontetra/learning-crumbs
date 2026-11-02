@@ -9,7 +9,13 @@ when: "Study published 2015"
 where: "Florida's east coast"
 plate: "19 years"
 plateNote: "Of nesting records studied to test the magnetic idea."
-imageToFind: "A loggerhead sea turtle, or hatchlings heading for the sea, from NOAA or US Fish and Wildlife (public domain)."
+image:
+  src: "/images/sea-turtles.jpg"
+  alt: "A loggerhead hatchling, crusted with sand, crawling across the wet beach towards the foam of the first wave. If it survives to grow up, a female like this may one day come back to nest near the beach where it hatched"
+  credit: "W. Gareth Rasberry, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (cropped)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_Hatchling.jpg"
 pebbles: [salmon, wayfinding, humpback-whale]
 tags: [animals, turtles, migration, navigation, magnetism, oceans]
 sources:
