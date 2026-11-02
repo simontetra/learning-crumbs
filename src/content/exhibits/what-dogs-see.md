@@ -10,7 +10,7 @@ where: "University of California"
 plate: "2"
 plateNote: "Types of colour detector in a dog's eye. Humans have 3."
 imageToFind: "A dog looking at something, or a dog with a blue and a yellow ball, from Pexels."
-pebbles: [colour-blind, my-red-your-red, goosebumps]
+pebbles: [colour-blind, my-red-your-red, monarchs]
 tags: [colour, dogs, animals, experiments, myths, how we know]
 sources:
   - title: "Can dogs see colors? (Psychology Today)"

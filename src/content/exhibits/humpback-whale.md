@@ -16,7 +16,7 @@ image:
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@ben-phillips-3129726/"
   fit: contain
-pebbles: [river-thames, arabian-oryx, bald-eagle]
+pebbles: [river-thames, salmon, bald-eagle]
 tags: [mammals, oceans, conservation, whaling, music]
 sources:
   - title: "South Atlantic humpback whales have rebounded from the brink of extinction (Smithsonian Magazine)"
