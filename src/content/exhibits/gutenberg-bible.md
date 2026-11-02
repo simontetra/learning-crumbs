@@ -9,7 +9,13 @@ when: "c. 1450 – 1455"
 where: "Mainz, Germany"
 plate: "B42"
 plateNote: "Collectors call it the 42-line Bible: most pages have 42 lines per column."
-imageToFind: "The Library of Congress and other libraries have published images of their Gutenberg Bibles; check each rights statement."
+image:
+  src: "/images/gutenberg-bible.jpg"
+  alt: "The Gutenberg Bible kept at Pelplin in Poland, lying open at the start of Saint Matthew's Gospel: two pages of dense black Gothic lettering in two columns, with red headings and painted capital letters that were added by hand after printing"
+  credit: "Kpalion, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_(Pelplin_copy)_02.jpg"
 pebbles: [movable-type-before-gutenberg, upper-and-lower-case, lord-howe-stick-insect]
 tags: [printing, Germany, books, Renaissance]
 sources:
