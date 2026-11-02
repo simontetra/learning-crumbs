@@ -9,7 +9,13 @@ when: "October 2022"
 where: "Alaska to Tasmania"
 plate: "11 days"
 plateNote: "How long the young godwit flew without landing."
-imageToFind: "A bar-tailed godwit, from Wikimedia Commons or US Fish and Wildlife (public domain)."
+image:
+  src: "/images/godwit.jpg"
+  alt: "Two bar-tailed godwits flying low over the water at Bakkhali, India, in April 2026, with long, slightly upturned beaks. The front one has the rusty orange breast of breeding season. Not the record-breaker, but the same kind of bird"
+  credit: "Tisha Mukherjee, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit_in_Bakkhali_April_2026_by_Tisha_Mukherjee_09.jpg"
 pebbles: [arctic-tern, pigeons, wright-brothers]
 tags: [animals, birds, migration, navigation, records]
 sources:
