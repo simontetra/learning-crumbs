@@ -1,14 +1,15 @@
 /* Layout concept: a quiet gallery wall. Each exhibit is a mounted plate with a
    museum label beside it; small moonlit pebbles mark the trail between rooms. */
 :root {
-  --wall: #eceff2;        /* page background, a cool gallery grey */
-  --label: #fbfcfd;       /* label cards */
-  --plate: #dfe4ea;       /* the mount behind a plate */
-  --ink: #1b2330;         /* text */
-  --muted: #586273;       /* secondary text */
-  --rule: #cbd2da;        /* hairlines */
+  --wall: #edf0e1;        /* page background, a soft pale olive */
+  --label: #fdfdf8;       /* label cards, warm paper */
+  --plate: #e2e6d2;       /* the mount behind a plate */
+  --ink: #252b20;         /* text */
+  --heading: #33462b;     /* headings: deep olive-green ink */
+  --muted: #5c6450;       /* secondary text */
+  --rule: #d2d8bf;        /* hairlines */
   --accent: #8e5f17;      /* lamp brass: links and highlights */
-  --pebble: #c9d0d8;      /* trail stones */
+  --pebble: #c9cfb3;      /* trail stones */
   --pebble-on: #8e5f17;   /* the stone you are standing on */
 
   --font-display: "Alegreya", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
@@ -43,15 +44,15 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
-    --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
+    --wall: #12150e; --label: #1a1e15; --plate: #23281c; --ink: #e7eadc; --muted: #a2aa92; --heading: #d4e0b4;
+    --rule: #30372a; --accent: #dba65a; --pebble: #444c39; --pebble-on: #f3f5f8;
     --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e; --car-text: #9fb3cc; --know-text: #aba7f2; --nav-text: #93a8e0; --snd-text: #ec9a63;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --wall: #10141a; --label: #181e27; --plate: #1f2731; --ink: #e5e9ef; --muted: #9aa4b3;
-  --rule: #2a3340; --accent: #dba65a; --pebble: #3a4553; --pebble-on: #f3f5f8;
+  --wall: #12150e; --label: #1a1e15; --plate: #23281c; --ink: #e7eadc; --muted: #a2aa92; --heading: #d4e0b4;
+  --rule: #30372a; --accent: #dba65a; --pebble: #444c39; --pebble-on: #f3f5f8;
   --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e; --car-text: #9fb3cc; --know-text: #aba7f2; --nav-text: #93a8e0; --snd-text: #ec9a63;
   color-scheme: dark;
 }
@@ -86,7 +87,7 @@ img { max-width: 100%; height: auto; }
 a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; color: var(--heading); line-height: 1.15; text-wrap: balance; margin: 0; }
 p { margin: 0; }
 
 .wrap {
@@ -108,7 +109,7 @@ p { margin: 0; }
 /* Header */
 .site-header { border-bottom: 1px solid var(--rule); background: var(--wall); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 14px; }
-.logo { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 10px; color: var(--heading); text-decoration: none; }
 .logo-mark { display: flex; gap: 4px; align-items: flex-end; }
 .logo-mark span { width: 7px; height: 6px; border-radius: 50%; background: var(--pebble); }
 .logo-mark span:nth-child(2) { width: 6px; height: 5px; }
@@ -299,3 +300,6 @@ main { padding-block: 8px 72px; }
 .door-pics span { border-radius: 10px; }
 .card-plate { border-radius: 0; }
 @media (prefers-reduced-motion: reduce) { .gallery-door:hover, .card:hover { transform: none; } }
+
+/* Headings and titles in deep olive ink rather than black */
+.card-title, .walk-nav strong { color: var(--heading); }
