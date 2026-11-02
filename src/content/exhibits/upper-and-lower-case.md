@@ -8,8 +8,14 @@ summary: "Printers kept metal letters in two wooden cases: capitals in the upper
 when: "From the 1500s; the terms recorded from the 1600s"
 where: "Printing workshops across Europe"
 plate: "Aa"
-plateNote: "Image to come: a pair of wooden type cases on a compositor's sloping frame."
-imageToFind: "Search Wikimedia Commons for 'type case' or 'compositor'; many photos are CC-licensed."
+plateNote: "A capital and a small letter: the upper case and the lower case."
+image:
+  src: "/images/upper-and-lower-case.jpg"
+  alt: "A printer's drawer of big wooden letters in Bodoni type, sorted in rows and worn and stained with old ink: lower-case g, a and sloping italic letters, with a printer's hand resting on the edge. Large wooden letters like these were for posters; book type was metal and far smaller"
+  credit: "Unionpearl, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (border trimmed)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Bodoni_120_point_wood_type.jpg"
 pebbles: [stereotype-and-cliche, qwerty, electra-typeface]
 tags: [printing, words, everyday phrases, typography]
 sources:
