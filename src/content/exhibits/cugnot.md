@@ -9,7 +9,13 @@ when: "c. 1770"
 where: "Paris, France"
 plate: "1770"
 plateNote: "Roughly when Cugnot's steam wagon first ran."
-imageToFind: "Cugnot's fardier, which survives in the Musée des Arts et Métiers in Paris; photos and old engravings are on Wikimedia Commons."
+image:
+  src: "/images/cugnot.jpg"
+  alt: "A full-size working replica of Cugnot's steam wagon at the Rétromobile show in Paris in 2011: a huge round metal boiler hanging off the front, two brass cylinders, a long wooden frame on three wheels, and a cannon slung underneath. The 250-year-old original stays safely in its museum"
+  credit: "Thesupermat, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:R%C3%A9tromobile_2011_-_Fardier_de_Cugnot_-_002.jpg"
 pebbles: [red-flag, stephensons-rocket, montgolfier-balloon]
 tags: [cars, steam, France, inventions, transport]
 sources:
