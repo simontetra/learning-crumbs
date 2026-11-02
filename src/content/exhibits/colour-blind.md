@@ -9,7 +9,14 @@ when: "1792; tests from 1917"
 where: "Manchester; Tokyo"
 plate: "1 in 12"
 plateNote: "Roughly how many men have some colour blindness (about 1 in 200 women)."
-imageToFind: "A plate from the Ishihara colour test (old plates are public domain on Wikimedia Commons), or traffic lights, from Pexels."
+image:
+  src: "/images/colour-blind.jpg"
+  alt: "A colour-test plate in the style of Ishihara's: a circle of red dots of many sizes and shades, with green dots among them forming a hidden shape. Most people spot it at once; to someone with red-green colour blindness it can disappear into the red"
+  credit: "Dan-yell, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Ishihara-Test.svg"
+  fit: contain
 pebbles: [my-red-your-red, what-dogs-see, red-flag]
 tags: [colour, eyes, the body, science, how we know]
 sources:
