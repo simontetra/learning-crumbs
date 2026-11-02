@@ -9,7 +9,13 @@ when: "1974 onwards"
 where: "Mauritius, Indian Ocean"
 plate: "4"
 plateNote: "The number of Mauritius kestrels known in the wild in 1974."
-imageToFind: "A photo of a Mauritius kestrel. Wikimedia Commons, search \"Falco punctatus\"; check each licence."
+image:
+  src: "/images/mauritius-kestrel.jpg"
+  alt: "A hand-coloured 1868 illustration of a Mauritius kestrel perched on a branch, with its spotted chest and barred tail"
+  credit: "John Gerrard Keulemans (1868), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Falco_punctatus_1868.jpg"
+  fit: contain
 pebbles: [black-robin, california-condor, james-bond]
 tags: [birds, islands, conservation, birds of prey]
 sources:
