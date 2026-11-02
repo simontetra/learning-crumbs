@@ -42,11 +42,12 @@ const ld = {
     <div class="galleries">
       {galleries.map((g) => (
         <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
-          <span class="eyebrow">Gallery {g.code}</span>
           <h3>{g.title}</h3>
           <p class="q" set:html={`“${g.question}”`} />
-          <div class="door-plates" aria-hidden="true">
-            {byGallery(g.slug).slice(0, 5).map((e) => <span>{e.data.plate}</span>)}
+          <div class="door-pics" aria-hidden="true">
+            {byGallery(g.slug).filter((e) => e.data.image).slice(0, 4).map((e) => (
+              <span><img src={e.data.image!.src} alt="" loading="lazy" class={e.data.image!.fit === 'contain' ? 'print' : undefined} /></span>
+            ))}
           </div>
           <div class="meta"><span class="eyebrow">{byGallery(g.slug).length} exhibits</span><span>Enter →</span></div>
         </a>

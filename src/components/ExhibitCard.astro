@@ -9,7 +9,6 @@ const d = exhibit.data;
     {d.image ? <img src={d.image.src} alt="" loading="lazy" class={d.image.fit === "contain" ? "print" : undefined} /> : <span>{d.plate}</span>}
   </div>
   <div class="card-body">
-    <span class="eyebrow">{d.accession}</span>
     <span class="card-title">{d.title}</span>
     <span class="card-sum">{d.summary}</span>
     <span class="card-more" aria-hidden="true">→</span>
