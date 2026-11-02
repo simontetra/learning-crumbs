@@ -9,6 +9,12 @@ when: "1951 – 1979"
 where: "Dallas, Texas; Eltville and Frankfurt, Germany"
 plate: "Mistake Out"
 plateNote: "The first name of the fluid later sold as Liquid Paper."
+image:
+  src: "/images/correction-fluid.jpg"
+  alt: "Liquid Paper bottles on display at the Women's Museum in Dallas: little bottles in white and in colours such as buff, green and blue, to match tinted paper, a Pen and Ink version, bottles with Japanese labels, and a box of typing correction film, the same idea as Tipp-Ex's correction paper"
+  credit: "FA2010, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Liquid_paper_products_Womens_Museum.jpg"
 pebbles: [qwerty, pepsi, bertha-benz]
 tags: [typewriters, inventors, women in history, brands, offices]
 sources:
