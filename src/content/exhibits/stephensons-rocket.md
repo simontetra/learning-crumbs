@@ -9,7 +9,13 @@ when: "October 1829"
 where: "Rainhill, near Liverpool"
 plate: "£500"
 plateNote: "The prize offered at the Rainhill Trials."
-imageToFind: "Stephenson's Rocket, which is in the Science Museum Group collection. Wikimedia Commons, search \"Stephenson's Rocket\"."
+image:
+  src: "/images/stephensons-rocket.jpg"
+  alt: "A Victorian engraving of Stephenson's Rocket pulling its tender, with its tall chimney and slanted cylinders driving the big front wheels"
+  credit: "Uncredited Victorian engraving (Samuel Smiles), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Rocket_(Smiles).jpg"
+  fit: contain
 pebbles: [bertha-benz, wright-brothers, draisine]
 tags: [trains, transport, inventions, Britain, Victorian]
 sources:
