@@ -9,7 +9,13 @@ when: "1893 – 1902"
 where: "London"
 plate: "4 Sept 1893"
 plateNote: "The date on Beatrix Potter's picture letter to Noel Moore."
-imageToFind: "Beatrix Potter's own illustrations for The Tale of Peter Rabbit (1902) are public domain in the UK and on Wikimedia Commons."
+image:
+  src: "/images/peter-rabbit.jpg"
+  alt: "Beatrix Potter's own watercolour from The Tale of Peter Rabbit (1902): Mrs Rabbit in a blue dress and white apron, with a basket, beside Flopsy, Mopsy and Cotton-tail in red cloaks, while Peter stands a little apart in his blue jacket"
+  credit: "Beatrix Potter (1902), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Peter-rabbit.PNG"
+  fit: contain
 pebbles: [hairy-maclary, the-pencil, gutenberg-bible]
 tags: [picture books, drawing, writers, women in history, Britain]
 sources:
