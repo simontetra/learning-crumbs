@@ -9,7 +9,12 @@ when: "At least 67,800 years ago"
 where: "Liang Metanduno cave, Muna Island, Sulawesi, Indonesia"
 plate: "67,800"
 plateNote: "The minimum age, in years, of the oldest known hand stencil."
-imageToFind: "Hand stencils in caves: Wikimedia Commons has many, for example from Argentina's Cueva de las Manos or the caves of Sulawesi; check each licence."
+image:
+  src: "/images/hands-on-the-wall.jpg"
+  alt: "A faded red hand stencil on the golden sandstone wall of a rock shelter: the outline of a hand and fingers, left behind when red ochre was sprayed around it. Not the record-breaking stencil from Indonesia, but made the same way"
+  credit: "Schomynv, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Red_hand_stencil_small.JPG"
 pebbles: [lascaux, ultramarine, papyrus]
 tags: [cave art, prehistory, Indonesia, archaeology, painting]
 sources:
