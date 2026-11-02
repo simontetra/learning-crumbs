@@ -10,7 +10,7 @@ where: "France"
 plate: "1903"
 plateNote: "The year Édouard Bénédictus dropped his flask."
 imageToFind: "A cracked but unbroken car windscreen, from Pexels or Wikimedia Commons."
-pebbles: [pyrex, bertha-benz, gorilla-glass]
+pebbles: [pyrex, seat-belt, windscreen-wiper]
 tags: [glass, inventions, accidents, cars, France, materials]
 sources:
   - title: "Laminated safety glass was invented by accident (Today I Found Out)"

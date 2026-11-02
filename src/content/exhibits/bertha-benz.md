@@ -17,7 +17,7 @@ image:
   licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
   url: "https://commons.wikimedia.org/wiki/File:1886_Benz_Patent_Motorwagen_(29744182207).jpg"
   fit: contain
-pebbles: [stephensons-rocket, pneumatic-tyre, correction-fluid]
+pebbles: [stephensons-rocket, benz-patent, correction-fluid]
 tags: [cars, transport, inventions, Germany, women in history, inventors]
 sources:
   - title: "Bertha Benz (Wikipedia)"
