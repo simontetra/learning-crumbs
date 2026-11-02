@@ -9,7 +9,13 @@ when: "17 December 1903"
 where: "Near Kitty Hawk, North Carolina"
 plate: "12 s"
 plateNote: "The length of the first powered aeroplane flight."
-imageToFind: "The famous 1903 photograph of the Wright Flyer's first flight is in the public domain (Library of Congress). Search \"first flight 1903 Library of Congress\"."
+image:
+  src: "/images/wright-brothers.jpg"
+  alt: "The first flight, 17 December 1903: the Wright Flyer lifts just off the sand with Orville lying at the controls, while Wilbur watches on the right"
+  credit: "John T. Daniels, US National Archives, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Wright_Brothers%27_1903_Aeroplane_Kitty_Hawk_in_First_Flight_-_NARA_-_7580929.jpg"
+  fit: contain
 pebbles: [sikorsky-helicopter, montgolfier-balloon, penny-farthing]
 tags: [flight, aeroplanes, transport, inventions, America, bicycles]
 sources:
