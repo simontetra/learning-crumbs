@@ -11,11 +11,10 @@ plate: "1 in 12"
 plateNote: "Roughly how many men have some colour blindness (about 1 in 200 women)."
 image:
   src: "/images/colour-blind.jpg"
-  alt: "A colour-test plate in the style of Ishihara's: a circle of red dots of many sizes and shades, with green dots among them forming a hidden shape. Most people spot it at once; to someone with red-green colour blindness it can disappear into the red"
-  credit: "Dan-yell, via Wikimedia Commons"
-  licence: "CC BY-SA 3.0"
-  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
-  url: "https://commons.wikimedia.org/wiki/File:Ishihara-Test.svg"
+  alt: "One of Shinobu Ishihara's own colour-test plates: a circle of orange and brown dots with green and olive dots hidden among them. Most people read the number 74; many people with red-green colour blindness read 21 instead"
+  credit: "Shinobu Ishihara, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Ishihara_9.svg"
   fit: contain
 pebbles: [my-red-your-red, what-dogs-see, red-flag]
 tags: [colour, eyes, the body, science, how we know]
