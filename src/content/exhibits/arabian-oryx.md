@@ -9,7 +9,12 @@ when: "1972 – 2011"
 where: "Arabian Peninsula; Phoenix, Arizona"
 plate: "1972"
 plateNote: "The year the Arabian oryx was declared extinct in the wild."
-imageToFind: "An Arabian oryx in the desert. Wikimedia Commons, search \"Oryx leucoryx\"; check each licence."
+image:
+  src: "/images/arabian-oryx.jpg"
+  alt: "An Arabian oryx, white with long straight horns, walking across the desert sand in Abu Dhabi"
+  credit: "Western Region, Abu Dhabi, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Arabian_oryx,_Abu_Dhabi,_WesternRegion.jpg"
 pebbles: [przewalskis-horse, california-condor, humpback-whale]
 tags: [mammals, deserts, conservation, Middle East, zoos]
 sources:
