@@ -9,7 +9,13 @@ when: "c. 1040 and 1377"
 where: "Song dynasty China; Goryeo Korea"
 plate: "1377"
 plateNote: "The year the Jikji was printed with metal type at Heungdeok Temple, Korea."
-imageToFind: "The Bibliothèque nationale de France's Gallica site has digitised the Jikji; check its reuse terms before using an image."
+image:
+  src: "/images/movable-type-before-gutenberg.jpg"
+  alt: "Two facing pages of the Jikji, printed in Korea in 1377, with columns of Chinese characters read from top to bottom. The last lines on the left-hand page record that it was printed with cast metal type at Heungdeok Temple outside Cheongju, in the seventh month of 1377"
+  credit: "Baegun Hwasang (author); printed by his students Seokchan and Daljam, 1377; via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Korean_book-Jikji-Selected_Teachings_of_Buddhist_Sages_and_Seon_Masters-1377.jpg"
+  fit: contain
 pebbles: [gutenberg-bible, the-journey-of-paper, upper-and-lower-case]
 tags: [printing, China, Korea, inventions]
 sources:
