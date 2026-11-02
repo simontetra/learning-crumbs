@@ -9,7 +9,13 @@ when: "From the 6th century; synthetic from 1828"
 where: "Afghanistan; Europe"
 plate: "ultra marinus"
 plateNote: "Latin for 'beyond the sea', where the stone came from."
-imageToFind: "A piece of lapis lazuli, or a public-domain painting with a bright ultramarine robe, on Wikimedia Commons."
+image:
+  src: "/images/ultramarine.jpg"
+  alt: "A rough lump of lapis lazuli from the Sar-e-Sang mines in the Hindu Kush mountains of Afghanistan, the same mountains that supplied Europe's painters: deep blue, streaked with white and flecked with tiny glints of gold-coloured pyrite. Only the bluest parts made the finest ultramarine"
+  credit: "James St. John, via Wikimedia Commons"
+  licence: "CC BY 2.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Lapis_lazuli_(lazuritic_metamorphite)_(Sar-e-Sang_Deposit,_Sakhi_Formation,_Precambrian,_2.4-2.7_Ga_(%3F);_Sar-e-Sang_Mining_District,_Hindu-Kush_Mountains,_Afghanistan)_17.jpg"
 pebbles: [hands-on-the-wall, crayola, gutenberg-bible]
 tags: [colour, painting, Afghanistan, chemistry, Renaissance]
 sources:
