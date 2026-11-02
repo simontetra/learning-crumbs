@@ -10,7 +10,7 @@ where: "Europe; later Birmingham, England"
 plate: "penna"
 plateNote: "Latin for feather, and the root of our word pen."
 imageToFind: "The Met's open-access collection includes CC0 images of writing sets and portraits of writers holding quills."
-pebbles: [papyrus, qwerty, correction-fluid]
+pebbles: [papyrus, qwerty, bald-eagle]
 tags: [writing tools, Middle Ages, Industrial Revolution, birds]
 sources:
   - title: "Quill (Encyclopaedia Britannica)"

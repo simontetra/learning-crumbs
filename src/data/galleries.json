@@ -14,5 +14,13 @@
     "question": "Did you use to write on a typewriter, Dad?",
     "placard": "Yes, I did — and correction fluid too, the cheaper kind. To my son, the past is one flat place where I might as well have been chiselling stone tablets. This gallery gives it some depth: how we got from reeds and feathers to the keys under your fingers.",
     "summary": "How writing and printing evolved, from papyrus and goose quills to movable type, the typewriter and correction fluid."
+  },
+  {
+    "slug": "back-from-the-brink",
+    "title": "Back from the Brink",
+    "code": "BRK",
+    "question": "Can an animal come back once it's nearly gone?",
+    "placard": "Sometimes the answer is yes. Each animal in this room fell to a handful: four kestrels, five robins, a few dozen condors. Then someone decided not to give up. These are true stories of stubborn people, lucky breaks and second chances, and of how close some of them came to ending the other way.",
+    "summary": "Animals, and one river, brought back from the edge of extinction: the Mauritius kestrel, Old Blue the robin, the California condor, the Arabian oryx and more."
   }
 ]

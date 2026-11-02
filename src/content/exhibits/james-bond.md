@@ -15,7 +15,7 @@ image:
   credit: "Photo by Jean Paul Montanaro, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/photo/flying-hummingbird-bird-20163266/"
-pebbles: [sherlock-holmes, the-great-gatsby, scarlett-ohara]
+pebbles: [mauritius-kestrel, sherlock-holmes, scarlett-ohara]
 tags: [books, spies, birds, Jamaica, characters]
 sources:
   - title: "Bond, James Bond: Birds, books and Bond (Smithsonian Libraries)"

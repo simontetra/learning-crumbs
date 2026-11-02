@@ -10,7 +10,7 @@ where: "Mainz, Germany"
 plate: "B42"
 plateNote: "Collectors call it the 42-line Bible: most pages have 42 lines per column."
 imageToFind: "The Library of Congress and other libraries have published images of their Gutenberg Bibles; check each rights statement."
-pebbles: [movable-type-before-gutenberg, upper-and-lower-case, stereotype-and-cliche]
+pebbles: [movable-type-before-gutenberg, upper-and-lower-case, lord-howe-stick-insect]
 tags: [printing, Germany, books, Renaissance]
 sources:
   - title: "Gutenberg Bible (Wikipedia)"
