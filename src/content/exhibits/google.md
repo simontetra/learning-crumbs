@@ -12,9 +12,9 @@ plateNote: "A googol: the number 1 followed by 100 zeros."
 image:
   src: "/images/google.jpg"
   alt: "A back rub, the literal kind: two hands massaging someone's back. Not what Page and Brin had in mind"
-  credit: "Photo: Pexels"
+  credit: "Photo by Anna Tarazevich, Pexels"
   licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/search/back%20massage/"
+  url: "https://www.pexels.com/@anntarazevich/"
 pebbles: [amazon, xbox, upper-and-lower-case]
 tags: [technology, internet, brands, mathematics, mistakes]
 sources:
