@@ -9,7 +9,12 @@ when: "1976"
 where: "Hawaii to Tahiti"
 plate: "31 days"
 plateNote: "Days at sea on Hōkūleʻa's first voyage to Tahiti."
-imageToFind: "The canoe Hōkūleʻa under sail (some photos are on Wikimedia Commons; check each licence), or a starry sky over the sea."
+image:
+  src: "/images/wayfinding.jpg"
+  alt: "The Milky Way and thousands of stars rising above a dark sea horizon, with waves washing over rocks in the foreground. Wayfinders like Mau Piailug knew where each star rises and sets along the horizon, and steered by them"
+  credit: "Photo by ozram, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@ozram/"
 pebbles: [dung-beetles, eratosthenes, sea-turtles]
 tags: [navigation, the Pacific, stars, people, oceans, traditions]
 sources:
