@@ -9,7 +9,12 @@ when: "Myth from 1937; disproved by experiment"
 where: "University of California"
 plate: "2"
 plateNote: "Types of colour detector in a dog's eye. Humans have 3."
-imageToFind: "A dog looking at something, or a dog with a blue and a yellow ball, from Pexels."
+image:
+  src: "/images/what-dogs-see.jpg"
+  alt: "A close-up of a dog's eye, photographed in black and white, with a window reflected in it. Black and white is how people once wrongly believed dogs saw everything; in fact they see blues and yellows"
+  credit: "Photo by Pablo Ezequiel Nieva, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@pablo-ezequiel-nieva-933807/"
 pebbles: [colour-blind, my-red-your-red, monarchs]
 tags: [colour, dogs, animals, experiments, myths, how we know]
 sources:
