@@ -9,7 +9,13 @@ when: "2013"
 where: "South Africa"
 plate: "hats"
 plateNote: "Tiny cardboard caps that blocked the beetles' view of the sky."
-imageToFind: "A dung beetle rolling a ball, or the Milky Way at night, from Wikimedia Commons or Pexels."
+image:
+  src: "/images/dung-beetles.jpg"
+  alt: "A shiny black flightless dung beetle in Addo Elephant National Park, South Africa, head down and back legs up, pushing a dung ball bigger than itself across red sand. This kind rolls by day; the star-gazing beetles in the experiment were a different, night-time species"
+  credit: "Kay-africa, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Flightless_Dung_Beetle_Circellium_Bachuss,_Addo_Elephant_National_Park,_South_Africa.JPG"
 pebbles: [monarchs, wayfinding, helium]
 tags: [animals, insects, stars, navigation, experiments]
 sources:
