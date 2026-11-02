@@ -9,7 +9,12 @@ when: "Noticed since Aristotle, over 2,300 years ago"
 where: "Your eyes and nose"
 plate: "ACHOO"
 plateNote: "The scientists' name for the sunlight sneeze."
-imageToFind: "A person sneezing, or bright sunlight through trees, from Pexels."
+image:
+  src: "/images/sun-sneeze.jpg"
+  alt: "Low morning sun blazing through the trunks of a misty wood, with beams of light slanting across leafy undergrowth. Stepping out of the shade into light this bright is what makes some people sneeze."
+  credit: "Photo by selena1965, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@selena1965/"
 pebbles: [hiccups, brain-freeze, bluetooth]
 tags: [the body, nerves, light, words, mysteries]
 sources:
