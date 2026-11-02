@@ -9,7 +9,13 @@ when: "1986 onwards"
 where: "Oceans worldwide; the South Atlantic"
 plate: "1986"
 plateNote: "The year a worldwide ban on commercial whaling took effect."
-imageToFind: "A humpback whale breaching or diving. NOAA publishes public-domain whale photos; Wikimedia Commons, search \"humpback whale NOAA\"."
+image:
+  src: "/images/humpback-whale.jpg"
+  alt: "A mother humpback whale swimming just below the surface with her calf above her, their long white flippers glowing in the blue water"
+  credit: "Photo by Ben Phillips, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@ben-phillips-3129726/"
+  fit: contain
 pebbles: [river-thames, arabian-oryx, bald-eagle]
 tags: [mammals, oceans, conservation, whaling, music]
 sources:
