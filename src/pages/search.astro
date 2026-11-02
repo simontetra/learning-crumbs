@@ -23,8 +23,17 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       function card(x) {
         var li = document.createElement('li'), a = document.createElement('a');
         a.className = 'card'; a.href = href(x.id); a.setAttribute('data-gallery', x.room);
-        a.innerHTML = '<div class="card-plate" aria-hidden="true"><span></span></div><div class="card-body"><span class="eyebrow"></span><span class="card-title"></span><span class="card-sum"></span></div>';
-        a.querySelector('.card-plate span').textContent = x.plate;
+        a.innerHTML = '<div class="card-plate" aria-hidden="true"></div><div class="card-body"><span class="eyebrow"></span><span class="card-title"></span><span class="card-sum"></span><span class="card-more" aria-hidden="true">→</span></div>';
+        var plate = a.querySelector('.card-plate');
+        if (x.image) {
+          var img = document.createElement('img');
+          img.src = root === '/' ? x.image : root + x.image.replace(/^\//, '');
+          img.alt = ''; img.loading = 'lazy';
+          if (x.print) img.className = 'print';
+          plate.appendChild(img);
+        } else {
+          var sp = document.createElement('span'); sp.textContent = x.plate; plate.appendChild(sp);
+        }
         a.querySelector('.eyebrow').textContent = x.gallery;
         a.querySelector('.card-title').textContent = x.title;
         a.querySelector('.card-sum').textContent = x.summary;
@@ -33,7 +42,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       function run() {
         var q = input.value.trim().toLowerCase();
         out.innerHTML = '';
-        if (!q) { count.textContent = data.length ? data.length + ' exhibits to explore.' : ''; data.forEach(function (x) { out.appendChild(card(x)); }); return; }
+        if (!q) { count.textContent = data.length ? data.length + ' exhibits to explore.' : ''; data.slice().sort(function (a, b) { return (b.image ? 1 : 0) - (a.image ? 1 : 0); }).forEach(function (x) { out.appendChild(card(x)); }); return; }
         var words = q.split(/\s+/);
         var hits = data.map(function (x) {
           var hay = (x.title + ' ' + x.question + ' ' + x.summary + ' ' + x.tags.join(' ') + ' ' + x.gallery).toLowerCase();

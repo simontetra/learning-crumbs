@@ -12,7 +12,8 @@ export async function GET() {
     gallery: galleryOf(e.data.gallery).title,
     room: e.data.gallery,
     plate: e.data.plate,
-    accession: e.data.accession,
+    image: e.data.image ? e.data.image.src : null,
+    print: e.data.image?.fit === 'contain',
     tags: e.data.tags,
     text: (e.body ?? '').replace(/[#>*_\-\[\]()]/g, ' ').replace(/\s+/g, ' '),
   }));
