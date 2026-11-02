@@ -10,7 +10,7 @@ where: "Detroit, Michigan"
 plate: "93 min"
 plateNote: "Time to build a Model T chassis on the moving line, by 1914."
 imageToFind: "A Ford Model T, or the Highland Park assembly line in about 1913 (public domain on Wikimedia Commons)."
-pebbles: [windscreen-wiper, seat-belt, mercedes]
+pebbles: [windscreen-wiper, seat-belt, patterson]
 tags: [cars, factories, inventions, America, transport]
 sources:
   - title: "Model T (Encyclopedia of Detroit, Detroit Historical Society)"
