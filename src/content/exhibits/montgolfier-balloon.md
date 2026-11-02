@@ -9,7 +9,13 @@ when: "1783"
 where: "Annonay, Versailles and Paris, France"
 plate: "1783"
 plateNote: "The year of the first balloon flights, with animals and then people."
-imageToFind: "An 18th-century print of a Montgolfier balloon ascent (public domain). Library of Congress or Wikimedia Commons, search \"Montgolfier balloon 1783\"."
+image:
+  src: "/images/montgolfier-balloon.jpg"
+  alt: "A hand-coloured 1783 print: a huge blue and gold Montgolfier balloon being filled with smoke from a fire, held by ropes, in the garden of Monsieur Reveillon, a Paris paper manufacturer, before a vast crowd"
+  credit: "Claude-Louis Desrais (1783), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Montgolfiere_1783.jpg"
+  fit: contain
 pebbles: [wright-brothers, sikorsky-helicopter, the-journey-of-paper]
 tags: [flight, balloons, transport, inventions, France]
 sources:
