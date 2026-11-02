@@ -9,7 +9,13 @@ when: "1865 – 1896"
 where: "Britain"
 plate: "2 mph"
 plateNote: "The speed limit in towns under the 1865 Red Flag Act."
-imageToFind: "A veteran car on the London to Brighton Veteran Car Run, on Wikimedia Commons or Pexels."
+image:
+  src: "/images/red-flag.jpg"
+  alt: "Colour photograph from 1964: a red 1903 Speedwell, number plate BJM 797, with brass lamps and entry number 172, drives along Madeira Drive in Brighton at the end of the London to Brighton Veteran Car Run. Crowds line both sides clapping, children at the front, flags fly along the seafront, and another veteran car follows behind."
+  credit: "Jim Barton, Veteran cars on Madeira Drive, Brighton 1964, via Geograph and Wikimedia Commons"
+  licence: "CC BY-SA 2.0 (cropped)"
+  url: "https://commons.wikimedia.org/wiki/File:Speedwell,_BJM_797,_London_to_Brighton_veteran_car_run_1964_(Veteran_cars_on_Madeira_Drive,_Brighton_1964_(3)_-_geograph.org.uk_-_6782518).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/"
 pebbles: [cugnot, benz-patent, bertha-benz]
 tags: [cars, laws, Britain, Victorian, transport]
 sources:
