@@ -9,7 +9,12 @@ when: "1835 – 1895"
 where: "India, England and Scotland"
 plate: "Helios"
 plateNote: "Greek for the Sun, and the source of the name helium."
-imageToFind: "A rainbow spectrum of sunlight, or a 'Sun' photo from NASA (public domain); or party balloons, from Pexels."
+image:
+  src: "/images/helium.jpg"
+  alt: "The Sun photographed by NASA's Solar Dynamics Observatory on 10 September 2025, glowing gold, with bright loops of hot gas arching off its surface. The picture uses ultraviolet light our eyes can't see, shown in gold. Helium was first discovered here, 27 years before anyone found it on Earth"
+  credit: "NASA / Solar Dynamics Observatory"
+  licence: "public domain (cropped)"
+  url: "https://images.nasa.gov/details/PIA26681"
 pebbles: [romer, lehmann, montgolfier-balloon]
 tags: [space, the Sun, chemistry, elements, how we know]
 sources:
