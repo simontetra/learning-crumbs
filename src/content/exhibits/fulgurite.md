@@ -9,7 +9,13 @@ when: "Whenever lightning strikes sand"
 where: "Beaches and deserts; famously at Drigg, Cumbria, in 1812"
 plate: "fulgur"
 plateNote: "Latin for lightning."
-imageToFind: "A fulgurite (a rough glass tube made by lightning), from a museum or mineral collection on Wikimedia Commons."
+image:
+  src: "/images/fulgurite.jpg"
+  alt: "Looking straight down the end of a fulgurite from the Sahara dunes in Morocco: a rough, ring-shaped tube crusted with orange and white sand grains, with a dark hollow running down the middle where the lightning passed."
+  credit: "James St. John, Fulgurite (Sahara Dune Field, Morocco), via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Fulgurite_(Sahara_Dune_Field,_Morocco)_6.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
 pebbles: [why-glass-is-clear, first-glass, the-pencil]
 tags: [glass, nature, weather, geology, Britain]
 sources:
