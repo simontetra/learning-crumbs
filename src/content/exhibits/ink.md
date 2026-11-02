@@ -9,7 +9,13 @@ when: "From about AD 420; Chinese soot ink far older"
 where: "Europe and the Middle East; China"
 plate: "oak gall"
 plateNote: "A little ball an oak grows around a wasp's egg: the start of a thousand years of ink."
-imageToFind: "Oak galls (oak apples or marble galls) on a twig, from Wikimedia Commons; or an old pen-and-ink drawing or manuscript."
+image:
+  src: "/images/ink.jpg"
+  alt: "A cluster of round brown marble galls, made by the wasp Andricus kollari, on an oak twig. One is broken open to show the spongy inside where the young wasp grew, and a couple have tiny round holes where wasps chewed their way out. Galls like these were crushed to make iron gall ink"
+  credit: "Michel Langeveld, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Andricus_kollari_127206869.jpg"
 pebbles: [quill-pen, peter-rabbit, the-pencil]
 tags: [ink, drawing, writing, chemistry, insects, China]
 sources:
