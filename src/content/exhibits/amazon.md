@@ -9,7 +9,12 @@ when: "1994"
 where: "Bellevue, Washington"
 plate: "Cadabra"
 plateNote: "Image to come: the Amazon River seen from above."
-imageToFind: "NASA Earth Observatory images of the Amazon River are generally public domain; credit NASA."
+image:
+  src: "/images/amazon.jpg"
+  alt: "The Amazon River winding in great loops through the rainforest, photographed from the International Space Station"
+  credit: "NASA, International Space Station (ISS070-E-15233)"
+  licence: "public domain"
+  url: "https://images.nasa.gov/details/iss070e015233"
 pebbles: [google, pepsi, xbox]
 tags: [business, brands, internet, mishearings]
 sources:
