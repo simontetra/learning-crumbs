@@ -9,7 +9,12 @@ when: "1980"
 where: "Chatham Islands, New Zealand"
 plate: "Old Blue"
 plateNote: "Named after the blue band on her leg."
-imageToFind: "A photo of a Chatham Island black robin. Wikimedia Commons, search \"Petroica traversi\"; check each licence."
+image:
+  src: "/images/black-robin.jpg"
+  alt: "A New Zealand bush robin, a close cousin of the black robin, perched on a post. Black robins look much the same but are sooty black all over"
+  credit: "Bernard Spragg, via Wikimedia Commons"
+  licence: "CC0, public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Bush_Robin._New_Zealand._(15476323294).jpg"
 pebbles: [mauritius-kestrel, lord-howe-stick-insect, james-bond]
 tags: [birds, islands, conservation, New Zealand]
 sources:
