@@ -2,7 +2,7 @@
    museum label beside it; small moonlit pebbles mark the trail between rooms. */
 :root {
   --wall: #edf0e1;        /* page background, a soft pale olive */
-  --label: #fdfdf8;       /* label cards, warm paper */
+  --label: #f7f7ea;       /* label cards, soft cream paper */
   --plate: #e2e6d2;       /* the mount behind a plate */
   --ink: #252b20;         /* text */
   --heading: #33462b;     /* headings: deep olive-green ink */
