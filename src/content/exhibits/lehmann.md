@@ -9,7 +9,13 @@ when: "1936"
 where: "Copenhagen, Denmark"
 plate: "P′"
 plateNote: "The title of Inge Lehmann's famous 1936 paper: just one letter and a mark."
-imageToFind: "A seismograph recording, or a cut-away diagram of the Earth's layers, on Wikimedia Commons (several are public domain)."
+image:
+  src: "/images/lehmann.jpg"
+  alt: "A cut-away drawing of the Earth, drawn to scale: the thin crust, the thick mantle in glowing reds and oranges, the liquid outer core, and at the very centre the small white inner core, labelled solid. That solid centre is what Inge Lehmann discovered"
+  credit: "Kelvinsong, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 (cropped)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Earth_poster.svg"
 pebbles: [patterson, eratosthenes, fulgurite]
 tags: [the Earth, earthquakes, women in history, Denmark, how we know]
 sources:
