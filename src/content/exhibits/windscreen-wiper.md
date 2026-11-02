@@ -9,7 +9,13 @@ when: "1903"
 where: "New York City; Birmingham, Alabama"
 plate: "1903"
 plateNote: "The year Mary Anderson patented her window cleaning device."
-imageToFind: "A windscreen wiper on a snowy or rainy windscreen, from Pexels; or Anderson's 1903 patent drawing (public domain)."
+image:
+  src: "/images/windscreen-wiper.jpg"
+  alt: "Mary Anderson's own patent drawing, 'Window Cleaning Device', patented 10 November 1903: a windscreen with snow on it and a wiper arm swept diagonally across the glass, worked by a handle from inside, with close-up drawings of its parts. It is signed 'Mary Anderson, Inventor'"
+  credit: "Mary Anderson, US Patent 743,801 (1903), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Anderson_Window_Cleaning_Device_1903.png"
+  fit: contain
 pebbles: [safety-glass, model-t, correction-fluid]
 tags: [cars, inventions, inventors, women in history, America, weather]
 sources:
