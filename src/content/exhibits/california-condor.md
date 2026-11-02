@@ -9,7 +9,12 @@ when: "1987 onwards"
 where: "California, Arizona and Baja California"
 plate: "27"
 plateNote: "The number of California condors alive in 1987, all of them in captivity."
-imageToFind: "A California condor in flight. The US Fish and Wildlife Service and National Park Service publish public-domain photos; Wikimedia Commons, search \"California condor\"."
+image:
+  src: "/images/california-condor.jpg"
+  alt: "A California condor soaring over Bitter Creek National Wildlife Refuge, where the last wild condor was caught in 1987. The tag and radio transmitter on its wing let biologists follow it"
+  credit: "Pacific Southwest Region, US Fish and Wildlife Service, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Gymnogyps_californianus_-Bitter_Creek_National_Wildlife_Refuge,_California,_USA_-flying-8.jpg"
 pebbles: [bald-eagle, mauritius-kestrel, arabian-oryx]
 tags: [birds, birds of prey, America, conservation, pollution]
 sources:
