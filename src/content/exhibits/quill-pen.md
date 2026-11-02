@@ -9,7 +9,12 @@ when: "c. 6th century – mid 19th century"
 where: "Europe; later Birmingham, England"
 plate: "penna"
 plateNote: "Latin for feather, and the root of our word pen."
-imageToFind: "The Met's open-access collection includes CC0 images of writing sets and portraits of writers holding quills."
+image:
+  src: "/images/quill-pen.jpg"
+  alt: "A painting from about 1633 of an old scholar in spectacles and a fur-trimmed robe, carefully trimming the tip of a white quill with a small knife, a penknife, over an open book"
+  credit: "Gerrit Dou, A Scholar Sharpening His Quill (c. 1632–35), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Gerrit_Dou_-_Scholar_sharpening_a_quill_pen.jpg"
 pebbles: [papyrus, qwerty, bald-eagle]
 tags: [writing tools, Middle Ages, Industrial Revolution, birds]
 sources:

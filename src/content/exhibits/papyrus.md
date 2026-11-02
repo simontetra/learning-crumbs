@@ -8,8 +8,14 @@ summary: "Egyptians made a writing surface from papyrus reeds. The oldest surviv
 when: "c. 2560 BC (oldest surviving)"
 where: "Wadi al-Jarf, Red Sea coast, Egypt"
 plate: "papyros"
-plateNote: "Image to come: papyrus reeds growing beside the Nile."
-imageToFind: "The Met and Smithsonian Open Access both have CC0 images of ancient Egyptian papyri."
+plateNote: "The Greek word for papyrus, and the ancestor of our word paper."
+image:
+  src: "/images/papyrus.jpg"
+  alt: "A ragged sheet of papyrus about 2,300 years old, covered in columns of dark ink handwriting, with holes where pieces have crumbled away. The fine lines of the pressed reed strips show through. This is Papyrus Amherst 63, far younger than Merer's diary"
+  credit: "The Morgan Library & Museum, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Papyrus_Amherst_63,_reverse,_columns_xvii-xviii.jpg"
+  fit: contain
 pebbles: [the-journey-of-paper, quill-pen, upper-and-lower-case]
 tags: [ancient Egypt, writing materials, archaeology]
 sources:
