@@ -9,7 +9,13 @@ when: "1952"
 where: "Goldeneye, Jamaica"
 plate: "J.B."
 plateNote: "Image to come: a bird of the Caribbean, such as the Cuban tody, from Birds of the West Indies."
-imageToFind: "A public-domain or CC0 natural-history illustration of a Caribbean bird (Biodiversity Heritage Library, Smithsonian Open Access)."
+image:
+  src: "/images/james-bond.jpg"
+  alt: "A hand-engraved plate of a masked lapwing, from the bird book Illustrations of Ornithology, 1826"
+  credit: "Jardine and Selby, Illustrations of Ornithology (1826), via Wikimedia Commons"
+  licence: "no known copyright restrictions"
+  url: "https://commons.wikimedia.org/wiki/File:Illustrations_of_ornithology_(1826)_(14772242603).jpg"
+  fit: contain
 pebbles: [sherlock-holmes, the-great-gatsby, scarlett-ohara]
 tags: [books, spies, birds, Jamaica, characters]
 sources:
