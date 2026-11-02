@@ -9,7 +9,14 @@ when: "5 August 1888"
 where: "Mannheim to Pforzheim, Germany"
 plate: "106 km"
 plateNote: "The distance of Bertha Benz's drive from Mannheim to Pforzheim."
-imageToFind: "A Benz Patent-Motorwagen (museum photo or old print). Wikimedia Commons, search \"Benz Patent-Motorwagen\"."
+image:
+  src: "/images/bertha-benz.jpg"
+  alt: "A museum replica of the 1886 Benz Patent-Motorwagen: a three-wheeled carriage with spoked wheels, a padded bench seat and a small engine at the back. Bertha drove a slightly later version, the Model III"
+  credit: "Sicnag, via Wikimedia Commons"
+  licence: "CC BY 2.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
+  url: "https://commons.wikimedia.org/wiki/File:1886_Benz_Patent_Motorwagen_(29744182207).jpg"
+  fit: contain
 pebbles: [stephensons-rocket, pneumatic-tyre, correction-fluid]
 tags: [cars, transport, inventions, Germany, women in history, inventors]
 sources:
