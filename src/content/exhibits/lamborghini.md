@@ -9,7 +9,13 @@ when: "1963"
 where: "Sant'Agata Bolognese, Italy"
 plate: "1963"
 plateNote: "The year Automobili Lamborghini was founded."
-imageToFind: "A Lamborghini tractor, or an early Lamborghini car, on Wikimedia Commons."
+image:
+  src: "/images/lamborghini.jpg"
+  alt: "A grey Lamborghini tractor on red carpet at a classic car show, with 'Lamborghini Cento X 100' painted on its front wheel, its engine and exhaust pipes left bare, and a Lamborghini bull badge woven into the rug in front. Older orange-and-blue Lamborghini tractors stand behind it. This one was made in 2016, a small run built for what would have been Ferruccio's 100th birthday."
+  credit: "Matti Blume, Techno-Classica 2018, Essen, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (cropped)"
+  url: "https://commons.wikimedia.org/wiki/File:Techno-Classica_2018,_Essen_(IMG_9240).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
 pebbles: [mercedes, jamais-contente, model-t]
 tags: [cars, supercars, Italy, brands, rivalries]
 sources:
@@ -18,6 +24,8 @@ sources:
   - title: "Ferrari vs Lamborghini: the astonishing true story (Discovery UK)"
     url: "https://www.discoveryuk.com/motoring/ferrari-vs-lamborghini/"
 ---
+
+*My son was telling me about this one: the Lamborghini and Ferrari feud over a clutch.*
 
 After the Second World War, an Italian mechanic called **Ferruccio Lamborghini** started building **tractors** out of leftover army machinery. Farmers needed them, and he grew rich.
 
