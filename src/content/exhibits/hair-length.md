@@ -9,7 +9,12 @@ when: "All the time, in every hair"
 where: "Your skin"
 plate: "2–7 years"
 plateNote: "How long a hair on your head keeps growing before it stops."
-imageToFind: "A child with very long hair, or a close-up of hair on an arm, from Pexels."
+image:
+  src: "/images/hair-length.jpg"
+  alt: "Close-up of a forearm in sunlight, the short fine hairs lit up along its edge, against a dark T-shirt and a blurred green background. Arm hairs like these grow for only a few months, then stop."
+  credit: "Photo by sinarz97, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@sinarz97/"
 pebbles: [goosebumps, baby-bones, taller-in-the-morning]
 tags: [the body, hair, biology]
 sources:
