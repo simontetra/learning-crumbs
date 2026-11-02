@@ -9,7 +9,13 @@ when: "From 1913"
 where: "Corning, New York"
 plate: "cake"
 plateNote: "The test that turned a railway glass into Pyrex."
-imageToFind: "A glass oven dish with something baked in it, from Pexels; or an old railway lantern."
+image:
+  src: "/images/pyrex.jpg"
+  alt: "Close-up of the bottom of a clear, thick old glass oven dish, with the word PYREX pressed into the glass in tall thin letters. Tiny air bubbles are trapped in the rim, and the glass is scuffed from years of use."
+  credit: "Coyau, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0"
+  url: "https://commons.wikimedia.org/wiki/User:Coyau"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
 pebbles: [safety-glass, stephensons-rocket, stainless-steel]
 tags: [glass, kitchens, inventions, women in history, America, materials]
 sources:
