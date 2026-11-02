@@ -9,7 +9,14 @@ when: "1920 – 2001"
 where: "Lord Howe Island and Ball's Pyramid, Australia"
 plate: "24"
 plateNote: "The number of stick insects found under one bush on Ball's Pyramid in 2001."
-imageToFind: "Ball's Pyramid rising from the sea, or a Lord Howe Island stick insect. Wikimedia Commons, search \"Ball's Pyramid\" or \"Dryococelus australis\"."
+image:
+  src: "/images/lord-howe-stick-insect.jpg"
+  alt: "A shiny black Lord Howe Island stick insect, or tree lobster, on a green leaf at Prague Zoo, which first bred the species in 2026"
+  credit: "Miroslav Bobek, Zoo Praha, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Dryococelus_australis,_photo_by_Miroslav_Bobek,_Zoo_Praha.jpg"
+  fit: contain
 pebbles: [black-robin, mauritius-kestrel, gutenberg-bible]
 tags: [insects, islands, Australia, conservation, rediscovered]
 sources:
