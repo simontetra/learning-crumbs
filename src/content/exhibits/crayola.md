@@ -9,7 +9,12 @@ when: "1903"
 where: "United States"
 plate: "8"
 plateNote: "The number of crayons in the first Crayola box."
-imageToFind: "A box of crayons, or crayons on a table, from Pexels."
+image:
+  src: "/images/crayola.jpg"
+  alt: "An open art case packed with colour: rows of wax crayons in paper wrappers, felt-tip pens, oil pastels, a palette of paint cakes and an eraser. Not a Crayola set, but a long way from eight crayons for a nickel"
+  credit: "Photo by Orange Tomato, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@orange-tomato-2779185/"
 pebbles: [ultramarine, rubbing-out, pepsi]
 tags: [drawing, colour, brands, America, words]
 sources:
