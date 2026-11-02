@@ -16,7 +16,7 @@ image:
   licence: "CC BY-SA 4.0 (border trimmed)"
   licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
   url: "https://commons.wikimedia.org/wiki/File:Bodoni_120_point_wood_type.jpg"
-pebbles: [upper-and-lower-case, gutenberg-bible, electra-typeface]
+pebbles: [upper-and-lower-case, raining-cats-and-dogs, electra-typeface]
 tags: [printing, words, everyday phrases, etymology]
 sources:
   - title: "stereotype (Online Etymology Dictionary)"

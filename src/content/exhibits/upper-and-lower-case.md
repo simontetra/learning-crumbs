@@ -16,7 +16,7 @@ image:
   licence: "CC BY 2.0"
   licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
   url: "https://commons.wikimedia.org/wiki/File:Upper_case_and_lower_case_types.jpg"
-pebbles: [stereotype-and-cliche, qwerty, electra-typeface]
+pebbles: [stereotype-and-cliche, qwerty, clue]
 tags: [printing, words, everyday phrases, typography]
 sources:
   - title: "lower-case (Online Etymology Dictionary)"
