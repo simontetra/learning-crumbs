@@ -9,7 +9,13 @@ when: "Every year; tracked for a 2010 study"
 where: "From Greenland and Iceland to the Antarctic"
 plate: "70,900 km"
 plateNote: "The average distance an Arctic tern flew in a year."
-imageToFind: "An Arctic tern in flight, from Wikimedia Commons or US Fish and Wildlife (public domain)."
+image:
+  src: "/images/arctic-tern.jpg"
+  alt: "A young Arctic tern gliding over the sea at Blönduós, Iceland, its long pointed wings spread wide. Its cap is still patchy and its beak not yet red: a juvenile, about to make its first journey to the other end of the world"
+  credit: "Charles J. Sharp, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0 (resized)"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  url: "https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_juvenile_in_flight_Blonduos.jpg"
 pebbles: [godwit, monarchs, eratosthenes]
 tags: [animals, birds, migration, navigation, records]
 sources:
