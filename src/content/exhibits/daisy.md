@@ -11,10 +11,10 @@ plate: "dæges ēage"
 plateNote: "Old English for 'day's eye'."
 image:
   src: "/images/daisy.jpg"
-  alt: "A clump of white daisy flowers with sunny yellow centres, wide open in daylight, with round buds still closed tight among the grey-green leaves. These are marguerites, bigger garden cousins of the little lawn daisy that gave us the name"
-  credit: "Photo by alexasfotos, Pexels"
-  licence: "Pexels licence, free to use"
-  url: "https://www.pexels.com/@alexasfotos/"
+  alt: "A lawn full of common daisies, the little white flowers with yellow middles, open wide in the daylight among the grass and clover"
+  credit: "Photo by Petra Reid, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@petra-reid-419907087/"
 pebbles: [muscle, goodbye, clue]
 tags: [words, plants, nature, Old English]
 sources:
