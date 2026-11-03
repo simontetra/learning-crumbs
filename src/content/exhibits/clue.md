@@ -9,7 +9,12 @@ when: "Old English to the 1600s"
 where: "England; the myth from ancient Greece"
 plate: "clew"
 plateNote: "The old word for a ball of thread or yarn."
-imageToFind: "A ball of red thread or yarn, from Pexels; or an ancient Greek vase showing Theseus and the Minotaur, from Wikimedia Commons."
+image:
+  src: "/images/clue.jpg"
+  alt: "Edward Burne-Jones's design for a tile, labelled LABYRINTHUS, THESEUS and MINOTAURUS: inside the stone walls of the maze, Theseus creeps forward with a sword, holding Ariadne's thread, while the bull-headed Minotaur peeps round the corner ahead, bones scattered on the floor"
+  credit: "Edward Burne-Jones, Theseus and the Minotaur in the Labyrinth (tile design), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Edward_Burne-Jones_-_Tile_Design_-_Theseus_and_the_Minotaur_in_the_Labyrinth_-_Google_Art_Project.jpg"
 pebbles: [raining-cats-and-dogs, daisy, upper-and-lower-case]
 tags: [words, myths, ancient Greece, mysteries]
 sources:
