@@ -9,7 +9,13 @@ when: "From 1651"
 where: "England"
 plate: "1651"
 plateNote: "The earliest known 'dogs and cats' in a rainy sky, in a poem by Henry Vaughan."
-imageToFind: "Heavy rain on a window or a street, from Pexels; or an old print of a stormy London street."
+image:
+  src: "/images/raining-cats-and-dogs.jpg"
+  alt: "A hand-coloured cartoon from 1820 that takes the saying literally: cats, dogs and pitchforks pour from the sky onto a street, knocking people flat, flipping umbrellas inside out and landing on top of a coach. Its title reads 'Very unpleasant Weather, or the Old saying verified: Raining Cats, Dogs & Pitchforks!!!'"
+  credit: "George Cruikshank, Very unpleasant Weather (1820), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:George_Cruikshank_-_Very_unpleasant_Weather_(retouched).jpg"
+  fit: contain
 pebbles: [clue, stereotype-and-cliche, nice]
 tags: [words, sayings, weather, animals, mysteries]
 sources:
