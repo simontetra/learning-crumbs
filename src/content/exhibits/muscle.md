@@ -9,7 +9,12 @@ when: "Latin; in English from the 1400s"
 where: "Ancient Rome"
 plate: "musculus"
 plateNote: "Latin for 'little mouse'."
-imageToFind: "A wood mouse or harvest mouse, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/muscle.jpg"
+  alt: "A small brown field mouse with big round ears, bright black eyes and long whiskers, nosing for seeds on an old log. Imagine one rippling under your skin and you have the Romans' idea of a muscle: musculus, 'little mouse'"
+  credit: "Photo by lichtblick800, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@lichtblick800/"
 pebbles: [daisy, nice, goosebumps]
 tags: [words, the body, animals, Latin]
 sources:
