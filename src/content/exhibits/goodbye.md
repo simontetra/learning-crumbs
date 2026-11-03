@@ -9,7 +9,12 @@ when: "From 1573"
 where: "England"
 plate: "godbwyes"
 plateNote: "How Gabriel Harvey spelled it in 1573."
-imageToFind: "A handwritten letter from the 1500s, public domain on Wikimedia Commons."
+image:
+  src: "/images/goodbye.jpg"
+  alt: "A hand in a frilled white cuff writing a letter with a dip pen by the light of a candle in a brass holder. This is a modern photo, and the letter is in Russian, but it gives the feel of the candlelit letters in which goodbye first appeared"
+  credit: "Photo by cottonbro studio, Pexels"
+  licence: "Pexels licence, free to use (cropped)"
+  url: "https://www.pexels.com/@cottonbro/"
 pebbles: [hello, nice, quill-pen]
 tags: [words, greetings, Tudor England]
 sources:
