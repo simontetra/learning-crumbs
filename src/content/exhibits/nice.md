@@ -9,7 +9,12 @@ when: "1300s – 1700s"
 where: "England"
 plate: "nescius"
 plateNote: "Latin for 'not knowing', where 'nice' began."
-imageToFind: "A jester or fool from an old manuscript or painting, public domain on Wikimedia Commons."
+image:
+  src: "/images/nice.jpg"
+  alt: "A court jester in red tights, a hood and a belled tunic, grinning as he pours himself a glass of wine, with a little jester's stick tucked under his arm that has its own grinning face. Seven hundred years ago, calling someone nice meant you thought they were a fool like him"
+  credit: "William Merritt Chase, Keying Up: The Court Jester (1875), via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:William_Merritt_Chase_Keying_up.jpg"
 pebbles: [goodbye, muscle, stereotype-and-cliche]
 tags: [words, meanings that changed, Latin, Middle Ages]
 sources:
