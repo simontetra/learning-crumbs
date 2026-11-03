@@ -9,7 +9,12 @@ when: "1870s; 9 September 1947"
 where: "Harvard University, Massachusetts"
 plate: "1947"
 plateNote: "The year a real moth was found in the Mark II computer."
-imageToFind: "The 1947 logbook page with the moth taped in (US Navy photo, public domain on Wikimedia Commons)."
+image:
+  src: "/images/bug.jpg"
+  alt: "A page from the Harvard Mark II computer's logbook for 9 September 1947: handwritten times and numbers on squared paper, and at 15:45 a real moth taped to the page beside the note 'Relay #70 Panel F (moth) in relay. First actual case of bug being found.'"
+  credit: "Courtesy of the Naval Surface Warfare Center, Dahlgren, VA, 1988, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1947.jpg"
 pebbles: [hello, ink, gorilla-glass]
 tags: [words, computers, insects, inventions, America]
 sources:
