@@ -9,7 +9,12 @@ when: "Old English, over 1,000 years ago"
 where: "England"
 plate: "dæges ēage"
 plateNote: "Old English for 'day's eye'."
-imageToFind: "Common daisies (Bellis perennis), some open and some closed, from Pexels or Wikimedia Commons."
+image:
+  src: "/images/daisy.jpg"
+  alt: "A clump of white daisy flowers with sunny yellow centres, wide open in daylight, with round buds still closed tight among the grey-green leaves. These are marguerites, bigger garden cousins of the little lawn daisy that gave us the name"
+  credit: "Photo by alexasfotos, Pexels"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@alexasfotos/"
 pebbles: [muscle, goodbye, clue]
 tags: [words, plants, nature, Old English]
 sources:
