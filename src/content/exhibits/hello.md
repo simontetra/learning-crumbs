@@ -9,7 +9,12 @@ when: "1877 – 1889"
 where: "United States"
 plate: "1877"
 plateNote: "The year Edison recommended 'hello' for the telephone."
-imageToFind: "An old candlestick telephone, or telephone operators at a switchboard, public domain on Wikimedia Commons."
+image:
+  src: "/images/hello.jpg"
+  alt: "Old black-and-white photograph of Alexander Graham Bell, white-bearded, seated at a carved desk speaking into an early telephone, while a crowd of men in dark suits gathers behind him to watch. It is usually identified as the opening of the long-distance line from New York to Chicago in 1892"
+  credit: "Bell Telephone Magazine (1932), Internet Archive Book Images, via Wikimedia Commons"
+  licence: "no known copyright restrictions (cropped)"
+  url: "https://commons.wikimedia.org/wiki/File:Bell_telephone_magazine_(1932)_(14756440715).jpg"
 pebbles: [goodbye, bug, phonograph]
 tags: [words, greetings, telephones, inventions, America]
 sources:
