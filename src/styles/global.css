@@ -149,15 +149,19 @@ main { padding-block: 8px 72px; }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 20px; }
 .section-head h2 { font-size: var(--step-2); }
 
-.galleries { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 24px; }
+.galleries { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); gap: 16px; }
 .gallery-door {
-  display: grid; gap: 14px; padding: 28px; background: var(--label); border: 1px solid var(--rule); border-radius: var(--radius);
-  color: var(--ink); text-decoration: none;
+  display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: var(--label); border: 1px solid var(--rule);
+  border-top: 5px solid var(--room-fill); border-radius: var(--radius); color: var(--ink); text-decoration: none;
 }
 .gallery-door:hover { border-color: var(--accent); }
-.gallery-door h3 { font-size: var(--step-2); }
-.gallery-door .q { font-family: var(--font-display); font-style: italic; font-size: var(--step-1); color: var(--muted); }
-.gallery-door .meta { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.door-pic { aspect-ratio: 4 / 3; background: var(--room-fill); display: grid; place-items: center; overflow: hidden; }
+.door-pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.gallery-door:hover .door-pic img { transform: scale(1.04); }
+.door-pic .code { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; color: #fff; }
+.door-body { display: grid; gap: 6px; padding: 12px 14px 14px; align-content: start; }
+.gallery-door h3 { font-size: 1.05rem; line-height: 1.25; }
+.gallery-door .q { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; line-height: 1.35; color: var(--muted); margin: 0; }
 .door-plates { display: flex; flex-wrap: wrap; gap: 8px; }
 .door-pics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .door-pics:empty { display: none; }

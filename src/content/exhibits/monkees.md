@@ -9,7 +9,12 @@ when: "1965 – 1966"
 where: "Los Angeles; London"
 plate: "Monkees"
 plateNote: "Spelled wrong on purpose, like Beatles and Byrds."
-imageToFind: "1960s NBC publicity photos of the Monkees, several of which are public domain on Wikimedia Commons; check each file's licence."
+image:
+  src: "/images/monkees.jpg"
+  alt: "Four young men in a open-top car in 1967: one in a flat cap holding a tambourine, one in a knitted hat playing a guitar, one in a white shirt with a bass guitar, and one in a striped top smiling at the camera"
+  credit: "NBC Television, via Wikimedia Commons"
+  licence: "public domain (published in the US in 1967 without a copyright notice)"
+  url: "https://commons.wikimedia.org/wiki/File:The_Monkees_1967.jpg"
 pebbles: [correction-fluid, google, vinyl]
 tags: [music, television, words, America, spelling]
 sources:
