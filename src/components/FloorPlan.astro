@@ -1,110 +1,130 @@
 ---
-// The tilted floor plan of the galleries. Rooms wind through it in rows (six wide on a desktop,
-// three wide on a phone), and each gold crumb between two rooms leads on to the next.
-// Pass `current` (a gallery slug) to mark where you are, and to make the crumbs either side of it
-// larger, so they read as the way on and back.
+// The floor plans of the galleries. Nine rooms sit on each floor, wound through in rows of three,
+// and each gold crumb between two rooms leads on to the next. The Ground floor is where you come in.
+// Stairs and a lift join each floor to the next. Pass `current` (a gallery slug) to show only the floor
+// that room is on, with that room marked and the crumbs either side of it made larger.
 import { galleries, galleryUrl } from '../lib/site';
 
 interface Props { current?: string }
 const { current } = Astro.props;
 
-// Positions for a plan `cols` rooms wide, as percentages of the plan.
-function place(cols: number) {
-  const rows = Math.ceil(galleries.length / cols);
-  return galleries.map((_, i) => {
-    const row = Math.floor(i / cols);
-    const k = i % cols;
-    const col = row % 2 === 0 ? k : cols - 1 - k;
-    return { x: ((col + 0.5) / cols) * 100, y: ((row + 0.5) / rows) * 100 };
-  });
-}
-const WIDE = 6;
-const NARROW = 3;
-const wide = place(WIDE);
-const narrow = place(NARROW);
-const rooms = galleries.map((g, i) => ({
-  ...g,
-  n: i + 1,
-  url: galleryUrl(g.slug),
-  wx: wide[i].x, wy: wide[i].y,
-  nx: narrow[i].x, ny: narrow[i].y,
-}));
-const crumbs = rooms.slice(0, -1).map((r, i) => {
-  const next = rooms[i + 1];
+const PER_FLOOR = 9;
+const COLS = 3;
+const FLOOR_NAMES = ['Ground floor', 'First floor', 'Second floor', 'Third floor', 'Fourth floor'];
+const floorName = (f: number) => FLOOR_NAMES[f] ?? `Floor ${f + 1}`;
+
+const rooms = galleries.map((g, i) => {
+  const floor = Math.floor(i / PER_FLOOR);
+  const j = i % PER_FLOOR;
+  const row = Math.floor(j / COLS);
+  const k = j % COLS;
+  const col = row % 2 === 0 ? k : COLS - 1 - k;
+  const onFloor = Math.min(PER_FLOOR, galleries.length - floor * PER_FLOOR);
+  const rows = Math.ceil(onFloor / COLS);
   return {
-    from: r, to: next, index: i,
-    wx: (r.wx + next.wx) / 2, wy: (r.wy + next.wy) / 2,
-    nx: (r.nx + next.nx) / 2, ny: (r.ny + next.ny) / 2,
+    ...g,
+    i,
+    n: i + 1,
+    url: galleryUrl(g.slug),
+    floor,
+    x: ((col + 0.5) / COLS) * 100,
+    y: ((row + 0.5) / rows) * 100,
   };
 });
+
+const floors = Array.from({ length: Math.ceil(galleries.length / PER_FLOOR) }, (_, f) => {
+  const list = rooms.filter((r) => r.floor === f);
+  const crumbs = list.slice(0, -1).map((r, k) => {
+    const next = list[k + 1];
+    return { from: r, to: next, x: (r.x + next.x) / 2, y: (r.y + next.y) / 2 };
+  });
+  const trail = list.map((r, k) => `${k === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join(' ');
+  return { index: f, name: floorName(f), rooms: list, rows: Math.ceil(list.length / COLS), crumbs, trail };
+});
+
 const here = current ? rooms.findIndex((r) => r.slug === current) : -1;
-const trailWide = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.wx} ${r.wy}`).join(' ');
-const trailNarrow = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.nx} ${r.ny}`).join(' ');
+const shown = here >= 0 ? floors.filter((f) => f.index === rooms[here].floor) : floors;
 ---
-<div class="floor-wrap">
-  <div class="floor">
-    <div class="plan">
-      <svg class="plan-trail wide" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d={trailWide} />
-      </svg>
-      <svg class="plan-trail narrow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d={trailNarrow} />
-      </svg>
-      {rooms.map((r, i) => (
-        <a class:list={['map-room', i === here && 'here']} href={r.url} data-gallery={r.slug}
-          style={`--wx:${r.wx}%;--wy:${r.wy}%;--nx:${r.nx}%;--ny:${r.ny}%`}
-          aria-current={i === here ? 'page' : undefined}>
-          <span class="map-no">{r.n}</span>
-          <span class="map-title">{r.title}</span>
-        </a>
-      ))}
-      {crumbs.map((c) => {
-        const isNext = c.index === here;
-        const isBack = c.index === here - 1;
-        const href = isBack ? c.from.url : c.to.url;
-        const label = isNext ? `Next: ${c.to.title} →` : isBack ? `← Back: ${c.from.title}` : c.to.title;
-        const aria = isNext ? `Next room: ${c.to.title}` : isBack ? `Back to ${c.from.title}` : `Next room: ${c.to.title}`;
-        return (
-          <a class:list={['map-crumb', (isNext || isBack) && 'exit']} href={href}
-            style={`--wx:${c.wx}%;--wy:${c.wy}%;--nx:${c.nx}%;--ny:${c.ny}%`}
-            aria-label={aria}>
-            <span aria-hidden="true">{label}</span>
-          </a>
-        );
-      })}
-    </div>
-  </div>
+<div class="floors">
+  {shown.map((f) => (
+    <section class="floor-block" aria-labelledby={`floor-${f.index}`}>
+      <h2 class="floor-name" id={`floor-${f.index}`}>{f.name}</h2>
+      <div class="floor-wrap">
+        <div class="floor">
+          <div class="plan" style={`--rows:${f.rows}`}>
+            <svg class="plan-trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d={f.trail} />
+            </svg>
+            {f.rooms.map((r) => (
+              <a class:list={['map-room', r.i === here && 'here']} href={r.url} data-gallery={r.slug}
+                style={`--x:${r.x}%;--y:${r.y}%`}
+                aria-current={r.i === here ? 'page' : undefined}>
+                <span class="map-no">{r.n}</span>
+                <span class="map-title">{r.title}</span>
+              </a>
+            ))}
+            {f.crumbs.map((c) => {
+              const isNext = c.from.i === here;
+              const isBack = c.from.i === here - 1;
+              const href = isBack ? c.from.url : c.to.url;
+              const label = isNext ? `Next: ${c.to.title} →` : isBack ? `← Back: ${c.from.title}` : c.to.title;
+              const aria = isBack ? `Back to ${c.from.title}` : `Next room: ${c.to.title}`;
+              return (
+                <a class:list={['map-crumb', (isNext || isBack) && 'exit']} href={href}
+                  style={`--x:${c.x}%;--y:${c.y}%`} aria-label={aria}>
+                  <span aria-hidden="true">{label}</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <nav class="stairs" aria-label={`Stairs and lift from the ${f.name}`}>
+        {f.index > 0 && <a class="stairs-down" href={rooms[PER_FLOOR * f.index - 1].url}>← Down to the {floorName(f.index - 1)}</a>}
+        {f.index < floors.length - 1 && <a class="stairs-up" href={rooms[PER_FLOOR * (f.index + 1)].url}>Up to the {floorName(f.index + 1)} →</a>}
+      </nav>
+    </section>
+  ))}
 </div>
 
 <style>
-  .floor-wrap { padding: 8px 0 40px; }
+  .floor-block + .floor-block { margin-top: 48px; }
+  .floor-name {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .floor-wrap { padding: 8px 0 12px; }
   .floor { padding: 28px; border-radius: 22px; background: var(--label); border: 1px solid var(--rule); box-shadow: var(--shadow-lift); }
   .plan {
     position: relative;
-    width: 90%;
+    width: min(90%, 720px);
     margin-inline: auto;
-    aspect-ratio: 6 / 3;
+    aspect-ratio: 3 / var(--rows, 3);
     transform: perspective(1400px) rotateX(34deg);
     transform-origin: 50% 55%;
     transform-style: preserve-3d;
   }
   .plan-trail { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .plan-trail path { fill: none; stroke: var(--pebble); stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-  .plan-trail.narrow { display: none; }
 
   .map-room {
     position: absolute;
-    left: var(--wx);
-    top: var(--wy);
-    width: calc(100% / 6 * 0.84);
-    height: calc(100% / 3 * 0.8);
+    left: var(--x);
+    top: var(--y);
+    width: calc(100% / 3 * 0.86);
+    height: calc(100% / var(--rows, 3) * 0.8);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 6px;
+    gap: 6px;
+    padding: 8px;
     border-radius: 8px;
     background: var(--room-fill, var(--pebble));
     color: #fbf7ec;
@@ -121,12 +141,12 @@ const trailNarrow = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.nx} ${r.ny}`
     box-shadow: 0 0 0 3px #fbf7ec, 0 0 0 5px var(--accent), 0 10px 0 rgb(30 25 15 / 0.35), 0 16px 26px rgb(0 0 0 / 0.25);
   }
   .map-no { font-family: var(--font-label); font-size: 0.7rem; opacity: 0.8; letter-spacing: 0.05em; }
-  .map-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(0.62rem, 1.05vw, 0.9rem); line-height: 1.15; }
+  .map-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(0.7rem, 1.3vw, 1rem); line-height: 1.15; }
 
   .map-crumb {
     position: absolute;
-    left: var(--wx);
-    top: var(--wy);
+    left: var(--x);
+    top: var(--y);
     width: 18px;
     height: 18px;
     margin: -9px 0 0 -9px;
@@ -172,22 +192,26 @@ const trailNarrow = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.nx} ${r.ny}`
     pointer-events: none;
   }
 
-  /* Phones: three rooms across, a taller plan, and a lighter tilt. */
+  .stairs { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 14px; }
+  .stairs a {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: var(--label);
+    border: 1px solid var(--rule);
+    color: var(--heading);
+    text-decoration: none;
+    font-size: var(--step--1);
+  }
+  .stairs a:hover, .stairs a:focus-visible { border-color: var(--accent); }
+  .stairs-up { margin-left: auto; }
+
+  /* Phones: the same three-wide plan, a taller tilt, and smaller labels. */
   @media (max-width: 760px) {
     .floor { padding: 16px; border-radius: 18px; }
-    .plan { width: 100%; aspect-ratio: 3 / 6; transform: perspective(900px) rotateX(26deg); }
-    .plan-trail.wide { display: none; }
-    .plan-trail.narrow { display: block; }
-    .map-room {
-      left: var(--nx);
-      top: var(--ny);
-      width: calc(100% / 3 * 0.86);
-      height: calc(100% / 6 * 0.76);
-      padding: 4px;
-    }
+    .plan { width: 100%; transform: perspective(900px) rotateX(26deg); }
+    .map-room { padding: 4px; }
     .map-title { font-size: 0.6rem; }
     .map-no { font-size: 0.6rem; }
-    .map-crumb { left: var(--nx); top: var(--ny); }
     .map-crumb span { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
