@@ -16,6 +16,10 @@ image:
   licence: "CC BY-SA 2.0"
   licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/"
   url: "https://commons.wikimedia.org/wiki/File:AR_Cueva_de_las_Manos_0702_038_(17215564935).jpg"
+fromHome:
+  src: "/images/hands-from-our-home.jpg"
+  alt: "Our own hand prints in orange-brown paint on white paper, the fingers and palm spread out and the paint thinned and speckled at the edges, much like the stencils on a cave wall"
+  caption: "Our own hands, painted at home, in the spirit of the stencils on the cave wall."
 pebbles: [lascaux, ultramarine, papyrus]
 tags: [cave art, prehistory, Indonesia, archaeology, painting]
 sources:
