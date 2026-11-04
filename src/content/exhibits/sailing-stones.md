@@ -16,7 +16,7 @@ image:
   licence: "CC BY-SA 4.0"
   url: "https://commons.wikimedia.org/wiki/File:Racetrack_Playa_in_Death_Valley_National_Park.jpg"
   licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
-pebbles: [paricutin, surtsey]
+pebbles: [paricutin, surtsey, earthquakes]
 tags: [earth, geology, deserts, California]
 sources:
   - title: "Racetrack Playa: The home of Death Valley's mysterious 'sailing stones' (Live Science)"

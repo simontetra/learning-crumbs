@@ -15,7 +15,7 @@ image:
   credit: "Jim Luhr, Smithsonian Institution, via Wikimedia Commons"
   licence: "Public domain"
   url: "https://commons.wikimedia.org/wiki/File:Paricut%C3%ADn_volcano.jpg"
-pebbles: [sailing-stones, surtsey]
+pebbles: [sailing-stones, surtsey, tectonic-plates]
 tags: [earth, geology, Mexico, volcanoes]
 sources:
   - title: "Paricutín, Volcano  (San Diego State University)"
