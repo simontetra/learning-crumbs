@@ -9,6 +9,12 @@ when: "1963–1967"
 where: "Westman Islands, Iceland"
 plate: "1963"
 plateNote: "The year the eruption reached the surface of the sea."
+image:
+  src: "/images/surtsey.jpg"
+  alt: "The eruption of Surtsey seen from the air: a huge white plume of steam and ash rising from the new island in the sea."
+  credit: "Howell Williams, NOAA, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Surtsey_eruption_1963.jpg"
 pebbles: [paricutin, sailing-stones]
 tags: [earth, geology, Iceland, islands]
 sources:
