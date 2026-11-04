@@ -9,7 +9,12 @@ when: "December 1877"
 where: "Menlo Park, New Jersey"
 plate: "1877"
 plateNote: "The year a machine first spoke back."
-imageToFind: "An Edison tinfoil phonograph (museum photo), or Edison posing with an early phonograph, public domain on Wikimedia Commons or the Library of Congress."
+image:
+  src: "/images/phonograph.jpg"
+  alt: "Thomas Edison seated at a table with his phonograph, surrounded by seven men, at Orange, New Jersey, in 1888."
+  credit: "Photograph of Thomas Edison and the perfected phonograph group, 1888, via Wikimedia Commons (author not named on the file page)"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Thomas_Edison_and_the_perfected-phonograph-group_in_1888.jpg"
 pebbles: [hello, vinyl, perfect-pitch]
 tags: [sound, music, inventions, Edison, America]
 sources:
