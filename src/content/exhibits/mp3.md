@@ -9,7 +9,12 @@ when: "1988 – 1995"
 where: "Erlangen, Germany"
 plate: ".mp3"
 plateNote: "The file name ending, chosen on 14 July 1995."
-imageToFind: "Earbuds or headphones with a music player or phone, from Pexels."
+image:
+  src: "/images/mp3.jpg"
+  alt: "A white MP3 player with black earphones on an old book, beside a cup of coffee and a sprig of fir."
+  credit: "niferure, via Pexels"
+  licence: "Pexels licence (free to use)"
+  url: "https://www.pexels.com/photo/coffee-near-mp3-player-with-earphones-17502633/"
 pebbles: [cd, streaming, perfect-pitch]
 tags: [sound, music, computers, inventions, Germany]
 sources:
