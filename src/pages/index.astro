@@ -45,26 +45,29 @@ const ld = {
     <div class="section-head">
       <h2 id="start-h">Not sure where to start?</h2>
     </div>
-    <p class="voice">Try one of these, or let us choose.</p>
     <div class="dip">
-      <button type="button" class="dip-btn" data-exhibits={JSON.stringify(exhibits.map((e) => ({ url: exhibitUrl(e.id), title: e.data.title })))}>
-        <svg class="dip-bag" viewBox="0 0 120 80" aria-hidden="true">
-          <path d="M14 30 Q60 6 106 30 L112 74 Q60 84 8 74 Z" fill="#c9a46a" stroke="#7a5c2e" stroke-width="2"/>
-          <path d="M34 22 L44 44 M60 16 L60 40 M86 22 L76 44" stroke="#7a5c2e" stroke-width="2" fill="none"/>
-          <rect x="44" y="6" width="28" height="18" rx="3" fill="#fff8e6" stroke="#7a5c2e" stroke-width="1.5" transform="rotate(-8 58 15)"/>
+      <button type="button" class="dip-btn" aria-label="Dip your hand in the bag for a random crumb" data-exhibits={JSON.stringify(exhibits.map((e) => ({ url: exhibitUrl(e.id), title: e.data.title })))}>
+        <svg class="dip-art" viewBox="0 0 200 200" aria-hidden="true">
+          <g class="dip-bag-art">
+            <path d="M34 92 Q100 70 166 92 L174 180 Q100 196 26 180 Z" fill="#b8322a" stroke="#6e1c16" stroke-width="3"/>
+            <path d="M34 92 Q100 70 166 92 Q156 116 100 118 Q44 116 34 92 Z" fill="#8f2620" stroke="#6e1c16" stroke-width="2"/>
+            <path d="M50 102 Q100 118 150 102" stroke="#e8c06a" stroke-width="3" fill="none"/>
+            <path d="M60 130 Q100 140 140 130" stroke="#d9584c" stroke-width="2" fill="none" opacity="0.6"/>
+          </g>
+          <g class="dip-hand">
+            <path d="M128 0 L154 0 L152 56 L128 70 Z" fill="#3d4f7a" stroke="#27324f" stroke-width="2"/>
+            <path d="M104 70 Q98 58 110 50 L126 46 Q138 46 138 58 L136 80 Q134 94 120 94 L110 94 Q98 92 104 70 Z" fill="#f2c9a0" stroke="#8a5a3a" stroke-width="2"/>
+            <path d="M118 48 L116 80 M126 46 L125 80" stroke="#8a5a3a" stroke-width="1.5" fill="none"/>
+            <path d="M104 64 Q94 60 96 68 L104 72" fill="#f2c9a0" stroke="#8a5a3a" stroke-width="2"/>
+          </g>
         </svg>
-        <span>Feeling lucky? Dip your hand in.</span>
+        <span class="dip-label">Feeling lucky? Dip your hand in.</span>
+        <span class="dip-result" aria-live="polite"></span>
       </button>
-      <p class="dip-result" aria-live="polite"></p>
     </div>
-    <ul class="starts">
-      {featured.map((e) => (
-        <li><a href={exhibitUrl(e.id)}><span class="start-title">{e.data.title}</span><span class="start-sum">{e.data.summary}</span></a></li>
-      ))}
-    </ul>
     <script>
       const dip = document.querySelector<HTMLButtonElement>('.dip-btn');
-      const result = document.querySelector<HTMLElement>('.dip-result');
+      const result = document.querySelector<HTMLElement>('.dip-btn .dip-result');
       dip?.addEventListener('click', () => {
         const list: { url: string; title: string }[] = JSON.parse(dip.dataset.exhibits || '[]');
         if (!list.length || dip.disabled) return;
@@ -72,17 +75,19 @@ const ld = {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reduce) { window.location.href = pick.url; return; }
         dip.disabled = true;
-        dip.classList.add('shaking');
-        let ticks = 0;
-        const flick = setInterval(() => {
-          result!.textContent = list[Math.floor(Math.random() * list.length)].title;
-          ticks++;
-          if (ticks >= 14) {
-            clearInterval(flick);
-            result!.textContent = pick.title;
-            setTimeout(() => { window.location.href = pick.url; }, 700);
-          }
-        }, 110);
+        dip.classList.add('diving');
+        setTimeout(() => {
+          dip.classList.add('shaking');
+          let ticks = 0;
+          const flick = setInterval(() => {
+            result!.textContent = list[Math.floor(Math.random() * list.length)].title;
+            if (++ticks >= 14) {
+              clearInterval(flick);
+              result!.textContent = pick.title;
+              setTimeout(() => { window.location.href = pick.url; }, 700);
+            }
+          }, 110);
+        }, 450);
       });
     </script>
   </section>
