@@ -68,22 +68,28 @@ const path = points
   }
   .crumb {
     position: absolute;
-    width: 18px;
-    height: 18px;
-    margin: -9px 0 0 -9px;
-    border-radius: 50%;
-    background: var(--room-fill, var(--pebble));
-    box-shadow: 0 0 0 4px var(--wall);
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
     pointer-events: auto;
     transition: transform 0.2s ease;
   }
+  /* Each crumb is a small five-point star, drawn with a clip path so the label is not clipped. */
+  .crumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--room-fill, var(--pebble));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 0 1px var(--wall)) drop-shadow(0 0 1px var(--wall));
+  }
   .crumb:hover,
   .crumb:focus-visible {
-    transform: scale(1.3);
+    transform: scale(1.35);
     outline: none;
   }
-  .crumb:focus-visible {
-    box-shadow: 0 0 0 4px var(--wall), 0 0 0 6px var(--accent);
+  .crumb:focus-visible::before {
+    filter: drop-shadow(0 0 2px var(--accent)) drop-shadow(0 0 2px var(--accent));
   }
   .crumb span {
     position: absolute;

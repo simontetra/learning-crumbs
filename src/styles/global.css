@@ -146,7 +146,7 @@ main { padding-block: 8px 72px; }
 
 /* Home */
 .entrance { padding-block: 48px 40px; display: grid; gap: 20px; max-width: 46rem; }
-.entrance h1 { font-size: clamp(1.9rem, 4.4vw, 2.7rem); }
+.entrance h1 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .entrance .lede { font-size: var(--step-0); color: var(--muted); max-width: 40rem; line-height: 1.5; }
 .trail-line { display: flex; gap: 10px; align-items: center; margin-top: 4px; }
 .trail-line span { width: 9px; height: 7px; border-radius: 50%; background: var(--pebble); }
