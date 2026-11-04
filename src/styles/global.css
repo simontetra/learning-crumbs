@@ -35,6 +35,7 @@
   --grv-fill:   #3d4f7a;  --grv-text:   #3d4f7a;   /* slate blue, for Why Don't We Float Away? */
   --wtr-fill:   #2f6f7e;  --wtr-text:   #2f6f7e;   /* teal, for Are We Waterproof? */
   --map-fill:   #7a5c2e;  --map-text:   #7a5c2e;   /* ochre, for Bigger and Smaller */
+  --bok-fill:   #5b3a6e;  --bok-text:   #5b3a6e;   /* plum, for Between the Covers */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -50,7 +51,7 @@
   :root:not([data-theme="light"]) {
     --wall: #12150e; --label: #1a1e15; --plate: #23281c; --ink: #e7eadc; --muted: #a2aa92; --heading: #d4e0b4;
     --rule: #30372a; --accent: #dba65a; --pebble: #444c39; --pebble-on: #f3f5f8;
-    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e; --car-text: #9fb3cc; --know-text: #aba7f2; --nav-text: #93a8e0; --snd-text: #ec9a63; --rst-text: #d9a27a; --grv-text: #9fb3e6; --wtr-text: #7fc4d1; --map-text: #d9b884;
+    --names-text: #7fa9d8; --quill-text: #e0806f; --brink-text: #79bf98; --myth-text: #b29ae0; --wheel-text: #6cc3cc; --art-text: #e0a35e; --mat-text: #a9b8c9; --word-text: #e48ab4; --bio-text: #c2cf7e; --car-text: #9fb3cc; --know-text: #aba7f2; --nav-text: #93a8e0; --snd-text: #ec9a63; --rst-text: #d9a27a; --grv-text: #9fb3e6; --wtr-text: #7fc4d1; --map-text: #d9b884; --bok-text: #cdb3e6;
     color-scheme: dark;
   }
 }
@@ -80,6 +81,7 @@
 [data-gallery="why-dont-we-float"] { --room-fill: var(--grv-fill); --room-text: var(--grv-text); }
 [data-gallery="are-we-waterproof"] { --room-fill: var(--wtr-fill); --room-text: var(--wtr-text); }
 [data-gallery="bigger-and-smaller"] { --room-fill: var(--map-fill); --room-text: var(--map-text); }
+[data-gallery="between-the-covers"] { --room-fill: var(--bok-fill); --room-text: var(--bok-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
