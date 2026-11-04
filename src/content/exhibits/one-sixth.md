@@ -9,6 +9,12 @@ when: "Today"
 where: "The Moon"
 plate: "1.62 m/s²"
 plateNote: "The Moon's surface gravity, compared with 9.80 m/s² on Earth: about one-sixth."
+image:
+  src: "/images/one-sixth.jpg"
+  alt: "Buzz Aldrin walking on the Moon during Apollo 11, in a white spacesuit, with his shadow stretching across the grey dust."
+  credit: "Neil A. Armstrong (NASA), via Wikimedia Commons"
+  licence: "Public domain (NASA)"
+  url: "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg"
 pebbles: [stainless-steel, wright-brothers]
 tags: [science, gravity, Moon, space]
 sources:
