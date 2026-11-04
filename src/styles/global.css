@@ -336,3 +336,5 @@ main { padding-block: 8px 72px; }
 .contact label { display: grid; gap: 6px; }
 .contact input, .contact textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--label); color: var(--ink); }
 .contact button { justify-self: start; font: inherit; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--rule); background: var(--plate); color: var(--ink); }
+
+.legal .intro { margin-block: 1.4em; }
