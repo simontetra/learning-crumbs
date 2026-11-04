@@ -126,6 +126,8 @@ p { margin: 0; }
 .site-nav { display: flex; gap: 20px; flex-wrap: wrap; }
 .site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
+.site-nav a { position: relative; }
+.nav-count { position: absolute; right: 0; bottom: -0.95em; font-size: 0.6rem; line-height: 1; font-weight: 700; color: #b3261e; }
 
 /* Breadcrumbs: a trail of pebbles */
 .crumbs { padding-block: 18px 0; }
@@ -384,3 +386,6 @@ main { padding-block: 8px 72px; }
 
 /* Uniform cards: every picture file is already the same portrait size with its own margin, so the frame adds none. */
 .door-pic.solo { padding: 0; background: #ece8dc; border-bottom: 1px solid var(--rule); }
+
+/* Room numbers: small, bottom left of each card. */
+.card-no { position: absolute; left: 12px; bottom: 9px; z-index: 2; font-family: var(--mono, monospace); font-size: 0.72rem; color: var(--muted); }

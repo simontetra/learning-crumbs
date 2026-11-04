@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { SITE_NAME, TAGLINE } from '../lib/site';
+import { SITE_NAME, TAGLINE, galleries } from '../lib/site';
 
 interface Props {
   title: string;              // page title, without the site name
@@ -49,7 +49,7 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
           <span class="logo-text">{SITE_NAME}</span>
         </a>
         <nav class="site-nav" aria-label="Main">
-          <a href="/galleries/" aria-current={nav === 'galleries' ? 'page' : undefined}>Galleries</a>
+          <a href="/galleries/" aria-current={nav === 'galleries' ? 'page' : undefined}>Galleries<span class="nav-count">{galleries.length}</span></a>
           <a href="/search/" aria-current={nav === 'search' ? 'page' : undefined}>Search</a>
           <a href="/about/" aria-current={nav === 'about' ? 'page' : undefined}>About</a>
         </nav>

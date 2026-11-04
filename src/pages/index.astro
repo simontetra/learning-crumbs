@@ -59,6 +59,7 @@ const ld = {
               <span class="eyebrow">{byGallery(g.slug).length} exhibits</span>
             </div>
           </a>
+          <span class="card-no" aria-hidden="true">{i + 1}</span>
           <TileShare path={galleryUrl(g.slug)} text={`${g.title}: ${g.question}`} />
           </div>
         );
