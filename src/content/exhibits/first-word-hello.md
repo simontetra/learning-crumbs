@@ -14,7 +14,7 @@ image:
   alt: "A painted card with the word hello in rainbow watercolour letters, inside a wobbly green border, with a small orange painted face below"
   credit: "Our own, at home"
   licence: "Our own work"
-  url: "https://learningcrumbs.org/books/"
+  url: "/exhibits/first-word-hello/"
 imageToFind: "A photo of our son with a book, from our own house, to go in Our very own."
 pebbles: [hello, hornbook, oldest-book]
 tags: [books, family, reading, words]
