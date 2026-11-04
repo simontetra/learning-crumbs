@@ -142,5 +142,37 @@
     "question": "Why does Africa look so small?",
     "placard": "My son noticed that the map makes Africa look small and America look big. He was right, and it isn't a silly mistake. This room looks at the map most of us grew up with, why it stretches the world the way it does, and what other maps do instead.",
     "summary": "The world map most of us grew up with was made in 1569 for sailors, and it makes countries near the poles look far bigger than they are. Other maps show the land differently, and each one is a choice."
+  },
+  {
+    "slug": "board-game-stories",
+    "title": "Board Game Stories",
+    "code": "GAM",
+    "question": "Who really invented Monopoly?",
+    "placard": "Many of the board games on our shelves are older than we are, and some are far older. This room starts with the game credited to one man but first patented by a woman, then follows the crumbs to a wartime murder mystery, a word game, a race game from India and chess.",
+    "summary": "Monopoly, Cluedo, Scrabble, Ludo and chess: where the best-known board games came from, and who first thought of them."
+  },
+  {
+    "slug": "games-for-every-age",
+    "title": "Games for Every Age",
+    "code": "PLY",
+    "question": "Which games does every generation still play?",
+    "placard": "Some games are played at every age, from a child's first game of Snap to a grown-up's turn at charades. This room looks at four that have crossed the generations, and where each one began.",
+    "summary": "Snap, charades, Jenga and Twister: games that have lasted for generations, and how each one began."
+  },
+  {
+    "slug": "modern-entertainment",
+    "title": "Modern Entertainment",
+    "code": "MOD",
+    "question": "How much time do we spend looking at screens?",
+    "placard": "Screens have become part of nearly every day, for children and grown-ups alike. This room looks at the latest survey figures, the consoles people own, and two games from the 1970s and 1980s that are still played around the table.",
+    "summary": "How much time children and adults spend online and watching television, how many consoles have been sold, and two games from the 1970s and 1980s."
+  },
+  {
+    "slug": "the-movie-room",
+    "title": "The Movie Room",
+    "code": "FLM",
+    "question": "How did television go from black and white to streaming?",
+    "placard": "We used to watch programmes when they were broadcast, and rent films on tape. This room follows the picture from the first public television, through the videotape and the disc, to the streaming service on the sofa.",
+    "summary": "From the first public television at Alexandra Palace to videotapes, DVDs and streaming: how we have watched programmes and films at home."
   }
 ]
