@@ -43,9 +43,10 @@ const ld = {
     <div class="galleries-wrap">
     <div class="galleries">
       {galleries.map((g, i) => {
-        const pics = byGallery(g.slug).filter((e) => e.data.image).slice(0, 1).map((e) => e.data.image!);
+        const allPics = byGallery(g.slug).filter((e) => e.data.image).map((e) => e.data.image!);
+        const pics = allPics.slice(0, 1);
         return (
-          <div class="gallery-cell" data-index={i}>
+          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(allPics.map((p) => p.src))}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
             <div class={pics.length ? (pics.length === 1 ? 'door-pic solo' : 'door-pic') : 'door-pic solo'} aria-hidden="true">
               {pics.length ? pics.map((p) => (
@@ -73,6 +74,19 @@ const ld = {
 
   <script>
     // Show 16 rooms at a time, with arrows to move between pages. Without JavaScript every room is shown.
+    // Each visit, every room card shows a random one of its pictures. The first picture is the fallback without JavaScript.
+    document.querySelectorAll<HTMLElement>('.gallery-cell[data-pics]').forEach((cell) => {
+      let list: string[] = [];
+      try { list = JSON.parse(cell.dataset.pics || '[]'); } catch { list = []; }
+      const img = cell.querySelector<HTMLImageElement>('.door-pic img');
+      if (!img || list.length < 2) return;
+      const src = list[Math.floor(Math.random() * list.length)];
+      if (src === img.getAttribute('src')) return;
+      img.style.opacity = '0';
+      img.addEventListener('load', () => { img.style.opacity = '1'; }, { once: true });
+      img.src = src;
+    });
+
     const wrap = document.querySelector<HTMLElement>('.galleries-wrap');
     if (wrap) {
       const cells = [...wrap.querySelectorAll<HTMLElement>('.gallery-cell')];
