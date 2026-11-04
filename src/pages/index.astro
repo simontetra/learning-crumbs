@@ -10,6 +10,8 @@ const featured = ['xbox', 'james-bond', 'upper-and-lower-case', 'correction-flui
   .map((id) => exhibits.find((e) => e.id === id)!)
   .filter(Boolean);
 
+const roomsJson = JSON.stringify(galleries.map((g, i) => ({ n: i + 1, slug: g.slug, title: g.title, urls: exhibits.filter((e) => e.data.gallery === g.slug).map((e) => exhibitUrl(e.id)) })).filter((r) => r.urls.length));
+
 const ld = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -45,6 +47,7 @@ const ld = {
     <div class="section-head">
       <h2 id="start-h">Not sure where to start?</h2>
     </div>
+    <div class="start-options">
     <div class="dip">
       <button type="button" class="dip-btn" aria-label="Dip your hand in the bag for a random crumb" data-exhibits={JSON.stringify(exhibits.map((e) => ({ url: exhibitUrl(e.id), title: e.data.title })))}>
         <svg class="dip-art" viewBox="0 0 200 200" aria-hidden="true">
@@ -64,6 +67,16 @@ const ld = {
         <span class="dip-label">Feeling lucky? Dip your hand in.</span>
         <span class="dip-result" aria-live="polite"></span>
       </button>
+    </div>
+    </div>
+    <div class="spin" hidden data-rooms={roomsJson}>
+      <div class="wheel-wrap">
+        <svg class="wheel-pointer" viewBox="0 0 20 24" aria-hidden="true"><path d="M10 24 L0 0 L20 0 Z" fill="#b8322a"/></svg>
+        <svg class="wheel" viewBox="-100 -100 200 200" role="img" aria-label="Spin the wheel to land on a random room"><g class="wheel-spin"></g><circle r="9" fill="#fff8e6" stroke="#6e1c16" stroke-width="2"/></svg>
+      </div>
+      <button type="button" class="spin-btn">Spin the wheel</button>
+      <p class="spin-result" aria-live="polite"></p>
+    </div>
     </div>
     <script>
       const dip = document.querySelector<HTMLButtonElement>('.dip-btn');
@@ -90,5 +103,49 @@ const ld = {
         }, 450);
       });
     </script>
+    <script>
+      const wheelBox = document.querySelector<HTMLElement>('.spin');
+      if (wheelBox) {
+        wheelBox.hidden = false;
+        const rooms: { n: number; slug: string; title: string; urls: string[] }[] = JSON.parse(wheelBox.dataset.rooms || '[]');
+        const spinG = wheelBox.querySelector<SVGGElement>('.wheel-spin')!;
+        const btn = wheelBox.querySelector<HTMLButtonElement>('.spin-btn')!;
+        const result = wheelBox.querySelector<HTMLElement>('.spin-result')!;
+        const size = 360 / rooms.length;
+        const colour = (slug: string) => {
+          const el = document.querySelector<HTMLElement>(`.gallery-door[data-gallery="${slug}"]`);
+          return (el && getComputedStyle(el).getPropertyValue('--room-fill').trim()) || '#7a6a55';
+        };
+        let current = 0;
+        const pt = (deg: number, r: number) => [r * Math.sin((deg * Math.PI) / 180), -r * Math.cos((deg * Math.PI) / 180)];
+        spinG.innerHTML = rooms.map((r, i) => {
+          const a0 = i * size, a1 = (i + 1) * size, mid = a0 + size / 2;
+          const [x0, y0] = pt(a0, 96), [x1, y1] = pt(a1, 96);
+          const [tx, ty] = pt(mid, 62);
+          return `<path d="M0 0 L${x0} ${y0} A96 96 0 0 1 ${x1} ${y1} Z" fill="${colour(r.slug)}" stroke="#fff8e6" stroke-width="1.5"/>` +
+            `<text x="${tx}" y="${ty}" transform="rotate(${mid} ${tx} ${ty})" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="#fff8e6">${r.n}</text>`;
+        }).join('');
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        btn.addEventListener('click', () => {
+          if (btn.disabled) return;
+          const w = Math.floor(Math.random() * rooms.length);
+          const room = rooms[w];
+          const pick = room.urls[Math.floor(Math.random() * room.urls.length)];
+          const landed = () => {
+            result.textContent = `Room ${room.n}: ${room.title}`;
+            setTimeout(() => { window.location.href = pick; }, 900);
+          };
+          if (reduce) { landed(); return; }
+          btn.disabled = true;
+          const c = (w + 0.5) * size;
+          const base = current + 1800;
+          const diff = (((-c - base) % 360) + 360) % 360;
+          current = base + diff;
+          spinG.style.transform = `rotate(${current}deg)`;
+          spinG.addEventListener('transitionend', landed, { once: true });
+        });
+      }
+    </script>
   </section>
 </Base>
+

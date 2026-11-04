@@ -414,3 +414,15 @@ main { padding-block: 8px 72px; }
 .dip-label { font-size: 1.05rem; }
 .dip-result { min-height: 1.6em; font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); }
 @media (prefers-reduced-motion: reduce) { .dip-hand, .dip-btn.shaking .dip-bag-art { animation: none; transition: none; } }
+
+/* Start options: the lucky dip bag and the spin wheel side by side. */
+.start-options { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+.spin { display: grid; justify-items: start; gap: 12px; }
+.spin[hidden] { display: none; }
+.wheel-wrap { position: relative; width: 220px; }
+.wheel-pointer { position: absolute; top: -10px; left: 50%; width: 22px; height: auto; transform: translateX(-50%); z-index: 2; }
+.wheel { width: 220px; height: 220px; display: block; }
+.wheel-spin { transform-box: view-box; transform-origin: center; transition: transform 4.5s cubic-bezier(0.17, 0.67, 0.12, 0.99); }
+.spin-btn { font: inherit; font-size: 1.05rem; padding: 10px 22px; border-radius: 999px; border: 2px solid var(--heading); background: var(--heading); color: var(--label); cursor: pointer; }
+.spin-btn:disabled { opacity: 0.6; cursor: default; }
+.spin-result { min-height: 1.6em; margin: 0; font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); }
