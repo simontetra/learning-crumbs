@@ -9,7 +9,13 @@ when: "1 July 1979"
 where: "Tokyo, Japan"
 plate: "2"
 plateNote: "Headphone sockets on the first Walkman, so two people could listen."
-imageToFind: "A first Sony Walkman TPS-L2 (blue and silver, museum or collector photo), on Wikimedia Commons."
+image:
+  src: "/images/walkman.jpg"
+  alt: "A blue Sony Walkman cassette player with its headphones on a stand, in a museum display."
+  credit: "Yoshikazu Takada, via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:First_Walkman_1979_(31011124386).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
 pebbles: [cassette, cd, xbox]
 tags: [sound, music, inventions, Japan, Sony]
 sources:
