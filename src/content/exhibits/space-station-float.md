@@ -9,6 +9,12 @@ when: "Today"
 where: "The International Space Station, in orbit"
 plate: "90%"
 plateNote: "Gravity on the International Space Station, compared with the ground."
+image:
+  src: "/images/space-station-float.jpg"
+  alt: "The International Space Station with its solar panels spread out, seen against the curve of the Earth and its clouds."
+  credit: "NASA, via Wikimedia Commons"
+  licence: "Public domain (NASA)"
+  url: "https://commons.wikimedia.org/wiki/File:STS-134_International_Space_Station_after_undocking.jpg"
 pebbles: [montgolfier-balloon, wright-brothers, falling-apple]
 tags: [science, gravity, space]
 sources:
