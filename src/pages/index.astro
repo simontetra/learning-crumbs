@@ -47,7 +47,7 @@ const ld = {
         return (
           <div class="gallery-cell" data-index={i}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
-            <div class="door-pic" aria-hidden="true">
+            <div class={pic ? 'door-pic has-img' : 'door-pic'} aria-hidden="true">
               {pic ? <img src={pic.src} alt="" loading="lazy" class={pic.fit === 'contain' ? 'print' : undefined} /> : <span class="code">{g.code}</span>}
             </div>
             <div class="door-body">

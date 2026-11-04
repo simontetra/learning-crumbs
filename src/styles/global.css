@@ -365,3 +365,7 @@ main { padding-block: 8px 72px; }
 .pager button { font: inherit; color: var(--heading); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
 .pager button:hover { border-color: var(--accent); }
 .pg-label { color: var(--muted); font-family: var(--mono, monospace); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8em; text-align: center; }
+
+/* Room pictures show whole, never cropped: a plate-coloured mount with the full picture inside it. */
+.door-pic.has-img { background: var(--plate); padding: 10px; }
+.door-pic.has-img img { position: absolute; inset: 10px; width: calc(100% - 20px); height: calc(100% - 20px); object-fit: contain; }
