@@ -9,6 +9,12 @@ when: "Today"
 where: "Across the whole Earth"
 plate: "A fingernail's speed"
 plateNote: "The US Geological Survey says the plates move roughly as fast as your fingernails grow."
+image:
+  src: "/images/tectonic-plates.jpg"
+  alt: "A wide crack opening in a grey lava field, with loose stones and steam rising from the hills behind."
+  credit: "r-ewing, via Pexels"
+  licence: "Pexels licence (free to use)"
+  url: "https://www.pexels.com/@r-ewing-2148003793/"
 pebbles: [earthquakes, paricutin, surtsey]
 tags: [earth, geology, plates]
 sources:
