@@ -1,8 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import ExhibitCard from '../components/ExhibitCard.astro';
 import RoomGrid from '../components/RoomGrid.astro';
-import { SITE_NAME, TAGLINE, galleries, galleryUrl, allExhibits } from '../lib/site';
+import { SITE_NAME, TAGLINE, galleries, galleryUrl, exhibitUrl, allExhibits } from '../lib/site';
 
 const exhibits = await allExhibits();
 const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === slug);
@@ -42,12 +41,23 @@ const ld = {
     </div>
     <RoomGrid />
 
-  <section aria-labelledby="start-h" style="margin-top:56px">
+  <section aria-labelledby="start-h" class="start" style="margin-top:56px">
     <div class="section-head">
-      <h2 id="start-h">Pick up a crumb</h2>
+      <h2 id="start-h">Not sure where to start?</h2>
     </div>
-    <ul class="walk">
-      {featured.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
+    <p class="voice">Try one of these, or let us choose.</p>
+    <button type="button" class="surprise" data-exhibits={JSON.stringify(exhibits.map((e) => exhibitUrl(e.id)))}>Surprise me →</button>
+    <ul class="starts">
+      {featured.map((e) => (
+        <li><a href={exhibitUrl(e.id)}><span class="start-title">{e.data.title}</span><span class="start-sum">{e.data.summary}</span></a></li>
+      ))}
     </ul>
+    <script>
+      document.querySelector<HTMLButtonElement>('.surprise')?.addEventListener('click', (ev) => {
+        const btn = ev.currentTarget as HTMLButtonElement;
+        const list: string[] = JSON.parse(btn.dataset.exhibits || '[]');
+        if (list.length) window.location.href = list[Math.floor(Math.random() * list.length)];
+      });
+    </script>
   </section>
 </Base>
