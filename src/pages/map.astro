@@ -1,9 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import FloorPlan from '../components/FloorPlan.astro';
-import { galleries, galleryUrl } from '../lib/site';
-
-const rooms = galleries.map((g, i) => ({ ...g, n: i + 1, url: galleryUrl(g.slug) }));
 ---
 <Base title="Floor plan" description="A floor plan of the galleries. Follow the crumbs from room to room." nav="galleries">
   <section class="placard">
@@ -12,21 +9,4 @@ const rooms = galleries.map((g, i) => ({ ...g, n: i + 1, url: galleryUrl(g.slug)
   </section>
 
   <FloorPlan />
-
-  <ol class="map-list">
-    {rooms.map((r) => (
-      <li><a href={r.url}><span class="map-no">{r.n}</span> {r.title}</a></li>
-    ))}
-  </ol>
 </Base>
-
-<style>
-  .map-list { display: none; }
-
-  @media (max-width: 760px) {
-    .map-list { display: grid; gap: 10px; list-style: none; padding: 0; margin: 0; }
-    .map-list a { display: flex; gap: 10px; align-items: baseline; color: var(--heading); text-decoration: none; padding: 10px 14px; border-radius: 12px; background: var(--label); border: 1px solid var(--rule); }
-    .map-list .map-no { color: var(--muted); opacity: 1; min-width: 2ch; }
-  }
-  .map-no { font-family: var(--font-label); font-size: 0.7rem; }
-</style>

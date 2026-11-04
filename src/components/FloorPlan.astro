@@ -1,41 +1,59 @@
 ---
-// The tilted floor plan of the galleries. Rooms wind through it in rows of six, and each gold crumb
-// between two rooms leads on to the next. Pass `current` (a gallery slug) to mark where you are,
-// and to show the crumbs either side of it as Back and Next arrows.
+// The tilted floor plan of the galleries. Rooms wind through it in rows (six wide on a desktop,
+// three wide on a phone), and each gold crumb between two rooms leads on to the next.
+// Pass `current` (a gallery slug) to mark where you are, and to make the crumbs either side of it
+// larger, so they read as the way on and back.
 import { galleries, galleryUrl } from '../lib/site';
 
 interface Props { current?: string }
 const { current } = Astro.props;
 
-const COLS = 6;
-const ROWS = Math.ceil(galleries.length / COLS);
-const rooms = galleries.map((g, i) => {
-  const row = Math.floor(i / COLS);
-  const k = i % COLS;
-  const col = row % 2 === 0 ? k : COLS - 1 - k;
-  return {
-    ...g,
-    n: i + 1,
-    url: galleryUrl(g.slug),
-    x: ((col + 0.5) / COLS) * 100,
-    y: ((row + 0.5) / ROWS) * 100,
-  };
-});
+// Positions for a plan `cols` rooms wide, as percentages of the plan.
+function place(cols: number) {
+  const rows = Math.ceil(galleries.length / cols);
+  return galleries.map((_, i) => {
+    const row = Math.floor(i / cols);
+    const k = i % cols;
+    const col = row % 2 === 0 ? k : cols - 1 - k;
+    return { x: ((col + 0.5) / cols) * 100, y: ((row + 0.5) / rows) * 100 };
+  });
+}
+const WIDE = 6;
+const NARROW = 3;
+const wide = place(WIDE);
+const narrow = place(NARROW);
+const rooms = galleries.map((g, i) => ({
+  ...g,
+  n: i + 1,
+  url: galleryUrl(g.slug),
+  wx: wide[i].x, wy: wide[i].y,
+  nx: narrow[i].x, ny: narrow[i].y,
+}));
 const crumbs = rooms.slice(0, -1).map((r, i) => {
   const next = rooms[i + 1];
-  return { from: r, to: next, mx: (r.x + next.x) / 2, my: (r.y + next.y) / 2, index: i };
+  return {
+    from: r, to: next, index: i,
+    wx: (r.wx + next.wx) / 2, wy: (r.wy + next.wy) / 2,
+    nx: (r.nx + next.nx) / 2, ny: (r.ny + next.ny) / 2,
+  };
 });
 const here = current ? rooms.findIndex((r) => r.slug === current) : -1;
-const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join(' ');
+const trailWide = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.wx} ${r.wy}`).join(' ');
+const trailNarrow = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.nx} ${r.ny}`).join(' ');
 ---
 <div class="floor-wrap">
   <div class="floor">
-    <div class="plan" style={`aspect-ratio: ${COLS} / ${ROWS}`}>
-      <svg class="plan-trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d={trail} />
+    <div class="plan">
+      <svg class="plan-trail wide" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d={trailWide} />
+      </svg>
+      <svg class="plan-trail narrow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d={trailNarrow} />
       </svg>
       {rooms.map((r, i) => (
-        <a class:list={['map-room', i === here && 'here']} href={r.url} data-gallery={r.slug} style={`left:${r.x}%;top:${r.y}%`} aria-current={i === here ? 'page' : undefined}>
+        <a class:list={['map-room', i === here && 'here']} href={r.url} data-gallery={r.slug}
+          style={`--wx:${r.wx}%;--wy:${r.wy}%;--nx:${r.nx}%;--ny:${r.ny}%`}
+          aria-current={i === here ? 'page' : undefined}>
           <span class="map-no">{r.n}</span>
           <span class="map-title">{r.title}</span>
         </a>
@@ -47,7 +65,9 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
         const label = isNext ? `Next: ${c.to.title} →` : isBack ? `← Back: ${c.from.title}` : c.to.title;
         const aria = isNext ? `Next room: ${c.to.title}` : isBack ? `Back to ${c.from.title}` : `Next room: ${c.to.title}`;
         return (
-          <a class:list={['map-crumb', (isNext || isBack) && 'exit']} href={href} style={`left:${c.mx}%;top:${c.my}%`} aria-label={aria}>
+          <a class:list={['map-crumb', (isNext || isBack) && 'exit']} href={href}
+            style={`--wx:${c.wx}%;--wy:${c.wy}%;--nx:${c.nx}%;--ny:${c.ny}%`}
+            aria-label={aria}>
             <span aria-hidden="true">{label}</span>
           </a>
         );
@@ -63,15 +83,19 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
     position: relative;
     width: 90%;
     margin-inline: auto;
+    aspect-ratio: 6 / 3;
     transform: perspective(1400px) rotateX(34deg);
     transform-origin: 50% 55%;
     transform-style: preserve-3d;
   }
   .plan-trail { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .plan-trail path { fill: none; stroke: var(--pebble); stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .plan-trail.narrow { display: none; }
 
   .map-room {
     position: absolute;
+    left: var(--wx);
+    top: var(--wy);
     width: calc(100% / 6 * 0.84);
     height: calc(100% / 3 * 0.8);
     transform: translate(-50%, -50%);
@@ -101,6 +125,8 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
 
   .map-crumb {
     position: absolute;
+    left: var(--wx);
+    top: var(--wy);
     width: 18px;
     height: 18px;
     margin: -9px 0 0 -9px;
@@ -146,8 +172,23 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
     pointer-events: none;
   }
 
+  /* Phones: three rooms across, a taller plan, and a lighter tilt. */
   @media (max-width: 760px) {
-    .floor-wrap { display: none; }
+    .floor { padding: 16px; border-radius: 18px; }
+    .plan { width: 100%; aspect-ratio: 3 / 6; transform: perspective(900px) rotateX(26deg); }
+    .plan-trail.wide { display: none; }
+    .plan-trail.narrow { display: block; }
+    .map-room {
+      left: var(--nx);
+      top: var(--ny);
+      width: calc(100% / 3 * 0.86);
+      height: calc(100% / 6 * 0.76);
+      padding: 4px;
+    }
+    .map-title { font-size: 0.6rem; }
+    .map-no { font-size: 0.6rem; }
+    .map-crumb { left: var(--nx); top: var(--ny); }
+    .map-crumb span { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     .map-room, .map-crumb::before { transition: none; }
