@@ -15,6 +15,10 @@ image:
   credit: "Photo by nati4, Pexels"
   licence: "Pexels licence, free to use (cropped)"
   url: "https://www.pexels.com/@nati4/"
+fromHome:
+  src: "/images/stainless-steel-home.jpg"
+  alt: "A fork with a clear handle and two knives laid on a pale table in strong sunlight."
+  caption: "Our own cutlery in the sun. Most of it is stainless steel."
 pebbles: [velcro, pyrex, rubbing-out, mass-and-weight]
 tags: [metals, inventions, Sheffield, Britain, kitchens, materials]
 sources:

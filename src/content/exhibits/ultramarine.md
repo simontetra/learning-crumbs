@@ -16,6 +16,10 @@ image:
   licence: "CC BY 2.0 (resized)"
   licenceUrl: "https://creativecommons.org/licenses/by/2.0/"
   url: "https://commons.wikimedia.org/wiki/File:Lapis_lazuli_(lazuritic_metamorphite)_(Sar-e-Sang_Deposit,_Sakhi_Formation,_Precambrian,_2.4-2.7_Ga_(%3F);_Sar-e-Sang_Mining_District,_Hindu-Kush_Mountains,_Afghanistan)_17.jpg"
+fromHome:
+  src: "/images/ultramarine-home.jpg"
+  alt: "A blue smear of watercolour paint on a sheet of textured white paper, in strong sunlight."
+  caption: "A dab of blue watercolour on textured paper, from our own paints, in our own house."
 pebbles: [hands-on-the-wall, crayola, gutenberg-bible]
 tags: [colour, painting, Afghanistan, chemistry, Renaissance]
 sources:
