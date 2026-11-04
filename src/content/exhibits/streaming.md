@@ -9,7 +9,12 @@ when: "2008"
 where: "Stockholm, Sweden"
 plate: "100 million"
 plateNote: "Songs you can stream on Spotify today, more than any person could hear in a lifetime."
-imageToFind: "A phone with headphones, or someone listening to music on a phone, from Pexels."
+image:
+  src: "/images/streaming.jpg"
+  alt: "A hand with dark nails touching the controls of a podcast player on a phone, with the screen showing a blank cover."
+  credit: "cottonbro, via Pexels"
+  licence: "Pexels licence (free to use)"
+  url: "https://www.pexels.com/@cottonbro/"
 pebbles: [mp3, wireless, google]
 tags: [sound, music, internet, Sweden, inventions]
 sources:
