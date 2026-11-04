@@ -174,5 +174,45 @@
     "question": "How did television go from black and white to streaming?",
     "placard": "We used to watch programmes when they were broadcast, and rent films on tape. This room follows the picture from the first public television, through the videotape and the disc, to the streaming service on the sofa.",
     "summary": "From the first public television at Alexandra Palace to videotapes, DVDs and streaming: how we have watched programmes and films at home."
+  },
+  {
+    "slug": "magic-and-magicians",
+    "title": "Magic and Magicians",
+    "code": "MAG",
+    "question": "How is a lady sawn in half?",
+    "placard": "Magic is about a moment of wonder. This room looks at the performers who made it famous, the tricks that became legends, and the history behind the stage. It tells the story of the illusion, and does not explain how it is done.",
+    "summary": "The great magicians and the tricks that made them famous, from the sawing illusion to the escape artist Houdini."
+  },
+  {
+    "slug": "musicals",
+    "title": "Musicals",
+    "code": "MUS",
+    "question": "Where did the musical begin?",
+    "placard": "Some stories are best told with a song. This room follows the musical from the first show whose story depended on its songs, to the longest-running show on Broadway.",
+    "summary": "From Show Boat in 1927 to The Phantom of the Opera: the musical, and the shows that changed how stories are sung."
+  },
+  {
+    "slug": "the-theatre",
+    "title": "The Theatre",
+    "code": "THE",
+    "question": "Where did Shakespeare's plays first go on?",
+    "placard": "Long before the cinema, a play took place in a room full of people, with no second take. This room looks at the Globe, the theatre that Shakespeare's company built on the south bank of the Thames.",
+    "summary": "The Globe Theatre, built in 1599 for Shakespeare's company, and the fire that destroyed it."
+  },
+  {
+    "slug": "solo-singers",
+    "title": "Solo Singers",
+    "code": "SNG",
+    "question": "Who has sold the most records as a solo artist?",
+    "placard": "One voice, one name on the poster. This room looks at the solo singers who have sold the most records, and the figures that make them count.",
+    "summary": "Elvis Presley, the best-selling solo artist in the United States, and how sales figures are counted."
+  },
+  {
+    "slug": "groups-and-bands",
+    "title": "Groups and Bands",
+    "code": "BND",
+    "question": "How many records have the Beatles sold?",
+    "placard": "Some of the biggest names in music were groups of people playing together. This room looks at the bands who have sold the most records, and why the numbers are hard to pin down.",
+    "summary": "The Beatles and other bands: the best-selling groups, and why their sales figures are disputed."
   }
 ]
