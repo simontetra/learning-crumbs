@@ -1,8 +1,8 @@
 ---
 title: "Hello, first"
-gallery: between-the-covers
+gallery: from-cave-wall-to-picture-book
 order: 0
-accession: LB-BOK-006
+accession: LB-ART-000
 question: "What was his first word?"
 summary: "Our son's first word was hello, at eleven weeks old. From talking he went on to reading, and he was reading fluently before he was two."
 when: "The first year, at home"

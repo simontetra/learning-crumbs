@@ -1,11 +1,27 @@
 [
   {
+    "slug": "from-cave-wall-to-picture-book",
+    "title": "From Cave Wall to Picture Book",
+    "code": "ART",
+    "question": "Daddy, who drew <em>us</em>?",
+    "placard": "My son had learned to read, and to talk in full sentences, by the time he was two. One morning, having just read <a href=\"https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\"><em>The Arabian Nights</em></a>, he looked up and asked me this. It is a bigger question than it sounds. Somebody drew Hairy Maclary, and somebody, a very long time ago, drew the first picture of all. This room walks from the oldest hands on a cave wall to the picture books on his shelf.",
+    "summary": "How people have drawn and painted, from hand stencils and the Lascaux caves to the pencil, the rubber, Peter Rabbit, Crayola and ink made from oak galls."
+  },
+  {
     "slug": "between-the-covers",
-    "title": "Between the Covers",
+    "title": "Chapter One",
     "code": "BOK",
     "question": "What is the oldest book in the world?",
-    "placard": "Books are the gateway to almost everything. Through them we learn about other cultures, far-off places, history, politics, nature and science, and we hear the tales people have carried for centuries. This room starts small, with one word, and then asks some bigger questions: which is the oldest, which is the longest, which sells the most, and how they are made.",
-    "summary": "Books are the gateway to learning and stories. This room covers the oldest dated printed book, the hornbook, how books are made, the longest and best-selling books, and one first word."
+    "placard": "Books are the gateway to almost everything. Through them we learn about other cultures, far-off places, history, politics, nature and science, and we hear the tales people have carried for centuries. This chapter begins with the oldest dated printed book, then asks some bigger questions: which is the longest, which sells the most, how books are made, and how many there are.",
+    "summary": "Books are the gateway to learning and stories. This chapter begins with the oldest dated printed book and covers the hornbook, how books are made, the longest and best-selling books, and how many there are."
+  },
+  {
+    "slug": "from-quill-to-keyboard",
+    "title": "From Quill to Keyboard",
+    "code": "QTK",
+    "question": "Did you use to write on a typewriter, Dad?",
+    "placard": "Yes, I did — and correction fluid too, the cheaper kind. To my son, the past is one flat place where I might as well have been chiselling stone tablets. This gallery gives it some depth: how we got from reeds and feathers to the keys under your fingers.",
+    "summary": "How writing and printing evolved, from papyrus and goose quills to movable type, the typewriter and correction fluid."
   },
   {
     "slug": "folk-tales",
@@ -24,14 +40,6 @@
     "summary": "Famous names that began as placeholders, near-misses and happy accidents: Xbox, Bluetooth, Sherlock Holmes, James Bond, Amazon and more."
   },
   {
-    "slug": "from-quill-to-keyboard",
-    "title": "From Quill to Keyboard",
-    "code": "QTK",
-    "question": "Did you use to write on a typewriter, Dad?",
-    "placard": "Yes, I did — and correction fluid too, the cheaper kind. To my son, the past is one flat place where I might as well have been chiselling stone tablets. This gallery gives it some depth: how we got from reeds and feathers to the keys under your fingers.",
-    "summary": "How writing and printing evolved, from papyrus and goose quills to movable type, the typewriter and correction fluid."
-  },
-  {
     "slug": "back-from-the-brink",
     "title": "Back from the Brink",
     "code": "BRK",
@@ -46,14 +54,6 @@
     "question": "When was the bicycle invented?",
     "placard": "My son asked me this one. The answer is 1817, and the first bicycle had no pedals. From there the trail runs on wheels of every kind, along the first railway, and then, thanks to two brothers who mended bicycles, up into the air.",
     "summary": "How we learned to get about: the first bicycle, the penny-farthing, roller skates, skateboards, the Rocket, the first car journey, the hot air balloon, the Wright brothers and the helicopter."
-  },
-  {
-    "slug": "from-cave-wall-to-picture-book",
-    "title": "From Cave Wall to Picture Book",
-    "code": "ART",
-    "question": "Daddy, who drew <em>us</em>?",
-    "placard": "My son had learned to read, and to talk in full sentences, by the time he was two. One morning, having just read <a href=\"https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\"><em>The Arabian Nights</em></a>, he looked up and asked me this. It is a bigger question than it sounds. Somebody drew Hairy Maclary, and somebody, a very long time ago, drew the first picture of all. This room walks from the oldest hands on a cave wall to the picture books on his shelf.",
-    "summary": "How people have drawn and painted, from hand stencils and the Lascaux caves to the pencil, the rubber, Peter Rabbit, Crayola and ink made from oak galls."
   },
   {
     "slug": "what-things-are-made-of",
