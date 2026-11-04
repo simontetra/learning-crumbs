@@ -9,6 +9,13 @@ when: "22 May 1960"
 where: "Off the coast of southern Chile"
 plate: "9.5"
 plateNote: "The magnitude generally agreed for the 1960 Chile earthquake. Some studies propose 9.4 or 9.6."
+image:
+  src: "/images/earthquakes.jpg"
+  alt: "A multi-storey building in Concepción, Chile, tilted and partly collapsed after the 2010 earthquake, with a metal fence in front."
+  credit: "Claudio Núñez, via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:2010_Chile_earthquake_-_Building_destroyed_in_Concepci%C3%B3n_(cropped).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
 pebbles: [tectonic-plates, paricutin, sailing-stones]
 tags: [earth, geology, Chile, earthquakes]
 sources:
