@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import RoomGrid from '../../components/RoomGrid.astro';
+import CrumbTrail from '../../components/CrumbTrail.astro';
 import { galleries, galleryUrl, allExhibits } from '../../lib/site';
 const exhibits = await allExhibits();
 const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === slug);
@@ -9,9 +10,12 @@ const count = (slug: string) => byGallery(slug).length;
 ---
 <Base title="Galleries" description="Every gallery in Learning Crumbs, each beginning with a question." nav="galleries">
   <Breadcrumbs trail={[{ name: 'Galleries' }]} />
-  <section class="placard">
-    <h1>Galleries</h1>
-    <p class="voice">Each room starts with a question someone actually asked. New rooms open as new questions come up.</p>
-  </section>
-  <RoomGrid />
+  <div class="home-wrap">
+    <CrumbTrail />
+    <section class="placard">
+      <h1>Galleries</h1>
+      <p class="voice">Each room starts with a question someone actually asked. New rooms open as new questions come up.</p>
+    </section>
+    <RoomGrid />
+  </div>
 </Base>
