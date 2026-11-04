@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://learningcrumbs.org/sitemap-index.xml
