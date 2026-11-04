@@ -9,7 +9,13 @@ when: "1901 – 1922"
 where: "Cornwall; Newfoundland; London"
 plate: "• • •"
 plateNote: "The letter S in Morse code: the first wireless signal to cross the Atlantic."
-imageToFind: "A 1920s or 1930s wireless set or crystal radio with headphones (museum photo), or Marconi with his equipment, public domain on Wikimedia Commons."
+image:
+  src: "/images/wireless.jpg"
+  alt: "A 1920s portable radio receiver with its back panel open, showing valves and wiring, and a horn speaker on top."
+  credit: "Uncredited photograph provided by the U.S. Bureau of Standards, via Wikimedia Commons (from Scientific American, 1920)"
+  licence: "Public domain (US)"
+  url: "https://commons.wikimedia.org/wiki/File:Portaphone_radio_receiver_(1920).jpg"
+  fit: contain
 pebbles: [bluetooth, walkman, pigeons]
 tags: [sound, radio, inventions, Britain, BBC]
 sources:
