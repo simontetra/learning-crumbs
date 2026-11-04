@@ -79,12 +79,15 @@ const ld = {
 
       {d.fromHome && (
         <details class="from-home">
-          <summary><span class="from-home-label">From our house</span> <span class="from-home-hint">See ours</span></summary>
+          <summary><span class="from-home-label">Our very own</span> <span class="from-home-hint">See ours</span></summary>
           <figure>
             <img src={d.fromHome.src} alt={d.fromHome.alt} loading="lazy" />
             <figcaption>{d.fromHome.caption}</figcaption>
           </figure>
         </details>
+      )}
+      {d.fromHome && (
+        <p class="add-yours"><a href={`/add-yours/?exhibit=${exhibit.id}`}>Add yours</a></p>
       )}
 
       <ShareLinks path={exhibitUrl(exhibit.id)} text={`${d.title}: ${d.question} Learning Crumbs`} />

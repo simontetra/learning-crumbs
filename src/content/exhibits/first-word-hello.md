@@ -9,7 +9,7 @@ when: "The first year, at home"
 where: "Our house"
 plate: "hello"
 plateNote: "The first word, in our house."
-imageToFind: "A photo of our son with a book, from our own house, to go in From our house."
+imageToFind: "A photo of our son with a book, from our own house, to go in Our very own."
 pebbles: [hello, hornbook, oldest-book]
 tags: [books, family, reading, words]
 sources: []

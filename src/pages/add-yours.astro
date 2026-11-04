@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { allExhibits } from '../lib/site';
+const exhibits = (await allExhibits()).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<Base title="Add yours" description="Send your own photo to go alongside an exhibit on Learning Crumbs.">
+  <article class="legal">
+    <h1>Add yours</h1>
+    <p>Have you made, found or photographed something that goes with one of our exhibits? Send it here. Use a nickname or your real name, whichever you prefer.</p>
+    <form class="contact" aria-describedby="add-note">
+      <label>Name or nickname <input name="name" type="text" maxlength="60" autocomplete="nickname" disabled></label>
+      <label>Which exhibit? <select name="exhibit" disabled>
+        <option value="">Choose one</option>
+        {exhibits.map((e) => <option value={e.id}>{e.data.title}</option>)}
+      </select></label>
+      <label>Photo <input name="photo" type="file" accept="image/*" disabled></label>
+      <label>A short caption <textarea name="caption" rows="3" maxlength="300" disabled></textarea></label>
+      <label><input type="checkbox" name="rights" disabled> I took this photo, or I have permission to share it, and it may be shown on Learning Crumbs with the name or nickname I give.</label>
+      <button type="submit" disabled>Send my photo</button>
+      <p id="add-note" class="draft">Not yet connected. Every photo will be checked by hand before it appears on the site.</p>
+    </form>
+  </article>
+  <script>
+    const exhibit = new URLSearchParams(location.search).get('exhibit');
+    const select = document.querySelector<HTMLSelectElement>('select[name="exhibit"]');
+    if (exhibit && select) select.value = exhibit;
+  </script>
+</Base>

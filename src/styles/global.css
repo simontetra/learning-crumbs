@@ -338,6 +338,8 @@ main { padding-block: 8px 72px; }
 .from-home-label { font-family: var(--font-label); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--room-text); }
 .from-home-label::before { content: ""; display: inline-block; width: 8px; height: 7px; border-radius: 50%; background: var(--room-fill); margin-right: 8px; vertical-align: 1px; }
 .from-home-hint { font-size: var(--step--1); color: var(--room-text); font-style: italic; }
+.add-yours { margin: 8px 0 0 18px; font-size: var(--step--1); }
+.add-yours a { color: var(--room-text); }
 .from-home-hint::after { content: " +"; }
 .from-home[open] .from-home-hint::after { content: " \2212"; }
 .from-home figure { margin: 0; padding: 0 16px 16px; display: grid; gap: 10px; }
