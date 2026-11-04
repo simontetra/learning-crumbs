@@ -43,12 +43,14 @@ const ld = {
     <div class="galleries-wrap">
     <div class="galleries">
       {galleries.map((g, i) => {
-        const pic = byGallery(g.slug).find((e) => e.data.image)?.data.image;
+        const pics = byGallery(g.slug).filter((e) => e.data.image).slice(0, 4).map((e) => e.data.image!);
         return (
           <div class="gallery-cell" data-index={i}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
-            <div class={pic ? 'door-pic has-img' : 'door-pic'} aria-hidden="true">
-              {pic ? <img src={pic.src} alt="" loading="lazy" class={pic.fit === 'contain' ? 'print' : undefined} /> : <span class="code">{g.code}</span>}
+            <div class={pics.length ? (pics.length === 1 ? 'door-pic solo' : 'door-pic') : 'door-pic solo'} aria-hidden="true">
+              {pics.length ? pics.map((p) => (
+                <span><img src={p.src} alt="" loading="lazy" /></span>
+              )) : <span class="code-tile"><span class="code">{g.code}</span></span>}
             </div>
             <div class="door-body">
               <h3>{g.title}</h3>
