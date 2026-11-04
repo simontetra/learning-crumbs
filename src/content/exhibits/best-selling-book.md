@@ -9,7 +9,14 @@ when: "Ancient to today"
 where: "Worldwide"
 plate: "5 billion"
 plateNote: "Guinness World Records' estimate of Bible copies, as of 1995. Counting is uncertain."
-imageToFind: "A photograph of an old Bible or a Commons image of a Gutenberg page, checked for licence."
+image:
+  src: "/images/holy-bible.jpg"
+  alt: "A dark burgundy leather Bible lying at an angle on a white background, with HOLY BIBLE in gold letters on the front cover and gilt edges on the pages"
+  credit: "Jim Burklo, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  url: "https://commons.wikimedia.org/wiki/File:The_Holy_Bible.png"
+  fit: contain
 pebbles: [gutenberg-bible, the-journey-of-paper, peter-rabbit]
 tags: [books, religion, records, history]
 sources:
