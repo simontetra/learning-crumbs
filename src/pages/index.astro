@@ -43,7 +43,7 @@ const ld = {
     <div class="galleries-wrap">
     <div class="galleries">
       {galleries.map((g, i) => {
-        const pics = byGallery(g.slug).filter((e) => e.data.image).slice(0, 4).map((e) => e.data.image!);
+        const pics = byGallery(g.slug).filter((e) => e.data.image).slice(0, 1).map((e) => e.data.image!);
         return (
           <div class="gallery-cell" data-index={i}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
