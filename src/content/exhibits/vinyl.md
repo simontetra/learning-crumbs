@@ -9,7 +9,12 @@ when: "1887 – 1948"
 where: "Washington, D.C.; New York"
 plate: "33⅓"
 plateNote: "Turns a minute for a long-playing record."
-imageToFind: "A vinyl record on a turntable with the needle in the groove, from Pexels or Unsplash."
+image:
+  src: "/images/vinyl.jpg"
+  alt: "A black vinyl record with a yellow centre label, seen from above on a white background."
+  credit: "Evan-Amos, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:12in-Vinyl-LP-Record-Angle.jpg"
 pebbles: [phonograph, cassette, monkees]
 tags: [sound, music, inventions, records, America]
 sources:
