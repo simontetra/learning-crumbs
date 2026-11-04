@@ -9,6 +9,12 @@ when: "Every bath"
 where: "Our own fingers"
 plate: "Keratin"
 plateNote: "Keratin in the outer layer of skin takes in water and swells."
+image:
+  src: "/images/skin-water-beads.jpg"
+  alt: "A close view of a bare shoulder and back, covered in tiny beads of water. The droplets are thickest across the top of the shoulder and fade into soft, blurred light."
+  credit: "Photo by Anna Nekrashevich, Pexels"
+  licence: "Pexels licence, free to use (resized)"
+  url: "https://www.pexels.com/@anna-nekrashevich/"
 pebbles: [wrinkly-fingers, duck-feathers, lotus-leaf]
 tags: [body, skin, water]
 sources:
