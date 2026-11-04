@@ -9,6 +9,13 @@ when: "1997"
 where: "Lotus leaves"
 plate: "Micro and nano"
 plateNote: "The leaf surface has micro- and nanometre-scale structures that keep water beaded up."
+image:
+  src: "/images/lotus-leaf-surface.jpg"
+  alt: "A black and white electron microscope picture of a lotus leaf surface. Rounded bumps rise out of the leaf, and each bump is covered in much finer, tiny points."
+  credit: "Wilhelm Barthlott and Christoph Neinhuis, lotus-salvinia.de, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Nelumbo_nucifera_(Nelumbonaceae)_Foto_Barthlott_%26_Neinhuis_(published_in_Planta_1997).jpg"
 pebbles: [duck-feathers, skin-barrier]
 tags: [plants, leaves, science]
 sources:
