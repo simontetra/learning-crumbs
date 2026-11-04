@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Suggest a room" description="Suggest a new room for Learning Crumbs. Rooms are checked before they go live." nav="galleries">
+  <article class="legal">
+    <h1>Suggest a room</h1>
+    <p>Have an idea for a room? Tell us what it could be about. Every room is checked and sourced before it goes live, so we may ask you a question or two. You don't need an account to suggest a room.</p>
+    <p class="draft"><strong>Not yet connected.</strong> This form will be switched on once the database is set up. Until then, nothing you type is sent anywhere.</p>
+    <form class="contact" aria-describedby="room-note">
+      <label>Room title <input name="title" type="text" maxlength="80" disabled></label>
+      <label>The question the room asks <input name="question" type="text" maxlength="160" disabled></label>
+      <label>Why it's worth a room <textarea name="why" rows="4" maxlength="800" disabled></textarea></label>
+      <fieldset>
+        <legend>How should we credit you, if we mention you?</legend>
+        <label><input type="radio" name="credit" value="anonymous" checked disabled> Anonymously</label>
+        <label><input type="radio" name="credit" value="real_name" disabled> With my real name</label>
+        <label><input type="radio" name="credit" value="nickname" disabled> With a nickname</label>
+        <label>Name or nickname (if you chose one of these) <input name="display_name" type="text" maxlength="60" disabled></label>
+      </fieldset>
+      <label>Email (optional, only to tell you when the room goes live) <input name="notify_email" type="email" autocomplete="email" disabled></label>
+      <button type="submit" disabled>Send suggestion</button>
+      <p id="room-note" class="draft">Submitting this form will not create an account.</p>
+    </form>
+  </article>
+</Base>
