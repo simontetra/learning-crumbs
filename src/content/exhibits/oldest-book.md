@@ -9,7 +9,12 @@ when: "11 May 868"
 where: "Dunhuang, in north-west China"
 plate: "868"
 plateNote: "The date printed in the colophon, the note at the end of the Diamond Sutra."
-imageToFind: "A photograph of the Diamond Sutra or a Commons image of it, checked for licence."
+image:
+  src: "/images/diamond-sutra.jpg"
+  alt: "A gilded illustration from the Diamond Sutra: a seated Buddha at the centre, flanked by standing and kneeling figures, with clouds and halos in gold on a green ground"
+  credit: "Chester Beatty Library, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Diamond_of_perfect_wisdom_sutra.jpg"
 pebbles: [papyrus, movable-type-before-gutenberg, the-journey-of-paper]
 tags: [books, China, history, printing]
 sources:
