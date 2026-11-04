@@ -25,7 +25,10 @@ const ld = {
 };
 ---
 <Base title={gallery.title} description={gallery.summary} jsonLd={ld} nav="galleries" image={exhibits.find((e) => e.data.image)?.data.image?.src}>
-  <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title }]} />
+  <div class="room-top">
+    <Breadcrumbs trail={[{ name: 'Galleries', href: '/galleries/' }, { name: gallery.title }]} />
+    <a class="floor-link" href="/map/">Floor plan</a>
+  </div>
   <section class="placard" data-gallery={gallery.slug}>
     <span class="eyebrow">{exhibits.length} exhibits</span>
     <h1>{gallery.title}</h1>
@@ -54,5 +57,7 @@ const ld = {
   .rn-dir { font-family: var(--font-label); font-size: var(--step--1); color: var(--muted); }
   .rn-title { font-family: var(--font-display); font-weight: 700; }
   .room-plan { margin-top: 40px; }
+  .room-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .floor-link { font-family: var(--font-label); font-size: var(--step--1); color: var(--room-text); white-space: nowrap; }
   .room-plan .floor-wrap { padding-top: 0; }
 </style>
