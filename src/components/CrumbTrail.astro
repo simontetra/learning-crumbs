@@ -1,0 +1,111 @@
+---
+// A trail of crumbs down the left margin, one for each room, in order.
+// It weaves gently left and right down the page, and each crumb links to its room.
+// Shown only on wide screens, where there is space beside the content.
+import { galleries, galleryUrl } from '../lib/site';
+
+const n = galleries.length;
+const H = n * 100;
+const points = galleries.map((g, i) => ({
+  slug: g.slug,
+  title: g.title,
+  x: i % 2 === 0 ? 30 : 70,
+  y: i * 100 + 50,
+}));
+const path = points
+  .map((p, i) => {
+    if (i === 0) return `M ${p.x} ${p.y}`;
+    const prev = points[i - 1];
+    return `C ${prev.x} ${prev.y + 50}, ${p.x} ${p.y - 50}, ${p.x} ${p.y}`;
+  })
+  .join(' ');
+---
+<nav class="crumb-trail" aria-label="Rooms, in order">
+  <svg viewBox={`0 0 100 ${H}`} preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d={path} />
+  </svg>
+  {points.map((p, i) => (
+    <a
+      class="crumb"
+      data-gallery={p.slug}
+      href={galleryUrl(p.slug)}
+      style={`left:${p.x}%;top:${(p.y / H) * 100}%`}
+      aria-label={`Room ${i + 1}: ${p.title}`}
+    >
+      <span aria-hidden="true">{p.title}</span>
+    </a>
+  ))}
+</nav>
+
+<style>
+  .crumb-trail {
+    display: none;
+    position: absolute;
+    left: -84px;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  @media (min-width: 1280px) {
+    .crumb-trail { display: block; }
+  }
+  .crumb-trail svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .crumb-trail path {
+    fill: none;
+    stroke: var(--pebble);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 1 7;
+    vector-effect: non-scaling-stroke;
+  }
+  .crumb {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border-radius: 50%;
+    background: var(--room-fill, var(--pebble));
+    box-shadow: 0 0 0 4px var(--wall);
+    pointer-events: auto;
+    transition: transform 0.2s ease;
+  }
+  .crumb:hover,
+  .crumb:focus-visible {
+    transform: scale(1.3);
+    outline: none;
+  }
+  .crumb:focus-visible {
+    box-shadow: 0 0 0 4px var(--wall), 0 0 0 6px var(--accent);
+  }
+  .crumb span {
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--label);
+    color: var(--heading);
+    font-size: var(--step--1);
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+  .crumb:hover span,
+  .crumb:focus-visible span {
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .crumb, .crumb span { transition: none; }
+  }
+</style>

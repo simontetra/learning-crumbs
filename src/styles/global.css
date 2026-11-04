@@ -431,6 +431,7 @@ main { padding-block: 8px 72px; }
 
 /* Page arrows: round, animated, halfway down the room grid, on the left and right edges. */
 .galleries-wrap { position: relative; }
+.home-wrap { position: relative; }
 /* Default: arrows sit in a row beneath the grid, clear of the cards. */
 .pager { position: static; display: flex; justify-content: space-between; align-items: center; margin: 24px 0 0; font-size: inherit; }
 .pager[hidden], .pager button[hidden] { display: none; }
