@@ -9,7 +9,14 @@ when: "Before the factory"
 where: "Everywhere"
 plate: "Signatures"
 plateNote: "Sheets are folded into sections called signatures, then sewn together."
-imageToFind: "A photograph of a sewing frame or a book being sewn, checked for licence."
+image:
+  src: "/images/folio-quarto-octavo.svg"
+  alt: "Diagram comparing a folio, a quarto and an octavo: one large sheet folded once makes two leaves, folded into quarters makes four, and folded into eighths makes eight, with each size drawn at its relative page size"
+  credit: "Skaalr, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Folio-Quarto-Octavo_Compared.svg"
+  fit: contain
 pebbles: [gutenberg-bible, quill-pen, ink]
 tags: [books, printing, craft, history]
 sources:
