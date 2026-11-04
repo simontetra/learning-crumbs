@@ -9,6 +9,13 @@ when: "2013–2014"
 where: "Racetrack Playa, Death Valley, California"
 plate: "2 to 5 m/min"
 plateNote: "How fast some rocks moved in the winter of 2013–14."
+image:
+  src: "/images/sailing-stones.jpg"
+  alt: "A grey rock on the cracked dry lake bed of Racetrack Playa, with a long track behind it leading across the mud."
+  credit: "Lgcharlot, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Racetrack_Playa_in_Death_Valley_National_Park.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 pebbles: [paricutin, surtsey]
 tags: [earth, geology, deserts, California]
 sources:
