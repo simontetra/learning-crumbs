@@ -1,7 +1,7 @@
 ---
 title: "Hello, first"
 gallery: between-the-covers
-order: 6
+order: 0
 accession: LB-BOK-006
 question: "What was his first word?"
 summary: "Our son's first word was hello, at eleven weeks old. From talking he went on to reading, and he was reading fluently before he was two."
@@ -9,6 +9,12 @@ when: "The first year, at home"
 where: "Our house"
 plate: "hello"
 plateNote: "The first word, in our house."
+image:
+  src: "/images/hello-first-word.jpg"
+  alt: "A painted card with the word hello in rainbow watercolour letters, inside a wobbly green border, with a small orange painted face below"
+  credit: "Our own, at home"
+  licence: "Our own work"
+  url: "https://learningcrumbs.org/books/"
 imageToFind: "A photo of our son with a book, from our own house, to go in Our very own."
 pebbles: [hello, hornbook, oldest-book]
 tags: [books, family, reading, words]
