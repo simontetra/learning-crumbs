@@ -398,3 +398,14 @@ main { padding-block: 8px 72px; }
 .starts a:hover { border-color: var(--accent); }
 .start-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
 .start-sum { color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
+
+/* Lucky dip: a bag to dip into, shaking while tickets flick past. */
+.dip { display: grid; gap: 12px; justify-items: start; margin-top: 4px; }
+.dip-btn { display: inline-flex; align-items: center; gap: 14px; font: inherit; font-size: 1.05rem; padding: 12px 24px 12px 14px; border-radius: 999px; border: 2px dashed var(--heading); background: var(--label); color: var(--heading); cursor: pointer; }
+.dip-btn:hover:not(:disabled) { border-style: solid; }
+.dip-btn:disabled { cursor: default; }
+.dip-bag { width: 56px; height: auto; flex: none; }
+.dip-btn.shaking .dip-bag { animation: dip-shake 0.4s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes dip-shake { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+.dip-result { min-height: 1.6em; margin: 0; font-family: var(--font-display); font-size: 1.25rem; color: var(--heading); }
+@media (prefers-reduced-motion: reduce) { .dip-btn.shaking .dip-bag { animation: none; } }
