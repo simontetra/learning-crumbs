@@ -9,7 +9,12 @@ when: "1963"
 where: "Hasselt, Belgium (Philips)"
 plate: "1963"
 plateNote: "The year the compact cassette was launched."
-imageToFind: "A compact cassette tape close up, or a pile of old cassettes, from Pexels or Unsplash."
+image:
+  src: "/images/cassette.jpg"
+  alt: "Close-up of several compact cassette tapes stacked together, one with its clear case and label visible."
+  credit: "Suzy Hazelwood, via Pexels"
+  licence: "Pexels licence (free to use)"
+  url: "https://www.pexels.com/photo/black-cassette-tape-in-close-up-photography-2718571/"
 pebbles: [vinyl, walkman, cd]
 tags: [sound, music, inventions, Netherlands, tape]
 sources:
