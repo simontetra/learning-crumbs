@@ -32,7 +32,7 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
 
   <div class="floor-wrap">
     <div class="floor">
-      <div class="plan">
+      <div class="plan" style={`aspect-ratio: ${COLS} / ${ROWS}`}>
         <svg class="plan-trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
           <path d={trail} />
         </svg>
@@ -65,7 +65,6 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
     position: relative;
     width: 90%;
     margin-inline: auto;
-    aspect-ratio: 2 / 1;
     transform: perspective(1400px) rotateX(34deg);
     transform-origin: 50% 55%;
     transform-style: preserve-3d;
