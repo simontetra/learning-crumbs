@@ -9,6 +9,12 @@ when: "Every day"
 where: "A duck's back"
 plate: "Preen oil"
 plateNote: "The oil that a bird spreads over its feathers, from a gland near its tail."
+image:
+  src: "/images/duck-feathers-water.jpg"
+  alt: "Overlapping brown and orange feathers, with tiny drops of water beaded across them and sitting in a glossy line on the darker feathers beneath."
+  credit: "Photo by anacardia, Pexels"
+  licence: "Pexels licence, free to use (resized)"
+  url: "https://www.pexels.com/@anacardia/"
 pebbles: [skin-barrier, lotus-leaf]
 tags: [birds, feathers, water]
 sources:
