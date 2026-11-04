@@ -9,6 +9,12 @@ when: "Every day"
 where: "Under the world's oceans"
 plate: "2,000 in a day"
 plateNote: "Almost 2,000 earthquakes were recorded in one day at a single spot on the Juan de Fuca Ridge, off Canada."
+image:
+  src: "/images/hidden-quakes.jpg"
+  alt: "Diagram of an undersea earthquake: a stuck section of the fault ruptures, lifting the seafloor and pushing a wave of water upwards."
+  credit: "Brian F. Atwater, Marco Cisternas V., Joanne Bourgeois, Walter C. Dudley, James W. Hendley II and Peter H. Stauffer, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Eq-gen3.svg"
 pebbles: [earthquakes, tectonic-plates, surtsey]
 tags: [earth, geology, oceans, earthquakes]
 sources:
