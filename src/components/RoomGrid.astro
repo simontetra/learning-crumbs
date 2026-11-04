@@ -4,6 +4,8 @@ import { galleries, galleryUrl, allExhibits } from '../lib/site';
 import TileShare from './TileShare.astro';
 const exhibits = await allExhibits();
 const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === slug);
+// Rooms whose cover is fixed: the first picture in the room, every visit.
+const pinned = new Set(['from-cave-wall-to-picture-book', 'between-the-covers']);
 ---
     <div class="galleries-wrap">
     <div class="galleries">
@@ -11,7 +13,7 @@ const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === sl
         const allPics = byGallery(g.slug).filter((e) => e.data.image).map((e) => '/cards/' + e.data.image!.src.split('/').pop()!.replace(/\.[^.]+$/, '.jpg'));
         const pics = allPics.slice(0, 1);
         return (
-          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(i === 0 ? pics : allPics)}>
+          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(pinned.has(g.slug) ? pics : allPics)}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
             <div class={pics.length ? (pics.length === 1 ? 'door-pic solo' : 'door-pic') : 'door-pic solo'} aria-hidden="true">
               {pics.length ? pics.map((p) => (
