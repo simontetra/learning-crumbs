@@ -15,7 +15,7 @@ image:
   credit: "Photo by nati4, Pexels"
   licence: "Pexels licence, free to use (cropped)"
   url: "https://www.pexels.com/@nati4/"
-pebbles: [velcro, pyrex, rubbing-out]
+pebbles: [velcro, pyrex, rubbing-out, mass-and-weight]
 tags: [metals, inventions, Sheffield, Britain, kitchens, materials]
 sources:
   - title: "Harry Brearley (Wikipedia)"

@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Montgolfiere_1783.jpg"
   fit: contain
-pebbles: [wright-brothers, helium, the-journey-of-paper]
+pebbles: [wright-brothers, helium, the-journey-of-paper, falling-apple]
 tags: [flight, balloons, transport, inventions, France]
 sources:
   - title: "Montgolfier balloon (Museum of Flight)"

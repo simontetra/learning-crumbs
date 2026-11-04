@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:1910-sikorsky_S-2.jpg"
   fit: contain
-pebbles: [wright-brothers, montgolfier-balloon, stephensons-rocket]
+pebbles: [wright-brothers, montgolfier-balloon, stephensons-rocket, one-sixth]
 tags: [flight, helicopters, transport, inventions, inventors]
 sources:
   - title: "Igor Sikorsky (Encyclopaedia Britannica)"

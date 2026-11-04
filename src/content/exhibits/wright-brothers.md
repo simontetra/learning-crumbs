@@ -16,7 +16,7 @@ image:
   licence: "public domain"
   url: "https://commons.wikimedia.org/wiki/File:Wright_Brothers%27_1903_Aeroplane_Kitty_Hawk_in_First_Flight_-_NARA_-_7580929.jpg"
   fit: contain
-pebbles: [sikorsky-helicopter, montgolfier-balloon, penny-farthing]
+pebbles: [sikorsky-helicopter, montgolfier-balloon, penny-farthing, space-station-float]
 tags: [flight, aeroplanes, transport, inventions, America, bicycles]
 sources:
   - title: "Wright Brothers' First Flight (EBSCO Research Starters)"
