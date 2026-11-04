@@ -126,5 +126,13 @@
     "question": "Why does Africa look so small?",
     "placard": "My son noticed that the map makes Africa look small and America look big. He was right, and it isn't a silly mistake. This room looks at the map most of us grew up with, why it stretches the world the way it does, and what other maps do instead.",
     "summary": "The world map most of us grew up with was made in 1569 for sailors, and it makes countries near the poles look far bigger than they are. Other maps show the land differently, and each one is a choice."
+  },
+  {
+    "slug": "between-the-covers",
+    "title": "Between the Covers",
+    "code": "BOK",
+    "question": "What is the oldest book in the world?",
+    "placard": "Books are so ordinary that we hardly stop to think about them. This room asks some simple questions: which is the oldest, which is the longest, which has sold the most, and how they are made.",
+    "summary": "The oldest dated printed book is over 1,150 years old. The longest novel has millions of words, the most-sold book is the Bible, and nobody knows exactly how many books are published each year."
   }
 ]
