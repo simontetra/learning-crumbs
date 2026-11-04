@@ -149,7 +149,9 @@ main { padding-block: 8px 72px; }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 20px; }
 .section-head h2 { font-size: var(--step-2); }
 
-.galleries { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); gap: 16px; }
+.galleries { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+@media (min-width: 560px) { .galleries { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .galleries { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
 .gallery-door {
   display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: var(--label); border: 1px solid var(--rule);
   border-top: 5px solid var(--room-fill); border-radius: var(--radius); color: var(--ink); text-decoration: none;
@@ -356,3 +358,10 @@ main { padding-block: 8px 72px; }
 /* Room tiles: keep each card flush, and pin its share row to the card's bottom edge. */
 .gallery-cell { display: grid; }
 .gallery-cell > .gallery-door { height: 100%; padding: 0; gap: 0; }
+
+.gallery-cell[hidden] { display: none; }
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; font-size: var(--step--1); }
+.pager[hidden], .pager button[hidden] { display: none; }
+.pager button { font: inherit; color: var(--heading); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.pager button:hover { border-color: var(--accent); }
+.pg-label { color: var(--muted); font-family: var(--mono, monospace); letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8em; text-align: center; }

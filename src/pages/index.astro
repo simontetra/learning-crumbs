@@ -40,11 +40,12 @@ const ld = {
       <h2 id="galleries-h">Galleries</h2>
       <span class="eyebrow">{exhibits.length} exhibits</span>
     </div>
+    <div class="galleries-wrap">
     <div class="galleries">
-      {galleries.map((g) => {
+      {galleries.map((g, i) => {
         const pic = byGallery(g.slug).find((e) => e.data.image)?.data.image;
         return (
-          <div class="gallery-cell">
+          <div class="gallery-cell" data-index={i}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
             <div class="door-pic" aria-hidden="true">
               {pic ? <img src={pic.src} alt="" loading="lazy" class={pic.fit === 'contain' ? 'print' : undefined} /> : <span class="code">{g.code}</span>}
@@ -60,7 +61,45 @@ const ld = {
         );
       })}
     </div>
+    <nav class="pager" aria-label="Browse rooms" hidden>
+      <button type="button" class="pg-prev" hidden>← Earlier rooms</button>
+      <span class="pg-label" aria-live="polite"></span>
+      <button type="button" class="pg-next">Next rooms →</button>
+    </nav>
+    </div>
   </section>
+
+  <script>
+    // Show 16 rooms at a time, with arrows to move between pages. Without JavaScript every room is shown.
+    const wrap = document.querySelector<HTMLElement>('.galleries-wrap');
+    if (wrap) {
+      const cells = [...wrap.querySelectorAll<HTMLElement>('.gallery-cell')];
+      const size = 16;
+      const pages = Math.ceil(cells.length / size);
+      const nav = wrap.querySelector<HTMLElement>('.pager')!;
+      const label = nav.querySelector<HTMLElement>('.pg-label')!;
+      const prev = nav.querySelector<HTMLButtonElement>('.pg-prev')!;
+      const next = nav.querySelector<HTMLButtonElement>('.pg-next')!;
+      let page = 1;
+      const show = () => {
+        cells.forEach((c, i) => { c.hidden = Math.floor(i / size) + 1 !== page; });
+        label.textContent = `Rooms ${(page - 1) * size + 1}–${Math.min(page * size, cells.length)} of ${cells.length}`;
+        prev.hidden = page === 1;
+        next.hidden = page === pages;
+      };
+      const go = (to: number) => {
+        page = to;
+        show();
+        wrap.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      };
+      if (pages > 1) {
+        nav.hidden = false;
+        prev.addEventListener('click', () => go(page - 1));
+        next.addEventListener('click', () => go(page + 1));
+        show();
+      }
+    }
+  </script>
 
   <section aria-labelledby="start-h" style="margin-top:56px">
     <div class="section-head">
