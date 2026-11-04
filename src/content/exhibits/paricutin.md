@@ -9,6 +9,12 @@ when: "1943"
 where: "Michoacán, Mexico"
 plate: "424 m"
 plateNote: "The final height of the cone, built up over nine years."
+image:
+  src: "/images/paricutin.jpg"
+  alt: "Parícutin seen from the air: a dark cinder cone rising above a black lava field, with a mountain ridge behind."
+  credit: "Jim Luhr, Smithsonian Institution, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Paricut%C3%ADn_volcano.jpg"
 pebbles: [sailing-stones, surtsey]
 tags: [earth, geology, Mexico, volcanoes]
 sources:
