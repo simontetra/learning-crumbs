@@ -80,8 +80,18 @@ const shown = here >= 0 ? floors.filter((f) => f.index === rooms[here].floor) : 
         </div>
       </div>
       <nav class="stairs" aria-label={`Stairs and lift from the ${f.name}`}>
-        {f.index > 0 && <a class="stairs-down" href={rooms[PER_FLOOR * f.index - 1].url}>← Down to the {floorName(f.index - 1)}</a>}
-        {f.index < floors.length - 1 && <a class="stairs-up" href={rooms[PER_FLOOR * (f.index + 1)].url}>Up to the {floorName(f.index + 1)} →</a>}
+        {f.index > 0 && (
+          <a class="stairs-down" href={rooms[PER_FLOOR * f.index - 1].url}>
+            <svg class="stair-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 4 H6 V8 H10 V12 H14 V16 H18" /></svg>
+            Down to the {floorName(f.index - 1)}
+          </a>
+        )}
+        {f.index < floors.length - 1 && (
+          <a class="stairs-up" href={rooms[PER_FLOOR * (f.index + 1)].url}>
+            <svg class="stair-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 16 H6 V12 H10 V8 H14 V4 H18" /></svg>
+            Up to the {floorName(f.index + 1)}
+          </a>
+        )}
       </nav>
     </section>
   ))}
@@ -204,6 +214,8 @@ const shown = here >= 0 ? floors.filter((f) => f.index === rooms[here].floor) : 
   }
   .stairs a:hover, .stairs a:focus-visible { border-color: var(--accent); }
   .stairs-up { margin-left: auto; }
+  .stairs a { display: inline-flex; align-items: center; gap: 8px; }
+  .stair-icon { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
 
   /* Phones: the same three-wide plan, a taller tilt, and smaller labels. */
   @media (max-width: 760px) {
