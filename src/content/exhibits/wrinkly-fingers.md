@@ -15,7 +15,7 @@ image:
   credit: "Photo by Yassin Doukhane, Pexels"
   licence: "Pexels licence, free to use (cropped)"
   url: "https://www.pexels.com/@yassin-doukhane-1334941/"
-pebbles: [pneumatic-tyre, velcro, taller-in-the-morning]
+pebbles: [pneumatic-tyre, velcro, taller-in-the-morning, skin-barrier]
 tags: [the body, nerves, experiments, biology]
 sources:
   - title: "Get a grip: why we get wrinkly fingers and toes (Newcastle University)"

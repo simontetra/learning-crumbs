@@ -110,5 +110,13 @@
     "question": "Why are we attached to the ground? Why don't we float into the air?",
     "placard": "It is one of the first questions most of us ask about gravity, and the answers are stranger than they sound. Gravity pulls on everything, including you, the chair you are sitting on and the air above it. Why it pulls is not the whole story. How hard it pulls depends on where you are, and an astronaut who floats in orbit is still being pulled by Earth. This room follows the pull from an apple, to the Moon, to the space station.",
     "summary": "Why we stay on the ground: the pull of gravity, why you would weigh a sixth as much on the Moon, and why astronauts float even though gravity is still strong."
+  },
+  {
+    "slug": "are-we-waterproof",
+    "title": "Are We Waterproof?",
+    "code": "WTR",
+    "question": "Daddy, are we waterproof?",
+    "placard": "My son asked this one, and I didn't know the answer, so we went looking. It turns out that skin, feathers and leaves all have their own ways of dealing with water. Some keep it out, some let it through, and some let it roll off. This room starts with our own skin, and then looks at a duck and a leaf.",
+    "summary": "Are we waterproof? Our skin soaks up a little water and swells, birds oil their feathers to shed it, and the lotus leaf sheds it completely."
   }
 ]
