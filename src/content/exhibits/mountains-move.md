@@ -9,6 +9,13 @@ when: "Today"
 where: "Himalayas, Everest and mountain ranges worldwide"
 plate: "2 mm a year"
 plateNote: "The rate at which Everest was growing, against an expected 1 mm a year, according to a 2024 study."
+image:
+  src: "/images/mountains-move.jpg"
+  alt: "Mount Everest's summit pyramid rising above snow-covered ridges and glaciers, with a plume of snow blown from the peak."
+  credit: "Bijay Chaurasia, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 pebbles: [tectonic-plates, paricutin, hidden-quakes]
 tags: [earth, geology, mountains, Himalayas]
 sources:
