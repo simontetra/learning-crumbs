@@ -15,7 +15,7 @@ const exhibits = (await allExhibits()).sort((a, b) => a.data.title.localeCompare
       </select></label>
       <label>Photo <input name="photo" type="file" accept="image/*" disabled></label>
       <label>A short caption <textarea name="caption" rows="3" maxlength="300" disabled></textarea></label>
-      <label><input type="checkbox" name="rights" disabled> I took this photo, or I have permission to share it, and it may be shown on Learning Crumbs with the name or nickname I give.</label>
+      <label><input type="checkbox" name="rights" disabled> I confirm that I have permission to share this type of content, and that I have read the <a href="/terms/">Terms of use</a>.</label>
       <button type="submit" disabled>Send my photo</button>
       <p id="add-note" class="draft">Not yet connected. Every photo will be checked by hand before it appears on the site.</p>
     </form>
