@@ -15,7 +15,7 @@ image:
   credit: "Howell Williams, NOAA, via Wikimedia Commons"
   licence: "Public domain"
   url: "https://commons.wikimedia.org/wiki/File:Surtsey_eruption_1963.jpg"
-pebbles: [paricutin, sailing-stones, tectonic-plates]
+pebbles: [paricutin, sailing-stones, tectonic-plates, hidden-quakes]
 tags: [earth, geology, Iceland, islands]
 sources:
   - title: "Surtsey (Wikipedia)"

@@ -16,7 +16,7 @@ image:
   licence: "CC BY-SA 2.0"
   url: "https://commons.wikimedia.org/wiki/File:2010_Chile_earthquake_-_Building_destroyed_in_Concepci%C3%B3n_(cropped).jpg"
   licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
-pebbles: [tectonic-plates, paricutin, sailing-stones]
+pebbles: [tectonic-plates, paricutin, sailing-stones, hidden-quakes]
 tags: [earth, geology, Chile, earthquakes]
 sources:
   - title: "1960 Chile earthquake (Encyclopaedia Britannica)"

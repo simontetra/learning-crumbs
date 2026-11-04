@@ -15,7 +15,7 @@ image:
   credit: "r-ewing, via Pexels"
   licence: "Pexels licence (free to use)"
   url: "https://www.pexels.com/@r-ewing-2148003793/"
-pebbles: [earthquakes, paricutin, surtsey]
+pebbles: [earthquakes, paricutin, surtsey, hidden-quakes]
 tags: [earth, geology, plates]
 sources:
   - title: "How fast do tectonic plates move? (US Geological Survey)"
