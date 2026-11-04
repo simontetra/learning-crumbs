@@ -1,5 +1,21 @@
 [
   {
+    "slug": "between-the-covers",
+    "title": "Between the Covers",
+    "code": "BOK",
+    "question": "What is the oldest book in the world?",
+    "placard": "Books are the gateway to almost everything. Through them we learn about other cultures, far-off places, history, politics, nature and science, and we hear the tales people have carried for centuries. This room starts small, with one word, and then asks some bigger questions: which is the oldest, which is the longest, which sells the most, and how they are made.",
+    "summary": "Books are the gateway to learning and stories. This room covers the oldest dated printed book, the hornbook, how books are made, the longest and best-selling books, and one first word."
+  },
+  {
+    "slug": "folk-tales",
+    "title": "Folk Tales",
+    "code": "FOL",
+    "question": "Why did Hansel leave a trail?",
+    "placard": "Long before these stories were printed, they were told aloud, in kitchens and by fires, and they changed a little with every telling. This room follows some of the trails they leave behind: crumbs, a red hood and a ball of thread.",
+    "summary": "Hansel and Gretel, Little Red Riding Hood and Theseus in the Labyrinth: old stories that were told aloud long before they were printed, and the trails they leave behind."
+  },
+  {
     "slug": "names-that-nearly-were",
     "title": "Names That Nearly Were",
     "code": "NAM",
@@ -126,13 +142,5 @@
     "question": "Why does Africa look so small?",
     "placard": "My son noticed that the map makes Africa look small and America look big. He was right, and it isn't a silly mistake. This room looks at the map most of us grew up with, why it stretches the world the way it does, and what other maps do instead.",
     "summary": "The world map most of us grew up with was made in 1569 for sailors, and it makes countries near the poles look far bigger than they are. Other maps show the land differently, and each one is a choice."
-  },
-  {
-    "slug": "between-the-covers",
-    "title": "Between the Covers",
-    "code": "BOK",
-    "question": "What is the oldest book in the world?",
-    "placard": "Books are so ordinary that we hardly stop to think about them. This room asks some simple questions: which is the oldest, which is the longest, which has sold the most, and how they are made.",
-    "summary": "The oldest dated printed book is over 1,150 years old. The longest novel has millions of words, the most-sold book is the Bible, and nobody knows exactly how many books are published each year."
   }
 ]
