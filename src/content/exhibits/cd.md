@@ -9,7 +9,12 @@ when: "1982"
 where: "Japan and the Netherlands"
 plate: "74 min"
 plateNote: "How much music fits on a standard CD."
-imageToFind: "A CD catching rainbow light, from Pexels or Unsplash."
+image:
+  src: "/images/cd.jpg"
+  alt: "Close-up of a compact disc on a blue background, with light reflecting in rainbow streaks across its surface."
+  credit: "indiansummer, via Pexels"
+  licence: "Pexels licence (free to use)"
+  url: "https://www.pexels.com/photo/close-up-shot-of-a-disc-6063811/"
 pebbles: [walkman, mp3, cassette]
 tags: [sound, music, inventions, Japan, Netherlands, myths]
 sources:
