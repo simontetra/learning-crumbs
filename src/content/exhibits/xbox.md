@@ -15,6 +15,7 @@ image:
   credit: "Photo by Lance He, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@lancehe/"
+  fit: contain
 pebbles: [bluetooth, google, amazon]
 tags: [technology, games, brands, placeholders]
 sources:
