@@ -9,7 +9,13 @@ when: "Today"
 where: "Your ears and brain"
 plate: "1 in 10,000"
 plateNote: "Roughly how rare perfect pitch is in Europe and America."
-imageToFind: "A child at a piano or with headphones, or piano keys close up, from Pexels."
+image:
+  src: "/images/perfect-pitch.jpg"
+  alt: "A silver tuning fork resting on a page of sheet music."
+  credit: "European Union, 2026, via Wikimedia Commons"
+  licence: "CC BY 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:A_tuning_fork_placed_on_sheet_music_2.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/4.0"
 pebbles: [phonograph, mp3, colour-blind]
 tags: [sound, music, the body, brain, languages]
 sources:
