@@ -20,10 +20,10 @@ sources:
 
 It is easy to think of mountains as fixed, but everything about them moves. Some grow, some shrink, and some do both at once.
 
-A 2024 study found that **Mount Everest** was growing at about **2 millimetres a year**, double the 1 millimetre a year that scientists had expected. The researchers linked this to a river in the Himalayas that captured part of a neighbouring river. With less water flowing down the valley below Everest, the rock there eroded more slowly, and other parts of the range rose to compensate.
+A 2024 study found that **Mount Everest** was growing at about **2 millimetres a year**, double the 1 millimetre a year that scientists had expected. The researchers linked this to a river in the Himalayas that captured part of a neighbouring river. Rock in the valleys below Everest began to erode, and other parts of the range rose to compensate for the loss.
 
 Erosion works the other way. Rain, rivers and ice carry rock away from the mountains and down to the sea, so the peaks are gradually worn lower.
 
 Scientists still argue about what limits how high a mountain can get. A 2020 study argued that erosion does not set the upper limit at all, and that the balance of forces between the moving plates and the weight of the mountain does.
 
-> **Look closer:** Everest is still rising, though the wind and snow are wearing it down at the same time.
+> **Look closer:** Everest is still rising, even though the rock around it is being carried away.

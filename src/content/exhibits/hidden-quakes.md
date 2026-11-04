@@ -22,6 +22,6 @@ Nobody feels most earthquakes, because most of them happen under the sea. The oc
 
 In one day, **almost 2,000 earthquakes** shook a single spot about 240 kilometres off Vancouver Island. The spot sits on the **Juan de Fuca Ridge**, where two plates are pulling apart and new ocean crust is forming. The vast majority of those quakes were smaller than magnitude 1, which is too weak for people to feel and is found only by instruments.
 
-Undersea earthquakes matter for more than the scientists who record them. The ocean floor is where new crust is made, and it is the main source of the energy that drives plate movement. Earthquakes are also by far the most common cause of tsunamis, and a large quake beneath the sea can lift or drop the seafloor enough to push the whole column of water above it.
+Undersea earthquakes matter for more than the scientists who record them. The ocean floor is where new crust is made. Earthquakes are also by far the most common cause of tsunamis, and a large quake beneath the sea can lift or drop the seafloor enough to push the whole column of water above it.
 
 > **Look closer:** The quietest parts of the Earth are often the busiest ones. A place where nothing seems to happen may be shifting a little every day.
