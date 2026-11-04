@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ExhibitCard from '../components/ExhibitCard.astro';
-import TileShare from '../components/TileShare.astro';
+import RoomGrid from '../components/RoomGrid.astro';
 import { SITE_NAME, TAGLINE, galleries, galleryUrl, allExhibits } from '../lib/site';
 
 const exhibits = await allExhibits();
@@ -40,83 +40,7 @@ const ld = {
       <h2 id="galleries-h">Galleries</h2>
       <span class="eyebrow">{exhibits.length} exhibits</span>
     </div>
-    <div class="galleries-wrap">
-    <div class="galleries">
-      {galleries.map((g, i) => {
-        const allPics = byGallery(g.slug).filter((e) => e.data.image).map((e) => '/cards/' + e.data.image!.src.split('/').pop()!.replace(/\.[^.]+$/, '.jpg'));
-        const pics = allPics.slice(0, 1);
-        return (
-          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(allPics)}>
-          <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
-            <div class={pics.length ? (pics.length === 1 ? 'door-pic solo' : 'door-pic') : 'door-pic solo'} aria-hidden="true">
-              {pics.length ? pics.map((p) => (
-                <span><img src={p} alt="" loading="lazy" /></span>
-              )) : <span class="code-tile"><span class="code">{g.code}</span></span>}
-            </div>
-            <div class="door-body">
-              <h3>{g.title}</h3>
-              <p class="q" set:html={`“${g.question}”`} />
-              <span class="eyebrow">{byGallery(g.slug).length} exhibits</span>
-            </div>
-          </a>
-          <span class="card-no" aria-hidden="true">{i + 1}</span>
-          <TileShare path={galleryUrl(g.slug)} text={`${g.title}: ${g.question}`} />
-          </div>
-        );
-      })}
-    </div>
-    <nav class="pager" aria-label="Browse rooms" hidden>
-      <button type="button" class="pg-prev" hidden>← Earlier rooms</button>
-      <span class="pg-label" aria-live="polite"></span>
-      <button type="button" class="pg-next">Next rooms →</button>
-    </nav>
-    </div>
-  </section>
-
-  <script>
-    // Show 16 rooms at a time, with arrows to move between pages. Without JavaScript every room is shown.
-    // Each visit, every room card shows a random one of its pictures. The first picture is the fallback without JavaScript.
-    document.querySelectorAll<HTMLElement>('.gallery-cell[data-pics]').forEach((cell) => {
-      let list: string[] = [];
-      try { list = JSON.parse(cell.dataset.pics || '[]'); } catch { list = []; }
-      const img = cell.querySelector<HTMLImageElement>('.door-pic img');
-      if (!img || list.length < 2) return;
-      const src = list[Math.floor(Math.random() * list.length)];
-      if (src === img.getAttribute('src')) return;
-      img.style.opacity = '0';
-      img.addEventListener('load', () => { img.style.opacity = '1'; }, { once: true });
-      img.src = src;
-    });
-
-    const wrap = document.querySelector<HTMLElement>('.galleries-wrap');
-    if (wrap) {
-      const cells = [...wrap.querySelectorAll<HTMLElement>('.gallery-cell')];
-      const size = 16;
-      const pages = Math.ceil(cells.length / size);
-      const nav = wrap.querySelector<HTMLElement>('.pager')!;
-      const label = nav.querySelector<HTMLElement>('.pg-label')!;
-      const prev = nav.querySelector<HTMLButtonElement>('.pg-prev')!;
-      const next = nav.querySelector<HTMLButtonElement>('.pg-next')!;
-      let page = 1;
-      const show = () => {
-        cells.forEach((c, i) => { c.hidden = Math.floor(i / size) + 1 !== page; });
-        label.textContent = `Rooms ${(page - 1) * size + 1}–${Math.min(page * size, cells.length)} of ${cells.length}`;
-        prev.hidden = page === 1;
-        next.hidden = page === pages;
-      };
-      const go = (to: number) => {
-        page = to;
-        show();
-        wrap.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      };
-      if (pages > 1) {
-        nav.hidden = false;
-        prev.addEventListener('click', () => go(page - 1));
-        next.addEventListener('click', () => go(page + 1));
-        show();
-      }
-    }
-  </script>
+    <RoomGrid />
 
   <section aria-labelledby="start-h" style="margin-top:56px">
     <div class="section-head">

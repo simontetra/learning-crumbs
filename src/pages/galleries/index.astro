@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RoomGrid from '../../components/RoomGrid.astro';
 import { galleries, galleryUrl, allExhibits } from '../../lib/site';
 const exhibits = await allExhibits();
 const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === slug);
@@ -12,19 +13,5 @@ const count = (slug: string) => byGallery(slug).length;
     <h1>Galleries</h1>
     <p class="voice">Each room starts with a question someone actually asked. New rooms open as new questions come up.</p>
   </section>
-  <div class="galleries">
-    {galleries.map((g) => (
-      <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
-        <h2 style="font-size:var(--step-2)">{g.title}</h2>
-        <p class="q" set:html={`“${g.question}”`} />
-        <p>{g.summary}</p>
-        <div class="door-pics" aria-hidden="true">
-          {byGallery(g.slug).filter((e) => e.data.image).slice(0, 4).map((e) => (
-            <span><img src={e.data.image!.src} alt="" loading="lazy" class={e.data.image!.fit === 'contain' ? 'print' : undefined} /></span>
-          ))}
-        </div>
-        <div class="meta"><span class="eyebrow">{count(g.slug)} exhibits</span><span>Enter →</span></div>
-      </a>
-    ))}
-  </div>
+  <RoomGrid />
 </Base>
