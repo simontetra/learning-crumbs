@@ -118,5 +118,13 @@
     "question": "Daddy, are we waterproof?",
     "placard": "My son asked this one, and I didn't know the answer, so we went looking. It turns out that skin, feathers and leaves all have their own ways of dealing with water. Some keep it out, some let it through, and some let it roll off. This room starts with our own skin, and then looks at a duck and a leaf.",
     "summary": "Are we waterproof? Our skin soaks up a little water and swells, birds oil their feathers to shed it, and the lotus leaf sheds it completely."
+  },
+  {
+    "slug": "bigger-and-smaller",
+    "title": "Bigger and Smaller",
+    "code": "MAP",
+    "question": "Why does Africa look so small?",
+    "placard": "My son noticed that the map makes Africa look small and America look big. He was right, and it isn't a silly mistake. This room looks at the map most of us grew up with, why it stretches the world the way it does, and what other maps do instead.",
+    "summary": "The world map most of us grew up with was made in 1569 for sailors, and it makes countries near the poles look far bigger than they are. Other maps show the land differently, and each one is a choice."
   }
 ]

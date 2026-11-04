@@ -16,6 +16,10 @@ image:
   licence: "public domain (five frames arranged as one picture)"
   url: "https://commons.wikimedia.org/wiki/File:Making_Paper.gif"
   fit: contain
+fromHome:
+  src: "/images/the-journey-of-paper-home.jpg"
+  alt: "A blue smear of watercolour paint on a sheet of textured white paper, in strong sunlight."
+  caption: "A dab of blue watercolour on textured paper, from our own paints, in our own house."
 pebbles: [papyrus, movable-type-before-gutenberg, montgolfier-balloon]
 tags: [paper, China, Islamic world, trade routes, inventions]
 sources:

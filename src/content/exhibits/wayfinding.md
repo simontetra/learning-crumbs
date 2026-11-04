@@ -15,7 +15,7 @@ image:
   credit: "Photo by ozram, Pexels"
   licence: "Pexels licence, free to use"
   url: "https://www.pexels.com/@ozram/"
-pebbles: [dung-beetles, eratosthenes, sea-turtles]
+pebbles: [dung-beetles, eratosthenes, sea-turtles, mercator-map]
 tags: [navigation, the Pacific, stars, people, oceans, traditions]
 sources:
   - title: "Mau Piailug (Wikipedia)"
