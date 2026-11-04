@@ -86,9 +86,10 @@ const ld = {
           </figure>
         </details>
       )}
-      {d.fromHome && (
-        <p class="add-yours"><a href={`/add-yours/?exhibit=${exhibit.id}`}>Add yours</a></p>
-      )}
+      <aside class="add-box" aria-label="Add your own">
+        <p><strong>Add your own.</strong> Have a photo, object or story that goes with this exhibit? Send it in with a caption and a credit.</p>
+        <a class="add-btn" href={`/add-yours/?exhibit=${exhibit.id}`}>Add yours</a>
+      </aside>
 
       <ShareLinks path={exhibitUrl(exhibit.id)} text={`${d.title}: ${d.question} Learning Crumbs`} />
       <div class="tags" aria-label="Topics">
@@ -122,6 +123,13 @@ const ld = {
     <ol></ol>
     <button type="button" id="clear-trail">Start a fresh trail</button>
   </aside>
+
+  <style>
+    .add-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin: 28px 0 8px; padding: 16px 18px; border-radius: 14px; background: var(--label); border: 1px dashed var(--rule); }
+    .add-box p { margin: 0; max-width: 46ch; }
+    .add-btn { display: inline-block; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--accent); color: var(--accent); font-family: var(--font-label); font-size: var(--step--1); text-decoration: none; white-space: nowrap; }
+    .add-btn:hover, .add-btn:focus-visible { background: var(--accent); color: var(--paper, #fff); }
+  </style>
 
   <script is:inline>
     // Keeps a list of the exhibits this visitor has walked through, in this browser only.
