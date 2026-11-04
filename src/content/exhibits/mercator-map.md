@@ -12,9 +12,9 @@ plateNote: "Gerardus Mercator presented this projection in 1569, designed for se
 image:
   src: "/images/mercator-world-map.jpg"
   alt: "A 1587 world map by Gerardus Mercator, printed as two side-by-side hemispheres inside a decorative border, with the Americas on the left and Africa and Asia on the right, in hand colour"
-  credit: "Julian Sargent, via Wikimedia Commons"
+  credit: "Rumold Mercator, via Wikimedia Commons (Chester Beatty Library copy)"
   licence: "public domain"
-  url: "https://commons.wikimedia.org/wiki/File:Mercator_World_Map.jpg"
+  url: "https://commons.wikimedia.org/wiki/File:World_map_(Orbis_terrae_compendiosa_descriptio)_(CBL_Wep_4180).jpg"
   fit: contain
 pebbles: [eratosthenes, tectonic-plates, wayfinding]
 tags: [maps, navigation, science]
