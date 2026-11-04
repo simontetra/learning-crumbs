@@ -9,6 +9,12 @@ when: "1687"
 where: "Woolsthorpe, England"
 plate: "1687"
 plateNote: "The year Newton published his theory of gravity, in the Principia."
+image:
+  src: "/images/falling-apple.jpg"
+  alt: "A black-and-white engraved portrait of Isaac Newton in a long wig, with an apple tree behind him and an apple at the lower right."
+  credit: "LadyofHats, via Wikimedia Commons"
+  licence: "CC0 (public domain dedication)"
+  url: "https://commons.wikimedia.org/wiki/File:Newton_portrait_with_apple_tree.svg"
 pebbles: [montgolfier-balloon, wright-brothers]
 tags: [science, gravity, Newton, England]
 sources:
