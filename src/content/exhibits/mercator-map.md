@@ -8,7 +8,14 @@ summary: "The world map most of us know was designed in 1569 to help sailors ste
 when: "1569"
 where: "Europe, for sailors everywhere"
 plate: "1569"
-plateNote: "Gerardus Mercator presented this projection in 1569, designed for sea navigation."
+plateNote: "Gerardus Mercator presented this projection in 1569, designed for sea navigation. The picture is a different world map of his, from 1587."
+image:
+  src: "/images/mercator-world-map.jpg"
+  alt: "A 1587 world map by Gerardus Mercator, printed as two side-by-side hemispheres inside a decorative border, with the Americas on the left and Africa and Asia on the right, in hand colour"
+  credit: "Julian Sargent, via Wikimedia Commons"
+  licence: "public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Mercator_World_Map.jpg"
+  fit: contain
 pebbles: [eratosthenes, tectonic-plates, wayfinding]
 tags: [maps, navigation, science]
 sources:
