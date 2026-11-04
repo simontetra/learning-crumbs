@@ -1,0 +1,15 @@
+---
+// Small share row for a room tile: Bluesky, Email, WhatsApp. Plain links, no tracking scripts.
+interface Props { path: string; text: string; }
+const { path, text } = Astro.props;
+const url = new URL(path, Astro.site).href;
+const enc = encodeURIComponent;
+const links = [
+  { name: 'Bluesky', href: `https://bsky.app/intent/compose?text=${enc(`${text} ${url}`)}` },
+  { name: 'Email', href: `mailto:?subject=${enc(text)}&body=${enc(`${text}\n\n${url}`)}` },
+  { name: 'WhatsApp', href: `https://wa.me/?text=${enc(`${text} ${url}`)}` },
+];
+---
+<nav class="tile-share" aria-label={`Share ${text}`}>
+  {links.map((l) => <a href={l.href} rel="noopener" target={l.name === 'Email' ? undefined : '_blank'}>{l.name}</a>)}
+</nav>

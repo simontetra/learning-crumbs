@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ExhibitCard from '../components/ExhibitCard.astro';
+import TileShare from '../components/TileShare.astro';
 import { SITE_NAME, TAGLINE, galleries, galleryUrl, allExhibits } from '../lib/site';
 
 const exhibits = await allExhibits();
@@ -43,6 +44,7 @@ const ld = {
       {galleries.map((g) => {
         const pic = byGallery(g.slug).find((e) => e.data.image)?.data.image;
         return (
+          <div class="gallery-cell">
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
             <div class="door-pic" aria-hidden="true">
               {pic ? <img src={pic.src} alt="" loading="lazy" class={pic.fit === 'contain' ? 'print' : undefined} /> : <span class="code">{g.code}</span>}
@@ -53,6 +55,8 @@ const ld = {
               <span class="eyebrow">{byGallery(g.slug).length} exhibits</span>
             </div>
           </a>
+          <TileShare path={galleryUrl(g.slug)} text={`${g.title}: ${g.question}`} />
+          </div>
         );
       })}
     </div>

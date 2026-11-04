@@ -157,9 +157,15 @@ main { padding-block: 8px 72px; }
 .gallery-door:hover { border-color: var(--accent); }
 .door-pic { aspect-ratio: 4 / 3; background: var(--room-fill); display: grid; place-items: center; overflow: hidden; }
 .door-pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.door-pic { position: relative; }
+.door-pic img { position: absolute; inset: 0; }
 .gallery-door:hover .door-pic img { transform: scale(1.04); }
 .door-pic .code { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; color: #fff; }
-.door-body { display: grid; gap: 6px; padding: 12px 14px 14px; align-content: start; }
+.door-body { display: grid; gap: 6px; padding: 12px 14px 30px; align-content: start; }
+.gallery-cell { position: relative; }
+.tile-share { position: absolute; right: 12px; bottom: 9px; display: flex; gap: 10px; z-index: 2; font-size: 0.72rem; }
+.tile-share a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.tile-share a:hover { color: var(--heading); }
 .gallery-door h3 { font-size: 1.05rem; line-height: 1.25; }
 .gallery-door .q { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; line-height: 1.35; color: var(--muted); margin: 0; }
 .door-plates { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -346,3 +352,7 @@ main { padding-block: 8px 72px; }
 .contact button { justify-self: start; font: inherit; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--rule); background: var(--plate); color: var(--ink); }
 
 .legal .intro { margin-block: 1.4em; }
+
+/* Room tiles: keep each card flush, and pin its share row to the card's bottom edge. */
+.gallery-cell { display: grid; }
+.gallery-cell > .gallery-door { height: 100%; padding: 0; gap: 0; }
