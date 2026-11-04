@@ -428,3 +428,29 @@ main { padding-block: 8px 72px; }
 .spin-btn { font: inherit; font-size: 1.05rem; padding: 10px 22px; border-radius: 999px; border: 2px solid var(--heading); background: var(--heading); color: var(--label); cursor: pointer; }
 .spin-btn:disabled { opacity: 0.6; cursor: default; }
 .spin-result { min-height: 1.6em; margin: 0; font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); }
+
+/* Page arrows: round, animated, halfway down the room grid, on the left and right edges. */
+.galleries-wrap { position: relative; }
+.pager { position: absolute; left: -14px; right: -14px; top: 50%; transform: translateY(-50%); display: flex; justify-content: space-between; pointer-events: none; margin: 0; font-size: inherit; }
+.pager[hidden], .pager button[hidden] { display: none; }
+.pg-arrow { pointer-events: auto; position: relative; width: 52px; height: 52px; border-radius: 50%; border: none; background: var(--heading); color: var(--label); display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.25); padding: 0; }
+.pg-arrow svg { width: 26px; height: 26px; position: relative; z-index: 1; }
+.pg-arrow:hover { background: var(--accent); }
+.pg-arrow:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pg-ring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--heading); opacity: 0; animation: pg-ring 2.2s ease-out infinite; }
+.pg-next svg { animation: pg-nudge-right 1.4s ease-in-out infinite; }
+.pg-prev svg { animation: pg-nudge-left 1.4s ease-in-out infinite; }
+@keyframes pg-nudge-right { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+@keyframes pg-nudge-left { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-4px); } }
+@keyframes pg-ring { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .pg-next svg, .pg-prev svg, .pg-ring { animation: none; } }
+@media (max-width: 560px) { .pager { left: -6px; right: -6px; } .pg-arrow { width: 44px; height: 44px; } }
+/* Next arrow sits on the right, Earlier arrow on the left, even when only one is showing. */
+.pg-next { margin-left: auto; }
+.pg-prev { margin-right: auto; }
+/* Make the arrow styles win over the older pager button rules. */
+.pager .pg-arrow { background: var(--heading); color: var(--label); border: none; border-radius: 50%; padding: 0; width: 52px; height: 52px; }
+.pager .pg-arrow:hover { background: var(--accent); }
+@media (max-width: 560px) { .pager .pg-arrow { width: 44px; height: 44px; } }
+@media (min-width: 900px) { .pager { left: -34px; right: -34px; } }

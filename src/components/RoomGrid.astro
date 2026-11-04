@@ -31,9 +31,9 @@ const byGallery = (slug: string) => exhibits.filter((e) => e.data.gallery === sl
       })}
     </div>
     <nav class="pager" aria-label="Browse rooms" hidden>
-      <button type="button" class="pg-prev" hidden>← Earlier rooms</button>
-      <span class="pg-label" aria-live="polite"></span>
-      <button type="button" class="pg-next">Next rooms →</button>
+      <button type="button" class="pg-arrow pg-prev" aria-label="Earlier rooms" hidden><span class="pg-ring" aria-hidden="true"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="pg-label sr-only" aria-live="polite"></span>
+      <button type="button" class="pg-arrow pg-next" aria-label="Next rooms"><span class="pg-ring" aria-hidden="true"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </nav>
     </div>
   </section>
