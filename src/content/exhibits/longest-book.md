@@ -9,7 +9,13 @@ when: "1649 – 2020"
 where: "Tamil Nadu, India, and France"
 plate: "3.6 million words"
 plateNote: "Venmurasu, a Tamil novel in 26 volumes, counted by words. Page counts give other answers."
-imageToFind: "A photograph of a shelf of long novels or a multi-volume set, checked for licence."
+image:
+  src: "/images/artamene-title-page.jpg"
+  alt: "Title page of Artamène, ou le Grand Cyrus, the third part, in large black letters: by Mademoiselle de Scudéry, printed at Rouen and sold in Paris in 1654, with a small flower ornament in the centre"
+  credit: "Madeleine de Scudéry, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:ScuderyArtamene.jpg"
+  fit: contain
 pebbles: [the-great-gatsby, arabian-nights, sherlock-holmes]
 tags: [books, records, India, France]
 sources:
