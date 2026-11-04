@@ -9,6 +9,13 @@ when: "Today"
 where: "Everywhere in the universe"
 plate: "kg and newtons"
 plateNote: "Mass is measured in kilograms. Weight is a force, measured in newtons."
+image:
+  src: "/images/mass-and-weight.jpg"
+  alt: "An old brass and cast-iron balance scale with two pans, beside a 5 kg iron weight and a smaller weight."
+  credit: "Nikodem Nijaki, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0"
+  url: "https://commons.wikimedia.org/wiki/File:Balance_scale_IMGP9755.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0"
 pebbles: [stainless-steel, sikorsky-helicopter]
 tags: [science, gravity, physics]
 sources:
