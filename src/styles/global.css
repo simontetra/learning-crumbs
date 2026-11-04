@@ -381,3 +381,6 @@ main { padding-block: 8px 72px; }
 /* Trading-card style: one picture per room, every frame the same portrait shape, letterboxed on the plate colour. */
 .door-pic.solo { padding: 10px; border-bottom: 1px solid var(--rule); }
 .door-pic.solo > span { padding-bottom: 133.33%; }
+
+/* Uniform cards: every picture file is already the same portrait size with its own margin, so the frame adds none. */
+.door-pic.solo { padding: 0; background: #ece8dc; border-bottom: 1px solid var(--rule); }

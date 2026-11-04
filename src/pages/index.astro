@@ -43,14 +43,14 @@ const ld = {
     <div class="galleries-wrap">
     <div class="galleries">
       {galleries.map((g, i) => {
-        const allPics = byGallery(g.slug).filter((e) => e.data.image).map((e) => e.data.image!);
+        const allPics = byGallery(g.slug).filter((e) => e.data.image).map((e) => '/cards/' + e.data.image!.src.split('/').pop()!.replace(/\.[^.]+$/, '.jpg'));
         const pics = allPics.slice(0, 1);
         return (
-          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(allPics.map((p) => p.src))}>
+          <div class="gallery-cell" data-index={i} data-pics={JSON.stringify(allPics)}>
           <a class="gallery-door" href={galleryUrl(g.slug)} data-gallery={g.slug}>
             <div class={pics.length ? (pics.length === 1 ? 'door-pic solo' : 'door-pic') : 'door-pic solo'} aria-hidden="true">
               {pics.length ? pics.map((p) => (
-                <span><img src={p.src} alt="" loading="lazy" /></span>
+                <span><img src={p} alt="" loading="lazy" /></span>
               )) : <span class="code-tile"><span class="code">{g.code}</span></span>}
             </div>
             <div class="door-body">
