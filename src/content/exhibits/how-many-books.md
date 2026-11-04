@@ -9,7 +9,13 @@ when: "Recent years"
 where: "Worldwide"
 plate: "755,755 – 2.2 million"
 plateNote: "Estimates of new titles per year vary a lot, and nobody has a single exact number."
-imageToFind: "A photograph of a bookshop or library shelves, checked for licence."
+image:
+  src: "/images/library-shelves.jpg"
+  alt: "A long library aisle with tall metal shelves full of books on both sides, receding towards a window at the far end, under strip lights"
+  credit: "Nick-D, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Book_shelves_on_the_top_floor_of_the_Menzies_Library_July_2026.jpg"
 pebbles: [gutenberg-bible, the-journey-of-paper, peter-rabbit]
 tags: [books, numbers, publishing]
 sources:
