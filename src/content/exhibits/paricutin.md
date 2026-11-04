@@ -11,10 +11,11 @@ plate: "424 m"
 plateNote: "The final height of the cone, built up over nine years."
 image:
   src: "/images/paricutin.jpg"
-  alt: "Parícutin seen from the air: a dark cinder cone rising above a black lava field, with a mountain ridge behind."
-  credit: "Jim Luhr, Smithsonian Institution, via Wikimedia Commons"
-  licence: "Public domain"
-  url: "https://commons.wikimedia.org/wiki/File:Paricut%C3%ADn_volcano.jpg"
+  alt: "The cone of Parícutin rising above a dark lava field, with new green shrubs growing across the black rock in the foreground."
+  credit: "LBM1948, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Par%C3%ADcutin_1.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 pebbles: [sailing-stones, surtsey, tectonic-plates]
 tags: [earth, geology, Mexico, volcanoes]
 sources:
