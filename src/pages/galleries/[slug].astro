@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ShareLinks from '../../components/ShareLinks.astro';
 import ExhibitCard from '../../components/ExhibitCard.astro';
+import FloorPlan from '../../components/FloorPlan.astro';
 import { galleries, galleryUrl, exhibitUrl, allExhibits } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -10,6 +11,9 @@ export async function getStaticPaths() {
 }
 const { gallery } = Astro.props;
 const exhibits = (await allExhibits()).filter((e) => e.data.gallery === gallery.slug);
+const at = galleries.findIndex((g) => g.slug === gallery.slug);
+const prevRoom = at > 0 ? galleries[at - 1] : null;
+const nextRoom = at < galleries.length - 1 ? galleries[at + 1] : null;
 
 const ld = {
   '@context': 'https://schema.org',
@@ -31,5 +35,27 @@ const ld = {
   <ol class="walk">
     {exhibits.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
   </ol>
+  <nav class="room-nav" aria-label="Adjoining rooms">
+    {prevRoom ? <a class="room-prev" href={galleryUrl(prevRoom.slug)}><span class="rn-dir">← Back</span><span class="rn-title">{prevRoom.title}</span></a> : <span></span>}
+    {nextRoom ? <a class="room-next" href={galleryUrl(nextRoom.slug)}><span class="rn-dir">Next →</span><span class="rn-title">{nextRoom.title}</span></a> : <span></span>}
+  </nav>
+  <section class="room-plan" aria-label="Where this room sits on the floor plan">
+    <p class="eyebrow">You are here</p>
+    <FloorPlan current={gallery.slug} />
+  </section>
   <ShareLinks path={galleryUrl(gallery.slug)} text={`${gallery.title}: ${gallery.question} Learning Crumbs`} />
 </Base>
+
+<style>
+  .room-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0 8px; }
+  .room-nav a { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 14px; background: var(--label); border: 1px solid var(--rule); color: var(--heading); text-decoration: none; }
+  .room-nav a:hover, .room-nav a:focus-visible { border-color: var(--accent); }
+  .room-next { text-align: right; align-items: flex-end; }
+  .rn-dir { font-family: var(--font-label); font-size: var(--step--1); color: var(--muted); }
+  .rn-title { font-family: var(--font-display); font-weight: 700; }
+  .room-plan { margin-top: 40px; }
+  .room-plan .floor-wrap { padding-top: 0; }
+  @media (max-width: 760px) {
+    .room-plan { display: none; }
+  }
+</style>

@@ -1,28 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import FloorPlan from '../components/FloorPlan.astro';
 import { galleries, galleryUrl } from '../lib/site';
 
-// Rooms wind through the plan in rows of six: left to right, then back again.
-const COLS = 6;
-const ROWS = Math.ceil(galleries.length / COLS);
-const rooms = galleries.map((g, i) => {
-  const row = Math.floor(i / COLS);
-  const k = i % COLS;
-  const col = row % 2 === 0 ? k : COLS - 1 - k;
-  return {
-    ...g,
-    n: i + 1,
-    url: galleryUrl(g.slug),
-    x: ((col + 0.5) / COLS) * 100,
-    y: ((row + 0.5) / ROWS) * 100,
-  };
-});
-// Each crumb sits between a room and the next, and leads on to the next.
-const crumbs = rooms.slice(0, -1).map((r, i) => {
-  const next = rooms[i + 1];
-  return { from: r, to: next, mx: (r.x + next.x) / 2, my: (r.y + next.y) / 2 };
-});
-const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join(' ');
+const rooms = galleries.map((g, i) => ({ ...g, n: i + 1, url: galleryUrl(g.slug) }));
 ---
 <Base title="Floor plan" description="A floor plan of the galleries. Follow the crumbs from room to room." nav="galleries">
   <section class="placard">
@@ -30,26 +11,7 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
     <p class="voice">Follow the crumbs from room to room. Each gold crumb is the way on to the next.</p>
   </section>
 
-  <div class="floor-wrap">
-    <div class="floor">
-      <div class="plan" style={`aspect-ratio: ${COLS} / ${ROWS}`}>
-        <svg class="plan-trail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d={trail} />
-        </svg>
-        {rooms.map((r) => (
-          <a class="map-room" href={r.url} data-gallery={r.slug} style={`left:${r.x}%;top:${r.y}%`}>
-            <span class="map-no">{r.n}</span>
-            <span class="map-title">{r.title}</span>
-          </a>
-        ))}
-        {crumbs.map((c) => (
-          <a class="map-crumb" href={c.to.url} style={`left:${c.mx}%;top:${c.my}%`} aria-label={`Next room: ${c.to.title}`}>
-            <span aria-hidden="true">{c.to.title}</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </div>
+  <FloorPlan />
 
   <ol class="map-list">
     {rooms.map((r) => (
@@ -59,88 +21,12 @@ const trail = rooms.map((r, i) => `${i === 0 ? 'M' : 'L'} ${r.x} ${r.y}`).join('
 </Base>
 
 <style>
-  .floor-wrap { padding: 8px 0 40px; }
-  .floor { padding: 28px; border-radius: 22px; background: var(--label); border: 1px solid var(--rule); box-shadow: var(--shadow-lift); }
-  .plan {
-    position: relative;
-    width: 90%;
-    margin-inline: auto;
-    transform: perspective(1400px) rotateX(34deg);
-    transform-origin: 50% 55%;
-    transform-style: preserve-3d;
-  }
-  .plan-trail { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-  .plan-trail path { fill: none; stroke: var(--pebble); stroke-width: 2; stroke-dasharray: 1 7; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-
-  .map-room {
-    position: absolute;
-    width: calc(100% / 6 * 0.84);
-    height: calc(100% / 3 * 0.8);
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 6px;
-    border-radius: 8px;
-    background: var(--room-fill, var(--pebble));
-    color: #fbf7ec;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    box-shadow: 0 8px 0 rgb(30 25 15 / 0.35), 0 12px 20px rgb(0 0 0 / 0.2);
-    transition: transform 0.2s ease;
-  }
-  .map-room:hover, .map-room:focus-visible { transform: translate(-50%, -50%) translateY(-4px); outline: none; }
-  .map-room:focus-visible { box-shadow: 0 0 0 3px var(--accent), 0 8px 0 rgb(30 25 15 / 0.35); }
-  .map-no { font-family: var(--font-label); font-size: 0.7rem; opacity: 0.8; letter-spacing: 0.05em; }
-  .map-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(0.62rem, 1.05vw, 0.9rem); line-height: 1.15; }
-
-  .map-crumb {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    margin: -9px 0 0 -9px;
-    transform: translateZ(10px);
-  }
-  .map-crumb::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #cf9c2e;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    filter: drop-shadow(0 0 1px #fbf7ec) drop-shadow(0 0 1px #fbf7ec);
-  }
-  .map-crumb:hover::before, .map-crumb:focus-visible::before { background: #ecc25e; }
-  .map-crumb:focus-visible { outline: none; }
-  .map-crumb span {
-    position: absolute;
-    left: calc(100% + 8px);
-    top: 50%;
-    transform: translateY(-50%);
-    white-space: nowrap;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: var(--label);
-    color: var(--heading);
-    font-size: var(--step--1);
-    box-shadow: var(--shadow-soft);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s ease;
-  }
-  .map-crumb:hover span, .map-crumb:focus-visible span { opacity: 1; }
-
   .map-list { display: none; }
 
   @media (max-width: 760px) {
-    .floor-wrap { display: none; }
     .map-list { display: grid; gap: 10px; list-style: none; padding: 0; margin: 0; }
     .map-list a { display: flex; gap: 10px; align-items: baseline; color: var(--heading); text-decoration: none; padding: 10px 14px; border-radius: 12px; background: var(--label); border: 1px solid var(--rule); }
     .map-list .map-no { color: var(--muted); opacity: 1; min-width: 2ch; }
   }
-  @media (prefers-reduced-motion: reduce) {
-    .map-room, .map-crumb::before { transition: none; }
-  }
+  .map-no { font-family: var(--font-label); font-size: 0.7rem; }
 </style>
