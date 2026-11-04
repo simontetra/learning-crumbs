@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ShareLinks from '../../components/ShareLinks.astro';
 import ExhibitCard from '../../components/ExhibitCard.astro';
 import { galleries, galleryUrl, exhibitUrl, allExhibits } from '../../lib/site';
 
@@ -30,4 +31,5 @@ const ld = {
   <ol class="walk">
     {exhibits.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
   </ol>
+  <ShareLinks path={galleryUrl(gallery.slug)} text={`${gallery.title}: ${gallery.question} Learning Crumbs`} />
 </Base>

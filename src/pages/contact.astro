@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Contact" description="How to contact Learning Crumbs.">
+  <article class="legal">
+    <h1>Contact</h1>
+    <p>The contact form is being set up. Once it is live you will be able to write to us here, and we will reply as soon as we can.</p>
+    <form class="contact" aria-describedby="contact-note">
+      <label>Name <input name="name" type="text" autocomplete="name" disabled></label>
+      <label>Email <input name="email" type="email" autocomplete="email" disabled></label>
+      <label>Message <textarea name="message" rows="5" disabled></textarea></label>
+      <button type="submit" disabled>Send</button>
+      <p id="contact-note" class="draft">Not yet connected. Messages will be sent to the site administrator.</p>
+    </form>
+  </article>
+</Base>

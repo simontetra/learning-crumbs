@@ -1,0 +1,17 @@
+---
+// Share links for an exhibit or gallery. Plain links, no tracking scripts.
+interface Props { path: string; text: string; }
+const { path, text } = Astro.props;
+const url = new URL(path, Astro.site).href;
+const enc = encodeURIComponent;
+const links = [
+  { name: 'Bluesky', href: `https://bsky.app/intent/compose?text=${enc(`${text} ${url}`)}` },
+  { name: 'X', href: `https://x.com/intent/post?text=${enc(text)}&url=${enc(url)}` },
+  { name: 'Email', href: `mailto:?subject=${enc(text)}&body=${enc(`${text}\n\n${url}`)}` },
+  { name: 'WhatsApp', href: `https://wa.me/?text=${enc(`${text} ${url}`)}` },
+];
+---
+<nav class="share" aria-label="Share this page">
+  <span class="share-label">Share</span>
+  {links.map((l) => <a href={l.href} rel="noopener" target={l.name === 'Email' ? undefined : '_blank'}>{l.name}</a>)}
+</nav>

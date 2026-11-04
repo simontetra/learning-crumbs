@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ExhibitCard from '../../components/ExhibitCard.astro';
+import ShareLinks from '../../components/ShareLinks.astro';
 import { render } from 'astro:content';
 import { allExhibits, galleryOf, galleryUrl, exhibitUrl, tagUrl, SITE_NAME } from '../../lib/site';
 
@@ -86,6 +87,7 @@ const ld = {
         </details>
       )}
 
+      <ShareLinks path={exhibitUrl(exhibit.id)} text={`${d.title}: ${d.question} Learning Crumbs`} />
       <div class="tags" aria-label="Topics">
         {d.tags.map((t) => <a href={tagUrl(t)}>{t}</a>)}
       </div>
