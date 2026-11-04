@@ -9,7 +9,13 @@ when: "First published 1812"
 where: "Germany"
 plate: "crumb"
 plateNote: "A trail of crumbs, which birds can eat."
-imageToFind: "A public domain illustration of Hansel and Gretel, such as an early Grimm-era engraving, checked for licence."
+image:
+  src: "/images/hansel-and-gretel-kubel.jpg"
+  alt: "Painting by Otto Kubel of Hansel and Gretel outside the gingerbread house: the boy holds a biscuit and the girl a piece of cake, while the witch stands in the doorway with a black cat at her feet and another cat on the path"
+  credit: "Otto Kubel (1868–1951), via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Hansel_and_Gretel_Kubel.jpg"
+  fit: contain
 pebbles: [following-the-yarn, little-red-riding-hood, clue]
 tags: [folk tales, Germany, stories, forests]
 sources:
