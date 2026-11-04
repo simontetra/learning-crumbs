@@ -21,4 +21,4 @@ From talking came reading. The sounds he already knew turned into words on a pag
 
 Books are the gateway to almost everything. A book can take a child to other lands and other times, to the bottom of the sea and to the stars, and into the stories that people have told each other for centuries.
 
-> **Look closer:** *Hello* is also the word Thomas Edison suggested for the telephone. See **Ahoy-hoy** in Where Words Come From.
+> **Look closer:** *Hello* is also the word Thomas Edison suggested for the telephone. See [**Ahoy-hoy**](/exhibits/hello/) in [Where Words Come From](/galleries/where-words-come-from/).

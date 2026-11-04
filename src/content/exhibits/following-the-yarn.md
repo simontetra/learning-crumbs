@@ -21,4 +21,4 @@ King **Minos** of Crete kept the **Minotaur**, a monster with a man's body and a
 
 When **Theseus**, a prince of Athens, volunteered to go, **Ariadne**, the daughter of Minos, gave him a ball of thread. He tied one end at the entrance and unrolled it as he walked into the twisting maze. After he killed the Minotaur, he followed the thread back to the entrance.
 
-> **Look closer:** An old word for a ball of thread was *clew*, and it became *clue*. See **A Ball of Thread** in Where Words Come From.
+> **Look closer:** An old word for a ball of thread was *clew*, and it became *clue*. See [**A Ball of Thread**](/exhibits/clue/) in [Where Words Come From](/galleries/where-words-come-from/).
