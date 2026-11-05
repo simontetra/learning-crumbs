@@ -9,6 +9,13 @@ when: "c. 1400 BC onwards"
 where: "Ancient world, then southern France and Spain"
 plate: "12th century"
 plateNote: "Modern draughts was probably invented in southern France in the 12th century, on an eight-by-eight board."
+image:
+  src: "/images/draughts.jpg"
+  alt: "A Victorian travellers' set of ivory draughts: a folding board with ivory and red pieces, beside its printed box"
+  credit: "Bodleian Libraries via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Bodleian_Libraries,_Travellers_set_of_ivory_draughts_(cropped).jpg"
+  fit: contain
 pebbles: [chess-from-chaturanga, backgammon]
 tags: [board games, history, draughts, checkers]
 sources:
