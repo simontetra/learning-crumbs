@@ -9,6 +9,14 @@ when: "c. 3100 BC onwards"
 where: "Egypt"
 plate: "3100 BC"
 plateNote: "Fragments of boards that may be senet were found in tombs from about 3100 BC, in the First Dynasty of Egypt."
+image:
+  src: "/images/senet.jpg"
+  alt: "A wooden senet board of squares with turquoise and green game pieces, in a museum display"
+  credit: "Enoch Leung via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Senet_(47429946982).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
+  fit: contain
 pebbles: [royal-game-of-ur, chess-from-chaturanga]
 tags: [board games, history, egypt, senet]
 sources:
