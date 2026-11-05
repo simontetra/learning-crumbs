@@ -9,6 +9,14 @@ when: "Ofcom, 2025 survey"
 where: "Tablets, phones and games consoles"
 plate: "3 hours"
 plateNote: "The average daily time online for children aged 8 to 14, in the 2025 survey."
+image:
+  src: "/images/children-tablet.jpg"
+  alt: "A child with curly hair using a tablet on a wooden stand at a table"
+  credit: "Julia M Cameron via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@julia-m-cameron/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [screen-time-adults, tv-viewing-today]
 tags: [screens, children, online, statistics]
 sources:
