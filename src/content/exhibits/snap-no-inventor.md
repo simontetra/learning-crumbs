@@ -9,6 +9,14 @@ when: "Victorian Britain"
 where: "Any kitchen table with a pack of cards"
 plate: "52 cards"
 plateNote: "Snap uses an ordinary pack of 52 playing cards."
+image:
+  src: "/images/stag-playing-cards.jpg"
+  alt: "Playing cards from a Stag pack: a joker, an ace of spades and the blue back of the pack"
+  credit: "Monstarules via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Original_Stag_playing_cards,_printed_by_the_Canadian_Playing_Card_Company.png"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [charades-from-france, jenga-from-the-blocks]
 tags: [games, cards, snap, history]
 sources:

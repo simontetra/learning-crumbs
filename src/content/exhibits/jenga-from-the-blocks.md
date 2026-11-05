@@ -9,6 +9,14 @@ when: "1974 and 1983"
 where: "Living rooms and game nights"
 plate: "Build"
 plateNote: "Jenga is Swahili for 'build'. The game was launched at the London Toy Fair in January 1983."
+image:
+  src: "/images/jenga-blocks.jpg"
+  alt: "A tall Jenga tower of wooden blocks against a dark background"
+  credit: "Sheila Sund via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Jenga_(31971964636).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
+  fit: contain
 pebbles: [twister-sex-in-a-box, snap-no-inventor]
 tags: [games, blocks, jenga, africa]
 sources:

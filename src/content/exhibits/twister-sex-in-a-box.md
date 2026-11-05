@@ -9,6 +9,14 @@ when: "1965 and 1966"
 where: "Living rooms and party floors"
 plate: "1966"
 plateNote: "Milton Bradley put Twister on sale in 1966, after a television appearance turned the tide."
+image:
+  src: "/images/twister-game.jpg"
+  alt: "Two people stretching across a Twister mat with coloured spots, with the spinner on the floor"
+  credit: "Polina Tankilevitch via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@polina-tankilevitch/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [charades-from-france, jenga-from-the-blocks]
 tags: [games, party games, twister, history]
 sources:

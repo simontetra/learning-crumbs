@@ -9,6 +9,14 @@ when: "18th century onwards"
 where: "France, then parties everywhere"
 plate: "A riddle, then an act"
 plateNote: "Players once guessed a word by solving each of its syllables. Acting it out came later."
+image:
+  src: "/images/charades-game.jpg"
+  alt: "A person pulling a face and gesturing with both hands while another watches, as in a game of charades"
+  credit: "Thefuturistics via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Game_of_Charades_-_05.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
+  fit: contain
 pebbles: [snap-no-inventor, twister-sex-in-a-box]
 tags: [games, words, acting, history]
 sources:
