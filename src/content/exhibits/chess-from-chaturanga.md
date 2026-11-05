@@ -9,6 +9,14 @@ when: "From the 6th century"
 where: "India, then Persia and Europe"
 plate: "Chaturanga"
 plateNote: "The earliest ancestor of chess, played in northern India in the 6th century."
+image:
+  src: "/images/chaturanga-chess-set.jpg"
+  alt: "A carved wooden chess set with pieces shaped as elephants, horses, chariots and foot soldiers, on a chequered board"
+  credit: "Chaturaji"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Chaturanga_Chess_Set.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [ludo-from-pachisi, scrabble-criss-crosswords]
 tags: [board games, history, chess]
 sources:
