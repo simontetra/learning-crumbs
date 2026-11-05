@@ -9,6 +9,13 @@ when: "First published 1812"
 where: "Germany"
 plate: "name"
 plateNote: "Rumpelstiltskin's power ends when someone says his name."
+image:
+  src: "/images/reel-life-rumpelstiltskin.jpg"
+  alt: "Cover of Reel Life magazine, 1 May 1915, showing a costumed Rumpelstiltskin beside a spinning wheel and a young woman with straw, from the film Rumpelstiltskin"
+  credit: "New York Motion Picture (film), via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Rumpelstiltskin_(1915)_-_May_1_1915_RL.jpg"
+  fit: contain
 imageToFind: "A public domain illustration of Rumpelstiltskin, such as an early Grimm-era engraving, checked for licence."
 pebbles: [google, xbox, cinderella]
 tags: [folk tales, Germany, names, magic]
