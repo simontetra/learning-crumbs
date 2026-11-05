@@ -22,7 +22,7 @@ const topicDescription = (() => {
   return full.slice(0, 155).replace(/\s+\S*$/, '') + '…';
 })();
 ---
-<Base title={title} description={topicDescription} image={exhibits.find((e) => e.data.image)?.data.image?.src}>
+<Base title={title} description={topicDescription} image={exhibits.find((e) => e.data.image)?.data.image?.src} noindex={exhibits.length < 3}>
   <Breadcrumbs trail={[{ name: 'Topics' }, { name: title }]} />
   <section class="placard">
     <span class="eyebrow">Topic · {exhibits.length} {exhibits.length === 1 ? 'exhibit' : 'exhibits'}</span>

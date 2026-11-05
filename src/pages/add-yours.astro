@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { allExhibits } from '../lib/site';
 const exhibits = (await allExhibits()).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
-<Base title="Add yours" description="Send your own photo to go alongside an exhibit on Learning Crumbs.">
+<Base title="Add yours" description="Send your own photo to go alongside an exhibit on Learning Crumbs." noindex>
   <article class="legal">
     <h1>Add yours</h1>
     <p style="margin-top: 1.25rem">Have you made, found or photographed something that goes with one of our exhibits?</p>

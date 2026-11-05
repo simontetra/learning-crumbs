@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-<Base title="Search" description="Search every exhibit in Learning Crumbs by name, question or topic." nav="search">
+<Base title="Search" description="Search every exhibit in Learning Crumbs by name, question or topic." nav="search" noindex>
   <Breadcrumbs trail={[{ name: 'Search' }]} />
   <form class="search-box" role="search" id="search-form">
     <h1>Search the galleries</h1>

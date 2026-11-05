@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+<Base title="How we check facts" description="How Learning Crumbs checks its facts: sources first, several sources where we can, and anything we cannot confirm is left out or marked as uncertain." nav="about">
+  <Breadcrumbs trail={[{ name: 'About', href: '/about/' }, { name: 'How we check facts' }]} />
+  <article class="legal">
+    <h1>How we check facts</h1>
+    <p class="intro">Learning Crumbs makes claims about history, science and people. This page explains how we try to get them right, and where we can fall short.</p>
+
+    <h2>Sources first</h2>
+    <p>Each exhibit is written from sources we have opened and read, not from memory. Where a source is only a summary, we look for the original record: a museum, an archive, official statistics, or the organisation the story is about.</p>
+
+    <h2>More than one source</h2>
+    <p>We check important facts against at least two independent sources where we can. If the sources disagree, the exhibit says so, rather than quietly choosing one.</p>
+
+    <h2>If we are not sure, we leave it out</h2>
+    <p>A claim we cannot confirm is either left out, or the exhibit says plainly that it is uncertain. We would rather publish a shorter exhibit than a wrong one.</p>
+
+    <h2>Every exhibit lists its sources</h2>
+    <p>The list at the bottom of each exhibit is the best place to start checking. If a link has stopped working, or a source says something different from what we wrote, please tell us.</p>
+
+    <h2>Pictures</h2>
+    <p>For every picture we record who made it, where it came from and its licence. We only use pictures we have the right to show, and the credit appears beside the picture.</p>
+
+    <h2>How the text is written</h2>
+    <p>Some of the text is drafted with the help of an AI tool. Every statement is then checked against its sources before it is published. The drafting does not replace the checking.</p>
+
+    <h2>When we get something wrong</h2>
+    <p>We correct the exhibit and, where it matters, say what changed. You can tell us through the <a href="/contact/">contact page</a>, and we will look at it.</p>
+
+    <h2>The limits</h2>
+    <p>Facts change, and sources sometimes disagree or are wrong. Learning Crumbs is a small project. This page describes what we aim to do, not a guarantee that every statement is correct.</p>
+
+    <p class="draft">Last updated 5 November 2026.</p>
+  </article>
+</Base>
