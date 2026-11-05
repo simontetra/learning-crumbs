@@ -9,6 +9,14 @@ when: "Ofcom, 2025 survey"
 where: "Phones, laptops and tablets"
 plate: "4 hours 30 minutes"
 plateNote: "The average daily time online for adults, in the 2025 survey."
+image:
+  src: "/images/adults-phone.jpg"
+  alt: "Close-up of a woman's hands tapping a smartphone, with a teal jumper and a brown paper bag in the foreground"
+  credit: "Kampus via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@kampus/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [screen-time-children, tv-viewing-today]
 tags: [screens, adults, online, statistics]
 sources:
