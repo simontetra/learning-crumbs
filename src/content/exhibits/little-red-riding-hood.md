@@ -9,6 +9,13 @@ when: "Printed 1697; Grimm 1812"
 where: "France and Germany"
 plate: "hood"
 plateNote: "The red hood gives the girl her name."
+image:
+  src: "/images/dore-riding-hood.jpg"
+  alt: "Engraving by Gustave Doré of a wolf standing by a bed, in which a figure in a nightcap lies, with a stool and a basket beside it"
+  credit: "Gustave Doré, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Chaperon_rouge2.jpg"
+  fit: contain
 imageToFind: "A public domain illustration of Little Red Riding Hood, checked for licence."
 pebbles: [following-the-crumbs, following-the-yarn]
 tags: [folk tales, France, Germany, wolves]
