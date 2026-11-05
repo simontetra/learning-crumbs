@@ -9,6 +9,13 @@ when: "1837 onwards"
 where: "England"
 plate: "bowl"
 plateNote: "Three bowls of porridge, too hot, too cold, and just right."
+image:
+  src: "/images/three-bears-soup.jpg"
+  alt: "Illustration of the three bears at the table, the little bear shouting 'Who has been tasting my soup?', with Goldilocks at the window"
+  credit: "Project Gutenberg, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:The_Three_Bears_-_Project_Gutenberg_etext_19993.jpg"
+  fit: contain
 imageToFind: "A public domain illustration of the three bears' house or the three chairs, checked for licence."
 pebbles: [cinderella, rumpelstiltskin, following-the-crumbs]
 tags: [folk tales, England, bears, stories]
