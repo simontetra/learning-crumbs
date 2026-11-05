@@ -9,6 +9,14 @@ when: "2025"
 where: "The living room, and everywhere else"
 plate: "4 hours 23 minutes"
 plateNote: "Average daily in-home video viewing per person in 2025, on all devices."
+image:
+  src: "/images/family-tv.jpg"
+  alt: "A family of three sitting on a sofa in a living room, watching television"
+  credit: "Mizuno Kozuki via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@mizunokozuki/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [black-and-white-television, streaming-and-the-dvd]
 tags: [television, streaming, youtube, statistics]
 sources:
