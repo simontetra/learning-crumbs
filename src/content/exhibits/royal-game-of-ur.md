@@ -9,6 +9,14 @@ when: "c. 2600–2400 BC"
 where: "Ur, Mesopotamia (modern Iraq)"
 plate: "2600 BC"
 plateNote: "The earliest known Royal Game of Ur boards date from about 2600 to 2400 BC."
+image:
+  src: "/images/royal-game-of-ur.jpg"
+  alt: "A Royal Game of Ur board with inlaid patterned squares, shown with its pieces and dice in a museum case"
+  credit: "British Museum via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Royal_game_of_Ur,_2010-08-03.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [chess-from-chaturanga, ludo-from-pachisi]
 tags: [board games, history, mesopotamia, race games]
 sources:
