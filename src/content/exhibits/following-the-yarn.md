@@ -9,6 +9,13 @@ when: "Ancient Greece"
 where: "Crete and Athens"
 plate: "thread"
 plateNote: "A ball of thread, the simple tool that got Theseus home."
+image:
+  src: "/images/kauffman-theseus-ariadne.jpg"
+  alt: "Painting by Angelica Kauffman of Ariadne at a doorway handing a red thread to Theseus, who stands in a tunic at the foot of the steps"
+  credit: "Angelica Kauffman, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Theseus_and_Ariadne_(Kauffman).jpg"
+  fit: contain
 imageToFind: "A public domain image of Theseus or the Labyrinth, checked for licence. The Burne-Jones tile is already in A Ball of Thread."
 pebbles: [clue, following-the-crumbs, little-red-riding-hood]
 tags: [myths, ancient Greece, mazes]
