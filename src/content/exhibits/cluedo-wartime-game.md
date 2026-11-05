@@ -9,6 +9,13 @@ when: "1943 onwards"
 where: "Birmingham, during the Second World War"
 plate: "Ten suspects"
 plateNote: "Pratt's first design had ten characters. The game that went on sale had six."
+image:
+  src: "/images/cluedo-players.jpg"
+  alt: "Several people sit around a Cluedo board on a wooden floor, with cards and dice in their hands"
+  credit: "cottonbro"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@cottonbro/"
+  fit: contain
 pebbles: [ludo-from-pachisi, monopoly-who-invented]
 tags: [board games, history, cluedo]
 sources:
