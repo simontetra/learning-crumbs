@@ -9,6 +9,14 @@ when: "1850s to today"
 where: "China, then America"
 plate: "1920"
 plateNote: "In 1920 Joseph Babcock published simplified rules for Americans."
+image:
+  src: "/images/mahjong.jpg"
+  alt: "Mahjong tiles with painted animals, people, flowers and fish in red and green on cream tiles"
+  credit: "Wenlongtian via Wikimedia Commons"
+  licence: "CC0"
+  url: "https://commons.wikimedia.org/wiki/File:Mahjong_%E5%8A%A8%E7%89%A9%E7%89%8C-1.jpg"
+  licenceUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
+  fit: contain
 pebbles: [scrabble-criss-crosswords, monopoly-who-invented]
 tags: [board games, history, china, mahjong]
 sources:
