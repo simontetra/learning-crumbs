@@ -9,6 +9,13 @@ when: "1938 to 1948"
 where: "Poughkeepsie, New York"
 plate: "Criss-Crosswords"
 plateNote: "The first name of the game, given by its inventor, Alfred Butts, in 1938."
+image:
+  src: "/images/scrabble-letters.jpg"
+  alt: "Wooden Scrabble tiles spelling LEARN, MATH and SCHOOL on a board with coloured premium squares"
+  credit: "Pixabay"
+  licence: "Pexels licence, free to use"
+  url: "https://www.pexels.com/@pixabay/"
+  fit: contain
 pebbles: [monopoly-who-invented, ludo-from-pachisi]
 tags: [board games, words, history, scrabble]
 sources:
