@@ -9,6 +9,14 @@ when: "1974 and 1988"
 where: "A grid on the kitchen table"
 plate: "1988"
 plateNote: "Victor Allis and James D. Allen proved that the first player can always win, working independently."
+image:
+  src: "/images/connect-four.jpg"
+  alt: "A Connect Four board in yellow and blue, with red and black discs part-way through a game"
+  credit: "Bubba73 via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Connect_4_game.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [trivial-pursuit, consoles-counted]
 tags: [board games, strategy, connect four, history]
 sources:
