@@ -9,6 +9,13 @@ when: "1904 and 1935"
 where: "A box on a shelf"
 plate: "1904 → 1935"
 plateNote: "Lizzie Magie's patent for The Landlord's Game was granted on 5 January 1904. Parker Brothers bought Monopoly in 1935."
+image:
+  src: "/images/landlords-game.jpg"
+  alt: "Cover of The Landlord's Game, by Elizabeth Magie Phillips, with her portrait and a drawing of a town of houses"
+  credit: "Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Landlords_board_game_cover.jpg"
+  fit: contain
 pebbles: [cluedo-wartime-game, scrabble-criss-crosswords]
 tags: [board games, history, monopoly]
 sources:
