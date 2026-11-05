@@ -37,6 +37,15 @@
   --map-fill:   #7a5c2e;  --map-text:   #7a5c2e;   /* ochre, for Bigger and Smaller */
   --bok-fill:   #5b3a6e;  --bok-text:   #5b3a6e;   /* plum, for Between the Covers */
   --folk-fill:  #3b6a3b;  --folk-text:  #3b6a3b;   /* forest green, for Folk Tales */
+  --bgm-fill:  #9c7a1a;  --bgm-text:  #9c7a1a;   /* mustard, for Board Games */
+  --gea-fill:  #b5487a;  --gea-text:  #b5487a;   /* rose, for Games for Every Age */
+  --men-fill:  #1f6f5c;  --men-text:  #1f6f5c;   /* jade, for Modern Entertainment */
+  --mov-fill:  #5c1f1f;  --mov-text:  #5c1f1f;   /* oxblood, for The Movie Room */
+  --mag-fill:  #6a4c93;  --mag-text:  #6a4c93;   /* lavender, for Magic and Magicians */
+  --mus-fill:  #d46a2a;  --mus-text:  #d46a2a;   /* tangerine, for Musicals */
+  --the-fill:  #7a1f3d;  --the-text:  #7a1f3d;   /* wine, for The Theatre */
+  --sol-fill:  #4f6d7a;  --sol-text:  #4f6d7a;   /* steel blue, for Solo Singers */
+  --grp-fill:  #3f8f7a;  --grp-text:  #3f8f7a;   /* sea green, for Groups and Bands */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -84,6 +93,15 @@
 [data-gallery="bigger-and-smaller"] { --room-fill: var(--map-fill); --room-text: var(--map-text); }
 [data-gallery="between-the-covers"] { --room-fill: var(--bok-fill); --room-text: var(--bok-text); }
 [data-gallery="folk-tales"] { --room-fill: var(--folk-fill); --room-text: var(--folk-text); }
+[data-gallery="board-game-stories"] { --room-fill: var(--bgm-fill); --room-text: var(--bgm-text); }
+[data-gallery="games-for-every-age"] { --room-fill: var(--gea-fill); --room-text: var(--gea-text); }
+[data-gallery="modern-entertainment"] { --room-fill: var(--men-fill); --room-text: var(--men-text); }
+[data-gallery="the-movie-room"] { --room-fill: var(--mov-fill); --room-text: var(--mov-text); }
+[data-gallery="magic-and-magicians"] { --room-fill: var(--mag-fill); --room-text: var(--mag-text); }
+[data-gallery="musicals"] { --room-fill: var(--mus-fill); --room-text: var(--mus-text); }
+[data-gallery="the-theatre"] { --room-fill: var(--the-fill); --room-text: var(--the-text); }
+[data-gallery="solo-singers"] { --room-fill: var(--sol-fill); --room-text: var(--sol-text); }
+[data-gallery="groups-and-bands"] { --room-fill: var(--grp-fill); --room-text: var(--grp-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
