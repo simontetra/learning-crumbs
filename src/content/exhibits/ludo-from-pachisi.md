@@ -9,6 +9,13 @@ when: "Ancient India, and England from 1896"
 where: "Homes across India, then the world"
 plate: "Pachisi → Ludo"
 plateNote: "Ludo was simplified from the Indian game pachisi. Its name is Latin for 'I play'."
+image:
+  src: "/images/pachisi-board.jpg"
+  alt: "A cloth pachisi board in the shape of a cross, with blue, pink and yellow squares, wooden tokens and three wooden throwing sticks"
+  credit: "Micha L. Rieser"
+  licence: "Creative Commons Attribution"
+  url: "https://commons.wikimedia.org/wiki/File:Pachisi-real.jpg"
+  fit: contain
 pebbles: [cluedo-wartime-game, chess-from-chaturanga]
 tags: [board games, history, ludo, india]
 sources:
