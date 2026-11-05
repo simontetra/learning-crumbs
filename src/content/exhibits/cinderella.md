@@ -9,6 +9,14 @@ when: "Printed 1697; Grimm 1812"
 where: "France and Germany"
 plate: "slipper"
 plateNote: "A small slipper, which only one foot could fit."
+image:
+  src: "/images/glass-slipper.jpg"
+  alt: "A glass slipper with a gold butterfly decoration, on a dark display stand in a glass case"
+  credit: "TSTS Sheng, via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Cinderella_Glass_Slipper_(16936171941).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
+  fit: contain
 imageToFind: "A public domain illustration of Cinderella's slipper, checked for licence."
 pebbles: [little-red-riding-hood, following-the-crumbs, goldilocks-and-the-three-bears]
 tags: [folk tales, France, Germany, magic]
