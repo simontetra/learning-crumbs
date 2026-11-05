@@ -39,7 +39,6 @@ const ld = {
     {exhibits.map((e) => <li><ExhibitCard exhibit={e} /></li>)}
   </ol>
   <aside class="suggest-box" aria-label="Suggest an artefact">
-    <p><strong>Know something that belongs here?</strong> Suggest an artefact for this room, and we will check it before it goes up.</p>
     <a class="suggest-btn" href={`/suggest/artefact/?gallery=${gallery.slug}`}>Suggest an artefact</a>
   </aside>
   <nav class="room-nav" aria-label="Adjoining rooms">
@@ -64,7 +63,7 @@ const ld = {
   .room-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
   .floor-link { font-family: var(--font-label); font-size: var(--step--1); color: var(--room-text); white-space: nowrap; }
   .room-plan .floor-wrap { padding-top: 0; }
-  .suggest-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; margin: 32px 0 0; padding: 16px 18px; border-radius: 14px; background: var(--label); border: 1px dashed var(--rule); }
+  .suggest-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px 20px; margin: 32px 0 0; padding: 16px 18px; border-radius: 14px; background: var(--label); border: 1px dashed var(--rule); }
   .suggest-box p { margin: 0; max-width: 46ch; }
   .suggest-btn { display: inline-block; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--accent); color: var(--accent); font-family: var(--font-label); font-size: var(--step--1); text-decoration: none; white-space: nowrap; }
   .suggest-btn:hover, .suggest-btn:focus-visible { background: var(--accent); color: var(--paper, #fff); }
