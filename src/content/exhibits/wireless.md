@@ -16,6 +16,10 @@ image:
   licence: "Public domain (US)"
   url: "https://commons.wikimedia.org/wiki/File:Portaphone_radio_receiver_(1920).jpg"
   fit: contain
+fromHome:
+  src: "/images/radio-from-home.jpg"
+  alt: "A brown and silver portable radio with a telescopic aerial, a tuning dial marked with AM, FM and SW bands, and a carry strap"
+  caption: "Our own radio at home, a portable with a tuning dial for AM, FM and shortwave, and a strap for carrying it about."
 pebbles: [bluetooth, walkman, pigeons]
 tags: [sound, radio, inventions, Britain, BBC]
 sources:
