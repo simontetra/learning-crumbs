@@ -9,6 +9,13 @@ when: "Before 800 AD onwards"
 where: "Persia, then Europe and America"
 plate: "1025"
 plateNote: "The word tables, used for the game, first appears in English print in the Codex Exoniensis of 1025."
+image:
+  src: "/images/backgammon.jpg"
+  alt: "A backgammon board with black and red checkers, two pairs of dice and a doubling cube"
+  credit: "Ptkfgs via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Backgammon_lg.jpg"
+  fit: contain
 pebbles: [chess-from-chaturanga, royal-game-of-ur]
 tags: [board games, history, backgammon, persia]
 sources:
