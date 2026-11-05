@@ -9,6 +9,14 @@ when: "1979, then 1981 and 1982"
 where: "Montreal, Canada"
 plate: "6,000 questions"
 plateNote: "The first game was written with about 6,000 questions, over roughly two years."
+image:
+  src: "/images/trivial-pursuit-board.jpg"
+  alt: "A Trivial Pursuit board in play, with coloured pieces, a die and a bag of spare tokens"
+  credit: "Pratyeka via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Trivial_Pursuit.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [connect-four, consoles-counted]
 tags: [board games, quiz, trivial pursuit, history]
 sources:

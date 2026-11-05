@@ -9,6 +9,13 @@ when: "Estimates to December 2025"
 where: "The living room, or the bedroom"
 plate: "89 million"
 plateNote: "Estimated PlayStation 5 sales by the end of December 2025."
+image:
+  src: "/images/consoles-switch.jpg"
+  alt: "A Nintendo Switch console with blue and red Joy-Con controllers, beside its docking station"
+  credit: "Evan-Amos via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Console-Docked-wJoyConRB.jpg"
+  fit: contain
 pebbles: [screen-time-children, trivial-pursuit]
 tags: [games consoles, statistics, playstation, xbox, nintendo]
 sources:
