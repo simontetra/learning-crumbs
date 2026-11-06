@@ -9,6 +9,13 @@ when: "1927"
 where: "Broadway, New York"
 plate: "1927"
 plateNote: "Show Boat, by Jerome Kern and Oscar Hammerstein II, opened on Broadway in 1927."
+image:
+  src: "/images/show-boat.jpg"
+  alt: "The 1927 sheet music cover for Ol' Man River from Show Boat, in red and grey, showing passengers on a paddle steamer's deck"
+  credit: "T.B. Harms Co. via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Show_Boat.jpg"
+  fit: contain
 pebbles: [phantom-of-the-opera, globe-theatre-1599]
 tags: [musicals, broadway, history]
 sources:
