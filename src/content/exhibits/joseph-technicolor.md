@@ -9,6 +9,14 @@ when: "1968 onwards"
 where: "Colet Court School, London; Broadway, New York"
 plate: "1968"
 plateNote: "Joseph was first performed at Colet Court School in London on 1 March 1968."
+image:
+  src: "/images/joseph-adelphi-2007.jpg"
+  alt: "The Joseph sign on the front of the Adelphi Theatre in London, with a poster for the show on the wall, photographed in 2007"
+  credit: "Andy Roberts from East London, England via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:London_Adelphi_Theatre_2007_Joseph.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
+  fit: contain
 pebbles: [evita, show-boat-1927]
 tags: [musicals, joseph, andrew-lloyd-webber, school, bible]
 sources:
