@@ -9,6 +9,14 @@ when: "1997 onwards"
 where: "The New Amsterdam Theatre, then the Minskoff Theatre, New York"
 plate: "1997"
 plateNote: "The Lion King opened on Broadway at the New Amsterdam Theatre on 13 November 1997."
+image:
+  src: "/images/lion-king-times-square.jpg"
+  alt: "The Lion King advertising on the glass front of a Times Square building in the evening, with the lion's face in yellow and black"
+  credit: "Mathieu BROSSAIS via Wikimedia Commons"
+  licence: "CC BY 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Publicit%C3%A9_pour_The_Lion_King_sur_Times_Square.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/4.0"
+  fit: contain
 pebbles: [show-boat-1927, phantom-of-the-opera]
 tags: [musicals, broadway, the-lion-king, disney, film]
 sources:
