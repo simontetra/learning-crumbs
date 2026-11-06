@@ -9,6 +9,14 @@ when: "1978 onwards"
 where: "The Prince Edward Theatre, London; Broadway, New York"
 plate: "1978"
 plateNote: "Evita opened in London at the Prince Edward Theatre on 21 June 1978."
+image:
+  src: "/images/evita-adelphi.jpg"
+  alt: "The Adelphi Theatre in London with a large Evita poster on its front, and people queuing at the entrance"
+  credit: "Francesco Pozzi via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Evita_at_the_Adelphi.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
+  fit: contain
 pebbles: [joseph-technicolor, phantom-of-the-opera]
 tags: [musicals, london, evita, argentina, andrew-lloyd-webber]
 sources:
