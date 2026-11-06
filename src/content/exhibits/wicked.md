@@ -9,6 +9,14 @@ when: "2003 onwards"
 where: "The Gershwin Theatre, New York"
 plate: "2003"
 plateNote: "Wicked opened on Broadway at the Gershwin Theatre in October 2003."
+image:
+  src: "/images/wicked-chicago.jpg"
+  alt: "The lit Wicked sign outside the Oriental Theatre in Chicago at night, with green bulbs around the frame"
+  credit: "bradleypjohnson via Wikimedia Commons"
+  licence: "CC BY 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Wicked,_oriental_theater_in_chicago.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/2.0"
+  fit: contain
 pebbles: [the-lion-king, show-boat-1927]
 tags: [musicals, broadway, wicked, oz, stephen-schwartz]
 sources:
