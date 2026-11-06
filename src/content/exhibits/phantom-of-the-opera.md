@@ -9,6 +9,14 @@ when: "1988 to 2023"
 where: "The Majestic Theatre, New York"
 plate: "1988"
 plateNote: "The Phantom of the Opera opened on Broadway in 1988, at the Majestic Theatre."
+image:
+  src: "/images/phantom.jpg"
+  alt: "The Majestic Theatre in New York at night, with a Phantom sign on its front and a large poster of the Phantom mask"
+  credit: "Ken Lund from Reno, Nevada, USA via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Majestic_Theatre,_Manhattan,_New_York_(7237737632).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
+  fit: contain
 pebbles: [show-boat-1927, sawing-a-woman-in-half]
 tags: [musicals, broadway, phantom, history]
 sources:
