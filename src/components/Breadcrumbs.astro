@@ -6,12 +6,15 @@ const items = [{ name: 'Home', href: '/' }, ...trail];
 const ld = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map((c, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: c.name,
-    ...(c.href ? { item: new URL(c.href, Astro.site).href } : {}),
-  })),
+  // Only steps with a page address go in the structured data (the last step may omit it).
+  itemListElement: items
+    .filter((c, i) => c.href || i === items.length - 1)
+    .map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      ...(c.href ? { item: new URL(c.href, Astro.site).href } : {}),
+    })),
 };
 ---
 <nav class="crumbs" aria-label="Breadcrumb">
