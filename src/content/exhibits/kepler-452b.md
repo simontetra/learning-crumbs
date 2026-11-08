@@ -25,4 +25,4 @@ The planet is about **60 per cent bigger** than Earth, which makes it a super-Ea
 
 Nothing is known yet about its atmosphere or surface, so whether it could have liquid water is still an open question.
 
-> **Look closer:** Kepler-452b is the closest match to our own Solar System that we have found so far. Its star is the same kind, and its year is almost the same length, but we know very little else about it.
+> **Look closer:** Its star is the same kind as ours, and its year is almost the same length, but we know very little else about the planet.

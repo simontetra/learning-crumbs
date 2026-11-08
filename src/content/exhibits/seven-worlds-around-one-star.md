@@ -23,4 +23,4 @@ TRAPPIST-1 is a tiny, dim star, about **40 light-years** from Earth in the const
 
 Three of the seven are firmly in the habitable zone, according to NASA. Science News Explores says the outermost planet is probably icy. Whether the inner planets have liquid water depends on their atmospheres, which have not yet been measured.
 
-> **Look closer:** A small, dim star has a very different habitable zone from the Sun. The planets have to be close in to stay warm, which is why seven of them fit in a space that would hold only Mercury's orbit around our Sun.
+> **Look closer:** A small, dim star has a very different habitable zone from the Sun. Its planets sit much closer to their star than Earth does to the Sun.
