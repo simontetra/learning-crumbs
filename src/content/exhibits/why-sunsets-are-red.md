@@ -15,8 +15,8 @@ tags: [science, light, atmosphere, colour]
 sources:
   - title: "Why is the sunset red? (Met Office)"
     url: "https://metoffice.gov.uk/learning/optics/why-is-the-sunset-red"
-  - title: "Why is the Sky Blue? (atoptics, horizon)"
-    url: "https://atoptics.co.uk/atoptics/blsky.htm"
+  - title: "Red skies at sunrise and sunset (MeteoSwiss)"
+    url: "https://www.meteoswiss.admin.ch/weather/weather-and-climate-from-a-to-z/red-skies-at-sunrise-and-sunset.html"
 ---
 
 When the sun is low, its light passes through a much thicker layer of air before it reaches you. The sun appears low in the sky, and the light has a much longer journey.
