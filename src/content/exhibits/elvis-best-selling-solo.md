@@ -9,6 +9,13 @@ when: "Recognised in 2014"
 where: "United States"
 plate: "134.5 million"
 plateNote: "Elvis Presley's RIAA-certified sales in the United States, as recognised by Guinness World Records in 2014."
+image:
+  src: "/images/elvis-modern-screen-1958.jpg"
+  alt: "Elvis Presley smiling in a black-and-white portrait, arms folded over the back of a chair, with a studio lamp behind him"
+  credit: "Modern Screen, June 1958, via Wikimedia Commons (author not named)"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Elvis_Presley,_Modern_Screen,_June_1958.jpg"
+  fit: contain
 pebbles: [beatles-sales-claims, show-boat-1927]
 tags: [music, singers, elvis, records]
 sources:
