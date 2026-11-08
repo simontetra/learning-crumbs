@@ -15,6 +15,8 @@ tags: [science, light, atmosphere, colour]
 sources:
   - title: "Why is the sunset red? (Met Office)"
     url: "https://metoffice.gov.uk/learning/optics/why-is-the-sunset-red"
+  - title: "Why is the sky blue? (Florida State University, Optics and Sunsets tutorial)"
+    url: "https://osa.magnet.fsu.edu/tutorials/whyskyblue.html"
   - title: "Red skies at sunrise and sunset (MeteoSwiss)"
     url: "https://www.meteoswiss.admin.ch/weather/weather-and-climate-from-a-to-z/red-skies-at-sunrise-and-sunset.html"
 ---
