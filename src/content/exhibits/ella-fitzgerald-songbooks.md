@@ -9,6 +9,13 @@ when: "1956 to 1964"
 where: "Newport News, Virginia; Verve Records"
 plate: "8 Songbooks"
 plateNote: "Ella Fitzgerald recorded eight Songbook albums for Verve Records between 1956 and 1964."
+image:
+  src: "/images/ella-fitzgerald-1962.jpg"
+  alt: "Ella Fitzgerald in a black-and-white studio portrait, looking to the side and smiling, with a floral wrap over her shoulder"
+  credit: "Lewin/Kaufman/Schwartz, Public Relations, Beverly Hills, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Ella_Fitzgerald_1962.JPG"
+  fit: contain
 pebbles: [elvis-best-selling-solo, beatles-sales-claims]
 tags: [music, singers, jazz, records]
 sources:
