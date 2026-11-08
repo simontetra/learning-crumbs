@@ -9,6 +9,14 @@ when: "1958 to today"
 where: "Bay City, Michigan"
 plate: "5 million"
 plateNote: "Like a Virgin (1984) was the first album by a female artist to sell more than five million copies in the United States."
+image:
+  src: "/images/madonna-rebel-heart-2015.jpg"
+  alt: "Madonna singing into a microphone on stage in a lace-sleeved purple and black outfit, with a braid over one shoulder"
+  credit: "chrisweger via Wikimedia Commons"
+  licence: "CC BY-SA 2.0"
+  url: "https://commons.wikimedia.org/wiki/File:Madonna_Rebel_Heart_Tour_2015_-_Stockholm_(23051472299)_(cropped).jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0"
+  fit: contain
 pebbles: [elvis-best-selling-solo, beatles-sales-claims]
 tags: [music, singers, madonna, records]
 sources:
