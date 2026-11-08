@@ -9,7 +9,13 @@ when: "Today"
 where: "Venus, the second planet from the Sun"
 plate: "900°F"
 plateNote: "The approximate surface temperature of Venus."
-imageToFind: "A public domain or openly licensed image of Venus, checked for licence."
+image:
+  src: "/images/venus-galileo-1990.jpg"
+  alt: "Venus as a pale blue globe with swirling clouds against black space, photographed by the Galileo spacecraft in 1990"
+  credit: "NASA/JPL, Galileo spacecraft (PIA00111)"
+  licence: "NASA/JPL image, NASA use policy"
+  url: "https://webarchive.library.unt.edu/eot2008/20080924153557/http://photojournal.jpl.nasa.gov/catalog/PIA00111"
+  fit: contain
 pebbles: [habitable-zone, mars-too-cold]
 tags: [science, space, planets, Venus]
 sources:
