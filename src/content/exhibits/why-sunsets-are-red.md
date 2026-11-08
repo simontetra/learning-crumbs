@@ -9,7 +9,14 @@ when: "Every evening, when the sun is low"
 where: "Near the horizon, looking towards the setting sun"
 plate: "Red"
 plateNote: "At sunset the blue has been scattered out, and the reds reach us."
-imageToFind: "A public domain or openly licensed photograph of a red sunset over the horizon, checked for licence."
+image:
+  src: "/images/sunset-red-sky.jpg"
+  alt: "A sky glowing orange and red above a dark grassy hill at sunset, with thin pink clouds"
+  credit: "Cara Denison via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@cara-denison-886614634/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [why-the-sky-is-blue, why-ice-looks-blue]
 tags: [science, light, atmosphere, colour]
 sources:
