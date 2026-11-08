@@ -25,4 +25,4 @@ Sleep also lets the brain recover. Scientists think it helps regain the energy t
 
 The reviews are clear on the main point, but they say the details are still unresolved. Some researchers think sleep weakens connections the brain no longer needs, while others think the replay of memories during sleep does the work.
 
-> **Look closer:** Sleep does not stop the day's learning. It works on it while we rest, which is why a night's sleep often helps before an exam.
+> **Look closer:** Sleep does not stop the day's learning. Research suggests the brain works on what it learned while we rest.
