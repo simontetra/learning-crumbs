@@ -9,7 +9,14 @@ when: "Announced 24 August 2016"
 where: "Proxima Centauri, about 4.2 light-years from the Sun"
 plate: "4.2 ly"
 plateNote: "The distance to Proxima Centauri, the star closest to the Sun."
-imageToFind: "A public domain or openly licensed illustration of Proxima Centauri b, checked for licence."
+image:
+  src: "/images/proxima-orbits-diagram.jpg"
+  alt: "A schematic diagram of two orbits around the star Proxima Centauri: a small inner orbit for planet b, and a much larger outer orbit for planet c"
+  credit: "Stephan Tournay, via Wikimedia Commons"
+  licence: "CC BY-SA 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Orbits_of_Proxima_Centauri_b_and_Proxima_Centauri_c_around_Proxima_Centauri.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+  fit: contain
 pebbles: [habitable-zone, mars-too-cold]
 tags: [science, space, exoplanets, stars]
 sources:
