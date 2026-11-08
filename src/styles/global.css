@@ -46,6 +46,10 @@
   --the-fill:  #7a1f3d;  --the-text:  #7a1f3d;   /* wine, for The Theatre */
   --sol-fill:  #4f6d7a;  --sol-text:  #4f6d7a;   /* steel blue, for Solo Singers */
   --grp-fill:  #3f8f7a;  --grp-text:  #3f8f7a;   /* sea green, for Groups and Bands */
+  --gld-fill:  #b8862b;  --gld-text:  #b8862b;   /* amber, for The Goldilocks Zone */
+  --pln-fill:  #3d3b6b;  --pln-text:  #3d3b6b;   /* deep violet, for The Planets */
+  --ocn-fill:  #1d5c8a;  --ocn-text:  #1d5c8a;   /* ocean blue, for The Oceans */
+  --cat-fill:  #5e4b3c;  --cat-text:  #5e4b3c;   /* umber, for Cataclysms */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -102,6 +106,10 @@
 [data-gallery="the-theatre"] { --room-fill: var(--the-fill); --room-text: var(--the-text); }
 [data-gallery="solo-singers"] { --room-fill: var(--sol-fill); --room-text: var(--sol-text); }
 [data-gallery="groups-and-bands"] { --room-fill: var(--grp-fill); --room-text: var(--grp-text); }
+[data-gallery="goldilocks-zone"] { --room-fill: var(--gld-fill); --room-text: var(--gld-text); }
+[data-gallery="planets-of-the-solar-system"] { --room-fill: var(--pln-fill); --room-text: var(--pln-text); }
+[data-gallery="the-oceans"] { --room-fill: var(--ocn-fill); --room-text: var(--ocn-text); }
+[data-gallery="cataclysms"] { --room-fill: var(--cat-fill); --room-text: var(--cat-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

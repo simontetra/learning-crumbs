@@ -214,5 +214,37 @@
     "question": "How many records have the Beatles sold?",
     "placard": "Some of the biggest names in music were groups of people playing together. This room looks at the bands who have sold the most records, and why the numbers are hard to pin down.",
     "summary": "The Beatles and other bands: the best-selling groups, and why their sales figures are disputed."
+  },
+  {
+    "slug": "goldilocks-zone",
+    "title": "The Goldilocks Zone",
+    "code": "GLD",
+    "question": "Why is Earth just the right distance from the Sun?",
+    "placard": "Porridge that is neither too hot nor too cold. This room looks at the band around a star where a planet can have liquid water, and the planets either side of it that are too hot or too cold.",
+    "summary": "Earth sits in the habitable zone, where liquid water can exist. Venus is too hot, and Mars is too cold."
+  },
+  {
+    "slug": "planets-of-the-solar-system",
+    "title": "The Planets",
+    "code": "PLN",
+    "question": "Dad, why was Pluto downgraded from a planet?",
+    "placard": "Eight planets go round the Sun, and one small world used to be counted among them. This room looks at what makes a planet a planet, and why Pluto no longer qualifies.",
+    "summary": "The eight planets of the Solar System, and the 2006 rule that moved Pluto into a new group."
+  },
+  {
+    "slug": "the-oceans",
+    "title": "The Oceans",
+    "code": "OCN",
+    "question": "Which is bigger, the Atlantic or the Pacific?",
+    "placard": "Two great oceans, one far larger than the other. This room compares their sizes and looks at how much of the Earth's surface is covered by water.",
+    "summary": "The Pacific is about half as big again as the Atlantic, and the biggest of Earth's oceans."
+  },
+  {
+    "slug": "cataclysms",
+    "title": "Cataclysms",
+    "code": "CAT",
+    "question": "Dad, what would happen if Yellowstone erupted?",
+    "placard": "Some disasters are so large that they have changed life on Earth. This room looks at events that scientists think caused mass extinctions, and at what a future eruption at Yellowstone might do.",
+    "summary": "A future Yellowstone eruption, the asteroid that ended the dinosaurs, and the Great Dying."
   }
 ]
