@@ -9,7 +9,14 @@ when: "Every day in daylight"
 where: "The atmosphere, above the Earth's surface"
 plate: "Blue"
 plateNote: "Blue light is scattered by the air much more strongly than red."
-imageToFind: "A public domain or openly licensed photograph of a clear blue sky, checked for licence."
+image:
+  src: "/images/blue-sky.jpg"
+  alt: "A bright blue sky with scattered white clouds, deeper blue at the top and paler towards the bottom"
+  credit: "Alexander Mass via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@rebornfilmes/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [why-sunsets-are-red, why-ice-looks-blue]
 tags: [science, light, atmosphere, colour]
 sources:
