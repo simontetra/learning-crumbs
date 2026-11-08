@@ -51,6 +51,7 @@
   --ocn-fill:  #1d5c8a;  --ocn-text:  #1d5c8a;   /* ocean blue, for The Oceans */
   --cat-fill:  #5e4b3c;  --cat-text:  #5e4b3c;   /* umber, for Cataclysms */
   --din-fill:  #5f6b4f;  --din-text:  #5f6b4f;   /* fossil olive, for Dinosaurs and Fossils */
+  --ice-fill:  #4f8fa8;  --ice-text:  #4f8fa8;   /* glacier blue, for Ice and Snow */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -112,6 +113,7 @@
 [data-gallery="the-oceans"] { --room-fill: var(--ocn-fill); --room-text: var(--ocn-text); }
 [data-gallery="cataclysms"] { --room-fill: var(--cat-fill); --room-text: var(--cat-text); }
 [data-gallery="dinosaurs-and-fossils"] { --room-fill: var(--din-fill); --room-text: var(--din-text); }
+[data-gallery="ice-and-snow"] { --room-fill: var(--ice-fill); --room-text: var(--ice-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
