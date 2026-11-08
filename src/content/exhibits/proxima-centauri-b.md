@@ -21,6 +21,6 @@ sources:
 
 Proxima Centauri is the star closest to the Sun, about **4.2 light-years** away. In 2016, astronomers announced a planet orbiting it, called **Proxima Centauri b**. It lies in the star's habitable zone, the region where liquid water could exist on the surface of a rocky planet.
 
-The habitable zone around Proxima is much closer to its star than Earth is to the Sun. Being in that zone does not mean the planet has water. Proxima is a red dwarf, and such stars are **prone to powerful flares**. A NASA study led from Goddard Space Flight Center suggests these eruptions could strip away a planet's atmosphere, and and it says Proxima b may be unsuitable for life.
+The habitable zone around Proxima is much closer to its star than Earth is to the Sun. Being in that zone does not mean the planet has water. Proxima is a red dwarf, and such stars are **prone to powerful flares**. A NASA study led from Goddard Space Flight Center suggests these eruptions could strip away a planet's atmosphere, and it says Proxima b may be unsuitable for life.
 
 > **Look closer:** A planet can be the right distance from its star and still be unsuitable. Habitable zone tells us about warmth, not about whether the air would survive the star's weather.
