@@ -9,7 +9,13 @@ when: "Announced in 2017"
 where: "TRAPPIST-1, about 40 light-years away in the constellation Aquarius"
 plate: "7 planets"
 plateNote: "The Earth-sized planets orbiting the star TRAPPIST-1."
-imageToFind: "A public domain or openly licensed illustration of the TRAPPIST-1 system, checked for licence."
+image:
+  src: "/images/trappist-1-comparison.jpg"
+  alt: "A comparison diagram showing the seven TRAPPIST-1 planets, labelled b to h, beside Jupiter's moons and the inner Solar System, with orbits enlarged 25 times"
+  credit: "NASA/JPL-Caltech (PIA21428)"
+  licence: "NASA/JPL image, NASA use policy"
+  url: "https://pds-rings.seti.org/press_releases/pages/PIA21xxx/PIA21428.html"
+  fit: contain
 pebbles: [proxima-centauri-b, habitable-zone]
 tags: [science, space, exoplanets, stars]
 sources:
@@ -23,4 +29,4 @@ TRAPPIST-1 is a tiny, dim star, about **40 light-years** from Earth in the const
 
 Three of the seven are firmly in the habitable zone, according to NASA. Science News Explores says the outermost planet is probably icy. Whether the inner planets have liquid water depends on their atmospheres, which have not yet been measured.
 
-> **Look closer:** A small, dim star has a very different habitable zone from the Sun. Its planets sit much closer to their star than Earth does to the Sun.
+> **Look closer:** NASA's comparison shows that all seven planets could fit inside Mercury's orbit with room to spare. The star is only slightly larger than Jupiter, so its planets sit much closer to it than Earth does to the Sun.
