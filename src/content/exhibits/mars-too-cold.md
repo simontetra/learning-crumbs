@@ -10,11 +10,12 @@ where: "Mars, the fourth planet from the Sun"
 plate: "−80°F"
 plateNote: "The average surface temperature of Mars."
 image:
-  src: "/images/mars-global-surveyor-2003.jpg"
-  alt: "Mars as a rust-coloured globe against black space, with a pale polar cap along the bottom edge, photographed by Mars Global Surveyor in 2003"
-  credit: "NASA/JPL/Malin Space Science Systems (PIA04591)"
-  licence: "NASA/JPL image, NASA use policy"
-  url: "https://webarchive.library.unt.edu/eot2008/20080916082525/http://photojournal.jpl.nasa.gov/catalog/pia04591"
+  src: "/images/mars-osiris-true-colour.jpg"
+  alt: "Mars in true colour, orange-red across most of the globe, with darker regions and a pale polar cap along the bottom edge"
+  credit: "ESA & MPS for OSIRIS Team, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0 IGO"
+  url: "https://commons.wikimedia.org/wiki/File:OSIRIS_Mars_true_color.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en"
   fit: contain
 pebbles: [habitable-zone, venus-too-hot]
 tags: [science, space, planets, Mars]
