@@ -15,8 +15,8 @@ tags: [science, light, atmosphere, colour]
 sources:
   - title: "Why is the sky blue? (Met Office)"
     url: "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects/why-is-the-sky-blue"
-  - title: "Why is the Sky Blue? (atoptics)"
-    url: "https://atoptics.co.uk/atoptics/blsky.htm"
+  - title: "Why is the sky blue? (National Institute of Environmental Health Sciences, for kids)"
+    url: "https://www.niehs.nih.gov/health/kids/topics/natural-world/why-the-sky-is-blue"
 ---
 
 Sunlight looks white, but it is made of every colour, and each colour has its own wavelength. Blue has a short wavelength and red has a long one.
