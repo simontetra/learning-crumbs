@@ -9,7 +9,13 @@ when: "Announced July 2015"
 where: "Kepler-452, about 1,400 light-years away in the constellation Cygnus"
 plate: "385 days"
 plateNote: "The length of the year on Kepler-452b, compared with 365 days on Earth."
-imageToFind: "A public domain or openly licensed illustration of Kepler-452b, checked for licence."
+image:
+  src: "/images/kepler-452-comparison.jpg"
+  alt: "A comparison diagram of the Kepler-452, Kepler-186 and Solar systems, with planets Kepler-452b, Kepler-186f and the inner Solar System planets shown below"
+  credit: "NASA/Ames/JPL-Caltech (PIA19826)"
+  licence: "NASA/JPL image, NASA use policy"
+  url: "https://pds-rings.seti.org:443/press_releases/pages/PIA19xxx/PIA19826.html"
+  fit: contain
 pebbles: [seven-worlds-around-one-star, habitable-zone]
 tags: [science, space, exoplanets, stars]
 sources:
@@ -23,6 +29,6 @@ Kepler-452b is a planet about 1,400 light-years away. It orbits a star much like
 
 The planet is about **60 per cent bigger** than Earth, which makes it a super-Earth. It takes **385 days** to orbit its star, only about 5 per cent longer than Earth's year. NASA's Kepler mission called it Earth's "older, bigger cousin".
 
-Nothing is known yet about its atmosphere or surface, so whether it could have liquid water is still an open question.
+Its orbit is about 1.05 astronomical units from its star, nearly the same distance as Earth's orbit from the Sun. Nothing is known yet about its atmosphere or surface, so whether it could have liquid water is still an open question.
 
 > **Look closer:** Its star is the same kind as ours, and its year is almost the same length, but we know very little else about the planet.
