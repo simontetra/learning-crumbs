@@ -9,6 +9,14 @@ when: "1963"
 where: "Tryon, North Carolina; Birmingham, Alabama"
 plate: "1963"
 plateNote: "Nina Simone wrote and released Mississippi Goddam in 1963, in response to the murder of Medgar Evers and the bombing of the 16th Street Baptist Church."
+image:
+  src: "/images/nina-simone-1969.jpg"
+  alt: "Nina Simone in a black-and-white close-up, wearing a patterned headwrap and a large hoop earring"
+  credit: "Gerrit de Bruin via Wikimedia Commons"
+  licence: "CC BY 4.0"
+  url: "https://commons.wikimedia.org/wiki/File:Nina_Simone_-1969.jpg"
+  licenceUrl: "https://creativecommons.org/licenses/by/4.0"
+  fit: contain
 pebbles: [beatles-sales-claims, houdini-escape-artist]
 tags: [music, singers, protest, civil-rights]
 sources:

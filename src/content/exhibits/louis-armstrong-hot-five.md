@@ -2,6 +2,7 @@
 title: "Louis Armstrong and the Hot Five"
 gallery: solo-singers
 order: 5
+hidden: true
 accession: LB-SNG-005
 question: "What did Louis Armstrong record in Chicago?"
 summary: "Louis Armstrong recorded as Louis Armstrong and His Hot Five in Chicago, making over 60 records between 1925 and 1928. His 1967 hit What a Wonderful World became his longest-lasting song."

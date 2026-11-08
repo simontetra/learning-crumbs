@@ -16,7 +16,7 @@ image:
   licence: "Public domain"
   url: "https://commons.wikimedia.org/wiki/File:Frank_Sinatra_by_Gottlieb_c1947-_2.jpg"
   fit: contain
-pebbles: [elvis-best-selling-solo, louis-armstrong-hot-five]
+pebbles: [elvis-best-selling-solo]
 tags: [music, singers, film, awards]
 sources:
   - title: "Frank Sinatra (Biography.com)"
