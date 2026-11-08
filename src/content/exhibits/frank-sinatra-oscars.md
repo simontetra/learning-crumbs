@@ -9,6 +9,13 @@ when: "1945 and 1953"
 where: "Hoboken, New Jersey; Los Angeles"
 plate: "2 Oscars"
 plateNote: "Frank Sinatra received a Special Academy Award in 1945 and the Best Supporting Actor Oscar in 1953."
+image:
+  src: "/images/sinatra-gottlieb-c1947.jpg"
+  alt: "Frank Sinatra in a checked suit and patterned tie, standing at a Columbia Records microphone in a recording studio"
+  credit: "William P. Gottlieb via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Frank_Sinatra_by_Gottlieb_c1947-_2.jpg"
+  fit: contain
 pebbles: [elvis-best-selling-solo, louis-armstrong-hot-five]
 tags: [music, singers, film, awards]
 sources:
