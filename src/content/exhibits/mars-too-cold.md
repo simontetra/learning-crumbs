@@ -9,7 +9,13 @@ when: "Today"
 where: "Mars, the fourth planet from the Sun"
 plate: "−80°F"
 plateNote: "The average surface temperature of Mars."
-imageToFind: "A public domain or openly licensed image of Mars, checked for licence."
+image:
+  src: "/images/mars-global-surveyor-2003.jpg"
+  alt: "Mars as a rust-coloured globe against black space, with a pale polar cap along the bottom edge, photographed by Mars Global Surveyor in 2003"
+  credit: "NASA/JPL/Malin Space Science Systems (PIA04591)"
+  licence: "NASA/JPL image, NASA use policy"
+  url: "https://webarchive.library.unt.edu/eot2008/20080916082525/http://photojournal.jpl.nasa.gov/catalog/pia04591"
+  fit: contain
 pebbles: [habitable-zone, venus-too-hot]
 tags: [science, space, planets, Mars]
 sources:
