@@ -9,7 +9,14 @@ when: "Today"
 where: "The Solar System, and planets around other stars"
 plate: "Just right"
 plateNote: "Liquid water needs a temperature between freezing and boiling."
-imageToFind: "A public domain or openly licensed diagram of the Sun and the inner planets, showing the habitable zone, checked for licence."
+image:
+  src: "/images/earth-sunrise-space.jpg"
+  alt: "Earth seen from space with the Sun rising behind its edge, the lights of Europe and the Mediterranean visible on the night side"
+  credit: "Zelch Csaba via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@zelch/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [venus-too-hot, mars-too-cold, goldilocks-and-the-three-bears]
 tags: [science, space, Sun, planets]
 sources:
