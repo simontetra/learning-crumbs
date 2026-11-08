@@ -9,6 +9,13 @@ when: "1947 to 2016"
 where: "Brixton, London; New York"
 plate: "1972"
 plateNote: "David Bowie released The Rise and Fall of Ziggy Stardust and the Spiders from Mars in 1972, with the band as the Spiders from Mars."
+image:
+  src: "/images/bowie-rca-1975.jpg"
+  alt: "David Bowie in a black-and-white portrait, resting his arms on a table with a cigarette in his hand and his hair backlit"
+  credit: "RCA Records via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:David_Bowie_1975.jpg"
+  fit: contain
 pebbles: [queen-live-aid, elvis-best-selling-solo]
 tags: [music, singers, bowie, glam]
 sources:
