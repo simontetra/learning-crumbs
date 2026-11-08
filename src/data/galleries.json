@@ -246,5 +246,13 @@
     "question": "Dad, what would happen if Yellowstone erupted?",
     "placard": "Some disasters are so large that they have changed life on Earth. This room looks at events that scientists think caused mass extinctions, and at what a future eruption at Yellowstone might do.",
     "summary": "A future Yellowstone eruption, the asteroid that ended the dinosaurs, and the Great Dying."
+  },
+  {
+    "slug": "dinosaurs-and-fossils",
+    "title": "Dinosaurs and Fossils",
+    "code": "DIN",
+    "question": "How do we know what dinosaurs looked like, and what colour they were?",
+    "placard": "No one has ever seen a living dinosaur, yet we can picture many of them in detail. This room looks at how bones, feathers and tiny pigment structures reveal their shape and, in some cases, their colour.",
+    "summary": "Bones give the shape, feathers give the texture, and pigment left in fossil feathers can give some colours."
   }
 ]
