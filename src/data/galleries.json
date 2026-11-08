@@ -262,5 +262,29 @@
     "question": "Why does ice often look blue?",
     "placard": "Ice is clear, yet a glacier can glow blue. This room looks at how light travels through frozen water, and why snow and ice can look white in one place and blue in another.",
     "summary": "Ice absorbs red light. When light travels far enough through thick ice, the blue that comes back is what we see."
+  },
+  {
+    "slug": "night-sky",
+    "title": "The Night Sky",
+    "code": "NGT",
+    "question": "Why do stars twinkle?",
+    "placard": "Look up on a clear night and the stars flicker, while the planets stay steady. This room looks at why, and what the air above us does to starlight.",
+    "summary": "Stars twinkle because the air above us bends their light. Planets look steady because they appear as small discs, not points."
+  },
+  {
+    "slug": "the-sky-above",
+    "title": "The Sky Above",
+    "code": "SKY",
+    "question": "Why is the sky blue?",
+    "placard": "The air is invisible, yet it paints the whole sky. This room looks at how sunlight meets the air, and why the sky turns red at sunset.",
+    "summary": "Air scatters blue light more than red, so the sky looks blue. At sunset, the blue is scattered out, and the reds reach us."
+  },
+  {
+    "slug": "our-bodies-at-rest",
+    "title": "Our Bodies at Rest",
+    "code": "BDY",
+    "question": "Why do we need to sleep?",
+    "placard": "A third of our lives can be spent asleep, and nobody has yet fully explained why. This room looks at what sleep does for the brain and the body.",
+    "summary": "Sleep helps the brain store memories and learning. Scientists still disagree about the details."
   }
 ]
