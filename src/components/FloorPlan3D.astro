@@ -1,0 +1,223 @@
+---
+// The floor plan as a building you can turn and step into. It is drawn in the browser from the
+// same list as everything else (src/data/galleries.json), nine rooms to a floor, so a new gallery
+// or a new floor appears here with no further work. The flat <FloorPlan /> is rendered underneath
+// as the fallback: it is what visitors without JavaScript see, and it is hidden once this one starts.
+import { galleries, galleryUrl } from '../lib/site';
+import FloorPlan from './FloorPlan.astro';
+
+const PER_FLOOR = 9; // keep in step with FloorPlan.astro
+const FLOOR_NAMES = ['Ground floor', 'First floor', 'Second floor', 'Third floor', 'Fourth floor', 'Fifth floor', 'Sixth floor', 'Seventh floor', 'Eighth floor', 'Ninth floor', 'Tenth floor'];
+
+const floors = Array.from({ length: Math.ceil(galleries.length / PER_FLOOR) }, (_, f) => ({
+  name: FLOOR_NAMES[f] ?? `Floor ${f}`,
+  rooms: galleries.slice(f * PER_FLOOR, (f + 1) * PER_FLOOR).map((g) => ({ title: g.title, slug: g.slug, url: galleryUrl(g.slug) })),
+}));
+const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
+---
+<div class="fp3d" id="fp3d" hidden>
+  <div class="fp-side">
+    <p class="fp-status" id="fp-status" aria-live="polite"></p>
+    <nav class="fp-lift" aria-label="Floors">
+      <ol id="fp-keys"></ol>
+      <button class="fp-whole" id="fp-whole" type="button" aria-pressed="true"><span class="fp-key" aria-hidden="true"></span><span class="fp-nm">Whole<span class="fp-fl"> building</span></span></button>
+    </nav>
+    <p class="fp-hint">Drag to turn the building. Pick a floor to step inside, then pick a room to go in.</p>
+  </div>
+  <div class="fp-stage" id="fp-stage" role="group" aria-label="The building in 3D">
+    <div class="fp-world fp-all" id="fp-world"></div>
+  </div>
+</div>
+<div id="fp3d-fallback"><FloorPlan /></div>
+<script type="application/json" id="fp3d-data" set:html={data} />
+
+<style is:global>
+  .fp3d {
+    --fp-crumb: #cf9c2e;
+    display: grid; grid-template-columns: minmax(200px, 250px) minmax(0, 1fr);
+    background: var(--label); border: 1px solid var(--rule); border-radius: 22px; box-shadow: var(--shadow-lift); overflow: hidden;
+  }
+  .fp3d[hidden] { display: none; }
+  .fp3d *, .fp3d *::before, .fp3d *::after { box-sizing: border-box; }
+  .fp-side { display: flex; flex-direction: column; gap: 16px; padding: 22px 6px 20px 22px; min-height: 0; max-height: clamp(440px, 74svh, 760px); overflow: auto; }
+  .fp-status { margin: 0; color: var(--muted); font-size: var(--step--1); line-height: 1.45; min-height: 5.8em; }
+  .fp-lift { background: var(--wall); border: 1px solid var(--rule); border-radius: 18px; padding: 7px; }
+  .fp-lift ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .fp-lift button {
+    all: unset; box-sizing: border-box; cursor: pointer; width: 100%;
+    display: grid; grid-template-columns: 38px 1fr; gap: 11px; align-items: center;
+    padding: 6px 9px 6px 6px; border-radius: 12px; font-family: var(--font-body); color: var(--ink);
+  }
+  .fp-lift button:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .fp-lift button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .fp-key { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--accent); display: grid; place-items: center; font-family: var(--font-label); font-weight: 700; font-size: 1rem; color: var(--heading); transition: background 0.25s, color 0.25s; }
+  .fp-lift button[aria-pressed="true"] .fp-key { background: var(--accent); color: var(--label); }
+  .fp-nm { display: flex; flex-direction: column; line-height: 1.2; font-weight: 700; color: var(--heading); }
+  .fp-nm small { font-weight: 400; color: var(--muted); font-size: 0.82rem; }
+  .fp-lift .fp-whole { margin-top: 5px; padding-top: 11px; border-top: 1px solid var(--rule); border-radius: 0 0 12px 12px; }
+  .fp-lift .fp-whole .fp-key, .fp-lift .fp-whole[aria-pressed="true"] .fp-key {
+    background:
+      linear-gradient(var(--heading) 0 0) center 9px / 16px 3px no-repeat,
+      linear-gradient(var(--heading) 0 0) center 15px / 16px 3px no-repeat,
+      linear-gradient(var(--heading) 0 0) center 21px / 16px 3px no-repeat,
+      linear-gradient(var(--heading) 0 0) center 27px / 16px 3px no-repeat;
+    border-color: var(--heading);
+  }
+  .fp-lift .fp-whole[aria-pressed="true"] .fp-key { background-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+  .fp-hint { margin: auto 0 0; color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+
+  .fp-stage {
+    position: relative; overflow: hidden; height: clamp(440px, 74svh, 760px);
+    perspective: 1500px; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none;
+    background: radial-gradient(ellipse at 50% 55%, var(--label), var(--wall) 85%);
+    border-left: 1px solid var(--rule);
+  }
+  .fp-stage.fp-dragging { cursor: grabbing; }
+  .fp-world {
+    position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d;
+    --rx: 62deg; --rz: -38deg; --zoom: 1; --fz: 255px; --ox: 0px; --oy: 0px; --py: 0px; --ss: 1; --lw: 120px;
+    transform: translateY(var(--py)) scale3d(var(--zoom), var(--zoom), var(--zoom)) rotateX(var(--rx)) rotateZ(var(--rz)) translate3d(calc(-1 * var(--ox)), calc(-1 * var(--oy)), calc(-1 * var(--fz)));
+  }
+  .fp-ground { position: absolute; transform: translateZ(-18px); background: radial-gradient(closest-side, color-mix(in srgb, var(--ink) 22%, transparent), transparent); pointer-events: none; }
+  .fp-frame, .fp-floor { position: absolute; transform-style: preserve-3d; }
+  .fp-floor { --o: 1; --d: 0ms; transform: translateZ(var(--zf)); transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--d), visibility 0s 0s; }
+  .fp-world:not(.fp-ready) .fp-floor { --d: calc(var(--f) * 140ms); }
+  .fp-floor.fp-pre { --o: 0; transform: translateZ(calc(var(--zf) - 220px)); }
+  .fp-floor.fp-below { --o: 0.18; }
+  .fp-floor.fp-above { --o: 0; transform: translateZ(calc(var(--zf) + 150px)); visibility: hidden; pointer-events: none; transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 0.5s; }
+  .fp-lf { opacity: var(--o); transition: opacity 0.5s var(--d); }
+  .fp-floor * { position: absolute; }
+  .fp-floor i { display: block; }
+
+  .fp-slab { inset: 0; background: var(--plate); border: 1.5px solid color-mix(in srgb, var(--plate) 70%, var(--ink)); border-radius: 3px; }
+  .fp-world.fp-all .fp-floor:hover .fp-slab { background: color-mix(in srgb, var(--accent) 22%, var(--plate)); }
+  .fp-skirt { background: color-mix(in srgb, var(--plate) 62%, var(--ink)); }
+  .fp-skirt.fp-e, .fp-skirt.fp-w { background: color-mix(in srgb, var(--plate) 50%, var(--ink)); }
+
+  /* Each room is painted its gallery's own colour, taken from --room-fill via data-gallery. */
+  a.fp-room { width: 120px; height: 120px; transform-style: preserve-3d; transform: translateZ(1px); color: inherit; text-decoration: none; -webkit-user-drag: none; outline: none; }
+  .fp-tile { inset: 0; background: color-mix(in srgb, var(--room-fill) 14%, var(--label)); border: 1px solid color-mix(in srgb, var(--room-fill) 45%, var(--rule)); transition: background 0.2s, opacity 0.5s var(--d); }
+  .fp-focus a.fp-room:hover .fp-tile, .fp-focus a.fp-room:focus-visible .fp-tile { background: color-mix(in srgb, var(--room-fill) 40%, var(--label)); }
+  .fp-wall { transform-origin: 0 0; }
+  .fp-w-n { background: color-mix(in srgb, var(--room-fill) 90%, white); }
+  .fp-w-s { background: color-mix(in srgb, var(--room-fill) 80%, black); }
+  .fp-w-e { background: color-mix(in srgb, var(--room-fill) 90%, black); }
+  .fp-w-w { background: var(--room-fill); }
+
+  svg.fp-crumbs { transform: translateZ(3px); pointer-events: none; }
+  .fp-crumb { fill: var(--fp-crumb); }
+  .fp-reveal { fill: none; stroke: #fff; stroke-width: 26; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: var(--len); stroke-dashoffset: 0; animation: fp-lay 0.75s linear both; animation-delay: calc(1000ms + var(--f) * 620ms); }
+  @keyframes fp-lay { from { stroke-dashoffset: var(--len); } to { stroke-dashoffset: 0; } }
+  .fp-walker { fill: var(--heading); stroke: var(--label); stroke-width: 2.5; display: none; }
+  .fp-focus .fp-walker { display: block; }
+
+  .fp-tread { background: var(--pebble); border: 1px solid color-mix(in srgb, var(--pebble) 60%, var(--ink)); }
+  .fp-stairs { transform-style: preserve-3d; left: 0; top: 0; width: 0; height: 0; }
+  .fp-focus .fp-stairs { cursor: pointer; }
+
+  /* Signs are counter-rotated so they always face the visitor. */
+  .fp-sign { width: max-content; transform-origin: 0 0; transform: translateZ(var(--lift, 30px)) rotateZ(calc(-1 * var(--rz))) rotateX(calc(-1 * var(--rx))) scale(var(--ss)) translate(-50%, -100%); }
+  a.fp-room .fp-sign { left: 50%; top: 50%; }
+  .fp-sign-in { position: relative !important; display: flex; flex-direction: column; align-items: center; padding-bottom: 9px; transition: transform 0.2s; }
+  .fp-sign-in::after { content: ""; position: absolute; bottom: 0; left: 50%; width: 2px; height: 9px; margin-left: -1px; background: var(--room-fill); }
+  .fp-sign-in > * { position: static; }
+  .fp-num { min-width: 22px; height: 22px; border-radius: 11px; padding: 0 6px; background: var(--room-fill); color: var(--room-ink); font-family: var(--font-label); font-weight: 700; font-size: 12px; line-height: 22px; text-align: center; }
+  .fp-ttl { display: none; margin-top: 3px; max-width: var(--lw); text-align: center; background: var(--label); color: var(--heading); border: 1px solid var(--rule); border-radius: 6px; padding: 4px 7px 5px; font-family: var(--font-display); font-size: 13.5px; line-height: 1.14; font-weight: 700; text-wrap: balance; } /* no shadow here: it upsets the browser's 3D layer sorting */
+  .fp-focus .fp-ttl { display: block; animation: fp-pop 0.35s cubic-bezier(0.3, 1.5, 0.5, 1) both; animation-delay: calc(260ms + var(--k) * 45ms); }
+  @keyframes fp-pop { from { opacity: 0; transform: translateY(8px) scale(0.9); } to { opacity: 1; transform: none; } }
+  .fp-focus a.fp-room:hover .fp-sign-in, .fp-focus a.fp-room:focus-visible .fp-sign-in { transform: translateY(-7px); }
+  .fp-focus a.fp-room:hover .fp-ttl, .fp-focus a.fp-room:focus-visible .fp-ttl { background: var(--room-fill); color: var(--room-ink); border-color: var(--room-fill); }
+  .fp-focus a.fp-room:focus-visible .fp-ttl { outline: 2.5px solid var(--accent); outline-offset: 2px; }
+
+  .fp-tag { font-family: var(--font-label); font-size: 12px; line-height: 1; padding: 6px 10px; border-radius: 999px; white-space: nowrap; background: var(--heading); color: var(--label); }
+  .fp-ftag, .fp-way { --room-fill: var(--heading); }
+  .fp-ftag { display: none; }
+  .fp-world.fp-all .fp-ftag { display: block; }
+  .fp-way .fp-tag { background: var(--label); color: var(--heading); border: 1.5px solid var(--fp-crumb); }
+  .fp-way .fp-sign-in::after { background: var(--fp-crumb); }
+  .fp-floor.fp-below .fp-way, .fp-floor.fp-below .fp-ftag, .fp-world.fp-narrow .fp-ftag { display: none; }
+  .fp-narrow .fp-ttl { font-size: 12px; padding: 3px 5px 4px; }
+  .fp-world.fp-all.fp-tiny a.fp-room .fp-sign, .fp-world.fp-tiny .fp-ttl { display: none; }
+
+  .fp-shaft { background: color-mix(in srgb, var(--ink) 5%, transparent); border: 1.5px solid color-mix(in srgb, var(--ink) 30%, transparent); position: absolute; display: block; transform-origin: 0 0; pointer-events: none; }
+  .fp-car { position: absolute; width: 40px; height: 40px; transform-style: preserve-3d; pointer-events: none; }
+  .fp-car i { position: absolute; display: block; transform-origin: 0 0; background: color-mix(in srgb, var(--heading) 80%, var(--label)); }
+  .fp-car .fp-top { inset: 0; transform: translateZ(44px); background: var(--heading); }
+
+  @media (max-width: 760px) {
+    .fp3d { grid-template-columns: minmax(0, 1fr); border-radius: 18px; }
+    .fp-side { display: contents; }
+    .fp-status { order: 1; padding: 14px 16px 10px; min-height: 0; }
+    .fp-stage { order: 2; border-left: 0; border-block: 1px solid var(--rule); height: clamp(400px, 68svh, 620px); }
+    .fp-lift { order: 3; margin: 8px; padding: 5px; display: flex; min-width: 0; }
+    .fp-hint { display: none; }
+    .fp-lift ol { flex-direction: row; flex: 4; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+    .fp-lift li { flex: 1 0 58px; order: var(--ord); }
+    .fp-lift button { display: flex; flex-direction: column; gap: 3px; padding: 5px 2px; text-align: center; }
+    .fp-lift .fp-whole { flex: 0 0 64px; margin: 0; padding: 5px 2px; border-top: 0; border-left: 1px solid var(--rule); border-radius: 0 12px 12px 0; }
+    .fp-nm { font-size: 0.74rem; }
+    .fp-nm small, .fp-nm .fp-fl { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fp-floor, .fp-lf, .fp-tile, .fp-sign-in { transition: none !important; }
+    .fp-reveal, .fp-focus .fp-ttl { animation: none; }
+    .fp-walker { display: none !important; }
+  }
+</style>
+
+<script>
+// @ts-nocheck
+(function () {
+  const root = document.getElementById('fp3d');
+  const dataEl = document.getElementById('fp3d-data');
+  if (!root || !dataEl || !CSS.supports('transform-style', 'preserve-3d')) return;
+  const DATA = JSON.parse(dataEl.textContent);
+  const N = DATA.floors.length;
+  if (!N) return;
+
+  const G = 170, R = 120, GAP = 14, HALL = 64, PADT = 18, PADR = 18, FRONT = 50, WALL = 22, DOOR = 40, SKIRT = 10, PITCH = R + GAP;
+  let count = 0;
+  const FLOORS = DATA.floors.map((src, f) => {
+    const rooms = src.rooms || [], n = rooms.length;
+    const cols = n <= 4 ? 2 : 3; // three across keeps every sign readable on a phone; busy floors grow deeper
+    const rows = Math.max(1, Math.ceil(n / cols));
+    const short = src.name.replace(/\s+floor$/i, '');
+    const F = { name: src.name, short, key: f === 0 ? 'G' : String(f), hash: short.toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'floor-' + f,
+      rooms, n, cols, rows, start: count,
+      W: HALL + cols * R + (cols - 1) * GAP + PADR, D: PADT + rows * R + (rows - 1) * GAP + FRONT };
+    count += n; return F;
+  });
+  const TOTAL = count, WMAX = Math.max(...FLOORS.map((F) => F.W)), DMAX = Math.max(...FLOORS.map((F) => F.D));
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stage = document.getElementById('fp-stage'), world = document.getElementById('fp-world');
+  const statusEl = document.getElementById('fp-status'), keys = document.getElementById('fp-keys'), whole = document.getElementById('fp-whole');
+  const SVGNS = 'http://www.w3.org/2000/svg';
+
+  function el(tag, cls, css) { const e = document.createElement(tag); if (cls) e.className = cls; if (css) Object.assign(e.style, css); return e; }
+  function span(cls, text) { const s = el('span', cls); if (text !== undefined) s.textContent = text; return s; }
+  const px = (n) => n + 'px';
+  const midX = (c) => HALL + c * PITCH + R / 2, midY = (r) => PADT + r * PITCH + R / 2;
+  let seed = 7; function rnd() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+
+  function wall(side, a, len, base, h, cls) {
+    const d = el('i', cls + ' fp-w-' + side), s = d.style;
+    if (side === 'n' || side === 's') { s.left = px(a); s.top = px(side === 'n' ? 0 : base); s.width = px(len); s.height = px(h); s.transform = 'rotateX(90deg)'; }
+    else { s.left = px(side === 'w' ? 0 : base); s.top = px(a); s.width = px(h); s.height = px(len); s.transform = 'rotateY(-90deg)'; }
+    return d;
+  }
+  function sideTo(a, b) { const dx = b[0] - a[0], dy = b[1] - a[1]; return dx === 1 ? 'e' : dx === -1 ? 'w' : dy === 1 ? 's' : 'n'; }
+  function billboard(cls, x, y, lift, inner) {
+    const s = el('span', 'fp-sign fp-lf ' + cls, { left: px(x), top: px(y) }); s.style.setProperty('--lift', px(lift));
+    const i = el('span', 'fp-sign-in'); i.append(inner); s.append(i); return s;
+  }
+  const roomsLabel = (F) => F.n === 0 ? 'No rooms yet' : F.n === 1 ? 'Room ' + (F.start + 1) : 'Rooms ' + (F.start + 1) + ' to ' + (F.start + F.n);
+
+  let mode = 'all', cur = 0, interacted = false, hovering = false, drag = null, suppress = false;
+  const floorEls = [];
+  FLOORS.forEach((F, f) => {
+    const { W, D } = F, top = f === N - 1, cy = midY(0);
+    const fl = el('section', 'fp-floor fp-pre', { left: px(-WMAX / 2), top: px(-DMAX / 2), width: px(W), height: px(D) });
+    fl.style.setProperty('--zf', px(f * G)); fl.style.setProperty('--f', Math.min(f, 6));
+    fl.setAttribute('aria-label', F.name);
+    fl.append(el('i', 'fp-slab fp-lf'));
+    [['n', 0, 0, W, SKIRT, 'rotateX(-90deg)'], ['s', 0, D, W, SKIRT,
