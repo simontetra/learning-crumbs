@@ -98,6 +98,7 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
   }
   .fp-ground { position: absolute; transform: translateZ(-18px); background: radial-gradient(closest-side, color-mix(in srgb, var(--ink) 22%, transparent), transparent); pointer-events: none; }
   .fp-frame, .fp-floor { position: absolute; transform-style: preserve-3d; }
+  .fp-arriving .fp-frame { visibility: hidden; } /* no lift shaft in the sky while you stand at the front doors */
   .fp-floor { --o: 1; --d: 0ms; transform: translateZ(var(--zf)); transition: transform 0.8s cubic-bezier(0.34, 1.5, 0.64, 1) var(--d), visibility 0s 0s; } /* floors land with a little bounce */
   .fp-world:not(.fp-ready) .fp-floor { --d: calc(var(--f) * 140ms); }
   .fp-floor.fp-pre { --o: 0; transform: translateZ(calc(var(--zf) - 220px)); }
@@ -137,13 +138,22 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
   @keyframes fp-peck { 50% { transform: rotate(32deg); } }
 
   /* The thing standing in each room. */
-  .fp-thing { left: 50%; top: 76%; width: max-content; transform-origin: 0 0; pointer-events: none; transform: translateZ(1px) rotateZ(calc(-1 * var(--rz))) rotateX(calc(-1 * var(--rx))) translate(-50%, -100%); }
+  .fp-thing { left: 58%; top: 76%; width: max-content; transform-origin: 0 0; pointer-events: none; transform: translateZ(1px) rotateZ(calc(-1 * var(--rz))) rotateX(calc(-1 * var(--rx))) translate(-50%, -100%); }
   .fp-thing > span { position: relative !important; display: block; font-size: 34px; line-height: 1; transform-origin: 50% 100%; }
   .fp-thing.fp-hop > span, .fp-focus a.fp-room:hover .fp-thing > span, .fp-focus a.fp-room:focus-visible .fp-thing > span { animation: fp-hop 0.55s cubic-bezier(0.3, 0.6, 0.4, 1); }
   @keyframes fp-hop { 30% { transform: translateY(-16px) scale(1.15, 0.9); } 60% { transform: translateY(0) scale(0.9, 1.1); } 80% { transform: translateY(-5px); } }
 
   .fp-tread { background: var(--pebble); border: 1px solid color-mix(in srgb, var(--pebble) 60%, var(--ink)); }
-  .fp-stairs { transform-style: preserve-3d; left: 0; top: 0; width: 0; height: 0; }
+  .fp-stairs, .fp-porch { transform-style: preserve-3d; left: 0; top: 0; width: 0; height: 0; }
+  /* The front porch, with the museum's name over the doors. The doors swing open as you arrive. */
+  .fp-porch i.fp-pier { background: color-mix(in srgb, var(--pebble) 82%, var(--ink)); }
+  .fp-porch i.fp-pier.fp-w-w, .fp-porch i.fp-pier.fp-w-e { background: color-mix(in srgb, var(--pebble) 66%, var(--ink)); }
+  .fp-porch .fp-roof { background: var(--pebble); }
+  .fp-porch .fp-museum { display: flex; align-items: center; justify-content: center; background: var(--heading); color: var(--label); font-family: var(--font-display); font-weight: 700; font-style: normal; font-size: 51px; letter-spacing: 0.03em; white-space: nowrap; } /* drawn at three times size and scaled down, so it stays sharp close up */
+  .fp-porch .fp-leaf { background: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 60%, var(--ink)); transform-origin: 0 100%; transform: rotateX(-90deg); transition: transform 0.9s cubic-bezier(0.3, 0.1, 0.3, 1); }
+  .fp-porch .fp-leaf-r { transform-origin: 100% 100%; }
+  .fp-entered .fp-leaf-l { transform: rotateX(-90deg) rotateY(105deg); }
+  .fp-entered .fp-leaf-r { transform: rotateX(-90deg) rotateY(-105deg); }
   .fp-focus .fp-stairs { cursor: pointer; }
 
   /* Signs are counter-rotated so they always face the visitor. */
@@ -211,7 +221,7 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
     .fp-surprise { right: 10px; bottom: 10px; padding: 8px 14px; font-size: 0.92rem; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .fp-floor, .fp-lf, .fp-tile, .fp-sign-in, .fp-car .fp-door { transition: none !important; }
+    .fp-floor, .fp-lf, .fp-tile, .fp-sign-in, .fp-car .fp-door, .fp-porch .fp-leaf { transition: none !important; }
     .fp-reveal, .fp-focus .fp-ttl, .fp-bird svg, .fp-thing > span { animation: none !important; }
   }
 </style>
@@ -347,7 +357,19 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
       st.addEventListener('click', (e) => { if (mode === 'floor' && cur === f) { e.stopPropagation(); select(f + 1); } });
       fl.append(st);
     }
-    if (f === 0) fl.append(billboard('fp-way', 40, D + 34, 6, span('fp-tag', 'Way in')));
+    if (f === 0) {
+      // the front porch: two piers, double doors on the trail, and the museum's name over them
+      const PX = -40, PW = 160, PD = 22, PH = 42, SH = 30, y0 = D + PD;
+      const stand = (x, w, h, z, cls) => el('i', cls + ' fp-lf', { left: px(x), top: px(y0 - h), width: px(w), height: px(h), transformOrigin: '0 100%', transform: 'translateZ(' + z + 'px) rotateX(-90deg)' });
+      const porch = el('div', 'fp-porch');
+      const name = stand(PX, PW * 3, SH * 3, PH, 'fp-museum'); name.style.transform += ' scale(0.3333)'; name.textContent = 'Learning Crumbs'; name.setAttribute('aria-hidden', 'true');
+      const sw = wall('w', D, PD, 0, PH + SH, 'fp-pier fp-lf'), se = wall('e', D, PD, PX + PW, PH + SH, 'fp-pier fp-lf'); sw.style.left = px(PX);
+      porch.append(sw, se, stand(PX, 62, PH, 0, 'fp-pier'), stand(58, PX + PW - 58, PH, 0, 'fp-pier'),
+        el('i', 'fp-leaf fp-leaf-l fp-lf', { left: '22px', top: px(y0 - PH), width: '18px', height: px(PH) }),
+        el('i', 'fp-leaf fp-leaf-r fp-lf', { left: '40px', top: px(y0 - PH), width: '18px', height: px(PH) }),
+        name, el('i', 'fp-roof fp-lf', { left: px(PX), top: px(D), width: px(PW), height: px(PD), transform: 'translateZ(' + (PH + SH) + 'px)' }));
+      fl.append(porch, billboard('fp-way', 40, y0 + 18, 6, span('fp-tag', 'Way in')));
+    }
     fl.append(billboard('fp-ftag', W + 16, D + 16, 0, span('fp-tag', F.name)));
 
     fl.addEventListener('click', (e) => { if (mode !== 'floor' || cur !== f) { e.preventDefault(); select(f); } });
@@ -413,8 +435,12 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
     const r = cam.rz * Math.PI / 180, dir = B.fly && B.fly.to < B.fly.from ? -1 : 1;
     const sx = ((b[0] - a[0]) * Math.cos(r) - (b[1] - a[1]) * Math.sin(r)) * dir;
     if (Math.abs(sx) > 0.5) B.flip = sx < 0 ? -1 : 1;
+    // near a room's middle the bird steps off the trail to the front-left corner, so it pecks beside the thing, not on it
+    let w = 0; for (const st of F.stops) w = Math.max(w, 1 - Math.abs(B.d - st) / 46);
+    w = w <= 0 ? 0 : w * w * (3 - 2 * w);
+    if (w > 0.7) B.flip = Math.cos(r) >= 0 ? 1 : -1; // and turns to face it
     F.bird.style.setProperty('--flip', B.flip);
-    F.bird.style.transform = 'translate3d(' + (a[0] + (b[0] - a[0]) * t).toFixed(1) + 'px,' + (a[1] + (b[1] - a[1]) * t).toFixed(1) + 'px,' + z.toFixed(1) + 'px) rotateZ(calc(-1 * var(--rz))) rotateX(calc(-1 * var(--rx))) translateZ(60px) scale(var(--ss)) translate(-50%, -100%)';
+    F.bird.style.transform = 'translate3d(' + (a[0] + (b[0] - a[0]) * t - 34 * w).toFixed(1) + 'px,' + (a[1] + (b[1] - a[1]) * t + 30 * w).toFixed(1) + 'px,' + z.toFixed(1) + 'px) rotateZ(calc(-1 * var(--rz))) rotateX(calc(-1 * var(--rx))) translateZ(60px) translate(-50%, -100%)';
   }
   function eat(F) { while (B.eat < F.crumbs.length && F.crumbs[B.eat].s < B.d - 3) { F.crumbs[B.eat].g.style.opacity = '0'; B.eat++; } }
   function arrive(F, k) { B.next = k + 1; B.pause = 1; hop(F.things[k]); F.bird.classList.remove('fp-peck'); void F.bird.offsetWidth; F.bird.classList.add('fp-peck'); }
@@ -459,11 +485,11 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
     pick = F.links[k]; pick.classList.add('fp-pick'); pick.focus({ preventScroll: true });
     statusEl.textContent = 'How about room ' + (n + 1) + ', ' + F.rooms[k].title + '? Pick its sign to go in, or ask for another surprise.';
   }
-  let last = performance.now(), started = false, visible = true;
+  let last = performance.now(), started = false, visible = true, rate = 6.5, intro = null;
   function tick(now) {
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
     if (mode === 'all' && !interacted && !hovering && !reduced && started && visible) tgt.rz += dt * 5;
-    const k = reduced ? 1 : 1 - Math.exp(-dt * 6.5); let moved = false;
+    const k = reduced ? 1 : 1 - Math.exp(-dt * rate); let moved = false;
     for (const p in tgt) { const d = tgt[p] - cam[p]; if (Math.abs(d) > 0.0008) { cam[p] += Math.abs(d) < 0.002 ? d : d * k; moved = true; } }
     if (moved) apply();
     stepCar(dt);
@@ -524,17 +550,40 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { interacted = true; tgt.rz += e.key === 'ArrowLeft' ? 15 : -15; e.preventDefault(); }
     else if (e.key === 'Escape' && mode === 'floor') { interacted = true; select(null); }
   });
-  new ResizeObserver(() => fit()).observe(stage);
+  new ResizeObserver(() => { if (!intro) fit(); }).observe(stage);
   if ('IntersectionObserver' in window) new IntersectionObserver((en) => (visible = en[0].isIntersecting)).observe(stage);
 
   // swap the flat plan for this one, then open: floors stack up and the trail is laid
   const fallback = document.getElementById('fp3d-fallback');
   root.hidden = false; if (fallback) fallback.hidden = true;
-  fromHash(); Object.assign(cam, tgt); cam.rz = tgt.rz - (reduced ? 0 : 24); apply();
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    floorEls.forEach((fl) => fl.classList.remove('fp-pre'));
+  fromHash();
+  function openUp() {
+    floorEls.forEach((fl) => fl.classList.remove('fp-pre')); floorEls[0].classList.add('fp-entered');
     setTimeout(() => { world.classList.add('fp-ready'); started = true; }, 1500);
-  }));
+  }
+  function endIntro() {
+    if (!intro) return; intro.forEach(clearTimeout); intro = null; world.classList.remove('fp-arriving');
+    rate = 3; setTimeout(() => (rate = 6.5), 1600); // rise out of the doorway a little more slowly than usual
+    if (mode === 'all') select(null, true);
+    openUp();
+  }
+  if (!reduced && mode === 'all') {
+    // Arriving: you stand at the front doors under the museum's name, they open, you walk in,
+    // and then the view lifts to show the whole building. Any tap or key skips it.
+    const z = clamp(stage.clientWidth * 0.74 / 160, 0.8, 3.2), D0 = FLOORS[0].D;
+    Object.assign(cam, { rx: 84, rz: 0, zoom: z, fz: 38, ox: 40 - WMAX / 2, oy: D0 + 22 - DMAX / 2, py: 0 }); Object.assign(tgt, cam); apply();
+    floorEls[0].classList.remove('fp-pre'); world.classList.add('fp-arriving'); rate = 2.2;
+    statusEl.textContent = 'Welcome to Learning Crumbs. Come on in.';
+    intro = [
+      setTimeout(() => floorEls[0].classList.add('fp-entered'), 900),
+      setTimeout(() => { tgt.oy -= 190; tgt.zoom = z * 1.35; tgt.fz = 30; }, 1500),
+      setTimeout(endIntro, 3000),
+    ];
+    root.addEventListener('pointerdown', endIntro, true); root.addEventListener('keydown', endIntro, true);
+  } else {
+    Object.assign(cam, tgt); apply();
+    requestAnimationFrame(() => requestAnimationFrame(openUp));
+  }
   requestAnimationFrame(tick);
 })();
 </script>
