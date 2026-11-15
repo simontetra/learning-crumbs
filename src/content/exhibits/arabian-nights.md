@@ -9,7 +9,13 @@ when: "c. 850 – 1717"
 where: "Baghdad, Persia, India, and then France"
 plate: "1704–1717"
 plateNote: "Antoine Galland's French translation, which first brought the tales to Europe."
-imageToFind: "A Commons illustration of Aladdin or Scheherazade from before 1900, checked for licence."
+image:
+  src: "/images/thousand-and-one-nights-persian.jpg"
+  alt: "A Persian painting in three panels: musicians and two women in fine dress at the top, a procession through a palace hall in the middle, and a seated couple with wine glasses at the bottom"
+  credit: "Mirza Abolhassan Khan Ghaffari, via Wikimedia Commons"
+  licence: "Public domain"
+  url: "https://commons.wikimedia.org/wiki/File:Thousand_and_One_Nights_17.jpg"
+  fit: contain
 fromHome:
   src: "/images/books-home.jpg"
   alt: "Two hardback picture-book editions on a white table: Usborne Illustrated Arabian Nights, with a purple cover and a flying carpet, beside Usborne Illustrated Stories from India, in orange and purple"
