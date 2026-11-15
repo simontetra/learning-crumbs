@@ -220,4 +220,196 @@ const data = JSON.stringify({ floors }).replace(/</g, '\\u003c');
     fl.style.setProperty('--zf', px(f * G)); fl.style.setProperty('--f', Math.min(f, 6));
     fl.setAttribute('aria-label', F.name);
     fl.append(el('i', 'fp-slab fp-lf'));
-    [['n', 0, 0, W, SKIRT, 'rotateX(-90deg)'], ['s', 0, D, W, SKIRT,
+    [['n', 0, 0, W, SKIRT, 'rotateX(-90deg)'], ['s', 0, D, W, SKIRT, 'rotateX(-90deg)'], ['w', 0, 0, SKIRT, D, 'rotateY(90deg)'], ['e', W, 0, SKIRT, D, 'rotateY(90deg)']]
+      .forEach(([n, l, t, w, h, tr]) => fl.append(el('i', 'fp-skirt fp-lf fp-' + n, { left: px(l), top: px(t), width: px(w), height: px(h), transformOrigin: '0 0', transform: tr })));
+
+    // rooms wind left to right, then right to left, from the back row to the front (as in FloorPlan.astro)
+    const cells = F.rooms.map((_, k) => { const r = Math.floor(k / F.cols), i = k % F.cols; return [r % 2 ? F.cols - 1 - i : i, r]; });
+    cells.forEach((cell, k) => {
+      const room = F.rooms[k], num = F.start + k + 1;
+      const a = el('a', 'fp-room', { left: px(HALL + cell[0] * PITCH), top: px(PADT + cell[1] * PITCH) });
+      a.href = room.url; a.tabIndex = -1; a.draggable = false; a.dataset.gallery = room.slug;
+      a.setAttribute('aria-label', 'Room ' + num + ': ' + room.title);
+      a.style.setProperty('--k', Math.min(k, 14));
+      a.append(el('i', 'fp-tile fp-lf'));
+      const doors = new Set();
+      doors.add(k > 0 ? sideTo(cell, cells[k - 1]) : 'w');              // in from the hall, or from the room before
+      if (k < F.n - 1) doors.add(sideTo(cell, cells[k + 1])); else if (!top) doors.add('s'); // out to the front hall
+      ['n', 's', 'w', 'e'].forEach((s) => {
+        if (doors.has(s)) { const seg = (R - DOOR) / 2; a.append(wall(s, 0, seg, R, WALL, 'fp-wall fp-lf'), wall(s, R - seg, seg, R, WALL, 'fp-wall fp-lf')); }
+        else a.append(wall(s, 0, R, R, WALL, 'fp-wall fp-lf'));
+      });
+      const frag = document.createDocumentFragment(), nu = span('fp-num', num), tt = span('fp-ttl', room.title);
+      nu.setAttribute('aria-hidden', 'true'); tt.setAttribute('aria-hidden', 'true'); frag.append(nu, tt);
+      const sg = billboard('', 0, 0, 30, frag); sg.style.left = '50%'; sg.style.top = '50%';
+      a.append(sg); fl.append(a);
+    });
+
+    // crumb trail: in from the door or the stairs, through the rooms, back along the halls to the stairs
+    const pts = f === 0 ? [[40, D + 30], [40, cy + 12]] : [[-8, cy + 17], [48, cy + 17]];
+    cells.forEach((c) => pts.push([midX(c[0]), midY(c[1])]));
+    if (!top) {
+      if (F.n) pts.push([midX(cells[F.n - 1][0]), D - 25], [22, D - 25]);
+      pts.push([22, cy - 17], [-8, cy - 17]);
+    }
+    const M = 70, svg = document.createElementNS(SVGNS, 'svg');
+    svg.setAttribute('class', 'fp-crumbs fp-lf'); svg.setAttribute('viewBox', [-M, -M, W + 2 * M, D + 2 * M].join(' ')); svg.setAttribute('aria-hidden', 'true');
+    Object.assign(svg.style, { left: px(-M), top: px(-M), width: px(W + 2 * M), height: px(D + 2 * M) });
+    const dPath = 'M' + pts.map((p) => p.join(' ')).join(' L'); let total = 0;
+    const mask = document.createElementNS(SVGNS, 'mask'); mask.id = 'fp-mk' + f; mask.setAttribute('maskUnits', 'userSpaceOnUse');
+    mask.setAttribute('x', -M); mask.setAttribute('y', -M); mask.setAttribute('width', W + 2 * M); mask.setAttribute('height', D + 2 * M);
+    const rv = document.createElementNS(SVGNS, 'path'); rv.setAttribute('class', 'fp-reveal'); rv.setAttribute('d', dPath); mask.append(rv); svg.append(mask);
+    const trail = document.createElementNS(SVGNS, 'g'); trail.setAttribute('mask', 'url(#fp-mk' + f + ')'); svg.append(trail);
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [x1, y1] = pts[i], [x2, y2] = pts[i + 1], len = Math.hypot(x2 - x1, y2 - y1); if (len < 1) continue;
+      const steps = Math.max(2, Math.round(len / 15)); total += len;
+      for (let s = (i ? 1 : 0); s <= steps; s++) {
+        const t = s / steps, nx = -(y2 - y1) / len, ny = (x2 - x1) / len, j = (rnd() - 0.5) * 9;
+        const g = document.createElementNS(SVGNS, 'g');
+        g.setAttribute('transform', 'translate(' + (x1 + (x2 - x1) * t + nx * j).toFixed(1) + ' ' + (y1 + (y2 - y1) * t + ny * j).toFixed(1) + ') rotate(' + Math.round(rnd() * 180) + ')');
+        const c = document.createElementNS(SVGNS, 'ellipse'); c.setAttribute('class', 'fp-crumb');
+        c.setAttribute('rx', (2.2 + rnd() * 2.2).toFixed(1)); c.setAttribute('ry', (1.6 + rnd() * 1.5).toFixed(1));
+        g.append(c); trail.append(g);
+      }
+    }
+    rv.style.setProperty('--len', Math.ceil(total) + 2);
+    const wk = document.createElementNS(SVGNS, 'circle'); wk.setAttribute('class', 'fp-walker'); wk.setAttribute('r', '5.5');
+    const am = document.createElementNS(SVGNS, 'animateMotion'); am.setAttribute('dur', Math.round(8 + total / 90) + 's'); am.setAttribute('repeatCount', 'indefinite');
+    am.setAttribute('path', dPath); wk.append(am); svg.append(wk);
+    fl.append(svg);
+
+    // dog-leg stairs, stacked in the same stairwell on every floor
+    if (!top) {
+      const st = el('div', 'fp-stairs'), rise = G / 14, dep = 14, run = 6 * dep, lane = 30;
+      const put = (x, y, w, h, z) => st.append(el('i', 'fp-tread fp-lf', { left: px(-6 - x - w), top: px(y), width: px(w), height: px(h), transform: 'translateZ(' + z.toFixed(1) + 'px)' }));
+      for (let i = 0; i < 6; i++) put(i * dep, cy - lane - 2, dep, lane, (i + 1) * rise);
+      put(run, cy - lane - 2, lane, lane * 2 + 4, 7 * rise);
+      for (let j = 0; j < 6; j++) put(run - (j + 1) * dep, cy + 2, dep, lane, (8 + j) * rise);
+      st.addEventListener('click', (e) => { if (mode === 'floor' && cur === f) { e.stopPropagation(); select(f + 1); } });
+      fl.append(st);
+    }
+    if (f === 0) fl.append(billboard('fp-way', 40, D + 34, 6, span('fp-tag', 'Way in')));
+    fl.append(billboard('fp-ftag', W + 16, D + 16, 0, span('fp-tag', F.name)));
+
+    fl.addEventListener('click', (e) => { if (mode !== 'floor' || cur !== f) { e.preventDefault(); select(f); } });
+    world.append(fl); floorEls.push(fl);
+
+    const li = el('li'), b = el('button'); b.type = 'button'; b.setAttribute('aria-pressed', 'false');
+    const key = span('fp-key', F.key); key.setAttribute('aria-hidden', 'true');
+    const nm = span('fp-nm'), line = span('', F.short); line.append(span('fp-fl', /floor$/i.test(F.name) ? ' floor' : ''));
+    const sm = el('small'); sm.textContent = roomsLabel(F);
+    nm.append(line, sm);
+    b.append(key, nm); b.addEventListener('click', () => select(f)); li.append(b); li.style.setProperty('--ord', f); keys.prepend(li); F.btn = b;
+  });
+
+  // ground shadow + lift, both sized to the building
+  const GS = Math.max(WMAX, DMAX) * 1.55;
+  world.prepend(el('div', 'fp-ground', { left: px(-GS / 2), top: px(-GS / 2), width: px(GS), height: px(GS) }));
+  const frame = el('div', 'fp-frame', { left: px(-WMAX / 2), top: px(-DMAX / 2), width: px(WMAX), height: px(DMAX) }), HT = (N - 1) * G + 70;
+  const LX = 8, LY = -62, LS = 48;
+  const sn = wall('n', LX, LS, 0, HT, 'fp-shaft'), ss = wall('s', LX, LS, 0, HT, 'fp-shaft'), sw = wall('w', LY, LS, 0, HT, 'fp-shaft'), se = wall('e', LY, LS, LX + LS, HT, 'fp-shaft');
+  sn.style.top = px(LY); ss.style.top = px(LY + LS); sw.style.left = px(LX);
+  const car = el('div', 'fp-car', { left: px(LX + 4), top: px(LY + 4) });
+  car.append(wall('n', 0, 40, 0, 44, ''), wall('s', 0, 40, 40, 44, ''), wall('w', 0, 40, 0, 44, ''), wall('e', 0, 40, 40, 44, ''), el('i', 'fp-top'));
+  frame.append(sn, ss, sw, se, car); world.append(frame);
+
+  // ---------- camera ----------
+  const cam = { rx: 62, rz: -38, zoom: 0.6, fz: (N - 1) * G / 2, ox: 0, oy: 0, py: 0, car: 2 }, tgt = Object.assign({}, cam);
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const near = (t, c) => t + Math.round((c - t) / 360) * 360;
+  function fit() {
+    const w = stage.clientWidth, h = stage.clientHeight, narrow = w < 620;
+    world.classList.toggle('fp-narrow', narrow);
+    if (mode === 'all') {
+      tgt.zoom = clamp(Math.min(w / ((WMAX + DMAX) * 0.75 + (narrow ? 40 : 190)), h / ((N - 1) * G * 0.88 + (WMAX + DMAX) * 0.33 + 120)), 0.1, 1.5);
+      tgt.fz = (N - 1) * G / 2; tgt.ox = 0; tgt.oy = 0; tgt.py = 0;
+    } else {
+      const F = FLOORS[cur];
+      tgt.zoom = narrow ? clamp(Math.min(w / (F.W + 80), h / (F.D * 0.914 + 190)), 0.2, 1.7)
+                        : clamp(Math.min(w / (F.W * 0.848 + F.D * 0.53 + 200), h / ((F.W * 0.53 + F.D * 0.848) * 0.64 + 200)), 0.2, 1.7);
+      tgt.fz = cur * G; tgt.ox = (F.W - WMAX) / 2; tgt.oy = (F.D - DMAX) / 2; tgt.py = narrow ? 34 : 26;
+    }
+    world.classList.toggle('fp-tiny', PITCH * tgt.zoom < (mode === 'all' ? 30 : 62));
+    world.style.setProperty('--lw', px(Math.round(narrow ? clamp(PITCH * tgt.zoom - 8, 70, 128) : clamp(107 * tgt.zoom, 80, 128))));
+    return narrow;
+  }
+  function apply() {
+    const s = world.style;
+    s.setProperty('--rx', cam.rx.toFixed(2) + 'deg'); s.setProperty('--rz', cam.rz.toFixed(2) + 'deg');
+    s.setProperty('--zoom', cam.zoom.toFixed(4)); s.setProperty('--fz', cam.fz.toFixed(1) + 'px');
+    s.setProperty('--ox', cam.ox.toFixed(1) + 'px'); s.setProperty('--oy', cam.oy.toFixed(1) + 'px');
+    s.setProperty('--py', cam.py.toFixed(1) + 'px'); s.setProperty('--ss', (1 / cam.zoom).toFixed(4));
+    car.style.transform = 'translateZ(' + cam.car.toFixed(1) + 'px)';
+  }
+  let last = performance.now(), started = false, visible = true;
+  function tick(now) {
+    const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (mode === 'all' && !interacted && !hovering && !reduced && started && visible) tgt.rz += dt * 5;
+    const k = reduced ? 1 : 1 - Math.exp(-dt * 6.5); let moved = false;
+    for (const p in tgt) { const d = tgt[p] - cam[p]; if (Math.abs(d) > 0.0008) { cam[p] += Math.abs(d) < 0.002 ? d : d * k; moved = true; } }
+    if (moved) apply();
+    requestAnimationFrame(tick);
+  }
+
+  function select(f, quiet) {
+    if (f === null || f === undefined) { mode = 'all'; } else { mode = 'floor'; cur = clamp(f, 0, N - 1); interacted = true; }
+    world.classList.toggle('fp-all', mode === 'all');
+    floorEls.forEach((fl, i) => {
+      const on = mode === 'floor' && i === cur;
+      fl.classList.toggle('fp-focus', on);
+      fl.classList.toggle('fp-below', mode === 'floor' && i < cur);
+      fl.classList.toggle('fp-above', mode === 'floor' && i > cur);
+      fl.querySelectorAll('a.fp-room').forEach((a) => (a.tabIndex = on ? 0 : -1));
+      FLOORS[i].btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    whole.setAttribute('aria-pressed', mode === 'all' ? 'true' : 'false');
+    const narrow = fit();
+    if (mode === 'all') {
+      tgt.rx = 62; tgt.rz = near(-38, tgt.rz);
+      statusEl.textContent = N + (N === 1 ? ' floor, ' : ' floors, ') + TOTAL + ' rooms. You come in on the ground floor and follow the crumbs up.';
+    } else {
+      const F = FLOORS[cur]; tgt.rx = narrow ? 24 : 50; tgt.rz = near(narrow ? 0 : -32, tgt.rz); tgt.car = cur * G + 2;
+      let t = F.name + ': ' + roomsLabel(F).toLowerCase() + '.';
+      if (F.n > 1) t += ' The crumbs lead from ' + F.rooms[0].title + ' to ' + F.rooms[F.n - 1].title + (cur < N - 1 ? ', then up the stairs.' : '.');
+      statusEl.textContent = t;
+      const ol = keys; if (ol.scrollWidth > ol.clientWidth) ol.scrollLeft = F.btn.parentNode.offsetLeft - ol.clientWidth / 2 + 29;
+    }
+    if (!quiet) { try { const h = mode === 'all' ? '' : '#' + FLOORS[cur].hash;
+      if (location.hash !== h) history.replaceState(null, '', h || location.pathname + location.search); } catch (e) {} }
+  }
+  function fromHash() { const i = FLOORS.findIndex((F) => '#' + F.hash === location.hash); select(i < 0 ? null : i, true); }
+  whole.addEventListener('click', () => { interacted = true; select(null); });
+  addEventListener('hashchange', fromHash);
+
+  // drag to turn. On touch, up-and-down swipes still scroll the page (touch-action: pan-y).
+  stage.addEventListener('pointerdown', (e) => { if (e.button) return; drag = { x: e.clientX, y: e.clientY, rz: tgt.rz, rx: tgt.rx, moved: false, touch: e.pointerType === 'touch' }; });
+  addEventListener('pointermove', (e) => {
+    if (!drag) return; const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.hypot(dx, dy) < 6) return;
+    drag.moved = true; interacted = true; stage.classList.add('fp-dragging');
+    tgt.rz = drag.rz - dx * 0.35; if (!drag.touch) tgt.rx = clamp(drag.rx - dy * 0.3, 22, 80);
+  });
+  function endDrag() { if (!drag) return; suppress = drag.moved; drag = null; stage.classList.remove('fp-dragging'); setTimeout(() => (suppress = false), 0); }
+  addEventListener('pointerup', endDrag); addEventListener('pointercancel', endDrag);
+  stage.addEventListener('click', (e) => { if (suppress) { e.preventDefault(); e.stopPropagation(); } }, true);
+  stage.addEventListener('dragstart', (e) => e.preventDefault());
+  stage.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hovering = true; });
+  stage.addEventListener('pointerleave', () => (hovering = false));
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { interacted = true; tgt.rz += e.key === 'ArrowLeft' ? 15 : -15; e.preventDefault(); }
+    else if (e.key === 'Escape' && mode === 'floor') { interacted = true; select(null); }
+  });
+  new ResizeObserver(() => fit()).observe(stage);
+  if ('IntersectionObserver' in window) new IntersectionObserver((en) => (visible = en[0].isIntersecting)).observe(stage);
+
+  // swap the flat plan for this one, then open: floors stack up and the trail is laid
+  const fallback = document.getElementById('fp3d-fallback');
+  root.hidden = false; if (fallback) fallback.hidden = true;
+  fromHash(); Object.assign(cam, tgt); cam.rz = tgt.rz - (reduced ? 0 : 24); apply();
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    floorEls.forEach((fl) => fl.classList.remove('fp-pre'));
+    setTimeout(() => { world.classList.add('fp-ready'); started = true; }, 1500);
+  }));
+  requestAnimationFrame(tick);
+})();
+</script>
