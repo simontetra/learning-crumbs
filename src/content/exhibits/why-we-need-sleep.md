@@ -9,7 +9,14 @@ when: "Every night"
 where: "Bedrooms, and everywhere people sleep"
 plate: "Memory"
 plateNote: "Sleep helps the brain fix what we learned during the day."
-imageToFind: "A public domain or openly licensed image of a person sleeping or a sleep laboratory, checked for licence."
+image:
+  src: "/images/sleeping-woman-pexels.jpg"
+  alt: "A woman with long dark hair asleep on a pale pillow, in soft morning light through sheer curtains"
+  credit: "Andrea Piacquadio via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@olly/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [sun-sneeze]
 tags: [science, body, sleep, memory, brain]
 sources:
