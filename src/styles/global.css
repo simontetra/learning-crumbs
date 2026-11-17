@@ -55,6 +55,7 @@
   --ngt-fill:  #2c3e66;  --ngt-text:  #2c3e66;   /* night blue, for The Night Sky */
   --sky-fill:  #486fa0;  --sky-text:  #486fa0;   /* sky blue, for The Sky Above */
   --bdy-fill:  #a04a5a;  --bdy-text:  #a04a5a;   /* rose, for Our Bodies at Rest */
+  --bld-fill:  #8a5a44;  --bld-text:  #8a5a44;   /* brick, for Buildings and Homes */
   --room-ink: #fbf7ef;    /* lettering on a painted plate */
 
   --step--1: 0.875rem;
@@ -120,6 +121,7 @@
 [data-gallery="night-sky"] { --room-fill: var(--ngt-fill); --room-text: var(--ngt-text); }
 [data-gallery="the-sky-above"] { --room-fill: var(--sky-fill); --room-text: var(--sky-text); }
 [data-gallery="our-bodies-at-rest"] { --room-fill: var(--bdy-fill); --room-text: var(--bdy-text); }
+[data-gallery="buildings-and-homes"] { --room-fill: var(--bld-fill); --room-text: var(--bld-text); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

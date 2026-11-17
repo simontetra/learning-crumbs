@@ -286,5 +286,13 @@
     "question": "Why do we need to sleep?",
     "placard": "We spend a large part of our lives asleep, and scientists are still working out exactly why. This room looks at what sleep does for the brain and the body.",
     "summary": "Sleep helps the brain store memories and learning. Scientists still disagree about the details."
+  },
+  {
+    "slug": "buildings-and-homes",
+    "title": "Buildings and Homes",
+    "code": "BLD",
+    "question": "How high can we build, and where do people live?",
+    "placard": "People have made homes from felt, snow, mud and earth, and today from steel and glass. This room looks at how climate and materials shape the places we live, from a tent that can be carried to towers that rise almost a kilometre.",
+    "summary": "Homes are shaped by climate and materials: felt homes that move, snow houses, mud towers, underground dugouts and steel skyscrapers."
   }
 ]
