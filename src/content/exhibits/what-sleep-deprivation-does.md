@@ -9,7 +9,14 @@ when: "Any night of poor sleep"
 where: "Throughout the body and brain"
 plate: "Slower"
 plateNote: "Reaction time and attention slow after poor sleep."
-imageToFind: "A public domain or openly licensed image of a tired person at a desk or on a bed, checked for licence."
+image:
+  src: "/images/lack-of-sleep-pexels.jpg"
+  alt: "A person in bed in white bedding, with a white pillow held over their head to block out light or noise"
+  credit: "Katrin Bolovtsova via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@ekaterina-bolovtsova/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [what-sleep-repairs, why-we-need-sleep]
 tags: [science, body, sleep, health, brain]
 sources:
