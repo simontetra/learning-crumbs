@@ -9,7 +9,14 @@ when: "Usually starts in childhood or young adulthood"
 where: "The brain's sleep and wake control"
 plate: "Rare"
 plateNote: "Narcolepsy is a rare condition, and there is currently no cure."
-imageToFind: "A public domain or openly licensed illustration of the brain, checked for licence."
+image:
+  src: "/images/narcolepsy-pexels.jpg"
+  alt: "A man asleep with his head resting on a table, a phone beside him and his face reflected in the glossy surface"
+  credit: "Esra Afşar via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@esra-afsar-123882149/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [what-sleep-deprivation-does, why-we-need-sleep]
 tags: [science, body, sleep, health, brain]
 sources:
