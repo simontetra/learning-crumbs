@@ -9,7 +9,14 @@ when: "Today"
 where: "Every stage of life"
 plate: "7–9 h"
 plateNote: "The recommended sleep for adults aged 26 to 64, in hours a day."
-imageToFind: "A public domain or openly licensed image of a baby sleeping, checked for licence."
+image:
+  src: "/images/newborn-sleep-pexels.jpg"
+  alt: "A newborn baby asleep on a white fleece blanket, wearing a white sleepsuit and a pink bow headband"
+  credit: "MD Photography via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@md-photography-2150970498/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [why-we-need-sleep, what-sleep-repairs]
 tags: [science, body, sleep, health]
 sources:

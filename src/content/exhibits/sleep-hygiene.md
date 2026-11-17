@@ -9,7 +9,14 @@ when: "Every day, not only at night"
 where: "The bedroom, and the hours before bed"
 plate: "Routine"
 plateNote: "A regular wake-up time, even at weekends, is the most useful habit."
-imageToFind: "A public domain or openly licensed image of a calm bedroom, checked for licence."
+image:
+  src: "/images/sleep-hygiene-pexels.jpg"
+  alt: "A woman asleep on her side in a light grey sleep mask, in a striped top, beside a white brick wall and a white duvet with pink spots"
+  credit: "Anete Lusina via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@anete-lusina/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [why-we-need-sleep, what-sleep-deprivation-does]
 tags: [science, body, sleep, health, habits]
 sources:
