@@ -9,7 +9,14 @@ when: "Every night"
 where: "Throughout the body, and in the brain"
 plate: "Repair"
 plateNote: "Growth hormone is released in its highest amounts during sleep."
-imageToFind: "A public domain or openly licensed diagram of the body or brain during sleep, checked for licence."
+image:
+  src: "/images/immune-response-commons.jpg"
+  alt: "A computer-generated view inside a blood vessel, with red blood cells, round white immune cells and irregular white shapes moving past the orange lining, with green particles near one of them"
+  credit: "Greg Luerman, via Wikimedia Commons"
+  licence: "CC BY-SA 3.0"
+  url: "https://commons.wikimedia.org/wiki/File:Immune_Response1.jpg"
+  licenceUrl: "http://creativecommons.org/licenses/by-sa/3.0/"
+  fit: contain
 pebbles: [why-we-need-sleep, what-sleep-deprivation-does]
 tags: [science, body, sleep, health]
 sources:
