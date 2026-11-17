@@ -9,7 +9,14 @@ when: "Any time of life"
 where: "Bedrooms, and everywhere a person lies awake"
 plate: "1 in 10"
 plateNote: "The approximate share of US adults with chronic insomnia disorder, according to the American Academy of Sleep Medicine."
-imageToFind: "A public domain or openly licensed image of a person awake at night, checked for licence."
+image:
+  src: "/images/insomnia-pexels.jpg"
+  alt: "A man lying awake in a dark room, lit only by the glow of a phone in his hand, with his eyes open"
+  credit: "cottonbro studio via Pexels"
+  licence: "Pexels licence"
+  url: "https://www.pexels.com/@cottonbro/"
+  licenceUrl: "https://www.pexels.com/license/"
+  fit: contain
 pebbles: [sleep-hygiene, what-sleep-deprivation-does, what-is-narcolepsy]
 tags: [science, body, sleep, health]
 sources:
